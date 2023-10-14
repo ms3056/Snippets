@@ -1,0 +1,104 @@
+/* Variables for colors and radius */
+body {
+  --border-color: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
+  --table-radius: 10px;
+  --cell-border-color: none;
+  --odd-row-bg: hsl(var(--shift-tertiary-h-5), var(--hsl-tertiary-s), var(--darker-tertiary-l-10));
+  --odd-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
+  --even-row-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-30));
+  --even-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20));
+  --hover-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-10));
+  --hover-text: white;
+  --header-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20));
+  --header-text: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
+  --text-shadow: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
+}
+
+/* Fix the borders and add a radius variable */
+:root table {
+  --table-border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+/* Add the radius */
+th:first-child {border-top-left-radius: var(--table-border-radius)}
+th:last-child {border-top-right-radius: var(--table-border-radius)}
+tr:last-child td:first-child {border-bottom-left-radius: var(--table-border-radius)}
+tr:last-child td:last-child {border-bottom-right-radius: var(--table-border-radius)}
+
+/* Redo the borders */
+:root :is(td, th) {
+  border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}
+
+/* 1. Border around the table with rounded corners */
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 3px solid var(--border-color) !important;
+  border-radius: var(--table-radius) !important;
+  overflow: hidden !important;
+}
+
+/* 2. Line within the header and table */
+th,
+td {
+  border: 1px solid var(--cell-border-color) !important;
+}
+
+/* 3. The first line between header and table */
+thead tr th {
+  font-size: 1.3em !important;
+  border-bottom: 3px solid var(--border-color) !important;
+  background-color: var(--header-bg) !important;
+  color: var(--header-text) !important;
+  text-shadow: 2px 2px 5px var(--text-shadow);
+}
+
+/* Target the first and last th elements for rounded corners */
+
+/* Rounded upper-left corner */
+thead tr th:first-child {
+  border-top-left-radius: calc(var(--table-radius) - 3px) !important;
+}
+
+/* Rounded upper-right corner */
+thead tr th:last-child {
+  border-top-right-radius: calc(var(--table-radius) - 3px) !important;
+}
+
+/* 4. The last line of the table at the bottom */
+tbody tr:last-child td {
+
+  /*  border-bottom: 6px solid var(--bottom-line-color) !important;*/
+}
+
+/* 5. Odd number rows background */
+tbody tr:nth-child(odd) {
+  background-color: var(--odd-row-bg) !important;
+  color: var(--odd-row-text);
+}
+
+/* 6. Even number rows background */
+tbody tr:nth-child(even) {
+  background-color: var(--even-row-bg) !important;
+  color: var(--even-row-text);
+}
+
+/* 7. Hover that highlights the background of the entire row with no gaps */
+tbody tr:hover {
+/*  background-color: var(--hover-bg) !important;*/
+/*  color: var(--hover-text) !important;*/
+  font-weight: bold;
+  text-shadow: 2px 2px 2px var(--text-shadow);
+  filter: hue-rotate(45deg);
+}
+
+/* Round the corners for the last row */
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: calc(var(--table-radius) - 3px) !important;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: calc(var(--table-radius) - 3px) !important;
+}

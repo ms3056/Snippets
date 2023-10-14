@@ -1,0 +1,38 @@
+body {
+  --my-tag-text: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-10), 1);
+  --my-tag-hash: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+  --my-tag-border: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+  --my-tag-background: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.1);
+  --my-tag-border-width: 2px;
+}
+
+/* Selects the hashtag symbol with the class 'cm-hashtag-begin' */
+.cm-line .cm-formatting.cm-hashtag-begin {
+  color: var(--my-tag-hash);
+  background: var(--my-tag-background);
+  border: var(--my-tag-border-width) solid var(--my-tag-border);
+  border-right-width: 0;
+  padding-right: 0.2em;
+}
+
+/* Selects the hashtag text with the class 'cm-hashtag-end' */
+.cm-line .cm-hashtag-end {
+  color: var(--my-tag-text);
+  background: var(--my-tag-background);
+  border: var(--my-tag-border-width) solid var(--my-tag-border);
+  border-left-width: 0;
+}
+
+/* Base styles for the hashtag symbol and text */
+.cm-line .cm-formatting.cm-hashtag-begin,
+.cm-line .cm-hashtag-end {
+  transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect to highlight both the hashtag symbol and text */
+.cm-line:hover .cm-formatting.cm-hashtag-begin,
+.cm-line:hover .cm-hashtag-end {
+filter: hue-rotate(180deg) brightness(1.1);
+}
+
+

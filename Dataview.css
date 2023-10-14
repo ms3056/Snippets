@@ -1,0 +1,85 @@
+/* Dataview Lists and Tables */
+.block-language-dataview li {
+/*    font-size: 1em !important;*/
+/*    margin-right: 20px;*/
+}
+
+/* Style for the parent element */
+.dataview.list-view-ul {
+    list-style: none !important;
+    padding-left: 4em;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    font-family: "Rec Mono Duotone", monospace !important;
+    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 3.6em;
+/*    position: relative;*/
+}
+
+/* Style for displaying the '.' character */
+.dataview.list-view-ul:before {
+    content: "";
+    position: absolute;
+    left: 2%;
+    top: 18%; 
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trees'%3E%3Cpath d='M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z'/%3E%3Cpath d='M7 16v6'/%3E%3Cpath d='M13 19v3'/%3E%3Cpath d='M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+    padding: 2em;
+    margin-left: 4px;
+
+}
+
+/* Style for adding the dotted line */
+.dataview.list-view-ul:after {
+    content: "";
+    position: absolute;
+    left: 2%; 
+    top: calc(18% + 3.4em);  
+    width: 50px;  
+    border-bottom: 3px dotted hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+}
+
+.dataview.list-view-ul:hover:before,
+.dataview.list-view-ul:hover:after {
+    filter: hue-rotate(180deg);
+}
+
+div.dataview-error-box {
+    visibility: hidden;
+}
+
+/* Parent element style, added for demonstration */
+div.dataview-error-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pseudo-element style */
+div.dataview-error-box::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: visible;
+    content: ".";
+    background: linear-gradient(to right, hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)), hsla(var(--shift-h-45), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a)), hsla(var(--shift-h-90), var(--hsl-second-s), var(--darker-l-30), var(--hsl-second-a)));
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-refresh-cw-off'%3E%3Cpath d='M21 8L18.74 5.74A9.75 9.75 0 0 0 12 3C11 3 10.03 3.16 9.13 3.47'/%3E%3Cpath d='M8 16H3v5'/%3E%3Cpath d='M3 12C3 9.51 4 7.26 5.64 5.64'/%3E%3Cpath d='m3 16 2.26 2.26A9.75 9.75 0 0 0 12 21c2.49 0 4.74-1 6.36-2.64'/%3E%3Cpath d='M21 12c0 1-.16 1.97-.47 2.87'/%3E%3Cpath d='M21 3v5h-5'/%3E%3Cpath d='M22 22 2 2'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    background-clip: text;
+    color: transparent;
+    width: 72px;  
+    height: 72px; 
+}
+
+.block-language-dataview:has(td) {
+    /* style to your heart's content */
+    font-family: "Rec Mono Duotone", monospace !important;
+    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    font-size: 1em !important;
+}

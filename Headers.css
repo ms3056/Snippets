@@ -1,0 +1,74 @@
+/* from the Everforest Enchanted theme by FireIsGood */
+:root body:is(.theme-dark, .theme-light) {
+    --h1-size: 2.000em !important;
+    --h2-size: 1.375em !important;
+    --h3-size: 1.250em !important;
+    --h4-size: 1.125em !important;
+    --h5-size: 1.125em !important;
+    --h6-size: 1.125em !important;
+
+    --h1-line-height: 1.2;
+    --h2-line-height: 1.2;
+    --h3-line-height: 1.2;
+    --h4-line-height: 1.1;
+    --h5-line-height: 1.1;
+    --h6-line-height: 1.1;
+
+    --h1-weight: 900;
+    --h2-weight: 700;
+    --h3-weight: 600;
+    --h4-weight: 500;
+    --h5-weight: 500;
+    --h6-weight: 500;
+}
+
+/* All Headers, editing and reading modes */
+/* From FireIsGood on Discord */
+.cm-header, :is(h1, h2, h3, h4, h5, h6) {
+  text-shadow: 2px 2px 2px black;
+
+}
+
+.HyperMD-header-1::before {
+  content: " ";
+  background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.7);
+  width: 4px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+/* Add extra space after Header-1 unless the next line is a horizontal line */
+.HyperMD-header.HyperMD-header-1.cm-line + .cm-line:not(.hr),
+.HyperMD-header.HyperMD-header-1.cm-line + .HyperMD-task-line:not(.hr) {
+/*    margin-top: 0.3em !important; */
+}
+
+.HyperMD-header-1 .cm-fold-indicator {
+  margin-left: -15px;
+  margin-right: 15px;
+  color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
+}
+
+/* By sailKite on Discord */
+.cm-header-1, .markdown-rendered h1 {
+    color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
+    padding-left: 0.3em;
+}
+
+.cm-header-2, .markdown-rendered h2 {
+    color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--darker-second-l-10), 1);
+}
+
+.cm-header-3, .markdown-rendered h3 {
+    color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), 1);
+}
+
+.cm-header-4, .markdown-rendered h4 {
+    color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--darker-second-l-10), 1);
+}
+
+.cm-header-5, .markdown-rendered h5, .cm-header-6, .markdown-rendered h6 {
+    color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
+}

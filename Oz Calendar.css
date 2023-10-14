@@ -1,0 +1,59 @@
+/* OZ Calendar Tweaks */
+.oz-calendar-plugin-today abbr {
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+    font-weight: bolder;
+    font-size: 1.6em;
+    text-shadow: 2px 2px 4px black;
+}
+
+.oz-calendar-plugin-view .react-calendar__tile--active {
+    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2) !important;
+}
+
+.oz-calendar-plugin-today {
+    border-radius: 0.5em;
+    border: 2px solid hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    padding: 0.3em !important;
+}
+
+.oz-calendar-nav-action-middle,
+.oz-calendar-plugin-view button.react-calendar__navigation__label {
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+}
+
+.oz-calendar-note-line-icon {
+    font-size: 1.1em;
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    align-content: center;
+    justify-content: center;
+}
+
+.oz-calendar-note-line:first-child span {
+    color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+    font-size: 1.2em;
+}
+
+.oz-calendar-note-line span {
+    border-bottom: 1px dashed var(--hsl-second-base);
+    display: inline;
+}
+
+.oz-calendar-note-line {
+    font-family: "Rec Mono Duotone", monospace;
+    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    font-size: 1.1em;
+    color: var(--hsl-second-base) !important;
+    text-shadow: 2px 2px 2px black;
+}
+
+.oz-calendar-note-line:last-child span {
+    border-bottom: unset;
+}
+
+
+.oz-calendar-note-line:hover {
+  filter: hue-rotate(180deg);
+  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;
+  color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+  border-radius: 5px;
+}

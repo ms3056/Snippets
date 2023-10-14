@@ -1,0 +1,141 @@
+/* Light Theme */
+.theme-light {
+  /* Renamed Colors */
+  --KB-divider-color: transparent;
+  --KB-tab-outline-color: transparent;
+  --KB-interactive-accent: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-30), 1);
+  --KB-text-on-accent: hsla(var(--shift-second-h-180), var(--hsl-accent-s), var(--darker-second-l-20), 1) !important;
+  --KB-borders: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-20), 1);
+  --KB-icons: hsla(var(--shift-second-h-90), var(--sat-second-s-10), var(--hsl-second-l), 1);
+  --KB-highlight-1: hsla(var(--shift-second-h-15), var(--sat-second-s-40), var(--darker-second-l-20), 1);
+  --KB-card-background-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.7), 80%, 1);
+  --KB-card-foreground-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.4), 90%, 1);
+}
+
+/* Dark Theme */
+.theme-dark {
+  /* Renamed Colors */
+  --KB-divider-color: transparent;
+  --KB-tab-outline-color: transparent;
+  --KB-interactive-accent: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-10), 1);
+  --KB-text-on-accent: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-30), 1) !important;
+  --KB-borders: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-30), 1);
+  --KB-icons: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+  --KB-highlight-1: hsla(var(--shift-second-h-15), var(--sat-second-s-40), var(--lighter-second-l-20), 0.2);
+  --KB-card-background-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.7), 20%, 1);
+  --KB-card-foreground-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.5), 13%, 1);
+}
+
+/* Main CSS with variables */
+
+.kanban-plugin__lane-wrapper {
+  background-color: var(--KB-card-background-color);
+  border: 1px solid var(--KB-borders);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.kanban-plugin__lane {
+  background-color: var(--KB-card-foreground-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.kanban-plugin__lane-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--KB-highlight-1);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.kanban-plugin__lane-grip svg {
+  stroke: var(--KB-icons);
+}
+
+.kanban-plugin__lane-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.kanban-plugin__lane-title-text p {
+  margin: 0;
+  color: var(--KB-text-on-accent);
+}
+
+.kanban-plugin__lane-title-count {
+  font-size: 14px;
+  color: var(--KB-icons);
+}
+
+.kanban-plugin__lane-settings-button-wrapper .kanban-plugin__icon svg {
+  stroke: var(--KB-icons);
+}
+
+.kanban-plugin__lane-items {
+  background-color: var(--KB-card-foreground-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.kanban-plugin__placeholder {
+  height: 50px;
+  background-color: var(--KB-divider-color);
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+  background-color: var(--KB-interactive-accent);
+  color: var(--KB-text-on-accent);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.kanban-plugin__item-button-plus {
+  margin-right: 5px;
+}
+
+.kanban-plugin__item-wrapper {
+  background-color: var(--KB-card-foreground-color);
+  border: 1px solid var(--KB-borders);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.kanban-plugin__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kanban-plugin__item-content-wrapper {
+  display: flex;
+}
+
+.kanban-plugin__item-title-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--KB-highlight-1);
+}
+
+.task-list-item-checkbox {
+  margin-right: 10px;
+}
+
+.kanban-plugin__item-title {
+  font-size: 16px;
+}
+
+.kanban-plugin__item-markdown p {
+  margin: 0;
+  color: var(--KB-text-on-accent);
+}
+
+.kanban-plugin__item-metadata {
+  font-size: 12px;
+  color: var(--KB-icons);
+}
+
+.kanban-plugin__item-postfix-button .kanban-plugin__icon svg {
+  stroke: var(--KB-icons);
+}

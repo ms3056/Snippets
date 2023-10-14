@@ -1,0 +1,35 @@
+body {
+  --crypto-main-text: var(--hsl-second-base) !important;
+  --crypto-secondary-text: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+  --crypto-background: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7) !important;
+  --crypto-border: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .5) !important;
+}
+
+
+.crypto-container {
+    font-family: Quicksand;
+}
+
+.crypto-symbol {
+  text-shadow: 2px 2px 4px hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--darker-second-l-40), 1);
+}
+
+.crypto-timestamp {
+    font-size: 0.7em;
+  color: hsla(var(--shift-second-h-45), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+}
+
+.crypto-refresh-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.crypto-refresh-button[data-app-id="crypto"] {
+      transform-origin: center !important;
+}
+
+.crypto-refresh-button[data-app-id="crypto"]:hover {
+      transform-origin: center !important;
+    color: var(--hsl-second-base) !important;
+}

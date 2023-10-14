@@ -1,0 +1,9 @@
+/* Direct parent-child relationship from top down to TickTick */
+.workspace-tab-container > .view-content > webview[src*="ticktick.com"] {
+  height: calc(100% - 200px) !important;
+}
+
+
+
+
+

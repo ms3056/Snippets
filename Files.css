@@ -1,0 +1,231 @@
+.theme-dark,
+.theme-light {
+    --root-bookmarks-color: black;
+    --group-bookmarks-color: transparent;
+/*    --child1-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --child2-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-l-5), 1);
+    --child3-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-l-10), 1);
+
+    --child4-color: hsla(var(--shift-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --child5-color: hsla(var(--shift-h-30), var(--hsl-second-s), var(--lighter-l-5), 1);
+    --child6-color: hsla(var(--shift-h-30), var(--hsl-second-s), var(--lighter-l-10), 1);
+
+    --child7-color: hsla(var(--shift-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --child8-color: hsla(var(--shift-h-90), var(--hsl-second-s), var(--lighter-l-5), 1);
+    --child9-color: hsla(var(--shift-h-90), var(--hsl-second-s), var(--lighter-l-10), 1);
+
+    --child10-color: hsla(var(--shift-h-120), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --child11-color: hsla(var(--shift-h-120), var(--hsl-second-s), var(--lighter-l-5), 1);
+    --child12-color: hsla(var(--shift-h-120), var(--hsl-second-s), var(--lighter-l-10), 1);
+
+    --child13-color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --child14-color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--lighter-l-5), 1);
+    --child15-color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--lighter-l-10), 1);*/
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder {
+    --nav-item-color: var(--hsl-second-base) !important;
+    border-radius: 4px;
+    --icon-color: var(--folder-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title,
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
+  font-size: 1em;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title {
+  --nav-item-color: var(--folder-color) !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title, .nav-file-title {
+/*  border: 2px solid transparent;*/
+}
+
+/* The very top level items */
+.workspace-leaf-content[data-type="file-explorer"] .tree-item-self.nav-folder-title[data-path]:not([data-path*="/"]) {
+    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .1) !important;
+}
+
+/* Bottom level items */
+.workspace-leaf-content[data-type="file-explorer"] .tree-item.nav-file .tree-item-self.nav-file-title .tree-item-inner.nav-file-title-content {
+    color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-l-10), var(--hsl-second-a));
+}
+
+/* Hover */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title:hover, .nav-file-title:hover {
+  filter: hue-rotate(180deg);
+/*  border: 2px solid var(--hsl-second-base) !important;*/
+  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;
+  color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+  border-radius: 5px;
+}
+
+/* Children */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+2) > .nav-folder-title {
+  background-color: transparent;
+  --folder-color: var(--child1-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+3) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color:var(--child2-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+4) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color:var(--child3-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+5) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color:var(--child4-color);  
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+6) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color:var(--child5-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+7) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color: var(--child6-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+8) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color: var(--child7-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+9) > .nav-folder-title{
+    background-color: transparent;
+  --folder-color: var(--child8-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+10) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child9-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+11) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child10-color);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+12) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child11-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+13) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child12-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+14) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child13-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+15) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child14-color); 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+16) > .nav-folder-title {
+    background-color: transparent;
+  --folder-color: var(--child15-color); 
+}
+
+/* Replace icons */
+.workspace-leaf-content[data-type="file-explorer"] .collapse-icon svg.svg-icon {
+  display: none; 
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .collapse-icon::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--hsl-second-base);
+
+}
+
+
+/* Closed Folder */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator.is-collapsed::after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+  content: "";
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+
+}
+
+/* Taken from the AnnuPpuccin Theme */
+/* Generic Icon */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+  content: "";
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}
+
+/* All of my templates start with t. */
+/* My startup templates start with Startup */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path*="t."][data-path$=".md"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path*="Startup"][data-path$=".md"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-json-2'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1'/%3E%3Cpath d='M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1'/%3E%3C/svg%3E") !important;
+    -webkit-mask-repeat: no-repeat;
+}
+
+/* Icon for Markdown Files */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".md"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".pdf"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6m-4 5H8m8 4H8m2-8H8'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* Icon for Canvas Files */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".canvas"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3h7v9H3zm11 0h7v5h-7zm0 9h7v9h-7zM3 16h7v5H3z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".svg"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".bmp"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".jpg"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".gif"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".webp"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".jpeg"]::before,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".png"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Ccircle cx='10' cy='13' r='2'/%3E%3Cpath d='m20 17-1.09-1.09a2 2 0 0 0-2.82 0L10 22'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* Excalidraw files are .excaidraw.md files */
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".excalidraw.md"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E%3Crect width='4' height='6' x='2' y='12' rx='2'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpath d='M10 12h2v6'/%3E%3Cpath d='M10 18h4'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".js"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-code'%3E%3Cpolyline points='16 18 22 12 16 6'/%3E%3Cpolyline points='8 6 2 12 8 18'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+}
+
+
+

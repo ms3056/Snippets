@@ -1,0 +1,8 @@
+div.view-actions {
+    --icon-size: 22px;
+}
+
+.cmdr-page-header {
+    color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-10), 100%) !important;
+    --icon-size: 22px;
+}

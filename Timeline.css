@@ -1,0 +1,211 @@
+
+
+.theme-light {
+
+}
+
+
+.theme-dark {
+    --tl-today-text: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --tl-today-day: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-10), 1);
+    --tl-weekend-text: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --tl-weekend-day: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--lighter-l-10), 1);
+    --tl-weekday-text: hsla(var(--shift-h-90), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --tl-weekday-day: hsla(var(--shift-h-90), var(--hsl-accent-s), var(--lighter-l-10), 1);
+    --tl-today-bg: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --tl-today-border: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --tl-weekend-bg: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
+    --tl-selected-bg: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
+    --tl-selected-border: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-10), 1);
+
+}
+
+
+.leaf-periodic-button.svelte-ilz3jn {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.leaf-periodic-button.svelte-ilz3jn span svg {
+    position: relative;
+    top: 0px !important;  
+    stroke: pink;
+}
+
+/* Targeting the name and number for Sunday */
+.timeline-weekday.svelte-ilz3jn:nth-child(1) .timeline-day-of-week.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekend-text);
+}
+
+.timeline-weekday.svelte-ilz3jn:nth-child(1) .timeline-day.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekend-day);
+}
+
+/* Targeting the name and number for Saturday */
+.timeline-weekday.svelte-ilz3jn:nth-child(7) .timeline-day-of-week.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekend-text);
+
+}
+
+.timeline-weekday.svelte-ilz3jn:nth-child(7) .timeline-day.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekend-day);
+}
+
+/* background for sunday */
+.timeline-weekday.svelte-ilz3jn:nth-child(1) {
+    /* styles */
+    background-color: var(--tl-weekend-bg);
+    border-radius: 5px;
+}
+
+/* background for saturday */
+.timeline-weekday.svelte-ilz3jn:nth-child(7) {
+    /* styles */
+    background-color: var(--tl-weekend-bg);
+    border-radius: 5px;
+}
+
+/* Targeting the name for Monday */
+.timeline-weekday.svelte-ilz3jn:nth-child(2) .timeline-day-of-week.svelte-ilz3jn,
+/* Targeting the name for Tuesday */
+.timeline-weekday.svelte-ilz3jn:nth-child(3) .timeline-day-of-week.svelte-ilz3jn,
+/* Targeting the name for Wednesday */
+.timeline-weekday.svelte-ilz3jn:nth-child(4) .timeline-day-of-week.svelte-ilz3jn,
+/* Targeting the name for Thursday */
+.timeline-weekday.svelte-ilz3jn:nth-child(5) .timeline-day-of-week.svelte-ilz3jn,
+/* Targeting the name for Friday */
+.timeline-weekday.svelte-ilz3jn:nth-child(6) .timeline-day-of-week.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekday-text);
+}
+
+/* Targeting the number for Monday */
+.timeline-weekday.svelte-ilz3jn:nth-child(2) .timeline-day.svelte-ilz3jn,
+/* Targeting the number for Tuesday */
+.timeline-weekday.svelte-ilz3jn:nth-child(3) .timeline-day.svelte-ilz3jn,
+/* Targeting the number for Wednesday */
+.timeline-weekday.svelte-ilz3jn:nth-child(4) .timeline-day.svelte-ilz3jn,
+/* Targeting the number for Thursday */
+.timeline-weekday.svelte-ilz3jn:nth-child(5) .timeline-day.svelte-ilz3jn,
+/* Targeting the number for Friday */
+.timeline-weekday.svelte-ilz3jn:nth-child(6) .timeline-day.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-weekday-day);
+}
+
+/* The container for the entire timeline */
+.timeline-container.svelte-ilz3jn {
+    /* styles */
+    border-radius: 10px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    border-top: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) ;
+/*    background-color: var(--card-foreground-color);*/
+/*    background: linear-gradient(to top, var(--card-foreground-color) 75%, transparent 75%);*/
+    background: linear-gradient(to top, var(--card-foreground-color) 25%, transparent);
+}
+
+/* The button that presumably allows the user to jump to "Today" */
+.leaf-periodic-button.svelte-ilz3jn {
+    /* styles */
+    background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) !important;
+    margin: 4px !important;
+    color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1) !important;
+
+}
+
+/* Individual container for each day of the week */
+.timeline-weekday.svelte-ilz3jn {
+    /* styles */
+
+}
+
+.timeline-weekday {
+    border: 2px solid transparent; !important;
+    border-radius: 5px;
+}
+
+.timeline-weekday:hover {
+    border:2px solid var(--tl-today-border) !important;
+    border-radius: 5px;
+}
+
+.timeline-day {
+/*    background-color: unset !important;*/
+}
+
+/* Remove the circle around the current day */
+.timeline-day.svelte-ilz3jn.svelte-ilz3jn {
+    border: unset !important;
+}
+
+.timeline-weekday.svelte-ilz3jn.is-selected {
+    border: 2px solid var(--tl-selected-border);
+    border-radius: 5px;
+    background-color: var(--tl-selected-bg);
+
+}
+
+/* Styles for the element with the class timeline-day */
+.timeline-weekday.is-selected .timeline-day {
+    /* Your styles here */
+    background-color: transparent !important;  
+
+}
+
+
+
+/* The name of each day of the week (Sun, Mon, Tue, etc.) */
+.timeline-day-of-week.svelte-ilz3jn {
+    /* styles */
+}
+
+/* The number of each day (08, 09, 10, etc.) */
+.timeline-day.svelte-ilz3jn {
+    /* styles */
+}
+
+/* The container for the current day (in this case, Friday the 13th) */
+.timeline-weekday.svelte-ilz3jn.is-selected.is-today {
+    /* styles */
+}
+
+/* The name of the current day (in this case, "Fri") */
+.timeline-weekday.svelte-ilz3jn.is-today .timeline-day-of-week.svelte-ilz3jn {
+    /* styles */
+    color: var(--tl-today-text) !important;
+    font-weight: bold !important;
+}
+
+/* border for today container */
+.timeline-weekday.svelte-ilz3jn.is-selected.is-today {
+
+}
+
+/* The number of the current day (in this case, "13") */
+.timeline-weekday.svelte-ilz3jn.is-today .timeline-day.svelte-ilz3jn {
+    /* styles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+/*    background-color: transparent;*/
+    text-shadow: 2px 2px 2px black;
+    color: var(--tl-today-day) !important;
+}
+
+/* The background of the timeline view */
+.timeline-view.svelte-ilz3jn {
+    /* styles */
+    background-color: var(--card-foreground-color) !important;
+    border-radius: 10px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
+    padding-bottom: 2px !important;
+}

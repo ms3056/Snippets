@@ -1,0 +1,82 @@
+/* You must turn ON line numbers even though they are not displayed  */
+/* Adapted from Vane6413 on Discord - this is mainly his code I have */
+/* only adapted and tweaked it after some experimentation            */
+/* The colors are based on the secondary color.                      */
+
+/* Dark theme color variables */
+.theme-dark {
+  --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
+  --al-2: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.05);
+  --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
+}
+
+/* Light theme color variables */
+.theme-light {
+  --al-1-light: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.9);
+  --al-2-light: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.65);
+  --al-3-light: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.9);
+}
+
+
+
+
+.cm-scroller {
+  padding-left: 6px !important;
+}
+
+.markdown-source-view .inline-title {
+  padding-bottom: 1.15em;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview div.cm-editor div {
+  caret-color: hsl(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l));
+}
+
+/* edit bar */
+.cm-gutter {
+  overflow: visible !important;
+}
+
+.cm-gutterElement {
+  display: flex;
+  margin-left: 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0px;
+  transform: translate(2px, -1px);
+  min-width: 10px !important;
+  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
+/*    background: linear-gradient(0deg, var(--al-1), var(--al-2), var(--al-3));*/
+}
+
+.cm-gutterElement.cm-active {
+  position: relative;
+  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.9);
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 19px 0px !important;
+  border-radius: 5px;
+}
+
+.cm-gutterElement:nth-child(2) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cm-gutterElement:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Background of active line */
+.cm-active.cm-line {
+  background: linear-gradient(90deg, var(--al-1), var(--al-2), var(--al-3));
+  filter: brightness(1.5);
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+}
+
+.cm-line {
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+}

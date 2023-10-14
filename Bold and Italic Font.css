@@ -1,0 +1,69 @@
+.inline-title {
+    color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+    opacity: 70%;
+    margin-left: 30px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.HyperMD-list-line.HyperMD-list-line-1.HyperMD-task-line {
+    line-height: inherit;
+    text-align: left;
+}
+
+/* Change font and color of italic text */
+em,
+.cm-em {
+    font-family: "Recursive Sans Casual Static", serif !important;
+    font-feature-settings: "zero", "liga" 1, "dlig" 1, "ss12" 1, "ss01" 0, "pnum" 1, "ss04" 1, "ss03" 1 !important;
+    font-style: italic;
+    color: hsla(var(--shift-h-15), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+}
+
+strong,
+.cm-strong {
+    font-size: 1.1em;
+    color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+}
+
+/* --- change font in Live Preview editing --- */
+.markdown-preview-view,
+.cm-s-obsidian {
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
+    width: 10px;
+    height: 10px;
+}
+
+.HyperMD-codeblock
+{
+    line-height: 1.4em !important;
+    border-right: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+    border-left: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+
+}
+
+.HyperMD-codeblock-bg
+{
+    background-color: hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),0.05) !important;
+}
+
+
+.HyperMD-codeblock-begin
+{
+    border-top: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.HyperMD-codeblock-end
+{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+}
+
+.code-block-flair {
+    color: hsla(var(--shift-h-180),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;
+}

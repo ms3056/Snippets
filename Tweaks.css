@@ -1,0 +1,38 @@
+
+/* Status Bar */
+.status-bar {
+	font-size: 1.1em;
+	color: var(--highlight-1);
+	background-color: var(--bg-panels) !important;
+	border: 2px solid var(--highlight-1);
+	text-shadow: 2px 2px 2px black;
+}
+
+/* Icons */
+.side-dock-actions,
+.side-dock-settings {
+	--icon-color: hsla(var(--shift-h-180), var(--sat-s-10), var(--hsl-accent-l), 1);
+}
+
+/* Omnivore Icon */
+.svg-icon.Omnivore path {
+	fill: hsla(var(--shift-h-180), var(--sat-s-10), var(--hsl-accent-l), 1) !important;
+}
+
+/* Active Icons */
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+	color: hsla(var(--shift-h-180), var(--sat-s-10), var(--hsl-accent-l), 1) !important;
+}
+
+/* Remove active icon backgrounds */
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+	background-color: transparent !important;
+}
+
+/* OZ Calendar Icon */
+.OZCAL_ICON {
+	fill: hsla(var(--shift-h-180), var(--sat-s-10), var(--hsl-accent-l), 1) !important;
+	filter: brightness(0.7);
+}
+
