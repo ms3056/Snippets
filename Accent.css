@@ -6,29 +6,29 @@ id: hiromike-accent-colors
 settings:
     -
         id: hsl-accent
-        title: 'Select your preferred accent'
+        title: 'Select the user interface accent color'
         type: variable-themed-color
         opacity: true
         format: hsl-split
-        description: Select the main accent color
+        description: User interface accent
         default-dark: '#725BAD'
         default-light: '#52138c'
     - 
         id: hsl-accent-secondary
-        title: 'Select your preferred accent'
+        title: 'Select the content accent color'
         type: variable-themed-color
         opacity: true
         format: hsl-split
-        description: Select the secondary color
+        description: Content accent
         default-dark: '#90D997'
         default-light: '#304f50'
     -
         id: hsl-accent-tertiary
-        title: 'Select your preferred accent'
+        title: 'Select the table accent color'
         type: variable-themed-color
         opacity: true
         format: hsl-split
-        description: Select the tertiary color
+        description: Table Accent
         default-dark: '#407F94'
         default-light: '#264c59'
 */

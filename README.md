@@ -13,7 +13,9 @@ I have also had a lot of help from the Discord community - FireIsGood, sailKite,
 
 ## Usage
 
-The minimum snippets you need to activate are `Accent.css` and `Cards.css`. All others are optional.
+- Select the `Default Theme`
+- The minimum snippets you need to activate are `Accent.css` and `Cards.css`. All others are optional.
+- You will also need the `Style Settings` plugin in order to change the accent colors.
 
 
 If you find these snippets useful please consider [Buying me a coffee](https://www.buymeacoffee.com/mstam30561)
