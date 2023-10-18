@@ -122,6 +122,9 @@
 /* Individual container for each day of the week */
 .timeline-weekday.svelte-ilz3jn {
     /* styles */
+    height: 3.7em;
+    margin-bottom: 0.5em;
+    padding-top: 0.2em;
 
 }
 

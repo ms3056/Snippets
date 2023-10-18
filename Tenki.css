@@ -1,4 +1,11 @@
+.theme-dark {
+    --te-background: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7);
+}
 
+
+.theme-light {
+    --te-background: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+}
 
 .tenki-refresh-button[data-app-id="tenki"] .clickable-icon {
   position: absolute;
@@ -39,7 +46,7 @@
 
 
 .forecast-day-container {
-  background-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7);
+  background-color: var(--te-background);
 }
 
 .forecast-rain {

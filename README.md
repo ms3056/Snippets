@@ -5,6 +5,8 @@
 
 These snippets are made for my personal use. I will not be taking requests to change them. If you find a bug I may fix it, but there are no guarantees.
 
+These snippets look best in Dark Mode. `Acent.css` anf `Cards.css` work good in Light Mode but not all of the snippets look nice in Light Mode. I will slowly fix the snippets to look nicer in Light Mode but since I don't use it my priority is low. 
+
 ## Attribution
 
 The `Cards.css` snippet is mostly NOT MY OWN WORK. It was taken from the excellent AnuPpuccin theme. I have made significant changes, but the baseline was all of their work. Please visit their theme page: [AnuPpuccin GitHub](https://github.com/AnubisNekhet/AnuPpuccin) and please consider [Buying them a coffee](https://www.buymeacoffee.com/anubisnekhet).

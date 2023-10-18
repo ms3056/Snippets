@@ -22,16 +22,41 @@
     --h6-weight: 500;
 }
 
+.theme-light {
+    --h1-line-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.3);
+    --h1-fold-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
+    --h1-text-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h2-text-color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h3-text-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h4-text-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h5-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h6-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --header-shadow: hsl(0, 0%, 62.502%);
+}
+
+
+.theme-dark {
+    --h1-line-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.7);
+    --h1-fold-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --h1-text-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --h2-text-color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --h3-text-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --h4-text-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --h5-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --h6-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --header-shadow: black;
+}
+
 /* All Headers, editing and reading modes */
 /* From FireIsGood on Discord */
 .cm-header, :is(h1, h2, h3, h4, h5, h6) {
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px var(--header-shadow);
 
 }
 
 .HyperMD-header-1::before {
   content: " ";
-  background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.7);
+  background-color: var(--h1-line-color);
   width: 4px;
   display: inline-block;
   border-radius: 5px;
@@ -48,27 +73,27 @@
 .HyperMD-header-1 .cm-fold-indicator {
   margin-left: -15px;
   margin-right: 15px;
-  color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
+  color: var(--h1-fold-color);
 }
 
 /* By sailKite on Discord */
 .cm-header-1, .markdown-rendered h1 {
-    color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
+    color: var(--h1-text-color);
     padding-left: 0.3em;
 }
 
 .cm-header-2, .markdown-rendered h2 {
-    color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    color: var(--h2-text-color);
 }
 
 .cm-header-3, .markdown-rendered h3 {
-    color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    color: var(--h3-text-color)
 }
 
 .cm-header-4, .markdown-rendered h4 {
-    color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    color: var(--h4-text-color);
 }
 
 .cm-header-5, .markdown-rendered h5, .cm-header-6, .markdown-rendered h6 {
-    color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    color: var(--h5-text-color);
 }

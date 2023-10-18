@@ -40,3 +40,7 @@
     padding: 1em;
     border-bottom: 2px dashed var(--metadata-divider-color);
 }
+
+.mod-date {
+    color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+}

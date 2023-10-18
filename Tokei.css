@@ -1,10 +1,21 @@
+.theme-dark {
+    --tk-background: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7);
+}
+
+
+.theme-light {
+    --tk-background: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+}
+
+
+
 /* My Personal Font Preference */
 .clock-container {
     font-family: Quicksand;
     --tokei-main-text: var(--hsl-second-base);
     --tokei-secondary-text: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a));
     --tokei-background: var(--side-panels);
-    --tokei-main-180:hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --tokei-main-180:hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
     margin-top: 10px;
 }
 
@@ -27,12 +38,14 @@
 
 /* this snippet will apply a more compact style */
 .timezone-container {
-    gap: 10px;
+    gap: 2px;
     display: inline-flex;
     flex-wrap: wrap;
-    --gap: 9px;
+    --gap: 6px;
     margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
     width: calc(100% + var(--gap));
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .timezone-container > * {
@@ -42,7 +55,7 @@
 .timezone-pair {
     flex-direction: row;
     max-width: 27%;
-    background-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7);
+    background-color: var(--tk-background);
 }
 
 .timezone-name {
