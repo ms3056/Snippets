@@ -35,53 +35,11 @@ ol>li>ol>li>ol>li>ol>li::marker,
 }
 */
 
-.markdown-source-view.mod-cm6 input.task-list-item-checkbox {
-    border-width: 1px;
-    --checkbox-size: 1.5em;
-    border-radius: 50%;
-}
 
-input.task-list-item-checkbox:hover {
-    border-color: var(--hsl-second-base);
-}
 
-input.task-list-item-checkbox:checked {
-    box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
-    border-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
-    background-color: var(--hsl-second-base);
-    transition: box-shadow 0s;
-}
 
-input.task-list-item-checkbox:checked::after {
-    -webkit-mask-size: 50%;
-}
 
-body {
-    --checklist-done-decoration: unset;
-    --checklist-done-opacity: 0.4;
-}
 
-.task-list-item.is-checked,
-.HyperMD-list-line[data-task]:is([data-task="x"]) {
-    opacity: var(--checklist-done-opacity);
-}
 
-.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-task-line {
-    align-items: center;
-}
 
-.task-list-item,
-.HyperMD-list-line[data-task] {
-    align-content: middle !important;
-    vertical-align: center !important;
-}
 
-/* Meeting times for Daily Note */
-.task-list-item code,
-.HyperMD-list-line[data-task] .cm-inline-code.cm-list-1 {
-    border-radius: 5px;
-    font-size: 1.1em;
-    color: var(--icons);
-    background: var(--card-background-color);
-/*    border: 0.1em solid hsla(var(--shift-second-h-180), var(--sat-second-s-30), var(--hsl-second-l), 0.7);*/
-}

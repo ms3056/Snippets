@@ -17,10 +17,10 @@
     --interactive-accent: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--lighter-l-30), 1);
     --text-on-accent: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--darker-l-20), 1) !important;
     --borders: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--lighter-l-20), 1);
-    --icons: hsla(var(--shift-h-90), var(--sat-s-10), var(--hsl-accent-l), 1);
     --highlight-1:hsla(var(--shift-h-15), var(--sat-s-40), var(--darker-l-20), 1);
     --card-background-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.7), 80%, 1);
     --card-foreground-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.4), 90%, 1);
+    --icons: hsla(var(--shift-h-90), var(--sat-s-10), var(--hsl-accent-l), 1);
     --icon60:hsla(var(--shift-h-60), var(--hsl-accent-s), var(--hsl-accent-l), 1);
     --icon120:hsla(var(--shift-h-120), var(--hsl-accent-s), var(--hsl-accent-l), 1);
     --icon180:hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 1);/* Derived Colors */
@@ -37,7 +37,6 @@
     --interactive-accent: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--darker-l-30), 1);
     --text-on-accent: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-20), 1) !important;
     --borders: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--darker-l-20), 1);
-    --icons: hsla(var(--shift-h-90), var(--sat-s-10), var(--hsl-accent-l), 1);
     --highlight-1:hsla(var(--shift-h-15), var(--hsl-accent-s), var(--lighter-l-10), 0.7);
     --card-background-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.7), 20%, 1);
     --card-foreground-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.4), 13%, 1);    /* Derived Colors */

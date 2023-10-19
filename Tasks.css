@@ -1,0 +1,71 @@
+
+.markdown-source-view.mod-cm6 input.task-list-item-checkbox {
+    border-width: 1px;
+    --checkbox-size: 1.5em;
+    border-radius: 50%;
+}
+
+input.task-list-item-checkbox:hover {
+    border-color: var(--hsl-second-base);
+}
+
+input.task-list-item-checkbox:checked {
+    box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
+    border-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+    background-color: var(--hsl-second-base);
+    transition: box-shadow 0s;
+}
+
+input.task-list-item-checkbox:checked::after {
+    -webkit-mask-size: 50%;
+}
+
+.theme-light {
+        --task-text:  hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20),1);
+        --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+        --task-background: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
+}
+
+.theme-dark {
+        --task-text:  hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20),1);
+        --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+        --task-background: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
+}
+
+body {
+    --checklist-done-decoration: unset;
+    --checklist-done-opacity: 0.4;
+}
+
+.task-list-item.is-checked,
+.HyperMD-list-line[data-task]:is([data-task="x"]) {
+    opacity: var(--checklist-done-opacity);
+}
+
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-task-line {
+    align-items: center;
+}
+
+
+.task-list-item,
+.HyperMD-list-line[data-task] {
+    align-content: middle !important;
+    vertical-align: center !important;
+}
+
+.HyperMD-list-line.HyperMD-task-line {
+    text-align: center;
+}
+
+.task-list-label + .cm-widgetBuffer + .cm-list-1 {
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: var(--task-text);
+    background: var(--task-background);
+    margin-right: 0.2em;
+    border: 2px solid var(--task-border);
+}
+
+
+
+

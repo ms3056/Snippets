@@ -6,9 +6,11 @@
 /* Dark theme color variables */
 .theme-dark {
   --al-0: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.9);
-  --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
-  --al-2: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.05);
-  --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
+
+  --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
+  --al-2: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.15);
+  --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
+
   --al-4: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1.0);
   --al-5: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
   --al-6: rgba(0, 0, 0, 0.9);
@@ -17,9 +19,11 @@
 /* Light theme color variables */
 .theme-light {
   --al-0: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.4);
+
   --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
   --al-2: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.25);
   --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+
   --al-4: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1.0);
   --al-5: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
   --al-6: hsl(0, 0%, 56.251%);
@@ -73,15 +77,30 @@
   border-bottom-right-radius: 5px;
 }
 
+
+
 /* Background of active line */
 .cm-active.cm-line {
-  background: linear-gradient(90deg, var(--al-1), var(--al-2), var(--al-3));
+background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    transparent 5%, 
+    var(--al-1) 25%, 
+    var(--al-2) 50%, 
+    var(--al-3) 75%, 
+    transparent 95%, 
+    transparent 100%
+);
+
   filter: brightness(1.5);
   padding-top: unset !important;
   padding-bottom: unset !important;
   margin-top: unset !important;
   margin-bottom: unset !important;
+
 }
+
+
 
 .cm-line {
   padding-top: unset !important;
