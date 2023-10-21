@@ -7,6 +7,10 @@
     --radius-xl: 10px;    /* Widths */
 }
 
+body:is(.theme-dark, .theme-light) {
+    --text-normal: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 70%, 100%);
+}
+
 .theme-light {
 
     /* Colors for Light Theme */
@@ -38,8 +42,8 @@
     --text-on-accent: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-20), 1) !important;
     --borders: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--darker-l-20), 1);
     --highlight-1:hsla(var(--shift-h-15), var(--hsl-accent-s), var(--lighter-l-10), 0.7);
-    --card-background-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.7), 20%, 1);
-    --card-foreground-color: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.4), 13%, 1);    /* Derived Colors */
+    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 1);
+    --card-foreground-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 5%, 1);    /* Derived Colors */
     --tab-container-background: var(--card-background-color);
     --background-primary: var(--card-foreground-color);
     --background-secondary: var(--card-background-color);
@@ -49,6 +53,17 @@
     --icon180:hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 1);
 }
 
+/* Selects the element with class 'nav-folder-title-content' that is a direct child of an element with class 'nav-folder-title' and is also a direct child of an element with class 'mod-root' */
+.mod-root > .nav-folder-title > .nav-folder-title-content {
+
+    /* Your CSS rules here */
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-size: 2em;
+    font-family: "Yu Gothic" !important;
+    color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 100%);
+}
 
 /* Title */
 .view-header-title-parent {
@@ -63,7 +78,7 @@
 }
 
 /*An experimental snippet to extend the right side clickable area for lines just a bit 
-  so it's less painful to click text with a space at the end of a line:*/
+so it's less painful to click text with a space at the end of a line:*/
 .cm-line:not(:has(>br))::after {
     content: " ";/*     background: linear-gradient(#fff4, #fff8); */
     width: 0.5rem;
@@ -76,11 +91,16 @@
 
 /* From FireIsGood on Discord */
 .mod-left-split .mod-top .workspace-tab-header-container-inner {
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    width: 94%;*/
-/*    height: 100%;*/
-/*    border-top: 3px solid var(--highlight-1);*/
+
+    /*    display: flex;*/
+
+    /*    justify-content: space-between;*/
+
+    /*    width: 94%;*/
+
+    /*    height: 100%;*/
+
+    /*    border-top: 3px solid var(--highlight-1);*/
     margin-left: 10px;
     padding-top: 6px;
     background-color: var(--card-foreground-color);
@@ -94,7 +114,6 @@
     width: 94%;
     height: 100%;
 }
-
 
 .mod-left-split .mod-top .workspace-tab-header-container {
     justify-content: center;
@@ -116,14 +135,16 @@
     text-shadow: 2px 2px 2px black;
 }
 
-.side-dock-actions {
-    
+.side-dock-actions svg {
+
+    /*    --icon-size: 20px !important;*/
 }
 
 /* Icons */
 .side-dock-actions,
 .side-dock-settings {
-/*    border-left: 3px solid var(--highlight-1) !important;*/
+
+    /*    border-left: 3px solid var(--highlight-1) !important;*/
     --icon-color: var(--icons);
     background-color: var(--card-foreground-color);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
@@ -140,8 +161,8 @@
     color: var(--highlight-1) !important;
 }
 
-
 /* Left side-bar icons */
+
 /* Select elements at positions 0, 4, 8, 12, etc. */
 .side-dock-ribbon-action:nth-child(4n) svg {
     color: var(--icon180);
@@ -223,7 +244,7 @@
 }
 
 .workspace .mod-root .workspace-tab-header {
-    width: auto;;
+    width: auto;
     flex: none;
     flex-shrink: 1;
     max-width: 100%;

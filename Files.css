@@ -47,7 +47,7 @@
 
 /* The very top level items */
 .workspace-leaf-content[data-type="file-explorer"] .tree-item-self.nav-folder-title[data-path]:not([data-path*="/"]) {
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .1) !important;
+/*    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .1) !important;*/
 }
 
 /* Bottom level items */
@@ -66,77 +66,77 @@
 
 /* Children */
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+2) > .nav-folder-title {
-  background-color: transparent;
+  background-color: var(--child1-bg-color);
   --folder-color: var(--child1-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+3) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child2-bg-color);
   --folder-color:var(--child2-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+4) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child3-bg-color);
   --folder-color:var(--child3-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+5) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child4-bg-color);
   --folder-color:var(--child4-color);  
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+6) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child5-bg-color);
   --folder-color:var(--child5-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+7) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child6-bg-color);
   --folder-color: var(--child6-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+8) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child7-bg-color);
   --folder-color: var(--child7-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+9) > .nav-folder-title{
-    background-color: transparent;
+    background-color: var(--child8-bg-color);
   --folder-color: var(--child8-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+10) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child9-bg-color);
   --folder-color: var(--child9-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+11) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child10-bg-color);
   --folder-color: var(--child10-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+12) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child11-bg-color);
   --folder-color: var(--child11-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+13) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child12-bg-color);
   --folder-color: var(--child12-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+14) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child13-bg-color);
   --folder-color: var(--child13-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+15) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child14-bg-color);
   --folder-color: var(--child14-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+16) > .nav-folder-title {
-    background-color: transparent;
+    background-color: var(--child15-bg-color);
   --folder-color: var(--child15-color); 
 }
 

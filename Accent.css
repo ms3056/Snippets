@@ -204,4 +204,5 @@ settings:
     --darker-tertiary-l-30:clamp(0%, calc(var(--hsl-tertiary-l) - 30%), 100%);
     --darker-tertiary-l-40:clamp(0%, calc(var(--hsl-tertiary-l) - 40%), 100%);
     --darker-tertiary-l-50:clamp(0%, calc(var(--hsl-tertiary-l) - 50%), 100%);
+    --color-accent: var(--hsl-second-base);
 }

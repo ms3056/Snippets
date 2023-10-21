@@ -3,13 +3,13 @@ body {
   --border-color: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
   --table-radius: 10px;
   --cell-border-color: none;
-  --odd-row-bg: hsl(var(--shift-tertiary-h-5), var(--hsl-tertiary-s), var(--darker-tertiary-l-10));
+  --odd-row-bg: hsl(var(--shift-tertiary-h-5), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
   --odd-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
   --even-row-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-30));
   --even-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20));
   --hover-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-10));
   --hover-text: white;
-  --header-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20));
+  --header-bg: hsla(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20), 80%);
   --header-text: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
   --text-shadow: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
 }
@@ -101,4 +101,8 @@ tbody tr:last-child td:first-child {
 
 tbody tr:last-child td:last-child {
   border-bottom-right-radius: calc(var(--table-radius) - 3px) !important;
+}
+
+table {
+    margin: 0 auto;
 }

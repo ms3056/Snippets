@@ -18,6 +18,16 @@
 
 - I have also had a lot of help from the Discord community - FireIsGood, sailKite, Daniel NL and others. If you feel I have left you out of the attribution let me know and I will add you. I have not purposly included anyone's code, but if you believe I have, please let me know and I will either remove it or attribute you immedaitely. 
 
+### Weather Icons
+
+- The icons for the Tenki app in the snippet `Tenki.css` come from the following repository:
+
+> Meteocons
+> Source: https://github.com/basmilius/weather-icons
+> MIT License - (c) 2020-2022 Bas Milius
+
+- Not all of the icons have been replaced - I will be replacing them as I see new weather conditions pop up. 
+
 ## Usage
 
 - Select the `Default Theme`

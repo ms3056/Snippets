@@ -71,6 +71,7 @@
 .forecast-tooltip {
   color: var(--hsl-second-base);
   background-color: black;
+  font-size: 1em;
 }
 
 
