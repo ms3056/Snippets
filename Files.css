@@ -31,7 +31,7 @@
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title,
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
-  font-size: 1em;
+  font-size: 1.1em;
   text-shadow: 2px 2px 4px #000000;
   font-family: "Rec Mono Duotone", monospace !important;
   font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
@@ -57,86 +57,87 @@
 
 /* Hover */
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title:hover, .nav-file-title:hover {
-  filter: hue-rotate(180deg);
+/*  filter: hue-rotate(180deg);*/
 /*  border: 2px solid var(--hsl-second-base) !important;*/
-  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;
-  color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+/*  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;*/
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;
   border-radius: 5px;
 }
 
 /* Children */
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+2) > .nav-folder-title {
-  background-color: var(--child1-bg-color);
+/*  background-color: var(--child1-bg-color);*/
   --folder-color: var(--child1-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+3) > .nav-folder-title{
-    background-color: var(--child2-bg-color);
+/*    background-color: var(--child2-bg-color);*/
   --folder-color:var(--child2-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+4) > .nav-folder-title{
-    background-color: var(--child3-bg-color);
+/*    background-color: var(--child3-bg-color);*/
   --folder-color:var(--child3-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+5) > .nav-folder-title{
-    background-color: var(--child4-bg-color);
+/*    background-color: var(--child4-bg-color);*/
   --folder-color:var(--child4-color);  
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+6) > .nav-folder-title{
-    background-color: var(--child5-bg-color);
+/*    background-color: var(--child5-bg-color);*/
   --folder-color:var(--child5-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+7) > .nav-folder-title{
-    background-color: var(--child6-bg-color);
+/*    background-color: var(--child6-bg-color);*/
   --folder-color: var(--child6-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+8) > .nav-folder-title{
-    background-color: var(--child7-bg-color);
+/*    background-color: var(--child7-bg-color);*/
   --folder-color: var(--child7-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+9) > .nav-folder-title{
-    background-color: var(--child8-bg-color);
+/*    background-color: var(--child8-bg-color);*/
   --folder-color: var(--child8-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+10) > .nav-folder-title {
-    background-color: var(--child9-bg-color);
+/*    background-color: var(--child9-bg-color);*/
   --folder-color: var(--child9-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+11) > .nav-folder-title {
-    background-color: var(--child10-bg-color);
+/*    background-color: var(--child10-bg-color);*/
   --folder-color: var(--child10-color);
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+12) > .nav-folder-title {
-    background-color: var(--child11-bg-color);
+/*    background-color: var(--child11-bg-color);*/
   --folder-color: var(--child11-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+13) > .nav-folder-title {
-    background-color: var(--child12-bg-color);
+/*    background-color: var(--child12-bg-color);*/
   --folder-color: var(--child12-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+14) > .nav-folder-title {
-    background-color: var(--child13-bg-color);
+/*    background-color: var(--child13-bg-color);*/
   --folder-color: var(--child13-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+15) > .nav-folder-title {
-    background-color: var(--child14-bg-color);
+/*    background-color: var(--child14-bg-color);*/
   --folder-color: var(--child14-color); 
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+16) > .nav-folder-title {
-    background-color: var(--child15-bg-color);
+/*    background-color: var(--child15-bg-color);*/
   --folder-color: var(--child15-color); 
 }
 

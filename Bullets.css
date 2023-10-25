@@ -1,6 +1,7 @@
 ul>li> .list-bullet::after,
 .cm-list-1 .list-bullet::after {
     background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+
 }
 
 ul>li> ul>li> .list-bullet::after,

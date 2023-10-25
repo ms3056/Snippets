@@ -1,7 +1,19 @@
 /* Dataview Lists and Tables */
-.block-language-dataview li {
-/*    font-size: 1em !important;*/
+/*.block-language-dataview li {
+    border-radius: 10px;
+    font-size: 1em !important;
+    background-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-30), 0.7);
+    padding: 10px;
+    text-align: center;
+}*/
+
+.dataview.list-view-ul li {
+    border-radius: 10px;
+    font-size: 1em !important;
+    background-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-30), 0.7);
 /*    margin-right: 20px;*/
+/*    padding: 10px;*/
+    text-align: center;
 }
 
 /* Style for the parent element */
@@ -13,8 +25,8 @@
     font-family: "Rec Mono Duotone", monospace !important;
     font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
     width: 90%;
     margin: 0 auto;
     min-height: 3.6em;
@@ -40,7 +52,7 @@
     content: "";
     position: absolute;
     left: 2%; 
-    top: calc(18% + 3.4em);  
+    top: calc(50% + 16px);  
     width: 50px;  
     border-bottom: 3px dotted hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
 }

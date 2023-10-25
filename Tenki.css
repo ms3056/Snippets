@@ -74,7 +74,9 @@
   font-size: 1em;
 }
 
-
+.last-updated {
+  font-size: 0.9em;
+}
 
 
 /* Replacement of icons */

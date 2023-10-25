@@ -125,6 +125,7 @@
 
 /* Specific Styles for Today Callout */
 .callout[data-callout="today"] {
+
     --callout-icon: calendar;
     background: linear-gradient(90deg, hsla(var(--callout-color), var(--gradient-start)) 0%, hsla(var(--callout-color), var(--gradient-end)) 100%);
 }
@@ -140,12 +141,36 @@
     color: var(--title-color);
 }
 
+/* Styles for the callout-content when the data-callout attribute is "today" */
 .callout[data-callout="today"] .callout-content {
-    background-color: var(--background-primary-alt);
+    background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
     font-size: 1.2em;
-
+    position: relative;  /* Relative positioning for pseudo-element */
+    padding-left: 38px !important;  /* Padding to ensure text does not overlap with "X" */
 }
+
+/* Remove default margin from the <p> to align it properly with the "X" */
+.callout[data-callout="today"] .callout-content p {
+    margin-top: 0 !important;
+/*    margin-bottom: 0 !important;*/
+}
+
+/* Styles for the 'X' appearing before the content */
+.callout[data-callout="today"] .callout-content::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 26px 26px; 
+    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.9);
+    position: absolute; 
+    left: 8px;  
+    top: 12px;    
+    transform: scaleX(-1) scaleY(-1); 
+}
+
 
 /* Specific Styles for Preamble Callout */
 .callout[data-callout="preamble"] {
@@ -164,9 +189,19 @@
 }
 
 .callout[data-callout="preamble"] .callout-content {
-    background-color: var(--background-primary-alt);
+    background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
     font-size: 1.2em;
+}
+
+.callout[data-callout="preamble"] .callout-content:has(>ul>li) {
+    line-height: 1em !important;
+    padding: unset;
+    color: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+}
+
+.callout[data-callout="preamble"] .callout-content >ul>li::marker {
+    color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
 }
 
 /* Common styles for data-callout-metadata=base */
@@ -253,6 +288,7 @@
     border-radius: 0.5em;
     margin: 10px;
     padding: 14px;
+    padding-bottom: unset;
     width: calc(100% - 20px);
     background-color: var(--callout-background);
     flex-grow: 1;

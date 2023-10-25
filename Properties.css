@@ -30,7 +30,7 @@
 .metadata-properties::before {
     display: absolute;
     content: "";
-        position: absolute;
+    position: absolute;
     left: 50%;
     top: 1px; 
     font-family: "Recursive Sans Casual Static", serif !important;
@@ -43,4 +43,12 @@
 
 .mod-date {
     color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+}
+
+.metadata-property-key-input {
+    line-height: 2.7em;
+}
+
+body {
+    --metadata-label-width: 10em;
 }

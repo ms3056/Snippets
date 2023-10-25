@@ -42,8 +42,9 @@ body:is(.theme-dark, .theme-light) {
     --text-on-accent: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-20), 1) !important;
     --borders: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--darker-l-20), 1);
     --highlight-1:hsla(var(--shift-h-15), var(--hsl-accent-s), var(--lighter-l-10), 0.7);
-    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 1);
-    --card-foreground-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 5%, 1);    /* Derived Colors */
+    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 14%, 1);
+    --card-foreground-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 8%, 1);    /* Derived Colors */
+    --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 1);;
     --tab-container-background: var(--card-background-color);
     --background-primary: var(--card-foreground-color);
     --background-secondary: var(--card-background-color);
@@ -51,6 +52,7 @@ body:is(.theme-dark, .theme-light) {
     --icon60:hsla(var(--shift-h-60), var(--hsl-accent-s), var(--hsl-accent-l), 1);
     --icon120:hsla(var(--shift-h-120), var(--hsl-accent-s), var(--hsl-accent-l), 1);
     --icon180:hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 1);
+    --card-shadow: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), var(--hsl-accent-secondary-a));
 }
 
 /* Selects the element with class 'nav-folder-title-content' that is a direct child of an element with class 'nav-folder-title' and is also a direct child of an element with class 'mod-root' */
@@ -60,7 +62,7 @@ body:is(.theme-dark, .theme-light) {
     justify-content: center;
     width: 100%;
     display: flex;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: "Yu Gothic" !important;
     color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 100%);
 }
@@ -91,21 +93,14 @@ so it's less painful to click text with a space at the end of a line:*/
 
 /* From FireIsGood on Discord */
 .mod-left-split .mod-top .workspace-tab-header-container-inner {
-
-    /*    display: flex;*/
-
-    /*    justify-content: space-between;*/
-
-    /*    width: 94%;*/
-
-    /*    height: 100%;*/
-
-    /*    border-top: 3px solid var(--highlight-1);*/
     margin-left: 10px;
     padding-top: 6px;
     background-color: var(--card-foreground-color);
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+/*    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;*/
+/*    box-shadow: 0px 4px 12px hsla(var(--card-shadow), 0.1), 0px 2px 4px hsla(var(--card-shadow), 0.08) !important;*/
+/*    box-shadow: 0px 10px 30px hsla(var(--card-shadow), 0.5), 0px 5px 15px hsla(var(--card-shadow), 0.5) !important;*/
+/*    filter: drop-shadow(3px 3px 4px var(--card-shadow));*/
 }
 
 .mod-left-split .workspace-tab-header-container-inner {
@@ -147,7 +142,11 @@ so it's less painful to click text with a space at the end of a line:*/
     /*    border-left: 3px solid var(--highlight-1) !important;*/
     --icon-color: var(--icons);
     background-color: var(--card-foreground-color);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+/*    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;*/
+/*    box-shadow: 0px 4px 12px hsla(var(--card-shadow), 0.1), 0px 2px 4px hsla(var(--card-shadow), 0.08) !important;*/
+/*    box-shadow: 0px 10px 30px hsla(var(--card-shadow), 0.5), 0px 5px 15px hsla(var(--card-shadow), 0.5) !important;*/
+/*    filter: drop-shadow(3px 3px 4px var(--card-shadow));*/
+
 }
 
 .side-dock-settings {
@@ -397,16 +396,23 @@ body .mod-right-split .workspace-tab-container {
 }
 
 /* Style for the workspace-leaf-content class */
-body .workspace-split .workspace-leaf-content {
+body .workspace-split .workspace-leaf-content,
+.nav-buttons-container {
     border-radius: var(--hm-card-radius, var(--radius-xl));
-    background-color: var(--card-foreground-color);/*    border: 1px solid var(--tab-outline-color);*/
+    background-color: var(--card-foreground-color);
     margin-bottom: var(--hm-card-layout-padding, 10px);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;
+/*    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08) !important;*/
+/*    box-shadow: 0px 4px 12px hsla(var(--card-shadow), 0.1), 0px 2px 4px hsla(var(--card-shadow), 0.08) !important;*/
+/*    box-shadow: 0px 4px 12px var(--card-shadow) !important;*/
+/*    filter: drop-shadow(13px 3px 4px var(--card-shadow));*/
+
 }
 
 body .workspace-split .workspace-leaf-content,
 body .side-dock-actions {
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+/*    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);*/
+/*    box-shadow: 0px 3px 4px 0px hsla(var(--card-shadow), 0.05);*/
+
 }
 
 body .workspace-split .mod-stacked .workspace-leaf-content {
@@ -445,4 +451,37 @@ body .workspace-drop-overlay:before {
     width: calc(100% - 6px - var(--hm-card-layout-padding, 0) * 2);
     height: calc(100% - 6px - var(--hm-card-layout-padding, 0) * 2);
     margin: auto;
+}
+
+.excalidraw-svg {
+    display: flex;
+    justify-content: center;
+}
+
+.excalidraw-embedded-img {
+    border-radius: 10px;
+    border: 3px solid var(--borders) !important;
+/*    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08);*/
+/*    box-shadow: 0px 4px 12px hsla(var(--card-shadow), 0.1), 0px 2px 4px hsla(var(--card-shadow), 0.08) !important;*/
+/*    box-shadow: 0px 10px 30px hsla(var(--card-shadow), 0.5), 0px 5px 15px hsla(var(--card-shadow), 0.5) !important;*/
+    right: 50%;
+}
+
+.markdown-preview-view mark,
+.cm-s-obsidian span.cm-highlight,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian .cm-highlight+span.cm-formatting-highligh {
+    border-radius: 10px;
+    border: 2px solid var(--highlight-border-color);
+    background-color: var(--highlight-color);
+    color: var(--highlight-text-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.nav-folder-title[data-count]::after {
+/*    font-size: 0.9em;
+    filter: brightness(1.5);*/
 }
