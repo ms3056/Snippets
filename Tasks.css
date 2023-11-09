@@ -1,23 +1,24 @@
 .theme-light {
-        --task-text:  hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20),1);
-        --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
-        --task-background: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
+    --task-text: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20), 1);
+    --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    --task-background: hsla(var(--shift-second-h-45), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
 }
 
 .theme-dark {
-        --task-text:  hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20),1);
-        --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
-        --task-background: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
+    --task-text: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--lighter-second-l-20), 1);
+    --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    --task-background: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
 }
 
 .markdown-source-view.mod-cm6 input.task-list-item-checkbox {
-    border-width: 1px;
-    --checkbox-size: 1.5em;
+    border-width: 2px;
+    --checkbox-size: 1.6em;
     border-radius: 50%;
 }
 
 input.task-list-item-checkbox:hover {
     border-color: var(--hsl-second-base);
+    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.5);
 }
 
 input.task-list-item-checkbox:checked {
@@ -29,6 +30,7 @@ input.task-list-item-checkbox:checked {
 
 input.task-list-item-checkbox:checked::after {
     -webkit-mask-size: 50%;
+    transform: translate(-0.06em, -0.1em) !important;
 }
 
 body {
@@ -36,22 +38,93 @@ body {
     --checklist-done-opacity: 0.4;
 }
 
+.HyperMD-task-line {
+    line-height: 1.6em !important;
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+
 .task-list-item.is-checked,
 .HyperMD-list-line[data-task]:is([data-task="x"]) {
     opacity: var(--checklist-done-opacity);
 }
 
+/*.HyperMD-task-line .cm-underline {
+    font-size: 1.1em;
+    text-decoration: none !important;
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    text-shadow: 2px 2px 4px black;
+    border-top: 2px solid hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1);
+}
+
+.HyperMD-task-line .cm-underline::before {
+    content: "";
+    background-color: hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v7'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M4 18v-1a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    padding-right: 1.3em;
+}*/
+
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line .cm-link .cm-underline {
+    font-size: 1.1em; 
+    text-decoration: none !important; 
+    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    text-shadow: 2px 2px 4px black; 
+    position: relative; 
+    padding-left: 30px; 
+}
+
+/* Pseudo-element for the SVG icon */
+.HyperMD-task-line .cm-underline::before {
+    content: ""; /* Necessary for pseudo-elements */
+    position: absolute; /* Position it absolutely within the .cm-underline */
+    left: 0; /* Align it to the left of the .cm-underline */
+    top: 0; /* Align it to the top of the .cm-underline */
+    width: 34px; /* Width of the SVG icon */
+    height: 34px; /* Height of the SVG icon */
+    background-color: transparent; /* Transparent background for the SVG icon */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v7'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M4 18v-1a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-size: cover; /* Ensure the SVG covers the area */
+    background-color: hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1); /* Color for the SVG icon */
+}
+
+/* Pseudo-element for the top, right, and bottom borders */
+.HyperMD-task-line .cm-underline::after {
+    content: ""; /* Necessary for pseudo-elements */
+    position: absolute; /* Position it absolutely within the .cm-underline */
+    top: 0; /* Align it to the top of the .cm-underline */
+    left: 24px; /* Start the border at the left edge of the text */
+    right: -10px; /* Extend the border to the right of the text by 10px */
+    bottom: 0; /* Align it to the bottom of the .cm-underline */
+    border: 2px solid hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1); /* Apply borders */
+    border-left: none; /* Remove the left border */
+    border-top-right-radius: 10px; /* Rounded top right corner */
+    border-bottom-right-radius: 10px; /* Rounded bottom right corner */
+    box-sizing: border-box; /* Ensures borders are included in the width/height */
+}
 
 /* Highlight the time */
 .cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1 {
     font-family: "Rec Mono Duotone";
+    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    text-shadow: 2px 2px 4px black;
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
     color: var(--task-text);
     background: var(--task-background);
-    margin-right: 0.6em;
-    border: 2px solid var(--task-border);
-    padding-top: 0.1em;
+    margin-right: 0.5em;
 }
+
+.cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::before,
+.cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::after {
+    content: "";
+    margin-right: -0.3em;
+}
+
 
 
