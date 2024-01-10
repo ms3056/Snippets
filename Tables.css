@@ -90,7 +90,7 @@ tbody tr:hover {
 /*  background-color: var(--hover-bg) !important;*/
 /*  color: var(--hover-text) !important;*/
   font-weight: bold;
-  text-shadow: 2px 2px 2px var(--text-shadow);
+/*  text-shadow: 2px 2px 2px var(--text-shadow);*/
   filter: hue-rotate(45deg);
 }
 

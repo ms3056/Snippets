@@ -22,15 +22,23 @@
         var(--hr-line-color2) calc(60% + var(--hr-line-offset)), 
         var(--hr-line-color3) calc(70% + var(--hr-line-offset)),
         transparent);
+
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+    line-height: 1.9em;
 }
 
 .markdown-source-view.mod-cm6 hr::after,
 .markdown-preview-view hr::after {
-    content: "⚡";
+    content: "";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-zap'%3E%3Cpolygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    background-color: var(--hsl-second-base);
     font-size: 1.3em;
-    color: transparent;
-    text-shadow: 0 0 0 var(--hr-text-color);
-    filter: hue-rotate(45deg);
+    filter: hue-rotate(90deg);
     position: absolute;
-    translate: 0 calc(var(--hr-thickness) / -2);
+    transform: translate(0, calc(var(--hr-thickness) / -2));
 }

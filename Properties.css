@@ -2,12 +2,15 @@
     /* Additional metadata properties here */
     font-family: "Rec Mono Duotone", monospace !important;
     font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+
 }
 
 .metadata-properties {
     margin-top: 2em;
     --metadata-divider-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.4);
     --metadata-label-text-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --metadata-label-font-size: 1em;
+    --metadata-input-font-size: 1.2em;
 }
 
 .metadata-input-longtext:empty:before,
@@ -50,5 +53,5 @@
 }
 
 body {
-    --metadata-label-width: 10em;
+    --metadata-label-width: 11em;
 }

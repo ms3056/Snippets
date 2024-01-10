@@ -16,13 +16,16 @@ em,
     font-family: "Recursive Sans Casual Static", serif !important;
     font-feature-settings: "zero", "liga" 1, "dlig" 1, "ss12" 1, "ss01" 0, "pnum" 1, "ss04" 1, "ss03" 1 !important;
     font-style: italic;
-    color: hsla(var(--shift-h-15), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    font-size: 1.1em;
+    color: hsla(var(--shift-h-45), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+    text-shadow: 2px 2px 2px black;
 }
 
 strong,
 .cm-strong {
     font-size: 1.1em;
-    color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    color: hsla(var(--shift-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
+    text-shadow: 2px 2px 2px black;
 }
 
 /* --- change font in Live Preview editing --- */
@@ -39,9 +42,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .HyperMD-codeblock
 {
     line-height: 1.4em !important;
-    border-right: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
-    border-left: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
-
+    border-right: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;
+    border-left: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;
 }
 
 .HyperMD-codeblock-bg
@@ -52,7 +54,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
 .HyperMD-codeblock-begin
 {
-    border-top: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+    border-top: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
 }
@@ -61,7 +63,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 {
     border-bottom-left-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
-    border-bottom: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;;
+    border-bottom: 2px solid hsla(var(--hsl-accent-h),var(--hsl-accent-s),var(--hsl-accent-l),1) !important;
 }
 
 .code-block-flair {

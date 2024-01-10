@@ -6,7 +6,7 @@
 /* > [!today    | base           | collapsed | blue, orange, etc] */
 
 /* Edit Block Button */
-.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button {
+.markdown-source-view.mod-cm6 .cm-callout>.edit-block-button {
     opacity: 0.6;
     background-color: var(--background-primary);
     color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-10), 1);
@@ -24,26 +24,30 @@
     justify-content: center;
 }
 
-.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button:hover {
-    color: hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--hsl-second-l), 1);
-    background-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--darker-second-l-30), 1);
-    border: 2px solid hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--hsl-second-l), 1);
+.markdown-source-view.mod-cm6 .cm-callout>.edit-block-button:hover {
+    color: hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--lighter-second-l-20), 1);
+    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-30), 1);
+    border: 2px solid hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--lighter-second-l-20), 1);
     opacity: 1;
 }
 
 .theme-dark,
 .theme-light {
     --callout-background: var(--background-primary);
+    --callout-bg-content: var(--background-primary);
+    --callout-content-background: var(--background-primary);
 }
 
 .theme-dark {
-    --gradient-start: 0.20;
-    --gradient-end: 0.9;
+    --gradient-start: 0.15;
+    --gradient-end: 0.6;
+    --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 1);
 }
 
 .theme-light {
     --gradient-start: 0.35;
     --gradient-end: 0.6;
+    --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 0.3);
 }
 
 /* These commands affect ALL callouts - custom or not  */
@@ -58,7 +62,7 @@
     align-items: center !important;
     justify-content: center !important;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-shadow: 2px 2px 2px black;
     background-color: unset;
     color: var(--hsl-second-base);
@@ -80,10 +84,10 @@
     transition: 200ms !important;
 }
 
-.callout-content,
+/* .callout-content,
 :is(h1, h2, h3, h4, h5, h6) {
 
-}
+} */
 
 .callout:hover {
     border: 3px solid hsl(var(--callout-color)) !important;
@@ -93,6 +97,16 @@
 /*              */
 /* Base Styling */
 /*              */
+
+/* Targeting the div with class 'block-language-dataviewjs' */
+.callout[data-callout="today"] .callout-content .block-language-dataviewjs span {
+    background-color: hsl(var(--callout-color));
+    float: right;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+    color: white;
+}
 
 /* Common Styles for Today & Preamble Callout */
 .callout[data-callout="today"] .callout-fold,
@@ -125,17 +139,16 @@
 
 /* Specific Styles for Today Callout */
 .callout[data-callout="today"] {
-
     --callout-icon: calendar;
     background: linear-gradient(90deg, hsla(var(--callout-color), var(--gradient-start)) 0%, hsla(var(--callout-color), var(--gradient-end)) 100%);
 }
 
-.callout[data-callout="today"] .svg-icon.lucide-calendar,
+/* .callout[data-callout="today"] .svg-icon.lucide-calendar,
 .callout[data-callout="today"] .svg-icon.lucide-chevron-down,
 .callout[data-callout="today"] .callout-title-inner {
 
-    /*  color: hsl(var(--callout-color));*/
-}
+   
+} */
 
 .callout[data-callout="today"] .callout-title-inner {
     color: var(--title-color);
@@ -145,30 +158,37 @@
 .callout[data-callout="today"] .callout-content {
     background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
-    font-size: 1.2em;
-    position: relative;  /* Relative positioning for pseudo-element */
-    padding-left: 38px !important;  /* Padding to ensure text does not overlap with "X" */
+    font-size: 1.1em;
+    position: relative;
+    /* Relative positioning for pseudo-element */
+    padding-left: 40px !important;
+    /* Padding to ensure text does not overlap with "X" */
 }
 
 /* Remove default margin from the <p> to align it properly with the "X" */
 .callout[data-callout="today"] .callout-content p {
     margin-top: 0 !important;
-/*    margin-bottom: 0 !important;*/
+    /*    filter: hue-rotate(180deg);*/
+    font-weight: normal;
+    /*    margin-bottom: 0 !important;*/
 }
 
 /* Styles for the 'X' appearing before the content */
 .callout[data-callout="today"] .callout-content::before {
     content: "";
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 26px 26px; 
+    -webkit-mask-size: 24px 24px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-size: 24px 24px;
     background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.9);
-    position: absolute; 
-    left: 8px;  
-    top: 12px;    
-    transform: scaleX(-1) scaleY(-1); 
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    transform: scaleX(-1) scaleY(-1);
 }
 
 
@@ -189,28 +209,42 @@
 }
 
 .callout[data-callout="preamble"] .callout-content {
+    font-family: Quicksand;
     background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
-    font-size: 1.2em;
+    padding-left: 0.4em !important;
+    font-size: 0.9em;
+}
+
+.callout[data-callout="preamble"] .callout-content>blockquote {
+    margin-left: 1em;
+    border-left: 4px solid hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+    border-radius: 10px;
+
+}
+
+.callout[data-callout="preamble"] .callout-content:has(>h2) {
+    --h2-text-color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
 }
 
 .callout[data-callout="preamble"] .callout-content:has(>ul>li) {
     line-height: 1em !important;
     padding: unset;
-    color: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    color: hsla(var(--shift-second-h-15), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
 }
 
-.callout[data-callout="preamble"] .callout-content >ul>li::marker {
+.callout[data-callout="preamble"] .callout-content>ul>li::marker {
     color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
 }
 
 /* Common styles for data-callout-metadata=base */
 .callout[data-callout-metadata*=normal] {
     display: flex;
-    flex-direction: column;/*    border-radius: 10px;*/
+    flex-direction: column;
+    /*    border-radius: 10px;*/
     justify-content: flex-start;
     align-items: flex-start;
-    background-color:  hsla(var(--callout-color), 0.2);
+    background-color: hsla(var(--callout-color), 0.2);
 
 }
 
@@ -243,7 +277,7 @@
 .callout[data-callout-metadata*=normal] .callout-content {
     border-radius: 0.5em;
     margin: 10px;
-/*    padding: 14px;*/
+    /*    padding: 14px;*/
     width: calc(100% - 20px);
     background-color: var(--callout-background);
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
@@ -254,7 +288,8 @@
 /* Common styles for data-callout-metadata=base */
 .callout[data-callout-metadata*=base] {
     display: flex;
-    flex-direction: column;/*    border-radius: 10px;*/
+    flex-direction: column;
+    /*    border-radius: 10px;*/
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -305,7 +340,7 @@
     --icon-size: 1.4em !important;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-title {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-title {
     --icon-size: 1.2em;
     --callout-line-height: 1.4em;
     line-height: var(--callout-line-height);
@@ -315,33 +350,33 @@
     padding: 0px;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-title > * {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-title>* {
     transform: scale(-1);
     align-self: flex-start;
     writing-mode: vertical-rl;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-title > .callout-icon {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-title>.callout-icon {
     rotate: 90deg;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-title > .callout-title-inner {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-title>.callout-title-inner {
     flex: 1 0 auto;
     contain: inline-size;
     text-align: center;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-title > .callout-fold,
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-content {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-title>.callout-fold,
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-content {
     padding: 0px 20px;
 }
 
-.callout[data-callout-metadata*=ninety]:not(.is-collapsed) > .callout-content {
+.callout[data-callout-metadata*=ninety]:not(.is-collapsed)>.callout-content {
     width: 100%;
     border-radius: 0.5em;
     margin: 0px 0px 0px 10px;
     background-color: var(--callout-background);
-        min-height: 9em !important;
+    min-height: 9em !important;
 }
 
 /* Setting vert-lines values */
@@ -377,7 +412,7 @@
     height: 4em;
 }
 
-.callout.is-collapsible.is-collapsed[data-callout-metadata*=collapsed] > .callout-title {
+.callout.is-collapsible.is-collapsed[data-callout-metadata*=collapsed]>.callout-title {
     --icon-size: 1.2em;
     font-size: 1.3em !important;
 }
@@ -404,65 +439,76 @@
 /* Custom Color List */
 .callout[data-callout-metadata*="hsl-accent"] {
     --callout-color: var(--hsl-second);
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.8);
 }
 
 .callout[data-callout-metadata*="orange"] {
     --callout-color: 48, 100%, 70%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(48, 100%, 70%, 0.8);
 }
 
 .callout[data-callout-metadata*="red"] {
     --callout-color: 329, 17%, 62%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(329, 17%, 62%, 0.8);
 }
 
 .callout[data-callout-metadata*="green"] {
     --callout-color: 101, 13%, 61%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(101, 13%, 61%, 0.8);
 }
 
 .callout[data-callout-metadata*="gray"] {
     --callout-color: 217, 11%, 67%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(217, 11%, 67%, 0.8);
 }
 
 .callout[data-callout-metadata*="blue"] {
-    --callout-color: 203, 17%, 76%;
-    --title-color: var(--hsl-second-base);
+    --callout-color: 203, 41%, 63%;
+    --title-color: hsla(203, 41%, 63%, 0.8);
 }
 
 .callout[data-callout-metadata*="lilac"] {
     --callout-color: 260, 83%, 63%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(260, 83%, 63%, 0.8);
 }
 
 .callout[data-callout-metadata*="gold"] {
     --callout-color: 46, 100%, 41%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(46, 100%, 41%, 0.8);
 }
 
 .callout[data-callout-metadata*="coquelicot"] {
- /* color: hsl(13, 100%, 50%);    */
     --callout-color: 13, 100%, 50%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(13, 100%, 50%, 0.8);
 }
 
 .callout[data-callout-metadata*="maize"] {
-     /* color: hsl(59, 82%, 69%);    */
     --callout-color: 59, 82%, 69%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(59, 82%, 69%, 0.8);
 }
 
 .callout[data-callout-metadata*="moonstone"] {
-     /* color: hsl(192, 43%, 50%);    */
-    --callout-color: 192, 43%, 50%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --callout-color: 192, 73%, 50%;
+    --title-color: hsla(192, 73%, 50%, 0.8);
 }
 
 .callout[data-callout-metadata*="nonphotoblue"] {
-     /* color: hsl(186, 43%, 67%);    */
     --callout-color: 186, 43%, 67%;
-    --title-color: hsla(var(--shift-second-h-180), var(--sat-second-s-20), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    --title-color: hsla(186, 43%, 67%, 0.8);
+}
+
+.callout[data-callout-metadata*="linen"] {
+    --callout-color: 331, 54%, 88%;
+    --title-color: hsla(331, 54%, 88%, 0.8);
+}
+
+.callout[data-callout-metadata*="indianred"] {
+    --callout-color: 344, 46%, 53%;
+    --title-color: hsla(344, 46%, 53%, 0.8);
+}
+
+.callout[data-callout-metadata*="tonypink"] {
+    --callout-color: 24, 61%, 69%;
+    --title-color: hsla(24, 61%, 69%, 0.8);
 }
 

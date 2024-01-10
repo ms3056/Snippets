@@ -15,7 +15,7 @@
     --tokei-main-text: var(--hsl-second-base);
     --tokei-secondary-text: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a));
     --tokei-background: var(--side-panels);
-    --tokei-main-180:hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    --tokei-main-180:hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-20), 1);
     margin-top: 10px;
 }
 

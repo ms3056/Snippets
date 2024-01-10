@@ -51,7 +51,6 @@
 /* From FireIsGood on Discord */
 .cm-header, :is(h1, h2, h3, h4, h5, h6) {
   text-shadow: 2px 2px 2px var(--header-shadow);
-
 }
 
 .HyperMD-header-1::before {
@@ -97,3 +96,4 @@
 .cm-header-5, .markdown-rendered h5, .cm-header-6, .markdown-rendered h6 {
     color: var(--h5-text-color);
 }
+

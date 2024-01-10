@@ -8,7 +8,7 @@
   --al-0: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.9);
 
   --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
-  --al-2: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 0.15);
+  --al-2: hsla(var(--shift-second-h-45), var(--hsl-second-s), var(--hsl-second-l), 0.1);
   --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.05);
 
   --al-4: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1.0);
@@ -21,7 +21,7 @@
   --al-0: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.4);
 
   --al-1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
-  --al-2: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 0.25);
+  --al-2: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 0.35);
   --al-3: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
 
   --al-4: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1.0);
@@ -75,8 +75,6 @@
   border-bottom-right-radius: 5px;
 }
 
-
-
 /* Background of active line */
 .cm-active.cm-line {
 background: linear-gradient(
@@ -95,7 +93,6 @@ background: linear-gradient(
   padding-bottom: unset !important;
   margin-top: unset !important;
   margin-bottom: unset !important;
-
 }
 
 .cm-line {

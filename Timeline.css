@@ -206,9 +206,9 @@
 .timeline-view.svelte-ilz3jn {
     /* styles */
     background-color: var(--card-foreground-color) !important;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border-top-left-radius: unset;
     border-top-right-radius: unset;
-    border-bottom: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
-    padding-bottom: 2px !important;
+    /* border-bottom: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2); */
+    /* padding-bottom: 2px !important; */
 }

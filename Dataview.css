@@ -7,55 +7,92 @@
     text-align: center;
 }*/
 
-.dataview.list-view-ul li {
-    border-radius: 10px;
-    font-size: 1em !important;
-    background-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-30), 0.7);
-/*    margin-right: 20px;*/
-/*    padding: 10px;*/
-    text-align: center;
+.dataview.list-view-ul li:hover {
+    background-color: var(--card-background-color);
 }
+
+.dataview.list-view-ul li {
+
+  --color-start: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.15);
+  --color-middle: hsla(var(--shift-second-h-45), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.25);
+  --color-end: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.15);
+  
+  --start-percentage: 15%; 
+  --middle-percentage: 30%;
+  --end-percentage: 85%;
+
+  border: 3px solid hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.5);
+
+  border-radius: 10px;
+  background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        transparent 5%, 
+        var(--color-start) 25%, 
+        var(--color-middle) 50%, 
+        var(--color-end) 75%, 
+        transparent 95%, 
+        transparent 100%
+  );
+  text-align: center;
+  padding: 0.2em;
+}
+
+/* CSS Selector to target links in the specific dataview tables and remove text-decoration */
+.dataview.list-view-ul li span a {
+  /* Variables for colors and gradient stops */
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 4px black;
+  text-decoration: none;
+}
+
 
 /* Style for the parent element */
 .dataview.list-view-ul {
     list-style: none !important;
     padding-left: 4em;
-    padding-top: 1.5em;
+    padding-top: 1em;
     padding-bottom: 3em;
-    font-family: "Rec Mono Duotone", monospace !important;
-    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+/*    font-family: "Rec Mono Duotone", monospace !important;*/
+/*    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;*/
+    font-weight: light !important;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+    gap: 1em;
     width: 90%;
-    margin: 0 auto;
+    margin: 0.5em auto;
     min-height: 3.6em;
 /*    position: relative;*/
+}
+
+/* Common styles for before and after pseudo-elements */
+.dataview.list-view-ul:before,
+.dataview.list-view-ul:after {
+    position: absolute;
+    left: 2%;
 }
 
 /* Style for displaying the '.' character */
 .dataview.list-view-ul:before {
     content: "";
-    position: absolute;
-    left: 2%;
-    top: 18%; 
+    top: 24px;  /* Use fixed pixel value instead of percentage */
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trees'%3E%3Cpath d='M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z'/%3E%3Cpath d='M7 16v6'/%3E%3Cpath d='M13 19v3'/%3E%3Cpath d='M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
     background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
     padding: 2em;
     margin-left: 4px;
-
 }
 
 /* Style for adding the dotted line */
 .dataview.list-view-ul:after {
     content: "";
-    position: absolute;
-    left: 2%; 
-    top: calc(50% + 16px);  
-    width: 50px;  
+    top: 78px;  /* Use fixed pixel value instead of percentage */
+    width: 50px;
     border-bottom: 3px dotted hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
 }
+
 
 .dataview.list-view-ul:hover:before,
 .dataview.list-view-ul:hover:after {

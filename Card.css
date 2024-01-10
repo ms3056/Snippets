@@ -1,0 +1,44 @@
+/* Set the background color for callouts with data-callout="code" */
+.callout[data-callout="code"] {
+    background-color: var(--background-primary);
+    position: relative; /* Needed for positioning the circle */
+}
+
+.callout[data-callout-metadata*="1st"] .callout-content {
+    display: inline-block; /* Ensure content is inline */
+    vertical-align: top; /* Align content to the top */
+    margin-left: 1em;
+
+}
+
+/* Adjust display for callout contents */
+
+.callout[data-callout-metadata*="2nd"] .callout-content {
+    display: inline-block; /* Ensure content is inline */
+    vertical-align: top; /* Align content to the top */
+    margin-left: 2.5em; /* Adjusted to make space for the circle */
+}
+
+/* Hide title and icon for callouts with data-callout="code" */
+.callout[data-callout="code"] .callout-title-inner,
+.callout[data-callout="code"] .callout-icon {
+    display: none;
+}
+
+/* Add circle before the callout and position it inline with the content */
+
+.callout[data-callout-metadata*="1st"] .callout-content:before {
+    content: "•";
+    position: absolute; 
+    left: 0.8em; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.callout[data-callout-metadata*="2nd"] .callout-content:before {
+    content: "•";
+    position: absolute; /* Position it absolutely within the callout */
+    left: 3.1em; 
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Ensure it's centered regardless of the line height */
+}
