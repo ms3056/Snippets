@@ -9,6 +9,24 @@
 .oz-calendar-plugin-view .react-calendar__tile--active {
     background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2) !important;
 }
+.oz-calendar-plugin-view .react-calendar__tile {
+    max-width: 100%;
+    padding: 10px 6.6667px;
+    background: none;
+    text-align: center;
+    line-height: 16px;
+    height: 30px;
+    display: block;
+}
+
+.oz-calendar-plugin-view .dots-wrapper {
+    display: none;
+}
+
+
+.oz-calendar-plugin-view.fixed .react-calendar {
+    height: 230px;
+}
 
 .oz-calendar-plugin-today {
     border-radius: 0.5em;

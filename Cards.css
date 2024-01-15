@@ -65,7 +65,7 @@ body:is(.theme-dark, .theme-light) {
 
 /* From sailKite @Discord */
 .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    height: 0px;
+    height: 2px;
     transition: height 200ms ease-in;
 
     &:hover {
@@ -83,17 +83,9 @@ body:is(.theme-dark, .theme-light) {
     }
 }
 
-/* Selects the element with class 'nav-folder-title-content' that is a direct child of an element with class 'nav-folder-title' and is also a direct child of an element with class 'mod-root' */
-.mod-root > .nav-folder-title > .nav-folder-title-content {
 
-    /* Your CSS rules here */
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    font-size: 1.5em;
-    font-family: "Yu Gothic" !important;
-    color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 100%);
-}
+/* Selects the element with class 'nav-folder-title-content' that is a direct child of an element with class 'nav-folder-title' and is also a direct child of an element with class 'mod-root' */
+
 
 /* Title */
 .view-header-title-parent {

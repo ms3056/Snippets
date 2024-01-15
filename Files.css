@@ -36,13 +36,20 @@
 
 
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
-  font-size: 1.1em;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: "Rec Mono Duotone", monospace !important;
-  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
-}
 
+
+
+.mod-root > .nav-folder-title > .nav-folder-title-content  {
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  line-height: 1em;
+  font-size: 1.6em;
+  border-radius: 10px;
+  font-family: "Yu Gothic" !important;
+  color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 100%);
+}
 
 .mod-root > .nav-folder-title[data-count]::after {
   content: attr(data-count);
@@ -59,6 +66,17 @@
   color: var(--hsl-second-base);
   background-color: var(--card-background-color);
 }
+
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
+  font-size: 1.1em;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+}
+
+
+
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title {
   --nav-item-color: var(--folder-color) !important;

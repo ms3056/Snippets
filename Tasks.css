@@ -151,7 +151,7 @@ body {
 }
 
 .tasks .cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1 {
-    font-family: "Quicksand";
+    font-family: "Recursive Sans Casual Static";
     background: var(--background-primary);
     color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-10), 1) !important;
     text-shadow: unset;

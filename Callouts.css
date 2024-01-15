@@ -84,11 +84,6 @@
     transition: 200ms !important;
 }
 
-/* .callout-content,
-:is(h1, h2, h3, h4, h5, h6) {
-
-} */
-
 .callout:hover {
     border: 3px solid hsl(var(--callout-color)) !important;
 }
@@ -100,9 +95,9 @@
 
 /* Targeting the div with class 'block-language-dataviewjs' */
 .callout[data-callout="today"] .callout-content .block-language-dataviewjs span {
-    background-color: hsl(var(--callout-color));
+    background-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-15), 1) !important;
     float: right;
-    padding: 0.2em;
+    padding: 0.3em;
     margin-bottom: 0.5em;
     border-radius: 10px;
     color: white;
@@ -208,12 +203,19 @@
     color: var(--title-color);
 }
 
+.callout[data-callout="preamble"] .callout-content :is(h1, h2, h3, h4, h5, h6) {
+    padding-left: 0.5em;
+}
+
+
 .callout[data-callout="preamble"] .callout-content {
-    font-family: Quicksand;
+    font-family: "Recursive Sans Casual Static";
     background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
-    padding-left: 0.4em !important;
-    font-size: 0.9em;
+    /* padding-left: 0.6em !important; */
+    font-size: 1em;
+    padding-right: 0.6em !important;
+
 }
 
 .callout[data-callout="preamble"] .callout-content>blockquote {

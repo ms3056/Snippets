@@ -26,7 +26,7 @@
 
 .weather-container {
   padding-top: 10px;
-  font-family: Quicksand;
+  font-family: "Recursive Sans Casual Static";
   --tenki-main-text: var(--hsl-second-base);
   --tenki-secondary-text: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-10), var(--hsl-second-a));
   --tenki-background: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.1), 25%, var(--hsl-accent-a));
@@ -35,6 +35,10 @@
 
 .current-container {
   gap: 30px;
+}
+
+.current-conditions {
+  font-size: 1.4em;
 }
 
 .forecast-container {
@@ -71,7 +75,8 @@
 .forecast-tooltip {
   color: var(--hsl-second-base);
   background-color: black;
-  font-size: 1em;
+  font-size: 1.5em;
+  width: unset;
 }
 
 .last-updated {

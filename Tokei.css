@@ -9,13 +9,24 @@
 
 
 
+.workspace-leaf:has(>.workspace-leaf-content>.clock-container) {
+    height: auto;
+}
+
+
+
+
+
+
+
 /* My Personal Font Preference */
 .clock-container {
-    font-family: Quicksand;
+    font-family: "Recursive Sans Casual Static";
     --tokei-main-text: var(--hsl-second-base);
     --tokei-secondary-text: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a));
     --tokei-background: var(--side-panels);
     --tokei-main-180:hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-20), 1);
+    padding: 0;
     margin-top: 10px;
 }
 
@@ -34,6 +45,7 @@
     color: var(--tokei-main-180);
     font-weight: bold;
     text-shadow: 2px 2px 2px black;
+    font-size: 1.2em !important;
 }
 
 /* this snippet will apply a more compact style */
@@ -41,11 +53,13 @@
     gap: 2px;
     display: inline-flex;
     flex-wrap: wrap;
+    padding-top: 0.3em !important;
     --gap: 6px;
     margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
     width: calc(100% + var(--gap));
-    padding-left: 20px;
-    padding-right: 20px;
+    height: calc(120% + var(--gap));
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .timezone-container > * {
@@ -61,7 +75,7 @@
 .timezone-name {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-shadow: 1px 2px 2px black;
     color: var(--tokei-main-180);
 }
@@ -77,6 +91,7 @@
     content: attr(data-text) " ";
     color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
     text-shadow: 2px 2px 2px black;
+    font-size: 1.2em;
 }
 
 .time-display::before {
