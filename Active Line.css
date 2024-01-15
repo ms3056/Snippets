@@ -95,6 +95,16 @@ background: linear-gradient(
   margin-bottom: unset !important;
 }
 
+/* Reset/override style for .cm-active.cm-line inside tables */
+.table-editor .cm-active.cm-line {
+  background: none; /* Reset background */
+  filter: none;     /* Reset filter */
+  padding-top: 0;   /* Reset padding */
+  padding-bottom: 0;
+  margin-top: 0;    /* Reset margins */
+  margin-bottom: 0;
+}
+
 .cm-line {
   padding-top: unset !important;
   padding-bottom: unset !important;
