@@ -33,19 +33,21 @@
   --tenki-border: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .5);
 }
 
+.location { 
+    font-size: 2em !important;
+}
+
 .current-container {
   gap: 30px;
 }
 
 .current-conditions {
-  font-size: 1.4em;
+  font-size: 1.5em;
+  color: var(--tenki-secondary-text);
 }
 
 .forecast-container {
   gap: 20px;
-}
-
-.tenki-refresh-button {
 }
 
 
@@ -55,6 +57,7 @@
 
 .forecast-rain {
     color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
+    font-size: 1.1em;
 }
 
 .current-icon {
@@ -64,7 +67,12 @@
 }
 
 .forecast-day {
-  font-size: 0.9em;
+  font-size: 1.1em;
+}
+
+.forecast-icon {
+	width: 80px;
+	height: 80px;
 }
 
 .location {
@@ -75,8 +83,8 @@
 .forecast-tooltip {
   color: var(--hsl-second-base);
   background-color: black;
-  font-size: 1.5em;
-  width: unset;
+  font-size: 1.3em;
+  width: 100%;
 }
 
 .last-updated {
@@ -89,130 +97,130 @@
 /* Source: https://github.com/basmilius/weather-icons */
 
 /* Rain */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/296.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/296.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='1381.32' y1='-1144.67' x2='1399.47' y2='-1097.39' gradientTransform='translate(-1189.41 1353.24) rotate(-9)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b65ed'/%3E%3Cstop offset='0.45' stop-color='%230a5ad4'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='1436.71' y1='-1137' x2='1454.86' y2='-1089.72' gradientTransform='translate(-1189.32 1354.33) rotate(-9)' xlink:href='%23b'/%3E%3ClinearGradient id='d' x1='1492.12' y1='-1129.34' x2='1510.27' y2='-1082.06' gradientTransform='translate(-1189.24 1355.43) rotate(-9)' xlink:href='%23b'/%3E%3Csymbol id='e' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='f' viewBox='0 0 129 57' overflow='visible'%3E%3C!-- raindrop-1 --%3E%3Cpath d='M8.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,8.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23b)' opacity='0'%3E%3CanimateTransform id='x1' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='0s; x1.end+.33s' dur='.67s'/%3E%3Canimate id='y1' attributeName='opacity' values='0; 1; 0' begin='0s; y1.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-2 --%3E%3Cpath d='M64.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,64.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23c)' opacity='0'%3E%3CanimateTransform id='x2' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='.33s; x2.end+.33s' dur='.67s'/%3E%3Canimate id='y2' attributeName='opacity' values='0; 1; 0' begin='.33s; y2.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-3 --%3E%3Cpath d='M120.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,120.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23d)' opacity='0'%3E%3CanimateTransform id='x3' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='-.33s; x3.end+.33s' dur='.67s'/%3E%3Canimate id='y3' attributeName='opacity' values='0; 1; 0' begin='-.33s; y3.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='350' height='222' transform='translate(81 145)' xlink:href='%23e'/%3E%3Cuse width='129' height='57' transform='translate(191.5 343.5)' xlink:href='%23f'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
-/* [src="http://cdn.weatherapi.com/weather/64x64/night/296.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/night/296.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='34.67' y1='18.56' x2='119.21' y2='164.99' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2386c3db'/%3E%3Cstop offset='0.45' stop-color='%2386c3db'/%3E%3Cstop offset='1' stop-color='%235eafcf'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='1381.32' y1='-1144.67' x2='1399.47' y2='-1097.39' gradientTransform='translate(-1189.41 1353.24) rotate(-9)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b65ed'/%3E%3Cstop offset='0.45' stop-color='%230a5ad4'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' x1='1436.71' y1='-1137' x2='1454.86' y2='-1089.72' gradientTransform='translate(-1189.32 1354.33) rotate(-9)' xlink:href='%23c'/%3E%3ClinearGradient id='e' x1='1492.12' y1='-1129.34' x2='1510.27' y2='-1082.06' gradientTransform='translate(-1189.24 1355.43) rotate(-9)' xlink:href='%23c'/%3E%3Csymbol id='g' viewBox='0 0 172 172'%3E%3C!-- moon --%3E%3Cpath d='M160.62,107.4c-47.17,0-85.41-37.73-85.41-84.26A83.31,83.31,0,0,1,78,2C35.27,6.61,2,42.33,2,85.73,2,132.27,40.24,170,87.41,170A85.16,85.16,0,0,0,170,106.87,88,88,0,0,1,160.62,107.4Z' stroke='%2372b9d5' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' fill='url(%23b)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='-15 86 86; 9 86 86; -15 86 86' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='h' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='f' viewBox='0 0 351 246'%3E%3Cuse width='172' height='172' xlink:href='%23g'/%3E%3Cuse width='350' height='222' transform='translate(1 24)' xlink:href='%23h'/%3E%3C/symbol%3E%3Csymbol id='i' viewBox='0 0 129 57' overflow='visible'%3E%3C!-- raindrop-1 --%3E%3Cpath d='M8.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,8.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23c)' opacity='0'%3E%3CanimateTransform id='x1' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='0s; x1.end+.33s' dur='.67s'/%3E%3Canimate id='y1' attributeName='opacity' values='0; 1; 0' begin='0s; y1.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-2 --%3E%3Cpath d='M64.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,64.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23d)' opacity='0'%3E%3CanimateTransform id='x2' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='.33s; x2.end+.33s' dur='.67s'/%3E%3Canimate id='y2' attributeName='opacity' values='0; 1; 0' begin='.33s; y2.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-3 --%3E%3Cpath d='M120.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,120.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23e)' opacity='0'%3E%3CanimateTransform id='x3' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='-.33s; x3.end+.33s' dur='.67s'/%3E%3Canimate id='y3' attributeName='opacity' values='0; 1; 0' begin='-.33s; y3.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='351' height='246' transform='translate(80 121)' xlink:href='%23f'/%3E%3Cuse width='129' height='57' transform='translate(191.5 343.5)' xlink:href='%23i'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Cloudy - Day*/
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/119.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/119.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3Csymbol id='b' viewBox='0 0 350 222'%3E%3C!-- cloud --%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='350' height='222' transform='translate(81 145)' xlink:href='%23b'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-18 0; 18 0; -18 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
 
-} */
+}
 
 /* Overcast */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/122.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/122.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='52.74' y1='9.62' x2='133.36' y2='149.27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239ca3af'/%3E%3Cstop offset='0.45' stop-color='%239ca3af'/%3E%3Cstop offset='1' stop-color='%236b7280'/%3E%3C/linearGradient%3E%3Csymbol id='d' viewBox='0 0 200.26 126.12'%3E%3Cpath d='M.5,93.18a32.44,32.44,0,0,0,32.44,32.44H162.69v-.12c.77,0,1.53.12,2.31.12a34.75,34.75,0,0,0,6.49-68.89A32.38,32.38,0,0,0,123,23.62,48.58,48.58,0,0,0,34.4,60.81c-.49,0-1-.07-1.46-.07A32.44,32.44,0,0,0,.5,93.18Z' stroke='%23848b98' stroke-miterlimit='10' fill='url(%23b)'/%3E%3C/symbol%3E%3Csymbol id='e' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='c' viewBox='0 0 398 222' overflow='visible'%3E%3C!-- dark-cloud --%3E%3Cuse width='200.26' height='126.12' transform='translate(198 27)' xlink:href='%23d'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-9 0; 9 0; -9 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C!-- cloud --%3E%3Cuse width='350' height='222' xlink:href='%23e'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-18 0; 18 0; -18 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='398' height='222' transform='translate(68.84 145)' xlink:href='%23c'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Overcast and Rain */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/353.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/353.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='52.74' y1='9.62' x2='133.36' y2='149.27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239ca3af'/%3E%3Cstop offset='0.45' stop-color='%239ca3af'/%3E%3Cstop offset='1' stop-color='%236b7280'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='1381.32' y1='-1144.67' x2='1399.47' y2='-1097.39' gradientTransform='translate(-1189.41 1353.24) rotate(-9)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b65ed'/%3E%3Cstop offset='0.45' stop-color='%230a5ad4'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' x1='1436.71' y1='-1137' x2='1454.86' y2='-1089.72' gradientTransform='translate(-1189.32 1354.33) rotate(-9)' xlink:href='%23c'/%3E%3ClinearGradient id='e' x1='1492.12' y1='-1129.34' x2='1510.27' y2='-1082.06' gradientTransform='translate(-1189.24 1355.43) rotate(-9)' xlink:href='%23c'/%3E%3ClinearGradient id='f' x1='78' y1='63.35' x2='118' y2='132.65' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3Csymbol id='h' viewBox='0 0 196 196'%3E%3C!-- sun-core --%3E%3Ccircle cx='98' cy='98' r='40' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='4' fill='url(%23f)'/%3E%3C!-- sun-rays --%3E%3Cpath d='M98,31.38V6m0,184V164.62M145.11,50.89,163.05,33M33,163.05l17.94-17.94m0-94.22L33,33m130.1,130.1-17.94-17.94M6,98H31.38M190,98H164.62' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='12'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='0 98 98; 45 98 98' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='j' viewBox='0 0 200.26 126.12'%3E%3Cpath d='M.5,93.18a32.44,32.44,0,0,0,32.44,32.44H162.69v-.12c.77,0,1.53.12,2.31.12a34.75,34.75,0,0,0,6.49-68.89A32.38,32.38,0,0,0,123,23.62,48.58,48.58,0,0,0,34.4,60.81c-.49,0-1-.07-1.46-.07A32.44,32.44,0,0,0,.5,93.18Z' stroke='%23848b98' stroke-miterlimit='10' fill='url(%23b)'/%3E%3C/symbol%3E%3Csymbol id='k' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='i' viewBox='0 0 398 222' overflow='visible'%3E%3C!-- dark-cloud --%3E%3Cuse width='200.26' height='126.12' transform='translate(198 27)' xlink:href='%23j'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-9 0; 9 0; -9 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C!-- cloud --%3E%3Cuse width='350' height='222' xlink:href='%23k'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-18 0; 18 0; -18 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C/symbol%3E%3Csymbol id='g' viewBox='0 0 410.84 258' overflow='visible'%3E%3Cuse width='196' height='196' xlink:href='%23h'/%3E%3Cuse width='398' height='222' transform='translate(12.84 36)' xlink:href='%23i'/%3E%3C/symbol%3E%3Csymbol id='l' viewBox='0 0 129 57' overflow='visible'%3E%3C!-- raindrop-1 --%3E%3Cpath d='M8.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,8.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23c)' opacity='0'%3E%3CanimateTransform id='x1' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='0s; x1.end+.33s' dur='.67s'/%3E%3Canimate id='y1' attributeName='opacity' values='0; 1; 0' begin='0s; y1.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-2 --%3E%3Cpath d='M64.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,64.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23d)' opacity='0'%3E%3CanimateTransform id='x2' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='.33s; x2.end+.33s' dur='.67s'/%3E%3Canimate id='y2' attributeName='opacity' values='0; 1; 0' begin='.33s; y2.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-3 --%3E%3Cpath d='M120.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,120.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23e)' opacity='0'%3E%3CanimateTransform id='x3' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='-.33s; x3.end+.33s' dur='.67s'/%3E%3Canimate id='y3' attributeName='opacity' values='0; 1; 0' begin='-.33s; y3.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='410.84' height='258' transform='translate(56 109)' xlink:href='%23g'/%3E%3Cuse width='129' height='57' transform='translate(191.5 343.5)' xlink:href='%23l'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Rain */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/302.png"],
-[src="http://cdn.weatherapi.com/weather/64x64/day/308.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/302.png"],
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/308.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='22.56' y1='21.96' x2='39.2' y2='50.8' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='22.53' y1='42.95' x2='25.47' y2='48.05' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234286ee'/%3E%3Cstop offset='0.45' stop-color='%234286ee'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='29.53' y1='42.95' x2='32.47' y2='48.05' xlink:href='%23b'/%3E%3ClinearGradient id='d' x1='36.53' y1='42.95' x2='39.47' y2='48.05' xlink:href='%23b'/%3E%3C/defs%3E%3Cpath d='M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23a)'/%3E%3Cline x1='24.39' y1='43.03' x2='23.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23b)'%3E%3CanimateTransform attributeName='transform' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3Cline x1='31.39' y1='43.03' x2='30.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23c)'%3E%3CanimateTransform attributeName='transform' begin='-0.4s' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' begin='-0.4s' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3Cline x1='38.39' y1='43.03' x2='37.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23d)'%3E%3CanimateTransform attributeName='transform' begin='-0.2s' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' begin='-0.2s' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3C/svg%3E");background-size: 60px;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Sun - Clear */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/113.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/113.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='26.75' y1='22.91' x2='37.25' y2='41.09' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='10.5' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23a)'/%3E%3Cpath d='M32,15.71V9.5m0,45V48.29M43.52,20.48l4.39-4.39M16.09,47.91l4.39-4.39m0-23-4.39-4.39M47.91,47.91l-4.39-4.39M15.71,32H9.5m45,0H48.29' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3'%3E%3CanimateTransform attributeName='transform' dur='45s' values='0 32 32; 360 32 32' repeatCount='indefinite' type='rotate'/%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 
 /* Replace Icons - Moon - Clear */
-/* [src="http://cdn.weatherapi.com/weather/64x64/night/113.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/night/113.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='54.33' y1='29.03' x2='187.18' y2='259.13' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2386c3db'/%3E%3Cstop offset='0.45' stop-color='%2386c3db'/%3E%3Cstop offset='1' stop-color='%235eafcf'/%3E%3C/linearGradient%3E%3Csymbol id='b' viewBox='0 0 270 270' overflow='visible'%3E%3C!-- moon --%3E%3Cpath d='M252.25,168.63C178.13,168.63,118,109.35,118,36.21A130.48,130.48,0,0,1,122.47,3C55.29,10.25,3,66.37,3,134.58,3,207.71,63.09,267,137.21,267,199.69,267,252,224.82,267,167.79A135.56,135.56,0,0,1,252.25,168.63Z' stroke='%2372b9d5' stroke-linecap='round' stroke-linejoin='round' stroke-width='6' fill='url(%23a)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='-15 135 135; 9 135 135; -15 135 135' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='270' height='270' transform='translate(121 121)' xlink:href='%23b'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Sun Rain */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/176.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/176.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='16.5' y1='19.67' x2='21.5' y2='28.33' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='22.56' y1='21.96' x2='39.2' y2='50.8' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='22.53' y1='42.95' x2='25.47' y2='48.05' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234286ee'/%3E%3Cstop offset='0.45' stop-color='%234286ee'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' x1='29.53' y1='42.95' x2='32.47' y2='48.05' xlink:href='%23c'/%3E%3ClinearGradient id='e' x1='36.53' y1='42.95' x2='39.47' y2='48.05' xlink:href='%23c'/%3E%3C/defs%3E%3Ccircle cx='19' cy='24' r='5' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23a)'/%3E%3Cpath d='M19,15.67V12.5m0,23V32.33m5.89-14.22,2.24-2.24M10.87,32.13l2.24-2.24m0-11.78-2.24-2.24M27.13,32.13l-2.24-2.24M7.5,24h3.17M30.5,24H27.33' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 19 24; 360 19 24' dur='45s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23b)'/%3E%3Cline x1='24.39' y1='43.03' x2='23.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23c)'%3E%3CanimateTransform attributeName='transform' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3Cline x1='31.39' y1='43.03' x2='30.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23d)'%3E%3CanimateTransform attributeName='transform' begin='-0.4s' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' begin='-0.4s' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3Cline x1='38.39' y1='43.03' x2='37.61' y2='47.97' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='url(%23e)'%3E%3CanimateTransform attributeName='transform' begin='-0.2s' type='translate' values='1 -5; -2 10' dur='0.7s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' begin='-0.2s' values='0;1;1;0' dur='0.7s' repeatCount='indefinite'/%3E%3C/line%3E%3C/svg%3E");background-size: 60px;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Sun Clouds */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/116.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/116.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='16.5' y1='19.67' x2='21.5' y2='28.33' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='22.56' y1='21.96' x2='39.2' y2='50.8' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='19' cy='24' r='5' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23a)'/%3E%3Cpath d='M19,15.67V12.5m0,23V32.33m5.89-14.22,2.24-2.24M10.87,32.13l2.24-2.24m0-11.78-2.24-2.24M27.13,32.13l-2.24-2.24M7.5,24h3.17M30.5,24H27.33' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 19 24; 360 19 24' dur='45s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='0.5' fill='url(%23b)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Moon Clouds */
-/* [src="http://cdn.weatherapi.com/weather/64x64/night/116.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/night/116.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='34.67' y1='18.56' x2='119.21' y2='164.99' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2386c3db'/%3E%3Cstop offset='0.45' stop-color='%2386c3db'/%3E%3Cstop offset='1' stop-color='%235eafcf'/%3E%3C/linearGradient%3E%3Csymbol id='d' viewBox='0 0 172 172'%3E%3C!-- moon --%3E%3Cpath d='M160.62,107.4c-47.17,0-85.41-37.73-85.41-84.26A83.31,83.31,0,0,1,78,2C35.27,6.61,2,42.33,2,85.73,2,132.27,40.24,170,87.41,170A85.16,85.16,0,0,0,170,106.87,88,88,0,0,1,160.62,107.4Z' stroke='%2372b9d5' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' fill='url(%23b)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='-15 86 86; 9 86 86; -15 86 86' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='e' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='c' viewBox='0 0 351 246'%3E%3Cuse width='172' height='172' xlink:href='%23d'/%3E%3Cuse width='350' height='222' transform='translate(1 24)' xlink:href='%23e'/%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='351' height='246' transform='translate(80 121)' xlink:href='%23c'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 /* Replace Icons - Day Thunderstorm */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/386.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/386.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f3f7fe'/%3E%3Cstop offset='0.45' stop-color='%23f3f7fe'/%3E%3Cstop offset='1' stop-color='%23deeafb'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='8.67' y1='17.07' x2='80.88' y2='142.14' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f7b23b'/%3E%3Cstop offset='0.45' stop-color='%23f7b23b'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='78' y1='63.35' x2='118' y2='132.65' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3Csymbol id='e' viewBox='0 0 196 196'%3E%3C!-- sun-core --%3E%3Ccircle cx='98' cy='98' r='40' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='4' fill='url(%23c)'/%3E%3C!-- sun-rays --%3E%3Cpath d='M98,31.38V6m0,184V164.62M145.11,50.89,163.05,33M33,163.05l17.94-17.94m0-94.22L33,33m130.1,130.1-17.94-17.94M6,98H31.38M190,98H164.62' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='12'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='0 98 98; 45 98 98' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='f' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%23e6effc' stroke-miterlimit='10' stroke-width='6' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='d' viewBox='0 0 363 258'%3E%3Cuse width='196' height='196' xlink:href='%23e'/%3E%3Cuse width='350' height='222' transform='translate(13 36)' xlink:href='%23f'/%3E%3C/symbol%3E%3Csymbol id='g' viewBox='0 0 102.66 186.75'%3E%3C!-- lightning-bolt --%3E%3Cpolygon points='34.77 2 2.77 98 34.77 98 18.77 178 98.78 66 50.77 66 82.78 2 34.77 2' stroke='%23f6a823' stroke-miterlimit='10' stroke-width='4' fill='url(%23b)'%3E%3Canimate id='x1' attributeName='opacity' values='1; 1; 0; 1; 0; 1; 0; 1' begin='0s; x1.end+.67s' dur='1.33s' keyTimes='0; .38; .5; .63; .75; .86; .94; 1'/%3E%3C/polygon%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='363' height='258' transform='translate(68 109)' xlink:href='%23d'/%3E%3Cuse width='102.66' height='186.74' transform='translate(205.23 291)' xlink:href='%23g'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/389.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/389.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='52.74' y1='9.62' x2='133.36' y2='149.27' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239ca3af'/%3E%3Cstop offset='0.45' stop-color='%239ca3af'/%3E%3Cstop offset='1' stop-color='%236b7280'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='99.45' y1='30.68' x2='232.64' y2='261.37' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236b7280'/%3E%3Cstop offset='0.45' stop-color='%236b7280'/%3E%3Cstop offset='1' stop-color='%234b5563'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' x1='8.67' y1='17.07' x2='80.88' y2='142.14' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f7b23b'/%3E%3Cstop offset='0.45' stop-color='%23f7b23b'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' x1='1381.32' y1='-1144.67' x2='1399.47' y2='-1097.39' gradientTransform='translate(-1189.41 1353.24) rotate(-9)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230b65ed'/%3E%3Cstop offset='0.45' stop-color='%230a5ad4'/%3E%3Cstop offset='1' stop-color='%230950bc'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' x1='1436.71' y1='-1137' x2='1454.86' y2='-1089.72' gradientTransform='translate(-1189.32 1354.33) rotate(-9)' xlink:href='%23d'/%3E%3ClinearGradient id='f' x1='1492.12' y1='-1129.34' x2='1510.27' y2='-1082.06' gradientTransform='translate(-1189.24 1355.43) rotate(-9)' xlink:href='%23d'/%3E%3ClinearGradient id='g' x1='78' y1='63.35' x2='118' y2='132.65' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fbbf24'/%3E%3Cstop offset='0.45' stop-color='%23fbbf24'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3Csymbol id='i' viewBox='0 0 196 196'%3E%3C!-- sun-core --%3E%3Ccircle cx='98' cy='98' r='40' stroke='%23f8af18' stroke-miterlimit='10' stroke-width='4' fill='url(%23g)'/%3E%3C!-- sun-rays --%3E%3Cpath d='M98,31.38V6m0,184V164.62M145.11,50.89,163.05,33M33,163.05l17.94-17.94m0-94.22L33,33m130.1,130.1-17.94-17.94M6,98H31.38M190,98H164.62' fill='none' stroke='%23fbbf24' stroke-linecap='round' stroke-miterlimit='10' stroke-width='12'%3E%3CanimateTransform attributeName='transform' additive='sum' type='rotate' values='0 98 98; 45 98 98' dur='6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='k' viewBox='0 0 200.26 126.12'%3E%3Cpath d='M.5,93.18a32.44,32.44,0,0,0,32.44,32.44H162.69v-.12c.77,0,1.53.12,2.31.12a34.75,34.75,0,0,0,6.49-68.89A32.38,32.38,0,0,0,123,23.62,48.58,48.58,0,0,0,34.4,60.81c-.49,0-1-.07-1.46-.07A32.44,32.44,0,0,0,.5,93.18Z' stroke='%23848b98' stroke-miterlimit='10' fill='url(%23a)'/%3E%3C/symbol%3E%3Csymbol id='l' viewBox='0 0 350 222'%3E%3Cpath d='M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z' stroke='%235b6472' stroke-miterlimit='10' stroke-width='6' fill='url(%23b)'/%3E%3C/symbol%3E%3Csymbol id='j' viewBox='0 0 398 222' overflow='visible'%3E%3C!-- dark-cloud --%3E%3Cuse width='200.26' height='126.12' transform='translate(198 27)' xlink:href='%23k'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-9 0; 9 0; -9 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C!-- black-cloud --%3E%3Cuse width='350' height='222' xlink:href='%23l'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-18 0; 18 0; -18 0' dur='6s' repeatCount='indefinite'/%3E%3C/use%3E%3C/symbol%3E%3Csymbol id='h' viewBox='0 0 410.84 258' overflow='visible'%3E%3Cuse width='196' height='196' xlink:href='%23i'/%3E%3Cuse width='398' height='222' transform='translate(12.84 36)' xlink:href='%23j'/%3E%3C/symbol%3E%3Csymbol id='m' viewBox='0 0 129 57' overflow='visible'%3E%3C!-- raindrop-1 --%3E%3Cpath d='M8.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,8.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23d)' opacity='0'%3E%3CanimateTransform id='x1' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='0s; x1.end+.33s' dur='.67s'/%3E%3Canimate id='y1' attributeName='opacity' values='0; 1; 0' begin='0s; y1.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-2 --%3E%3Cpath d='M64.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,64.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23e)' opacity='0'%3E%3CanimateTransform id='x2' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='.33s; x2.end+.33s' dur='.67s'/%3E%3Canimate id='y2' attributeName='opacity' values='0; 1; 0' begin='.33s; y2.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C!-- raindrop-3 --%3E%3Cpath d='M120.5,56.5a8,8,0,0,1-8-8V8.5a8,8,0,0,1,16,0v40A8,8,0,0,1,120.5,56.5Z' stroke='%230a5ad4' stroke-miterlimit='10' fill='url(%23f)' opacity='0'%3E%3CanimateTransform id='x3' attributeName='transform' additive='sum' type='translate' values='0 -60; 0 60' begin='-.33s; x3.end+.33s' dur='.67s'/%3E%3Canimate id='y3' attributeName='opacity' values='0; 1; 0' begin='-.33s; y3.end+.33s' dur='.67s' keyTimes='0; .25; 1'/%3E%3C/path%3E%3C/symbol%3E%3Csymbol id='n' viewBox='0 0 102.66 186.75'%3E%3C!-- lightning-bolt --%3E%3Cpolygon points='34.77 2 2.77 98 34.77 98 18.77 178 98.78 66 50.77 66 82.78 2 34.77 2' stroke='%23f6a823' stroke-miterlimit='10' stroke-width='4' fill='url(%23c)'%3E%3Canimate id='x1' attributeName='opacity' values='1; 1; 0; 1; 0; 1; 0; 1' begin='0s; x1.end+.67s' dur='1.33s' keyTimes='0; .38; .5; .63; .75; .86; .94; 1'/%3E%3C/polygon%3E%3C/symbol%3E%3C/defs%3E%3Cuse width='410.84' height='258' transform='translate(56 109)' xlink:href='%23h'/%3E%3Cuse width='129' height='57' transform='translate(191.5 343.5)' xlink:href='%23m'/%3E%3Cuse width='102.66' height='186.74' transform='translate(205.23 291)' xlink:href='%23n'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}
 
 
 /* Replace Icons - Day/Night Mist */
-/* [src="http://cdn.weatherapi.com/weather/64x64/day/143.png"],
-[src="http://cdn.weatherapi.com/weather/64x64/night/143.png"] {
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/143.png"],
+.current-icon[src="http://cdn.weatherapi.com/weather/64x64/night/143.png"] {
   object-position: -99999px 99999px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='220' y1='137.65' x2='292' y2='262.35' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d4d7dd'/%3E%3Cstop offset='0.45' stop-color='%23d4d7dd'/%3E%3Cstop offset='1' stop-color='%23bec1c6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' y1='193.65' y2='318.35' xlink:href='%23a'/%3E%3ClinearGradient id='c' y1='249.65' y2='374.35' xlink:href='%23a'/%3E%3C/defs%3E%3C!-- layer-1 --%3E%3Cline x1='136' y1='200' x2='376' y2='200' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='24' stroke='url(%23a)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-48 0; 48 0; -48 0' dur='6s' repeatCount='indefinite'/%3E%3C/line%3E%3C!-- layer-2 --%3E%3Cline x1='136' y1='256' x2='376' y2='256' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='24' stroke='url(%23b)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='-48 0; 48 0; -48 0' begin='-1.5s' dur='6s' repeatCount='indefinite'/%3E%3C/line%3E%3C!-- layer-3 --%3E%3Cline x1='136' y1='312' x2='376' y2='312' fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='24' stroke='url(%23c)'%3E%3CanimateTransform attributeName='transform' additive='sum' type='translate' values='48 0; -48 0; 48 0' dur='6s' repeatCount='indefinite'/%3E%3C/line%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-} */
+}

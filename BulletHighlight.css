@@ -1,0 +1,38 @@
+
+.theme-dark  {
+    --bh_1: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.15);
+    --bh_2: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--darker-second-l-10), 0.15); 
+    --bh_3: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--darker-second-l-20), 0.15);
+    --bh_4: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.15);
+    --bh_5: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--darker-second-l-10), 0.15);
+    --bh_6: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-20), 0.15);
+}
+
+.HyperMD-list-line-1:hover,
+.HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-2, .HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6):hover) {
+  background-color: var(--bh_1);
+}
+
+.HyperMD-list-line-2:hover,
+.HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6):hover) {
+  background-color: var(--bh_2);
+}
+
+.HyperMD-list-line-3:hover,
+.HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6):hover) {
+  background-color: var(--bh_3);
+}
+
+.HyperMD-list-line-4:hover,
+.HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6):hover) {
+  background-color: var(--bh_4);
+}
+
+.HyperMD-list-line-5:hover,
+.HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-6):hover) {
+  background-color: var(--bh_5);
+}
+
+.HyperMD-list-line-6:hover {
+  background-color: var(--bh_6);
+}

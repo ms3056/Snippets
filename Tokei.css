@@ -56,7 +56,7 @@
     padding-top: 0.3em !important;
     --gap: 12px;
     margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-    /* width: calc(120% + var(--wide)); */
+    width: calc(120% + var(--wide));
     /* height: calc(120% + var(--gap)); */
     padding-left: 2px;
     padding-right: 2px;
@@ -67,17 +67,23 @@
 }
 
 .timezone-pair {
+    min-width: 5em;
+    min-height: 4em;
     flex-direction: row;
     max-width: 27%;
     background-color: var(--tk-background);
 }
 
 .timezone-name {
+    /* margin-right: 0.05em; */
+    margin-left: 0.1em;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-shadow: 1px 2px 2px black;
     color: var(--tokei-main-180);
+
+
 }
 
 .timezone-time:after {
@@ -86,12 +92,14 @@
 }
 
 .timezone-time {
-    display: inline;
+    display: block;
+    text-align: center;
     white-space: pre-line;
     content: attr(data-text) " ";
     color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
     text-shadow: 2px 2px 2px black;
     font-size: 1.2em;
+
 }
 
 .time-display::before {

@@ -107,7 +107,7 @@
     border-top: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) ;
 /*    background-color: var(--card-foreground-color);*/
 /*    background: linear-gradient(to top, var(--card-foreground-color) 75%, transparent 75%);*/
-    background: linear-gradient(to top, var(--card-foreground-color) 25%, transparent);
+    background: linear-gradient(to top, hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 0.7) 10%, transparent);
 }
 
 /* The button that presumably allows the user to jump to "Today" */
@@ -129,7 +129,7 @@
 }
 
 .timeline-weekday {
-    border: 2px solid transparent; !important;
+    /* border: 2px solid transparent !important; */
     border-radius: 5px;
 }
 
@@ -205,10 +205,14 @@
 /* The background of the timeline view */
 .timeline-view.svelte-ilz3jn {
     /* styles */
-    background-color: var(--card-foreground-color) !important;
-    /* border-radius: 10px; */
+    /* background-color: var(--card-foreground-color) !important; */
+    /* background: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 0.8) !important; */
+    /* background: linear-gradient(to top, hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 0.7) 60%, transparent) !important; */
+
+    border-radius: 10px;
     border-top-left-radius: unset;
     border-top-right-radius: unset;
+    padding: 0.4em;
     /* border-bottom: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2); */
     /* padding-bottom: 2px !important; */
 }
