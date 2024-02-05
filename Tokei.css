@@ -59,7 +59,7 @@
 
 .quarter,
 .week {
-  color: var(--tokei-main-180);
+  color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
   font-size: 1.2em !important;
@@ -73,8 +73,8 @@
   padding-top: 0.3em !important;
   --gap: 12px;
   margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-  width: calc(120% + var(--wide));
-  /* height: calc(120% + var(--gap)); */
+  width: calc(120% + 0);
+  height: calc(100% + var(--gap));
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -100,6 +100,7 @@
   transform: rotate(180deg);
   font-size: 1.1em;
   text-shadow: 1px 2px 2px black;
+  text-align: center;
   color: hsla(
     calc(var(--typ-accent-h) + 180),
     calc(var(--typ-accent-s) + 0%),
@@ -126,6 +127,7 @@
   );
   text-shadow: 2px 2px 2px black;
   font-size: 1.2em;
+  text-align: center;
 }
 
 

@@ -391,8 +391,8 @@ body.theme-custom {
 .sidebar-toggle-button.mod-left {
     background-color: var(--background-primary-alt);
     height: var(--header-height);
+    padding-left: 1.1em;
 }
-
 
 .sidebar-toggle-button svg {
     color: var(--washed-blue) !important;
@@ -405,9 +405,12 @@ body.theme-custom {
 /* Titlebar Button Container */
 .titlebar-button-container {
     background-color: var(--background-primary-alt) !important;
-    color: var(--soft-yellow);
+    color: hsla(calc(var(--accent-h) + 180), calc(var(--accent-s) + 0%), calc(var(--accent-l) + 20%), 1);
     padding-top: 0.8em !important;
+    padding-right: 1.4em !important;
 }
+
+
 
 .titlebar-button-container svg {
     width: 16px;

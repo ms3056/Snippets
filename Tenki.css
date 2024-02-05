@@ -32,17 +32,18 @@ font-family: "Bricolage Grotesque 14pt";
 
 .current-icon {
   margin-right: 2em;
-  width: 120px;
-  height: 120px;
+  width: 128px;
+  height: 128px;
 }
 
 .current-conditions {
   font-size: 1.4em;
   text-shadow: 2px 2px 4px black;
-  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 1);
+  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
 }
 
 .current-stats-container {
+  font-size: 1.2em;
   text-shadow: 2px 2px 4px black;
   color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
 
@@ -76,12 +77,18 @@ font-family: "Bricolage Grotesque 14pt";
 
 .forecast-day {
 	font-weight: bold;
+  font-size: 1.2em;
   color: hsla(
     calc(var(--typ-accent-h) + 180),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 10%),
     1
   );
+}
+
+.forecast-icon {
+	width: 80px;
+	height: 80px;
 }
 
 .forecast-tooltip {
