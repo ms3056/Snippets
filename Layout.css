@@ -301,8 +301,10 @@ body.theme-custom {
 
     /* Scrollbar Styles */
     --scrollbar-thumb-bg: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 5%), var(--accent-a));
-    --scrollbar-active-thumb-bg: hsla(calc(var(--accent-h) + 0%), calc(var(--accent-s) + 0%), calc(var(--accent-l) + 10%), calc(var(--accent-a) + 0%));
+    --scrollbar-active-thumb-bg: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 20%), 1);
 }
+
+
 
 /* Title */
 .inline-title {
@@ -312,13 +314,13 @@ body.theme-custom {
 
 /* Scrollbar */
 ::-webkit-scrollbar-track {
-    background-color: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 20%), var(--accent-a));
-    border: 2px solid var(--background-primary);
+    background-color: hsla(calc(var(--accent-h) + 0), calc(var(--accent-s) + 0%), calc(var(--accent-l) - 20%), 1) !important;
+    border: 2px solid var(--background-primary) !important;
 }
 
 ::-webkit-scrollbar {
-    width: 0.8em;
-    border: 2px solid var(--background-primary);
+    width: 0.7em !important;
+    border: 2px solid var(--background-primary) !important;
 }
 
 /* Workspace tab text */
@@ -341,9 +343,21 @@ body.theme-custom {
 }
 
 /* Sidebar Toggle Button */
-.sidebar-toggle-button {
+
+/* This is another method of hiding that tiny little line */
+/* .workspace-ribbon.side-dock-ribbon.mod-left::before {
+    border: 2px solid var(--background-primary-alt);
+} */
+
+/* This feels like a better way to hide that little line */
+.workspace-ribbon.mod-left .sidebar-toggle-button {
+    height: var(--header-height);
+}
+
+.sidebar-toggle-button.mod-left {
     background-color: var(--background-primary-alt);
 }
+
 
 .sidebar-toggle-button svg {
     color: var(--washed-blue) !important;
@@ -380,6 +394,10 @@ body.theme-custom {
     border-bottom-right-radius: var(--radiusL);
     text-shadow: 2px 2px 2px black;
     margin-right: 2px;
+}
+
+.side-dock-actions {
+    /* border-top: pink 2px solid; */
 }
 
 /* Left Side-bar Icons */

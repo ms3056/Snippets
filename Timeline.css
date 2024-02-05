@@ -117,7 +117,7 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 }
 
 /* The container for the entire timeline */
-.timeline-container.svelte-ilz3jn {
+.timeline-container {
     /* styles */
     border-radius: 10px;
     border-bottom-left-radius: unset;
@@ -128,26 +128,12 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 }
 
 /* The button that presumably allows the user to jump to "Today" */
-.leaf-periodic-button.svelte-ilz3jn {
+.leaf-periodic-button {
     /* styles */
     background-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.2) !important;
     margin: 4px !important;
     color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1) !important;
 
-}
-
-/* Individual container for each day of the week */
-.timeline-weekday.svelte-ilz3jn {
-    /* styles */
-    height: 3.7em;
-    margin-bottom: 0.5em;
-    /* padding-top: 0.2em; */
-
-}
-
-.timeline-weekday {
-    /* border: 2px solid transparent !important; */
-    border-radius: 5px;
 }
 
 .timeline-weekday:hover {
@@ -156,15 +142,22 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 }
 
 .timeline-day {
-/*    background-color: unset !important;*/
+   /* background-color: unset !important; */
 }
 
 /* Remove the circle around the current day */
-.timeline-day.svelte-ilz3jn.svelte-ilz3jn {
+.timeline-day {
     border: unset !important;
 }
 
-.timeline-weekday.svelte-ilz3jn.is-selected {
+.timeline-weekday {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 3.7em;
+    margin-bottom: 0.5em;
+}
+
+.timeline-weekday.is-selected {
     border: 2px solid var(--tl-selected-border);
     border-radius: 5px;
     background-color: var(--tl-selected-bg);

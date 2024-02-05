@@ -76,22 +76,22 @@
 /* Style for displaying the '.' character */
 .dataview.list-view-ul:before {
     content: "";
-    top: 26px;
+    /* top: 26px; */
     /* Use fixed pixel value instead of percentage */
     /* -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trees'%3E%3Cpath d='M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z'/%3E%3Cpath d='M7 16v6'/%3E%3Cpath d='M13 19v3'/%3E%3Cpath d='M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5'/%3E%3C/svg%3E"); */
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg class='w-6 h-6 text-gray-800 dark:text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' width='52' height='52' viewBox='0 0 24 24'%3E%3Cpath stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 16v-5.5C11 8.5 9.4 7 7.5 7m3.5 9H4v-5.5C4 8.5 5.6 7 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
     background-color: hsl(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l));
     padding: 1.8em;
-    margin-left: 0px;
+    margin-left: 1em;
 }
 
 /* Style for adding the dotted line */
 .dataview.list-view-ul:after {
     content: "";
-    top: 78px;
-    /* Use fixed pixel value instead of percentage */
-    width: 50px;
+    margin-top: 2.9em;
+    margin-left: 1.1em;
+    width: 2.5em;
     border-bottom: 3px dotted hsl(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), var(--typ-accent-l));
 }
 
