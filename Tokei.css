@@ -46,7 +46,7 @@
 
 .time {
   text-shadow: 2px 2px 4px black;
-  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 1);
+  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
   /* font-size: 3em; */
 
 }
@@ -100,7 +100,12 @@
   transform: rotate(180deg);
   font-size: 1.1em;
   text-shadow: 1px 2px 2px black;
-  color: var(--tokei-main-180);
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
 }
 
 .timezone-time:after {
@@ -116,7 +121,7 @@
   color: hsla(
     calc(var(--typ-accent-h) - 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 0%),
+    calc(var(--typ-accent-l) + 10%),
     1
   );
   text-shadow: 2px 2px 2px black;

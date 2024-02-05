@@ -18,7 +18,7 @@ color: hsla(calc(var(--accent-h) + 45), calc(var(--accent-s) + 0%), calc(var(--a
 padding-top: 10px;
 font-family: "Bricolage Grotesque 14pt";
 --tenki-main-text: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-s) + 10%), 1);
---tenki-secondary-text: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+--tenki-secondary-text: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
 --tenki-background: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 10%), 0.5);
 --tenki-border: hsla(calc(var(--accent-h) + 0), calc(var(--accent-s) - 30%), calc(var(--accent-s) + 0%), 1);
 --tenki-highlight: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-s) + 20%), 1);
@@ -27,7 +27,7 @@ font-family: "Bricolage Grotesque 14pt";
 
 .location {
   text-shadow: 2px 2px 4px black;
-  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 1);
+  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
 }
 
 .current-icon {
@@ -76,7 +76,12 @@ font-family: "Bricolage Grotesque 14pt";
 
 .forecast-day {
 	font-weight: bold;
-	color: var(--tenki-secondary-text);
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
 }
 
 .forecast-tooltip {
@@ -92,11 +97,13 @@ font-family: "Bricolage Grotesque 14pt";
 }
 
 .forecast-rain {
-  color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+  color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
   font-size: 1.1em;
 }
 
-
+.last-updated {
+  font-size: 0.9em;
+}
 
 
 /* Replacement of icons */

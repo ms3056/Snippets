@@ -137,3 +137,38 @@ div.dataview-error-box::before {
     font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
     font-size: 1em !important;
 }
+
+/* Dataview Tables */
+
+/* Remove the border (my default tables have a border) */
+.block-language-dataview.node-insert-event > table {
+    border: 2px solid hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 0%), 1) !important;
+
+}
+
+/* Header */
+.block-language-dataview .table-view-tr-header > th {
+    border-bottom: solid 4px hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 0%), 1) !important;
+    color: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
+    background-color: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
+    font-size: 0.9em !important;
+    text-align: center !important;
+    line-height: 2em !important;
+}
+
+/* Odd number rows background */
+.block-language-dataview .table-view-tbody > tr:nth-child(odd) {
+    background-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
+    color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
+  }
+  
+  /* Even number rows background */
+.block-language-dataview .table-view-tbody > tr:nth-child(even) {
+    background-color: hsla(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
+    color: hsla(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
+}
+
+.block-language-dataview .table-view-tbody > tr:hover {
+      font-weight: bold !important;
+      filter: hue-rotate(180deg) brightness(1.2) !important;
+}

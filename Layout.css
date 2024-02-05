@@ -15,12 +15,20 @@ settings:
                 value: theme-custom
 
             -
+                label: Blue Gray
+                value: theme-blue-gray
+
+            -
                 label: Daisy Blue
                 value: theme-daisy-blue
             
             -
                 label: Orange Jist
                 value: theme-orange-jist
+
+            -
+                label: Plum
+                value: theme-plum
 
             -
                 label: Red Sky
@@ -215,10 +223,22 @@ body.theme-orange-jist {
     --typ-accent: hsla(23, 100%, 61%, 1);
 }
 
-body.theme-tea-teal{
-	--accent-h: 195 !important;
-	--accent-s: 63% !important;
-	--accent-l: 52% !important;
+body.theme-plum {
+    --accent-h: 342 !important;
+    --accent-s: 59% !important;
+    --accent-l: 34% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 342 !important;
+    --typ-accent-s: 59% !important;
+    --typ-accent-l: 62% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(342, 59%, 62%, 1);
+}
+
+body.theme-tea-teal {
+    --accent-h: 195 !important;
+    --accent-s: 63% !important;
+    --accent-l: 52% !important;
     --accent-a: 100% !important;
     --typ-accent-h: 195 !important;
     --typ-accent-s: 63% !important;
@@ -227,7 +247,17 @@ body.theme-tea-teal{
     --typ-accent: hsla(195, 63%, 52%, 1);
 }
 
-
+body.theme-blue-gray {
+    --accent-h: 232 !important;
+    --accent-s: 23% !important;
+    --accent-l: 43% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 232 !important;
+    --typ-accent-s: 23% !important;
+    --typ-accent-l: 63% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(232, 23%, 63%, 1);
+}
 
 body.theme-custom {
     --accent-h: var(--hsl-accent-h) !important;
@@ -350,12 +380,17 @@ body.theme-custom {
 } */
 
 /* This feels like a better way to hide that little line */
-.workspace-ribbon.mod-left .sidebar-toggle-button {
+/* .workspace-ribbon.mod-left .sidebar-toggle-button {
     height: var(--header-height);
-}
+} */
+
+/* .workspace-ribbon.mod-left::before {
+    border-bottom: unset;
+} */
 
 .sidebar-toggle-button.mod-left {
     background-color: var(--background-primary-alt);
+    height: var(--header-height);
 }
 
 
