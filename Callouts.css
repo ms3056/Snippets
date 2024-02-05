@@ -45,7 +45,7 @@
     --gradient-end: 0.6;
     --callout-bg-color: hsla(var(--typ-accent-h), var(--typ-accent-s), 5%, 1);
     --callout-content-text: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1);
-    --callout-vacation: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1);
+    --callout-vacation: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) - 30%), 1);
 }
 
 .theme-light {
@@ -106,7 +106,7 @@
     padding: 0.4em;
     margin-bottom: 0.5em;
     border-radius: 10px;
-    color: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1);
+    color: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) + 30%), 1);
 }
 
 /* Common Styles for Today & Preamble Callout */

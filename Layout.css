@@ -258,7 +258,7 @@ body.theme-custom {
     --text-on-accent: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 30%), 1);
     --text-error: var(--bright-red);
     --text-success: var(--bright-green);
-    --tab-container-background: var(--bright-red);
+    /* --tab-container-background: var(--bright-red); */
 
     /* Icon Colors */
     --icons: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 1);
@@ -284,8 +284,7 @@ body.theme-custom {
     --tab-radius: var(--radiusS);
     --tab-radius-active: var(--radiusS);
     --tab-curve: none;
-    --tab-text-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 1);
-;
+    /* --tab-text-color: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 1) !important; */
     --tab-font-size: 1em;
 
     /* Divider Color */
@@ -322,19 +321,23 @@ body.theme-custom {
     border: 2px solid var(--background-primary);
 }
 
+/* Workspace tab text */
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), var(--typ-accent-l), 1);
+}
+
 /* Workspace Tab Header */
 .workspace .mod-root .workspace-tab-header.is-active {
     border-top: 2px solid hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.5);
     margin-left: 1em;
-    color: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), var(--typ-accent-l), 1);
 
 }
 
 .workspace-tab-header {
-    border-top: 2px solid transparent;
+    /* border-top: 2px solid transparent;
     background-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.1);
     margin-left: 1em;
-    border-radius: var(--radiusS);
+    border-radius: var(--radiusS); */
 }
 
 /* Sidebar Toggle Button */
