@@ -6,19 +6,35 @@
 
 
 .theme-dark {
-    --tl-today-text: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 1);
-    --tl-today-day: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-10), 1);
-    --tl-weekend-text: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
-    --tl-weekend-day: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--lighter-l-10), 1);
-    --tl-weekday-text: hsla(var(--shift-h-90), var(--hsl-accent-s), var(--hsl-accent-l), 1);
-    --tl-weekday-day: hsla(var(--shift-h-90), var(--hsl-accent-s), var(--lighter-l-10), 1);
-    --tl-today-bg: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
-    --tl-today-border: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1);
-    --tl-weekend-bg: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
-    --tl-selected-bg: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--hsl-accent-l), 0.2);
-    --tl-selected-border: hsla(var(--shift-h-180), var(--hsl-accent-s), var(--lighter-l-10), 1);
-
+    --tl-today-text: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --tl-today-day: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --tl-weekend-text: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --tl-weekend-day: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --tl-weekday-text: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --tl-weekday-day: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --tl-today-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --tl-today-border: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --tl-weekend-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 0.2);
+    --tl-selected-bg: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 0.2);
+    --tl-selected-border: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
 }
+
+
+.timeline-container:not(:has(.timeline-view)) {
+    /* CSS styles for the closed widget */
+    height: 2em !important;
+}
+
+/* Gradient for the first widget */
+body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-container > div > div > div.timeline-container.svelte-ilz3jn {
+    background: linear-gradient(to top, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent);
+}
+
+/* Gradient for the second widget */
+body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-container > div > div > div.timeline-container.svelte-ilz3jn > div.timeline-view.svelte-ilz3jn {
+    background: linear-gradient(to bottom, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent);
+}
+
 
 
 .leaf-periodic-button.svelte-ilz3jn {
@@ -82,6 +98,8 @@
 .timeline-weekday.svelte-ilz3jn:nth-child(6) .timeline-day-of-week.svelte-ilz3jn {
     /* styles */
     color: var(--tl-weekday-text);
+    background-color: unset;
+
 }
 
 /* Targeting the number for Monday */
@@ -104,18 +122,17 @@
     border-radius: 10px;
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
-    border-top: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) ;
-/*    background-color: var(--card-foreground-color);*/
+    border-top: 2px solid hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.2) ;
+   /* background-color: var(--card-foreground-color) !important; */
 /*    background: linear-gradient(to top, var(--card-foreground-color) 75%, transparent 75%);*/
-    background: linear-gradient(to top, hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 0.7) 10%, transparent);
 }
 
 /* The button that presumably allows the user to jump to "Today" */
 .leaf-periodic-button.svelte-ilz3jn {
     /* styles */
-    background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) !important;
+    background-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.2) !important;
     margin: 4px !important;
-    color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 1) !important;
+    color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1) !important;
 
 }
 
@@ -124,7 +141,7 @@
     /* styles */
     height: 3.7em;
     margin-bottom: 0.5em;
-    padding-top: 0.2em;
+    /* padding-top: 0.2em; */
 
 }
 
@@ -197,10 +214,12 @@
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
-/*    background-color: transparent;*/
+   /* background-color: transparent; */
     text-shadow: 2px 2px 2px black;
     color: var(--tl-today-day) !important;
 }
+
+
 
 /* The background of the timeline view */
 .timeline-view.svelte-ilz3jn {
@@ -212,7 +231,7 @@
     border-radius: 10px;
     border-top-left-radius: unset;
     border-top-right-radius: unset;
-    padding: 0.4em;
+    /* padding: 0.4em; */
     /* border-bottom: 2px solid hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2); */
     /* padding-bottom: 2px !important; */
 }

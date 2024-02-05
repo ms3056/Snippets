@@ -48,8 +48,8 @@ body:is(.theme-dark, .theme-light) {
     --borders: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--darker-l-20), 1);
     --highlight-1:hsla(var(--shift-h-15), var(--hsl-accent-s), var(--lighter-l-10), 0.7);
 /*    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 14%, 1);*/
-    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 20%, 1);
-    --card-foreground-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 1);    /* Derived Colors */
+    --card-background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 10%, 1);
+    --card-foreground-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), 5%, 1);    /* Derived Colors */
     /* --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 1); */
     --tab-container-background: var(--card-background-color);
     --background-primary: var(--card-foreground-color);

@@ -8,44 +8,43 @@
 }*/
 
 .dataview.list-view-ul li:hover {
-    background-color: var(--card-background-color);
+    background-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 30%), 1);
 }
 
 .dataview.list-view-ul li {
 
-  --color-start: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.15);
-  --color-middle: hsla(var(--shift-second-h-45), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.25);
-  --color-end: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.15);
-  
-  --start-percentage: 15%; 
-  --middle-percentage: 30%;
-  --end-percentage: 85%;
+    --color-start: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 0.10);
+    --color-middle: hsla(calc(var(--typ-accent-h) + 30), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 0.20);
+    --color-end: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 0.10);
 
-  border: 3px solid hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.5);
+    --start-percentage: 15%;
+    --middle-percentage: 30%;
+    --end-percentage: 85%;
 
-  border-radius: 10px;
-  background: linear-gradient(
-        90deg, 
-        transparent 0%, 
-        transparent 5%, 
-        var(--color-start) 25%, 
-        var(--color-middle) 50%, 
-        var(--color-end) 75%, 
-        transparent 95%, 
-        transparent 100%
-  );
-  text-align: center;
-  padding: 0.2em;
+    border: 3px solid hsla(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 0.5);
+
+    border-radius: 10px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            transparent 5%,
+            var(--color-start) 25%,
+            var(--color-middle) 50%,
+            var(--color-end) 75%,
+            transparent 95%,
+            transparent 100%);
+    text-align: center;
+    padding: 0.1em;
 }
 
 /* CSS Selector to target links in the specific dataview tables and remove text-decoration */
 .dataview.list-view-ul li span a {
-  /* Variables for colors and gradient stops */
-  font-family: "Rec Mono Duotone", monospace !important;
-  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
-  font-size: 1.1em;
-  text-shadow: 2px 2px 4px black;
-  text-decoration: none;
+    /* Variables for colors and gradient stops */
+    font-family: "Rec Mono Duotone", monospace !important;
+    font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px black;
+    text-decoration: none;
+    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 30%), calc(var(--typ-accent-l) + 20%), 1);
 }
 
 
@@ -53,18 +52,18 @@
 .dataview.list-view-ul {
     list-style: none !important;
     padding-left: 4em;
-    padding-top: 1em;
-    padding-bottom: 3em;
-/*    font-family: "Rec Mono Duotone", monospace !important;*/
-/*    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;*/
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    /* font-family: "Rec Mono Duotone", monospace !important; */
+      /* font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important; */
     font-weight: light !important;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
     gap: 1em;
     width: 90%;
     margin: 0.5em auto;
-    min-height: 3.6em;
-/*    position: relative;*/
+    min-height: 3em;
+    border-bottom: 2px dotted var(--typ-accent);
 }
 
 /* Common styles for before and after pseudo-elements */
@@ -77,26 +76,29 @@
 /* Style for displaying the '.' character */
 .dataview.list-view-ul:before {
     content: "";
-    top: 24px;  /* Use fixed pixel value instead of percentage */
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trees'%3E%3Cpath d='M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z'/%3E%3Cpath d='M7 16v6'/%3E%3Cpath d='M13 19v3'/%3E%3Cpath d='M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5'/%3E%3C/svg%3E");
+    top: 26px;
+    /* Use fixed pixel value instead of percentage */
+    /* -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-trees'%3E%3Cpath d='M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z'/%3E%3Cpath d='M7 16v6'/%3E%3Cpath d='M13 19v3'/%3E%3Cpath d='M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5'/%3E%3C/svg%3E"); */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg class='w-6 h-6 text-gray-800 dark:text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' width='52' height='52' viewBox='0 0 24 24'%3E%3Cpath stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 16v-5.5C11 8.5 9.4 7 7.5 7m3.5 9H4v-5.5C4 8.5 5.6 7 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
-    padding: 2em;
-    margin-left: 4px;
+    background-color: hsl(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l));
+    padding: 1.8em;
+    margin-left: 0px;
 }
 
 /* Style for adding the dotted line */
 .dataview.list-view-ul:after {
     content: "";
-    top: 78px;  /* Use fixed pixel value instead of percentage */
+    top: 78px;
+    /* Use fixed pixel value instead of percentage */
     width: 50px;
-    border-bottom: 3px dotted hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+    border-bottom: 3px dotted hsl(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), var(--typ-accent-l));
 }
 
 
 .dataview.list-view-ul:hover:before,
 .dataview.list-view-ul:hover:after {
-    filter: hue-rotate(180deg);
+    filter: hue-rotate(90deg);
 }
 
 div.dataview-error-box {
@@ -117,18 +119,21 @@ div.dataview-error-box::before {
     transform: translateX(-50%);
     visibility: visible;
     content: ".";
-    background: linear-gradient(to right, hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)), hsla(var(--shift-h-45), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a)), hsla(var(--shift-h-90), var(--hsl-second-s), var(--darker-l-30), var(--hsl-second-a)));
+    background: linear-gradient(to right, 
+        hsl(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), var(--typ-accent-l)), 
+        hsl(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), var(--typ-accent-l)), 
+        hsl(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), var(--typ-accent-l)));
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-refresh-cw-off'%3E%3Cpath d='M21 8L18.74 5.74A9.75 9.75 0 0 0 12 3C11 3 10.03 3.16 9.13 3.47'/%3E%3Cpath d='M8 16H3v5'/%3E%3Cpath d='M3 12C3 9.51 4 7.26 5.64 5.64'/%3E%3Cpath d='m3 16 2.26 2.26A9.75 9.75 0 0 0 12 21c2.49 0 4.74-1 6.36-2.64'/%3E%3Cpath d='M21 12c0 1-.16 1.97-.47 2.87'/%3E%3Cpath d='M21 3v5h-5'/%3E%3Cpath d='M22 22 2 2'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
     background-clip: text;
     color: transparent;
-    width: 72px;  
-    height: 72px; 
+    width: 72px;
+    height: 72px;
 }
 
 .block-language-dataview:has(td) {
     /* style to your heart's content */
     font-family: "Rec Mono Duotone", monospace !important;
-    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
     font-size: 1em !important;
 }

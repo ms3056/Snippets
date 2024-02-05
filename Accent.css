@@ -204,7 +204,7 @@ settings:
     --darker-tertiary-l-30:clamp(0%, calc(var(--hsl-tertiary-l) - 30%), 100%);
     --darker-tertiary-l-40:clamp(0%, calc(var(--hsl-tertiary-l) - 40%), 100%);
     --darker-tertiary-l-50:clamp(0%, calc(var(--hsl-tertiary-l) - 50%), 100%);
-    --color-accent: var(--hsl-second-base);
+    /* --color-accent: var(--hsl-second-base); */
     --highlight-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-30), 1);
     --highlight-border-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-30), 1);
     --highlight-text-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-40), 1);

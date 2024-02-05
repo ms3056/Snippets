@@ -1,109 +1,131 @@
 .theme-dark {
-    --tk-background: hsla(var(--hsl-accent-h), calc(var(--hsl-accent-s) * 0.5), 20%, 0.7);
+  --tk-background: hsla(
+    var(--typ-accent-h),
+    calc(var(--typ-accent-s) * 0.5),
+    20%,
+    0.7
+  );
 }
-
 
 .theme-light {
-    --tk-background: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+  --tk-background: hsla(
+    var(--typ-accent-h),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
+    0.2
+  );
 }
 
-
-
-.workspace-leaf:has(>.workspace-leaf-content>.clock-container) {
-    height: auto;
+.workspace-leaf:has(> .workspace-leaf-content > .clock-container) {
+  height: auto;
 }
-
-
-
-
-
-
 
 /* My Personal Font Preference */
 .clock-container {
-    font-family: "Recursive Sans Casual Static";
-    --tokei-main-text: var(--hsl-second-base);
-    --tokei-secondary-text: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-l-10), var(--hsl-second-a));
-    --tokei-background: var(--side-panels);
-    --tokei-main-180:hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-20), 1);
-    padding: 0;
-    margin-top: 10px;
+  font-family: "Bricolage Grotesque 14pt";
+  --tokei-main-text: var(--typ-accent);
+  --tokei-secondary-text: hsla(
+    calc(var(--typ-accent-h) + 0), 
+    calc(var(--typ-accent-s) + 0%), 
+    calc(var(--typ-accent-l) + 30%), 
+    calc(var(--typ-accent-a) + 0%)
+  );
+  --tokei-background: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) - 30%), calc(var(--typ-accent-s) - 30%), 1);
+  --tokei-border: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) - 30%), calc(var(--typ-accent-s) + 0%), 1);
+  --tokei-main-180: hsla(
+    calc(var(--typ-accent-h) - 180), 
+    calc(var(--typ-accent-s) + 0%), 
+    calc(var(--typ-accent-l) + 20%), 
+    1
+  );
+
+  padding: 0;
+  margin-top: 10px;
 }
 
+
 .time {
-    text-shadow: 2px 2px 4px hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-l-40), 1);
+  text-shadow: 2px 2px 4px
+  hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 40%), 1);
+  /* font-size: 3em; */
+
 }
 
 .date {
-    font-size: 1.6em;
-    text-shadow: 2px 2px 2px black;
-    color: var(--tokei-main-text);
+  font-size: 1.7em;
+  text-shadow: 2px 2px 2px black;
+  color: var(--tokei-main-text);
 }
 
 .quarter,
 .week {
-    color: var(--tokei-main-180);
-    font-weight: bold;
-    text-shadow: 2px 2px 2px black;
-    font-size: 1.2em !important;
+  color: var(--tokei-main-180);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  font-size: 1.2em !important;
 }
 
 /* this snippet will apply a more compact style */
 .timezone-container {
-    gap: 2px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    padding-top: 0.3em !important;
-    --gap: 12px;
-    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-    width: calc(120% + var(--wide));
-    /* height: calc(120% + var(--gap)); */
-    padding-left: 2px;
-    padding-right: 2px;
+  gap: 2px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding-top: 0.3em !important;
+  --gap: 12px;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(120% + var(--wide));
+  /* height: calc(120% + var(--gap)); */
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .timezone-container > * {
-    margin: var(--gap) 0 0 var(--gap);
+  margin: var(--gap) 0 0 var(--gap);
+  border-radius: 10px;
 }
 
 .timezone-pair {
-    min-width: 5em;
-    min-height: 4em;
-    flex-direction: row;
-    max-width: 27%;
-    background-color: var(--tk-background);
+  min-width: 5em;
+  min-height: 4em;
+  flex-direction: row;
+  max-width: 27%;
+  background-color: var(--tokei-background);
+  border-color: var(--tokei-border);
 }
 
 .timezone-name {
-    /* margin-right: 0.05em; */
-    margin-left: 0.1em;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 1.1em;
-    text-shadow: 1px 2px 2px black;
-    color: var(--tokei-main-180);
-
-
+  /* margin-right: 0.05em; */
+  margin-left: 0.1em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.1em;
+  text-shadow: 1px 2px 2px black;
+  color: var(--tokei-main-180);
 }
 
 .timezone-time:after {
-    content: " ";
-    white-space: pre;
+  content: " ";
+  white-space: pre;
 }
 
 .timezone-time {
-    display: block;
-    text-align: center;
-    white-space: pre-line;
-    content: attr(data-text) " ";
-    color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
-    text-shadow: 2px 2px 2px black;
-    font-size: 1.2em;
-
+  display: block;
+  text-align: center;
+  white-space: pre-line;
+  content: attr(data-text) " ";
+  color: hsla(
+    calc(var(--typ-accent-h) - 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+  text-shadow: 2px 2px 2px black;
+  font-size: 1.2em;
 }
 
+
 .time-display::before {
-    content: attr(data-text) "\A";
-    white-space: pre;
-    display: inline;
+  content: attr(data-text) "\A";
+  white-space: pre;
+  display: inline;
 }

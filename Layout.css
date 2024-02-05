@@ -1,0 +1,471 @@
+@charset "UTF-8";
+/* @settings
+name: Card Layout - Accent Colors
+id: layout-accent-colors
+settings:
+    - 
+        id: theme-color
+        title: Theme Color
+        type: class-select
+        allowEmpty: false
+        default: theme-daisy-blue
+        options:
+            -
+                label: Custom
+                value: theme-custom
+
+            -
+                label: Daisy Blue
+                value: theme-daisy-blue
+            
+            -
+                label: Orange Jist
+                value: theme-orange-jist
+
+            -
+                label: Red Sky
+                value: theme-red-sky
+            
+            -
+                label: Silvery
+                value: theme-silvery
+
+            -
+                label: Spruce
+                value: theme-spruce
+
+            -
+                label: Tea Teal
+                value: theme-tea-teal
+            
+            -
+                label: Violette
+                value: theme-violette
+
+            -
+                label: Yellowish
+                value: theme-yellowish
+            
+    -
+        id: hsl-accent
+        title: 'Select the custom user interface accent color'
+        type: variable-themed-color
+        opacity: true
+        format: hsl-split
+        description: User interface accent
+        default-dark: '#007AFF'
+        default-light: '#5dcbc3'
+    
+    - 
+        id: accent-typ
+        title: 'Select the custom typography accent color'
+        type: variable-themed-color
+        opacity: true
+        format: hsl-split
+        description: Content accent
+        default-dark: '#90D997'
+        default-light: '#304f50'
+
+
+*/
+
+/* CSS Variables for Theme Colors */
+:root {
+    /* Basic Color Palette */
+    --darkest-blue: #18222b;
+    --mid-blue: #273341;
+    --light-blue: #303f51;
+    --dark-blue: #1d2833;
+    --soft-dark-blue: #2c3a4a;
+    --ocean-blue: #2c4f64;
+    --bright-blue: #5dcbc3;
+    --percy-blue: #84dca1;
+    --bright-green: #b9e678;
+    --soft-yellow: #ffd580;
+    --bright-yellow: #f8c260;
+    --bright-orange: #ffa161;
+    --bright-red: #ff695d;
+    --bright-purple: #d689e3;
+    --washed-blue: #74859a;
+    --almost-white: #f7f5e9;
+    --soft-white: #eeead1;
+    --basic-gray: #cfd1d1;
+    --blue-gray: #c4d1d1;
+
+    /* Radius Variables */
+    --radiusL: 14px;
+    --radiusS: 10px;
+}
+
+/* Theme Specific Color Variables */
+body.theme-daisy-blue,
+body.theme-red-sky,
+body.theme-silvery,
+body.theme-violette,
+body.theme-tea-teal,
+body.theme-orange-jist,
+body.theme-yellowish,
+body.theme-custom {
+    --text: 50% !important;
+}
+
+body.theme-daisy-blue {
+    --accent-h: 210 !important;
+    --accent-s: 93% !important;
+    --accent-l: 40% !important;
+    --accent-a: 90% !important;
+    --typ-accent-h: 210 !important;
+    --typ-accent-s: 93% !important;
+    --typ-accent-l: 67% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(210, 93%, 67%, 1);
+}
+
+body.theme-spruce {
+    --accent-h: 175 !important;
+    --accent-s: 49% !important;
+    --accent-l: 37% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 175 !important;
+    --typ-accent-s: 49% !important;
+    --typ-accent-l: 55% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(175, 49%, 55%, 1);
+}
+
+body.theme-red-sky {
+    --accent-h: 0 !important;
+    --accent-s: 58% !important;
+    --accent-l: 37% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 0 !important;
+    --typ-accent-s: 58% !important;
+    --typ-accent-l: 66% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(0, 58%, 66%, 1);
+}
+
+body.theme-silvery {
+    --accent-h: 215 !important;
+    --accent-s: 43% !important;
+    --accent-l: 42% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 215 !important;
+    --typ-accent-s: 43% !important;
+    --typ-accent-l: 52% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(215, 43%, 52%, 1);
+    --text: 20% !important;
+}
+
+/* Light theme colors */
+body.theme-violette {
+    --accent-h: 254 !important;
+    --accent-s: 80% !important;
+    --accent-l: 68% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 255 !important;
+    --typ-accent-s: 80% !important;
+    --typ-accent-l: 68% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(255, 80%, 68%, 1);
+}
+
+/* Dark theme colors */
+body.theme-violette.theme-dark {
+    --accent-h: 255 !important;
+    --accent-s: 73% !important;
+    --accent-l: 48% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 255 !important;
+    --typ-accent-s: 73% !important;
+    --typ-accent-l: 68% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(255, 73%, 68%, 1);
+}
+
+body.theme-yellowish {
+    --accent-h: 43 !important;
+    --accent-s: 76% !important;
+    --accent-l: 50% !important;
+    --accent-a: 100% !important;
+}
+
+body.theme-yellowish.theme-dark {
+    --accent-h: 47 !important;
+    --accent-s: 85% !important;
+    --accent-l: 40% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 47 !important;
+    --typ-accent-s: 85% !important;
+    --typ-accent-l: 50% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(47, 85%, 50%, 1);
+}
+
+body.theme-orange-jist {
+    --accent-h: 23 !important;
+    --accent-s: 100% !important;
+    --accent-l: 41% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 23 !important;
+    --typ-accent-s: 100% !important;
+    --typ-accent-l: 61% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(23, 100%, 61%, 1);
+}
+
+body.theme-tea-teal{
+	--accent-h: 195 !important;
+	--accent-s: 63% !important;
+	--accent-l: 52% !important;
+    --accent-a: 100% !important;
+    --typ-accent-h: 195 !important;
+    --typ-accent-s: 63% !important;
+    --typ-accent-l: 52% !important;
+    --typ-accent-a: 100% !important;
+    --typ-accent: hsla(195, 63%, 52%, 1);
+}
+
+
+
+body.theme-custom {
+    --accent-h: var(--hsl-accent-h) !important;
+    --accent-s: var(--hsl-accent-s) !important;
+    --accent-l: var(--hsl-accent-l) !important;
+    --accent-a: var(--hsl-accent-a) !important;
+    --typ-accent-h: var(--accent-typ-h) !important;
+    --typ-accent-s: var(--accent-typ-s) !important;
+    --typ-accent-l: var(--accent-typ-l) !important;
+    --typ-accent-a: var(--accent-typ-a) !important;
+    --typ-accent: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1) !important;
+}
+
+
+/* Dark Theme Styles */
+.theme-dark {
+    /* Surface Colors */
+    --background-primary: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 30%), var(--accent-a));
+    --background-primary-alt: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 20%), var(--accent-a));
+    --background-secondary: var(--background-primary);
+    --background-secondary-alt: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l)), var(--accent-a));
+    --shadow: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 25%));
+
+    /* Text Foreground Colors */
+    --text-normal: hsla(calc(var(--typ-accent-h) + 10), var(--typ-accent-s), calc(var(--typ-accent-l) + 10%), 1);
+    --text-muted: hsla(calc(var(--typ-accent-h) + 10), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 1);
+    --text-faint: hsla(calc(var(--typ-accent-h) + 10), var(--typ-accent-s), calc(var(--typ-accent-l) - 5%), 1);
+    --text-on-accent: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 30%), 1);
+    --text-error: var(--bright-red);
+    --text-success: var(--bright-green);
+    --tab-container-background: var(--bright-red);
+
+    /* Icon Colors */
+    --icons: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 1);
+    --icon60: hsla(calc(var(--accent-h) + 60), var(--accent-s), var(--accent-l), 1);
+    --icon120: hsla(calc(var(--accent-h) + 120), var(--accent-s), var(--accent-l), 1);
+    --icon180: hsla(calc(var(--accent-h) + 180), var(--accent-s), var(--accent-l), 1);
+
+    /* Modifier Colors */
+    --background-modifier-hover: var(--mid-blue);
+    --background-modifier-active-hover: var(--dark-blue);
+    --background-modifier-border: var(--ocean-blue);
+    --background-modifier-border-hover: hsla(calc(var(--accent-h) + 10), var(--accent-s), calc(var(--accent-l) - 20%), 1);
+    --background-modifier-border-focus: none;
+    --color-accent: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 30%), 1);
+
+    --background-modifier-error: var(--bright-red);
+    --background-modifier-success: var(--bright-green);
+    --background-modifier-message: var(--washed-blue);
+    --background-modifier-form-field: var(--light-blue);
+
+    /* Tab Styles */
+    --tab-container-background: var(--background-primary-alt);
+    --tab-radius: var(--radiusS);
+    --tab-radius-active: var(--radiusS);
+    --tab-curve: none;
+    --tab-text-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), 1);
+;
+    --tab-font-size: 1em;
+
+    /* Divider Color */
+    --divider-color: var(--background-primary-alt);
+
+    /* Miscellaneous */
+    --file-header-active: var(--almost-white);
+    --hr-color: var(--percy-blue);
+    --icon-color-focused: var(--bright-blue);
+    --icon-color-hover: var(--washed-blue);
+    --ribbon-background: var(--background-primary-alt);
+    --nav-collapse-icon-color: var(--percy-blue);
+    --slider-track-background: var(--ocean-blue);
+
+    /* Scrollbar Styles */
+    --scrollbar-thumb-bg: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 5%), var(--accent-a));
+    --scrollbar-active-thumb-bg: hsla(calc(var(--accent-h) + 0%), calc(var(--accent-s) + 0%), calc(var(--accent-l) + 10%), calc(var(--accent-a) + 0%));
+}
+
+/* Title */
+.inline-title {
+    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
+
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    background-color: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 20%), var(--accent-a));
+    border: 2px solid var(--background-primary);
+}
+
+::-webkit-scrollbar {
+    width: 0.8em;
+    border: 2px solid var(--background-primary);
+}
+
+/* Workspace Tab Header */
+.workspace .mod-root .workspace-tab-header.is-active {
+    border-top: 2px solid hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.5);
+    margin-left: 1em;
+    color: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), var(--typ-accent-l), 1);
+
+}
+
+.workspace-tab-header {
+    border-top: 2px solid transparent;
+    background-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.1);
+    margin-left: 1em;
+    border-radius: var(--radiusS);
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-button {
+    background-color: var(--background-primary-alt);
+}
+
+.sidebar-toggle-button svg {
+    color: var(--washed-blue) !important;
+}
+
+.sidebar-toggle-button.mod-right {
+    padding-right: 1em;
+}
+
+/* Titlebar Button Container */
+.titlebar-button-container {
+    background-color: var(--background-primary-alt) !important;
+    color: var(--soft-yellow);
+    padding-top: 0.8em !important;
+}
+
+.titlebar-button-container svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Custom Frames Frame */
+.custom-frames-frame {
+    background-color: var(--background-primary);
+}
+
+/* Status Bar */
+.status-bar {
+    font-size: 1.1em;
+    color: var(--washed-blue);
+    background-color: var(--background-primary);
+    border: 10px solid var(--background-primary-alt);
+    border-top-left-radius: var(--radiusL);
+    border-bottom-right-radius: var(--radiusL);
+    text-shadow: 2px 2px 2px black;
+    margin-right: 2px;
+}
+
+/* Left Side-bar Icons */
+.side-dock-ribbon-action:nth-child(4n) svg {
+    color: var(--icon180);
+}
+
+.side-dock-ribbon-action:nth-child(4n + 1) svg {
+    color: var(--icons);
+}
+
+.side-dock-ribbon-action:nth-child(4n + 2) svg {
+    color: var(--icon60);
+}
+
+.side-dock-ribbon-action:nth-child(4n + 3) svg {
+    color: var(--icon120);
+}
+
+/* Hover Style for Workspace Tabs */
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    height: 2px;
+    transition: height 200ms ease-in;
+
+    &:hover {
+        height: var(--header-height);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+/* Layout Styles */
+.workspace-tab-container {
+    margin: 7px;
+    border-radius: var(--radiusL);
+    box-shadow: 5px 5px 5px 0px var(--shadow);
+}
+
+.workspace-split.mod-horizontal.mod-right-split {
+    padding-right: 10px;
+    background-color: var(--background-primary-alt);
+}
+
+.workspace-tabs {
+    background-color: var(--background-primary-alt);
+    padding: 4px;
+}
+
+.side-dock-actions {
+    background-color: var(--background-primary) !important;
+    border-top-right-radius: var(--radiusS) !important;
+    border-bottom-right-radius: var(--radiusS) !important;
+    padding: 6px !important;
+    margin-top: 10px !important;
+}
+
+.side-dock-actions svg {
+    width: 20px;
+    height: 20px;
+}
+
+.side-dock-settings {
+    background-color: var(--background-primary) !important;
+    border-top-right-radius: var(--radiusS);
+    border-bottom-right-radius: var(--radiusS);
+    padding: 4px;
+    margin-bottom: 10px !important;
+}
+
+.side-dock-settings svg {
+    width: 20px;
+    height: 20px;
+}
+
+.workspace-ribbon {
+    padding: 0px !important;
+    background-color: var(--background-primary-alt) !important;
+}
+
+.workspace-tab-header-container {
+    background-color: var(--background-primary-alt) !important;
+}
+
+/* Additional styles specific to elements can be similarly structured and organized. */

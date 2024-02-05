@@ -22,30 +22,32 @@
     --h6-weight: 500;
 }
 
+/* Light theme color variables */
 .theme-light {
-    --h1-line-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.3);
-    --h1-fold-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.1);
-    --h1-text-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --h2-text-color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --h3-text-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --h4-text-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --h5-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --h6-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 1);
+    --h1-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h1-fold-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h1-text-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h2-text-color: hsla(calc(var(--typ-accent-h) - 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h3-text-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h4-text-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h5-text-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --h6-text-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
     --header-shadow: hsl(0, 0%, 62.502%);
 }
 
-
+/* Dark theme color variables */
 .theme-dark {
-    --h1-line-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.7);
-    --h1-fold-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --h1-text-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --h2-text-color: hsla(var(--shift-second-h-60), var(--hsl-second-s), var(--darker-second-l-10), 1);
-    --h3-text-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), 1);
-    --h4-text-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--darker-second-l-10), 1);
-    --h5-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
-    --h6-text-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--darker-second-l-10), 1);
+    --h1-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h1-fold-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
+    --h1-text-color: hsla(calc(var(--typ-accent-h) - 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h2-text-color: hsla(calc(var(--typ-accent-h) + 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h3-text-color: hsla(calc(var(--typ-accent-h) + 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h4-text-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h5-text-color: hsla(calc(var(--typ-accent-h) + 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h6-text-color: hsla(calc(var(--typ-accent-h) + 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
     --header-shadow: black;
 }
+
 
 /* All Headers, editing and reading modes */
 /* From FireIsGood on Discord */

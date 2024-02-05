@@ -1,17 +1,18 @@
 ul>li> .list-bullet::after,
 .cm-list-1 .list-bullet::after {
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a)) !important;
+    background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1) !important;
 
 }
 
 ul>li> ul>li> .list-bullet::after,
 .cm-list-2 .list-bullet::after {
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-10), var(--hsl-second-a)) !important;
+    background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) - 10%), calc(var(--typ-accent-l) - 10%), 1) !important;
+    
 }
 
 ul>li> ul>li> ul>li> .list-bullet::after,
 .cm-list-3 .list-bullet::after {
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-20), var(--hsl-second-a)) !important;
+    background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) - 20%), calc(var(--typ-accent-l) - 20%), 1) !important;
 }
 
 

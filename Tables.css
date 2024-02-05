@@ -1,18 +1,20 @@
 /* Variables for colors and radius */
 body {
-  --border-color: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
+  --border-color: hsl(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%));
   --table-radius: 10px;
   --cell-border-color: none;
-  --odd-row-bg: hsl(var(--shift-tertiary-h-5), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
-  --odd-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-10));
-  --even-row-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-30));
-  --even-row-text: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20));
-  --hover-bg: hsl(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--darker-tertiary-l-10));
+  --odd-row-bg: hsla(calc(var(--typ-accent-h) - 5), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 0.5);
+  --odd-row-text: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1);
+  --link-text: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+  --even-row-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 30%), 0.5);
+  --even-row-text: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1);
+  --hover-bg: hsl(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%));
   --hover-text: white;
-  --header-bg: hsla(var(--hsl-tertiary-h), var(--hsl-tertiary-s), var(--lighter-tertiary-l-20), 80%);
-  --header-text: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
-  --text-shadow: hsl(var(--shift-tertiary-h-45), var(--hsl-tertiary-s), var(--darker-tertiary-l-20));
+  --header-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 80%);
+  --header-text: hsl(calc(var(--typ-accent-h) - 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%));
+  --text-shadow: hsl(calc(var(--typ-accent-h) - 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%));
 }
+
 
 /* Fix the borders and add a radius variable */
 :root table {
@@ -29,6 +31,10 @@ tr:last-child td:last-child {border-bottom-right-radius: var(--table-border-radi
 /* Redo the borders */
 :root :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}
+
+tbody tr .internal-link {
+  color: var(--link-text) !important;
 }
 
 /* 1. Border around the table with rounded corners */

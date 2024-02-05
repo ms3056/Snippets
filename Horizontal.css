@@ -1,10 +1,10 @@
 .markdown-source-view.mod-cm6 hr,
 .markdown-preview-view hr {
     --hr-line-offset: 25%;
-    --hr-line-color1: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--darker-second-l-10), var(--hsl-second-a));
-    --hr-line-color2: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), var(--hsl-second-a));
-    --hr-line-color3: hsla(var(--shift-second-h-10), var(--hsl-second-s), var(--darker-second-l-10), var(--hsl-second-a));
-    --hr-text-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-10), var(--hsl-second-a));
+    --hr-line-color1: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), calc(var(--typ-accent-l) - 10%), var(--typ-accent-a));
+    --hr-line-color2: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) - 10%), var(--typ-accent-a));
+    --hr-line-color3: hsla(calc(var(--typ-accent-h) + 10), var(--typ-accent-s), calc(var(--typ-accent-l) - 10%), var(--typ-accent-a));
+    --hr-text-color: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) - 10%), var(--typ-accent-a));
     --hr-text-offset: 2ch;
     --hr-thickness: 2px;
     display: grid;
@@ -36,7 +36,7 @@
     -webkit-mask-repeat: no-repeat;
     width: 24px;
     height: 24px;
-    background-color: var(--hsl-second-base);
+    background-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 0%), var(--typ-accent-a));;
     font-size: 1.3em;
     filter: hue-rotate(90deg);
     position: absolute;

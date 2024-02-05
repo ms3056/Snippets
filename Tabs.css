@@ -114,9 +114,11 @@
 .workspace .mod-root .workspace-tab-header-inner {
     /* width:auto; */
 }
+
 .workspace .mod-root .workspace-tab-header {
     /* width:auto;
     flex: none;
     flex-shrink: 1;
-    max-width:25% *
+    max-width:25% */
 }
+

@@ -2,57 +2,60 @@
 .theme-light {
     --root-bookmarks-color: black;
     --group-bookmarks-color: transparent;
-    --child1-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --child1-bg-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--hsl-second-l), 0.2);
 
-    --child2-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-5), 1);
-    --child2-bg-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-5), 0.2);
+    --child1-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    --child1-bg-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2);
 
-    --child3-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --child3-bg-color: hsla(var(--shift-second-h-30), var(--hsl-second-s), var(--lighter-second-l-10), 0.2);
+    --child2-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 1);
+    --child2-bg-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 0.2);
 
-    --child4-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --child4-bg-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+    --child3-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --child3-bg-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 
-    --child5-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-5), 1);
-    --child5-bg-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-5), 0.2);
+    --child4-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    --child4-bg-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2);
 
-    --child6-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --child6-bg-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--lighter-second-l-10), 0.2);
+    --child5-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 1);
+    --child5-bg-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 0.2);
 
-    --child7-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --child7-bg-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+    --child6-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --child6-bg-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 
-    --child8-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-5), 1);
-    --child8-bg-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-5), 0.2);
+    --child7-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    --child7-bg-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2);
 
-    --child9-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --child9-bg-color: hsla(var(--shift-second-h-120), var(--hsl-second-s), var(--lighter-second-l-10), 0.2);
+    --child8-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 1);
+    --child8-bg-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 0.2);
 
-    --child10-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --child10-bg-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+    --child9-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --child9-bg-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 
-    --child11-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-5), 1);
-    --child11-bg-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-5), 0.2);
+    --child10-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    --child10-bg-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2);
 
-    --child12-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --child12-bg-color: hsla(var(--shift-second-h-150), var(--hsl-second-s), var(--lighter-second-l-10), 0.2);
+    --child11-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 1);
+    --child11-bg-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 0.2);
 
-    --child13-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
-    --child13-bg-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 0.2);
+    --child12-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --child12-bg-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 
-    --child14-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-5), 1);
-    --child14-bg-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-5), 0.2);
+    --child13-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    --child13-bg-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2);
 
-    --child15-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    --child15-bg-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-10), 0.2);
+    --child14-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 1);
+    --child14-bg-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 5%), 0.2);
+
+    --child15-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
+    --child15-bg-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 }
+
 
 [data-type="bookmarks"] .tree-item-self.is-active {
   display: flex;
   align-items: center;
 /*    background-color: hsla(var(--hsl-accent-h), var(--hsl-accent-s), var(--hsl-accent-l), 0.2) !important;*/
-    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
+    /* color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1); */
+    color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
 /*    border: 2px solid var(--hsl-accent-base) !important;*/
 }
 
@@ -63,7 +66,7 @@
     height: 22px;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-left'%3E%3Cpath d='m15 18-6-6 6-6'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-    background-color: var(--hsl-second-base);
+    background-color: var(--typ-accent);
 }
 
 [data-type="bookmarks"] .tree-item-self.is-active::after {
@@ -73,7 +76,7 @@
     height: 22px;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-    background-color: var(--hsl-second-base);
+    background-color: var(--typ-accent);
 }
 
 [data-type="bookmarks"] .tree-item > .tree-item-self {
@@ -83,17 +86,16 @@
 /*  border: 2px solid transparent;*/
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
-    font-family: "Rec Mono Duotone", monospace !important;
+    font-family: "Bricolage Grotesque 14pt", monospace !important;
   font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
 }
 
 [data-type="bookmarks"] .tree-item-self:hover {
-/*    filter: hue-rotate(180deg) brightness(1.1);*/
-    border-radius: 5px !important;
-    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1) !important;
-    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;
-/*    border: 2px solid var(--hsl-accent-base);*/
+  border-radius: 5px !important;
+  color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
+  background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.3) !important;
 }
+
 
 [data-type="bookmarks"] .tree-item-children > .tree-item > .tree-item-self{
   font-weight: normal;
@@ -195,12 +197,13 @@
   height: 16px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='hsl(0, 0%, 50%)' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
-  background-color: var(--hsl-second-base);
+  background-color: var(--typ-accent);
 }
 
 [data-type="bookmarks"] .collapse-icon.is-collapsed::after {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='hsl(0, 0%, 50%)' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
-  background-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
+  background-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), calc(var(--typ-accent-a) + 0%));
+
 }
 

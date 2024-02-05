@@ -6,11 +6,13 @@
 /* > [!today    | base           | collapsed | blue, orange, etc] */
 
 /* Edit Block Button */
+
+
 .markdown-source-view.mod-cm6 .cm-callout>.edit-block-button {
     opacity: 0.6;
     background-color: var(--background-primary);
-    color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-10), 1);
-    border: 2px solid hsla(var(--hsl-second), 0.5);
+    color: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l)+10%), 1);
+    border: 2px solid hsla(var(--typ-accent), 0.5);
     transition: ease-in-out all .4s;
     transition: 150ms cubic-bezier(0.2, 0, 1, 0.9);
     border-radius: 10px;
@@ -25,9 +27,9 @@
 }
 
 .markdown-source-view.mod-cm6 .cm-callout>.edit-block-button:hover {
-    color: hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--lighter-second-l-20), 1);
-    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--darker-second-l-30), 1);
-    border: 2px solid hsla(var(--shift-second-h-180), var(--sat-second-s-40), var(--lighter-second-l-20), 1);
+    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) - 20%), 1);
+    background-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 1);
+    border: 2px solid hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) - 20%), 1);
     opacity: 1;
 }
 
@@ -41,13 +43,17 @@
 .theme-dark {
     --gradient-start: 0.15;
     --gradient-end: 0.6;
-    --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 1);
+    --callout-bg-color: hsla(var(--typ-accent-h), var(--typ-accent-s), 5%, 1);
+    --callout-content-text: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1);
+    --callout-vacation: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1);
 }
 
 .theme-light {
     --gradient-start: 0.35;
     --gradient-end: 0.6;
-    --callout-bg-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), 5%, 0.3);
+    --callout-bg-color: hsla(var(--typ-accent-h), var(--typ-accent-s), 90%, 1);
+    --callout-content-text: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 1);
+    --callout-vacation: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) + 10%), 1);
 }
 
 /* These commands affect ALL callouts - custom or not  */
@@ -65,7 +71,7 @@
     font-size: 1.3em;
     text-shadow: 2px 2px 2px black;
     background-color: unset;
-    color: var(--hsl-second-base);
+    color: var(--typ-accent);
 }
 
 .callout-fold,
@@ -95,12 +101,12 @@
 
 /* Targeting the div with class 'block-language-dataviewjs' */
 .callout[data-callout="today"] .callout-content .block-language-dataviewjs span {
-    background-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-15), 1) !important;
+    background-color: var(--callout-vacation) !important;
     float: right;
-    padding: 0.3em;
+    padding: 0.4em;
     margin-bottom: 0.5em;
     border-radius: 10px;
-    color: white;
+    color: hsla(var(--typ-accent-h), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1);
 }
 
 /* Common Styles for Today & Preamble Callout */
@@ -136,14 +142,15 @@
 .callout[data-callout="today"] {
     --callout-icon: calendar;
     background: linear-gradient(90deg, hsla(var(--callout-color), var(--gradient-start)) 0%, hsla(var(--callout-color), var(--gradient-end)) 100%);
+    color: hsla(calc(var(--typ-accent-h) + 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1) !important;
+
 }
 
-/* .callout[data-callout="today"] .svg-icon.lucide-calendar,
-.callout[data-callout="today"] .svg-icon.lucide-chevron-down,
-.callout[data-callout="today"] .callout-title-inner {
+.callout[data-callout="today"] svg {
+    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1) !important;
 
-   
-} */
+}
+
 
 .callout[data-callout="today"] .callout-title-inner {
     color: var(--title-color);
@@ -158,6 +165,7 @@
     /* Relative positioning for pseudo-element */
     padding-left: 40px !important;
     /* Padding to ensure text does not overlap with "X" */
+    color: var(--callout-content-text);
 }
 
 /* Remove default margin from the <p> to align it properly with the "X" */
@@ -179,7 +187,7 @@
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
     mask-repeat: no-repeat;
     mask-size: 24px 24px;
-    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.9);
+    background-color: hsla(calc(var(--typ-accent-h) + 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1) !important;
     position: absolute;
     left: 8px;
     top: 10px;
@@ -209,7 +217,7 @@
 
 
 .callout[data-callout="preamble"] .callout-content {
-    font-family: "Recursive Sans Casual Static";
+    font-family: "Bricolage Grotesque 14pt";
     background-color: var(--callout-bg-color) !important;
     border-left: 3px dashed hsla(var(--callout-color), 0.7);
     /* padding-left: 0.6em !important; */
@@ -220,24 +228,24 @@
 
 .callout[data-callout="preamble"] .callout-content>blockquote {
     margin-left: 1em;
-    border-left: 4px solid hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+    border-left: 4px solid hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 1);
     border-radius: 10px;
 
 }
 
 .callout[data-callout="preamble"] .callout-content:has(>h2) {
-    --h2-text-color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+    --h2-text-color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
 }
 
 .callout[data-callout="preamble"] .callout-content:has(>ul>li) {
     line-height: 1.2em !important;
     --list-spacing: 0.3em;
     padding: unset;
-    color: hsla(var(--shift-second-h-15), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    color: hsla(calc(var(--typ-accent-h) + 15), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
 }
 
 .callout[data-callout="preamble"] .callout-content>ul>li::marker {
-    color: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
 }
 
 /* Common styles for data-callout-metadata=base */
@@ -292,7 +300,6 @@
 .callout[data-callout-metadata*=base] {
     display: flex;
     flex-direction: column;
-    /*    border-radius: 10px;*/
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -440,9 +447,9 @@
 }
 
 /* Custom Color List */
-.callout[data-callout-metadata*="hsl-accent"] {
-    --callout-color: var(--hsl-second);
-    --title-color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.8);
+.callout[data-callout-metadata*="typ-accent"] {
+    --callout-color: var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l) !important;
+    --title-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.8);
 }
 
 .callout[data-callout-metadata*="orange"] {
@@ -514,4 +521,3 @@
     --callout-color: 24, 61%, 69%;
     --title-color: hsla(24, 61%, 69%, 0.8);
 }
-

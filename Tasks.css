@@ -1,13 +1,11 @@
 .theme-light {
-    --task-text: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--lighter-second-l-20), 1);
-    --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
+    --task-text: hsla(calc(var(--typ-accent-h) + 180%), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1);
     --task-background: hsla(var(--shift-second-h-45), var(--hsl-accent-secondary-s), var(--darker-second-l-40), 1);
 }
 
 .theme-dark {
-    --task-text: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--lighter-second-l-10), 1);
-    --task-border: hsla(var(--shift-second-h-180), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 1);
-    --task-background: hsla(var(--shift-second-h-90), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
+    --task-text: hsla(calc(var(--typ-accent-h) - 5), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 25%), 1);
+    --task-background: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-s) - 20%), 1);
 }
 
 .markdown-source-view.mod-cm6 input.task-list-item-checkbox {
@@ -18,14 +16,15 @@
 }
 
 input.task-list-item-checkbox:hover {
-    border-color: var(--hsl-second-base);
-    background-color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 0.5);
+    border-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    background-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.3);
 }
+
 
 input.task-list-item-checkbox:checked {
     box-shadow: inset 0 0 0 calc(0.0625 * var(--font-text-size)) var(--background-primary);
-    border-color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), var(--hsl-second-a));
-    background-color: var(--hsl-second-base);
+    border-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    background-color: var(--typ-accent);
     transition: box-shadow 0s;
 }
 
@@ -46,7 +45,7 @@ body {
 }
 
 /* Targeting all child elements of the div with class 'HyperMD-list-line' */
-.HyperMD-list-line > * {
+.HyperMD-list-line>* {
     /* Applying vertical alignment to the middle */
     vertical-align: middle !important;
 }
@@ -57,70 +56,61 @@ body {
     opacity: var(--checklist-done-opacity);
 }
 
-/*.HyperMD-task-line .cm-underline {
-    font-size: 1.1em;
-    text-decoration: none !important;
-    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
-    text-shadow: 2px 2px 4px black;
-    border-top: 2px solid hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1);
+/* Notes hover */
+.HyperMD-task-line .cm-underline:hover,
+.HyperMD-task-line .cm-underline:hover::after {
+    color: hsla(calc(var(--typ-accent-h) + 225), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
+    border-color: hsla(calc(var(--typ-accent-h) + 225), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) - 20%), 1);
 }
 
-.HyperMD-task-line .cm-underline::before {
-    content: "";
-    background-color: hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1);
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v7'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M4 18v-1a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    padding-right: 1.3em;
-}*/
-
-.HyperMD-task-line .cm-underline:hover{
-    color: hsla(var(--shift-second-h-90), var(--hsl-second-s), var(--hsl-second-l), 1)!important;
+.HyperMD-task-line .cm-underline:hover::before {
+    background-color: hsla(calc(var(--typ-accent-h) + 225), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) - 20%), 1);
 }
 
 /* Base styles for .cm-underline inside .HyperMD-task-line */
 .HyperMD-task-line .cm-underline {
-    font-size: 1.1em; 
-    text-decoration: none !important; 
-    color: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
-    text-shadow: 2px 2px 4px black; 
-    position: relative; 
-    padding-left: 30px; 
+    font-size: 1.1em;
+    text-decoration: none !important;
+    color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
+    text-shadow: 2px 2px 4px black;
+    position: relative;
+    padding-left: 30px;
 }
 
 /* Pseudo-element for the SVG icon */
 .HyperMD-task-line .cm-underline::before {
-    content: ""; 
+    content: "";
     position: absolute;
-    left: 0; 
-    top: 0; 
-    width: 34px; 
-    height: 34px; 
+    left: 0;
+    top: 0;
+    width: 34px;
+    height: 34px;
     background-color: transparent;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v7'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M4 18v-1a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-    mask-size: cover; 
-    background-color: hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1); 
+    mask-size: cover;
+    background-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
 }
 
 /* Pseudo-element for the top, right, and bottom borders */
 .HyperMD-task-line .cm-underline::after {
-    content: ""; 
-    position: absolute; 
-    top: 0; 
-    left: 24px; 
-    right: -10px; 
-    bottom: 0; 
-    border: 2px solid hsla(var(--shift-second-h-210), var(--hsl-second-s), var(--hsl-second-l), 1); 
-    border-left: none; 
-    border-top-right-radius: 10px; 
-    border-bottom-right-radius: 10px; 
-    box-sizing: border-box; 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: -10px;
+    bottom: 0;
+    border: 2px solid hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
 }
 
 /* Highlight the time */
-.cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1 {
+.cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1 {
     font-family: "Rec Mono Duotone";
-    font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+    font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
     text-shadow: 2px 2px 4px black;
     border-radius: 5px;
     font-size: 1em;
@@ -131,8 +121,8 @@ body {
     margin-right: 0.5em;
 }
 
-.cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::before,
-.cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::after {
+.cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1::before,
+.cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1::after {
     content: "";
     margin-right: -0.3em;
 }
@@ -140,20 +130,20 @@ body {
 /* Undo styling for cssclasses: tasks for my quarterly notes pages */
 .tasks input[type=checkbox] {
     border-width: 0.1em !important;
-    --checkbox-size: unset !important; 
+    --checkbox-size: unset !important;
     border-radius: 0% !important;
     margin-right: unset !important;
 }
 
-.tasks .cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::before,
-.tasks .cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1::after {
+.tasks .cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1::before,
+.tasks .cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1::after {
     margin-right: unset;
 }
 
-.tasks .cm-widgetBuffer + .task-list-label + .cm-widgetBuffer + .cm-list-1 {
+.tasks .cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1 {
     font-family: "Recursive Sans Casual Static";
     background: var(--background-primary);
-    color: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-10), 1) !important;
+    color: hsla(calc(var(--typ-accent-h) + 0%), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1) !important;
     text-shadow: unset;
     line-height: 1.6em !important;
     font-size: 1.2em;
