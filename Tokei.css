@@ -91,6 +91,7 @@
   max-width: 27%;
   background-color: var(--tokei-background);
   border-color: var(--tokei-border);
+  border-radius: var(--radiusL);
 }
 
 .timezone-name {
@@ -99,12 +100,12 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font-size: 1.1em;
-  text-shadow: 1px 2px 2px black;
+  text-shadow: 2px 2px 4px black;
   text-align: center;
   color: hsla(
     calc(var(--typ-accent-h) + 180),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-l) - 0%),
     1
   );
 }
