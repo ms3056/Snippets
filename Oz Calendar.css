@@ -1,13 +1,18 @@
 /* OZ Calendar Tweaks */
 .oz-calendar-plugin-today abbr {
-    color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
+    color: hsla(
+        calc(var(--typ-accent-h) + 180),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
     font-weight: bolder;
     font-size: 1.6em;
     text-shadow: 2px 2px 4px black;
 }
 
 .oz-calendar-plugin-view .react-calendar__tile--active {
-    background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.2) !important;
+    background-color: var(--background-primary-alt) !important; 
 }
 
 .oz-calendar-plugin-view .react-calendar__tile {
@@ -20,6 +25,26 @@
     display: block;
 }
 
+.oz-calendar-plugin-view .react-calendar__month-view__days__day--weekend {
+	background-color: var(--background-primary-alt) !important;
+    border-radius: unset;
+    filter: brightness(0.5);
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekNumbers {
+    display: block !important;
+    color: hsla(
+        calc(var(--typ-accent-h) + 180),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
+    flex-basis: auto !important;
+    background-color: var(--background-primary-alt);
+    font-size: var(--nav-item-size);
+    border-radius: var(--radiusS);
+}
+
 .oz-calendar-plugin-view .dots-wrapper {
     display: none;
 }
@@ -30,7 +55,12 @@
 
 .oz-calendar-plugin-today {
     border-radius: 0.5em;
-    border: 2px solid hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+    border: 2px solid hsla(
+        calc(var(--typ-accent-h) + 180),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
     padding: 0.3em !important;
 }
 

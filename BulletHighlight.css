@@ -1,11 +1,11 @@
 
 .theme-dark  {
-  --bh_1: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.15);
-  --bh_2: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 0.15); 
-  --bh_3: hsla(calc(var(--typ-accent-h) - 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 0.15);
-  --bh_4: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.15);
-  --bh_5: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 0.15);
-  --bh_6: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 0.15);
+  --bh_1: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.1);
+  --bh_2: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 0.1); 
+  --bh_3: hsla(calc(var(--typ-accent-h) - 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 0.1);
+  --bh_4: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.1);
+  --bh_5: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 0.1);
+  --bh_6: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 20%), 0.1);
 }
 
 

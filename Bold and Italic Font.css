@@ -31,8 +31,8 @@ em,
   font-style: italic;
   font-size: 1em;
   color: hsla(
-    calc(var(--typ-accent-h) + 45),
-    calc(var(--typ-accent-s) + 20%),
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 10%),
     calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
@@ -44,7 +44,7 @@ strong,
   font-size: 1.1em;
   color: hsla(
     calc(var(--typ-accent-h) + 180),
-    calc(var(--typ-accent-s) + 30%),
+    calc(var(--typ-accent-s) + 10%),
     calc(var(--typ-accent-l) + 20%),
     1
   ) !important;
@@ -66,6 +66,18 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   );
   width: 10px;
   height: 10px;
+}
+
+/* Apply a horizontal transformation to shift all elements with the 'HyperMD-codeblock' class to the right by 2em */
+.HyperMD-codeblock,
+[class^="language-"] {
+  transform: translateX(2em) !important;
+  width: 90%;
+}
+
+.HyperMD-list-line ~ .HyperMD-codeblock {
+  padding-left: 2em !important;
+  background-color: var(--background-primary-alt) !important;
 }
 
 .HyperMD-codeblock {
@@ -119,7 +131,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
     ) !important;
 }
 
-.code-block-flair {
+.markdown-source-view.mod-cm6 .code-block-flair {
   color: hsla(
     calc(var(--typ-accent-h) - 180),
     calc(var(--typ-accent-s) + 0%),

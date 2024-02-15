@@ -1,5 +1,5 @@
 .list-bullet {
-  margin-right: 0.5em;
+  margin-right: 0.3em;
   --list-bullet-size: 0.5em;
 }
 
@@ -15,12 +15,14 @@
 
 .has-list-bullet > li[data-line="1"] > .list-bullet::after,
 .HyperMD-list-line-2 .list-bullet::after {
-  background-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 20%),
-    calc(var(--typ-accent-l) - 0%),
-    1
-  );
+  background-color: var(--background-primary);
+  border: 0.1em solid
+    hsla(
+      calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 20%),
+      calc(var(--typ-accent-l) + 0%),
+      1
+    );
 }
 
 .has-list-bullet > li[data-line="2"] > .list-bullet::after,
@@ -35,12 +37,14 @@
 
 .has-list-bullet > li[data-line="3"] > .list-bullet::after,
 .HyperMD-list-line-4 .list-bullet::after {
-  background-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 60%),
-    calc(var(--typ-accent-l) - 0%),
-    1
-  );
+  background-color: var(--background-primary);
+  border: 0.1em solid
+    hsla(
+      calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 60%),
+      calc(var(--typ-accent-l) - 0%),
+      1
+    );
 }
 
 .has-list-bullet > li[data-line="4"] > .list-bullet::after,

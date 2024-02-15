@@ -27,6 +27,10 @@ settings:
                 value: theme-orange-jist
 
             -
+                label: Palenight
+                value: theme-palenight
+
+            -
                 label: Plum
                 value: theme-plum
 
@@ -73,7 +77,6 @@ settings:
         description: Content accent
         default-dark: '#90D997'
         default-light: '#304f50'
-
 
 */
 
@@ -216,29 +219,18 @@ body.theme-yellowish.theme-dark {
   --typ-accent: hsla(47, 85%, 50%, 1);
 }
 
-/* body.theme-orange-jist {
-    --accent-h: 30 !important;
-    --accent-s: 50% !important;
-    --accent-l: 35% !important;
-    --accent-a: 100% !important;
-    --typ-accent-h: 30 !important;
-    --typ-accent-s: 50% !important;
-    --typ-accent-l: 45% !important;
-    --typ-accent-a: 100% !important;
-    --typ-accent: hsla(30, 50%, 45%, 1);
-} */
-
 body.theme-orange-jist {
-  --accent-h: 30 !important; /* A hue closer to true orange */
-  --accent-s: 70% !important; /* Increased saturation for vibrancy */
-  --accent-l: 35% !important; /* A balanced lightness for dark themes */
-  --accent-a: 100% !important; /* Keeping solid colors */
-  --typ-accent-h: 30 !important; /* Matching hue for typography */
-  --typ-accent-s: 70% !important; /* Vibrant, but not overwhelming */
-  --typ-accent-l: 55% !important; /* Lighter for readability */
-  --typ-accent-a: 100% !important; /* Solid typography */
-  --typ-accent: hsla(33, 70%, 55%, 1); /* Computed typography color */
+  --accent-h: 30 !important;
+  --accent-s: 70% !important;
+  --accent-l: 35% !important;
+  --accent-a: 100% !important;
+  --typ-accent-h: 30 !important;
+  --typ-accent-s: 70% !important;
+  --typ-accent-l: 55% !important;
+  --typ-accent-a: 100% !important;
+  --typ-accent: hsla(33, 70%, 55%, 1);
 }
+
 body.theme-plum {
   --accent-h: 274 !important;
   --accent-s: 59% !important;
@@ -251,16 +243,29 @@ body.theme-plum {
   --typ-accent: hsl(274, 59%, 52%);
 }
 
+body.theme-palenight {
+  --accent-h: 229 !important;
+  --accent-s: 20% !important;
+  --accent-l: 44% !important;
+  --accent-a: 100% !important;
+  --typ-accent-h: 0 !important;
+  --typ-accent-s: 48% !important;
+  --typ-accent-l: 52% !important;
+  --typ-accent-a: 100% !important;
+  --typ-accent: hsl(0, 48%, 52%);
+  --text-selection: hsl(180, 48%, 52%);
+}
+
 body.theme-tea-teal {
-  --accent-h: 150 !important; /* Green hue */
-  --accent-s: 43% !important; /* Saturation similar to the silvery theme for consistency */
-  --accent-l: 42% !important; /* Lightness matched to maintain vibe */
-  --accent-a: 100% !important; /* Full opacity for solid colors */
-  --typ-accent-h: 150 !important; /* Matching hue for typography */
-  --typ-accent-s: 43% !important; /* Consistent saturation for text vibrancy */
-  --typ-accent-l: 52% !important; /* Increased lightness for readability */
-  --typ-accent-a: 100% !important; /* Solid typography colors */
-  --typ-accent: hsla(150, 43%, 52%, 1); /* Computed typography color */
+  --accent-h: 150 !important;
+  --accent-s: 43% !important;
+  --accent-l: 42% !important;
+  --accent-a: 100% !important;
+  --typ-accent-h: 150 !important;
+  --typ-accent-s: 43% !important;
+  --typ-accent-l: 52% !important;
+  --typ-accent-a: 100% !important;
+  --typ-accent: hsla(150, 43%, 52%, 1);
 }
 
 body.theme-blue-gray {
@@ -356,36 +361,41 @@ body.theme-custom {
   /* --tab-container-background: var(--bright-red); */
 
   /* Icon Colors */
-  --icons: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 1);
+  --icons: hsla(
+    var(--typ-accent-h),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
+    1
+  );
 
   --icon60: hsla(
-    calc(var(--accent-h) + 60),
-    var(--accent-s),
-    var(--accent-l),
+    calc(var(--typ-accent-h) + 60),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
     1
   );
   --icon120: hsla(
-    calc(var(--accent-h) + 120),
-    var(--accent-s),
-    var(--accent-l),
+    calc(var(--typ-accent-h) + 120),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
     1
   );
   --icon180: hsla(
-    calc(var(--accent-h) + 180),
-    var(--accent-s),
-    var(--accent-l),
+    calc(var(--typ-accent-h) + 180),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
     1
   );
 
   --icon220: hsla(
-    calc(var(--accent-h) + 220),
-    var(--accent-s),
-    var(--accent-l),
+    calc(var(--typ-accent-h) + 220),
+    var(--typ-accent-s),
+    var(--typ-accent-l),
     1
   );
 
   /* Modifier Colors */
-  --background-modifier-hover: var(--mid-blue);
+  --background-modifier-hover: var(--background-primary-alt);
   --background-modifier-active-hover: var(--dark-blue);
   --background-modifier-border: var(--ocean-blue);
   --background-modifier-border-hover: hsla(
@@ -402,13 +412,25 @@ body.theme-custom {
     1
   );
 
+  --interactive-accent: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 15%),
+    1
+  );
+  --text-on-accent: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 20%),
+  1
+);
+
   --background-modifier-error: var(--bright-red);
   --background-modifier-success: var(--bright-green);
   --background-modifier-message: var(--washed-blue);
   --background-modifier-form-field: var(--light-blue);
 
   /* Tab Styles */
-
   --tab-radius: var(--radiusS);
   --tab-radius-active: var(--radiusS);
   --tab-curve: none;
@@ -430,18 +452,18 @@ body.theme-custom {
   );
 
   /* Active Tabs */
-  --tab-text-color-active: hvar(--background-primary);
-  --tab-text-color-focused-active-current: hsla(
-    calc(var(--typ-accent-h) + 180),
-    var(--typ-accent-s),
-    calc(var(--typ-accent-l) - 0%),
+  /* Active tab but Obsidian not focused */
+  --tab-text-color-active: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 0%),
     1
   );
   --tab-background-active: var(--background-primary);
   --tab-text-color-focused-active-current: hsla(
-    calc(var(--typ-accent-h) + 180),
-    var(--typ-accent-s),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 20%),
     1
   );
 
@@ -451,8 +473,22 @@ body.theme-custom {
   /* Miscellaneous */
   --file-header-active: var(--almost-white);
   --hr-color: var(--percy-blue);
-  --icon-color-focused: var(--bright-blue);
-  --icon-color-hover: var(--washed-blue);
+
+  --icon-color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
+    1
+  );
+  --icon-color-hover: orange;
+  --icon-color-active: blue;
+  --icon-color-focused: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 20%),
+    1
+  );
+
   --ribbon-background: var(--background-primary-alt);
   --nav-collapse-icon-color: var(--percy-blue);
   --slider-track-background: var(--ocean-blue);
@@ -511,6 +547,22 @@ body.theme-custom {
   ) !important;
 }
 
+/* Active icons */
+.mod-right-split .workspace-tab-header .workspace-tab-header-inner-icon,
+.mod-left-split .workspace-tab-header .workspace-tab-header-inner-icon {
+  border-bottom: 4px solid var(--background-primary);
+  padding-bottom: 4px;
+}
+.mod-right-split
+  .workspace-tab-header.is-active
+  .workspace-tab-header-inner-icon,
+.mod-left-split
+  .workspace-tab-header.is-active
+  .workspace-tab-header-inner-icon {
+  border-bottom: 4px solid var(--typ-accent);
+  padding-bottom: 4px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar-track {
   background-color: hsla(
@@ -538,29 +590,6 @@ body.theme-custom {
     hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.5);
   margin-left: 1em;
 }
-
-.workspace-tab-header {
-  /* border-top: 2px solid transparent;
-    background-color: hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.1);
-    margin-left: 1em;
-    border-radius: var(--radiusS); */
-}
-
-/* Sidebar Toggle Button */
-
-/* This is another method of hiding that tiny little line */
-/* .workspace-ribbon.side-dock-ribbon.mod-left::before {
-    border: 2px solid var(--background-primary-alt);
-} */
-
-/* This feels like a better way to hide that little line */
-/* .workspace-ribbon.mod-left .sidebar-toggle-button {
-    height: var(--header-height);
-} */
-
-/* .workspace-ribbon.mod-left::before {
-    border-bottom: unset;
-} */
 
 .sidebar-toggle-button.mod-left {
   background-color: var(--background-primary-alt);
@@ -594,8 +623,14 @@ body.theme-custom {
   padding-right: 3em;
 }
 
+
+
 /* Titlebar Button Container */
-.titlebar-button-container {
+/* Windows controls */
+
+.titlebar-button-container.mod-right {
+  /* padding-right: 1.4em; */
+  top: 0.5em;
   background-color: var(--background-primary-alt) !important;
   color: hsla(
     calc(var(--accent-h) + 180),
@@ -603,8 +638,50 @@ body.theme-custom {
     calc(var(--accent-l) + 20%),
     1
   );
-  padding-top: 0.8em !important;
-  padding-right: 1.4em !important;
+}
+
+.titlebar-button-container {
+  /* background-color: var(--background-primary-alt) !important; */
+  /* color: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 20%),
+    1
+  ); */
+  /* padding-top: 0.8em !important; */
+  /* padding-right: 1.4em !important; */
+  /* padding-right: 1.4em; */
+}
+
+
+
+.titlebar-button.mod-minimize,
+.titlebar-button.mod-maximize,
+.titlebar-button.mod-close {
+  /* padding-right: 1.4em; */
+  /* padding-top: 0.8em; */
+
+}
+
+.titlebar-button.mod-minimize:hover svg {
+  /* background-color: var(--background-primary); */
+  width: 24px;
+  height: 24px;
+
+}
+
+.titlebar-button.mod-maximize:hover svg {
+  /* background-color: var(--background-primary); */
+  width: 24px;
+  height: 24px;
+
+}
+
+.titlebar-button.mod-close:hover svg {
+  /* background-color: var(--background-primary); */
+  width: 24px;
+  height: 24px;
+
 }
 
 .titlebar-button-container svg {
@@ -620,7 +697,12 @@ body.theme-custom {
 /* Status Bar */
 .status-bar {
   font-size: 1.1em;
-  color: var(--washed-blue);
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
   background-color: var(--background-primary);
   border: 10px solid var(--background-primary-alt);
   border-top-left-radius: var(--radiusL);
@@ -740,4 +822,3 @@ body.theme-custom {
   background-color: var(--background-primary-alt) !important;
 }
 
-/* Additional styles specific to elements can be similarly structured and organized. */
