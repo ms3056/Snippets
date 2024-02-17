@@ -65,10 +65,12 @@
 
   --gradient-end: 0.5;
 
+ 
+
   --callout-bg-color: hsla(
     calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) - 0%),
-    calc(var(--typ-accent-l) - 48%),
+    calc(var(--typ-accent-l) - 52%),
     1
   );
 
@@ -80,8 +82,8 @@
   );
 
   --callout-vacation: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 20%),
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 40%),
     1
   );
@@ -150,15 +152,15 @@
   border-radius: 10px;
   font-weight: bold;
   font-size: 1em;
-  border: 4px solid
+  border: 2px solid
     hsla(
-      var(--typ-accent-h),
-      var(--typ-accent-s),
-      calc(var(--typ-accent-l) - 10%),
+      calc(var(--typ-accent-h) + 90),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) - 20%),
       1
     );
   color: hsla(
-    var(--typ-accent-h),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 60%),
     calc(var(--typ-accent-l) + 30%),
     1
@@ -212,15 +214,21 @@
 
 .callout[data-callout="today"] svg {
   color: hsla(
-    calc(var(--typ-accent-h) + 180),
-    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 20%),
     calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
 }
 
 .callout[data-callout="today"] .callout-title-inner {
-  color: var(--title-color);
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 20%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  ) !important;
+  text-shadow: 2px 2px 2px black;
 }
 
 /* Styles for the callout-content when the data-callout attribute is "today" */

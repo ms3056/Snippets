@@ -1,4 +1,4 @@
-.theme-dark {
+/*.theme-dark {
   --tk-background: hsla(
     var(--typ-accent-h),
     calc(var(--typ-accent-s) * 0.5),
@@ -14,7 +14,7 @@
     var(--typ-accent-l),
     0.2
   );
-}
+}*/
 
 .workspace-leaf:has(> .workspace-leaf-content > .clock-container) {
   height: auto;
@@ -30,7 +30,7 @@
     calc(var(--typ-accent-l) + 30%), 
     calc(var(--typ-accent-a) + 0%)
   );
-  --tokei-background: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 10%), 0.5);
+  --tokei-background: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 10%), 0.2);
   --tokei-border: hsla(calc(var(--accent-h) + 0), calc(var(--accent-s) - 30%), calc(var(--accent-s) + 0%), 1);
   --tokei-main-180: hsla(
     calc(var(--typ-accent-h) - 180), 
@@ -54,7 +54,12 @@
 .date {
   font-size: 1.7em;
   text-shadow: 2px 2px 2px black;
-  color: var(--tokei-main-text);
+  color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
 }
 
 .quarter,

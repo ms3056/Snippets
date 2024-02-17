@@ -4,16 +4,15 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 3px !important;
+  height: 4px !important;
   background-color: hsla(
     calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
   z-index: 1000;
 }
-
 
 .needle::before {
   visibility: visible;
@@ -22,16 +21,16 @@
   -webkit-mask-repeat: no-repeat;
   background-clip: text;
   position: absolute;
-  left: 0%; /* Aligns to the left edge */
+  left: -2%; /* Aligns to the left edge */
   top: 50%; /* Centers vertically */
   transform: translate(-12%, -17%);
   background-color: hsla(
     calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
-  width: 72px;
+  width: 18px;
   height: 72px;
 }
 
@@ -43,15 +42,15 @@
   background-clip: text;
   font-size: 2em;
   position: absolute;
-  right: 0%; /* Aligns to the left edge */
+  right: 4%; /* Aligns to the left edge */
   top: 50%; /* Centers vertically */
-  transform: translate(78%, -17%);
+  transform: translate(79%, -17%);
   background-color: hsla(
     calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
-  width: 72px;
+  width: 18px;
   height: 72px;
 }

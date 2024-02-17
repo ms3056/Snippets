@@ -17,6 +17,10 @@ settings:
             -
                 label: Blue Gray
                 value: theme-blue-gray
+            
+            -
+                label: Dark Gray
+                value: theme-dark-gray
 
             -
                 label: Daisy Blue
@@ -130,6 +134,20 @@ body.theme-daisy-blue {
   --typ-accent-l: 67% !important;
   --typ-accent-a: 100% !important;
   --typ-accent: hsla(210, 93%, 67%, 1);
+}
+
+body.theme-dark-gray {
+  --accent-h: 212 !important;
+  --accent-s: 45% !important;
+  --accent-l: 42% !important;
+  --accent-a: 100% !important;
+  --typ-accent-h: 210 !important;
+  --typ-accent-s: 37% !important;
+  --typ-accent-l: 59% !important;
+  --typ-accent-a: 100% !important;
+  --typ-accent: hsl(210, 37%, 59%);
+  --background-primary-alt: hsl(212, 15%, 20%);
+  --background-primary: hsl(212, 15%, 15%);
 }
 
 body.theme-spruce {
@@ -508,6 +526,38 @@ body.theme-custom {
   );
 }
 
+/* Hover line indicator */
+/*.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
+.workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+    position: relative;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
+.workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    width: 4px;
+    height: 0;
+    background: hsla(
+      calc(var(--typ-accent-h) + 180),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 10%),
+      1
+    );
+    opacity: 1;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
+.workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+.workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
+    height: calc(100% - 6px);
+}*/
+
 .view-header-title-parent {
   color: hsla(
     calc(var(--typ-accent-h) + 0),
@@ -541,11 +591,13 @@ body.theme-custom {
 .inline-title {
   color: hsla(
     calc(var(--typ-accent-h) + 180),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 0%),
+    calc(var(--typ-accent-s) + 20%),
+    calc(var(--typ-accent-l) + 10%),
     1
   ) !important;
+  text-shadow: 2px 2px 2px black;
 }
+
 
 /* Active icons */
 .mod-right-split .workspace-tab-header .workspace-tab-header-inner-icon,

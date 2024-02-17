@@ -1,6 +1,6 @@
 /* from the Everforest Enchanted theme by FireIsGood */
 :root body:is(.theme-dark, .theme-light) {
-    --h1-size: 2.000em !important;
+    --h1-size: 1.757em !important;
     --h2-size: 1.375em !important;
     --h3-size: 1.250em !important;
     --h4-size: 1.125em !important;
@@ -37,7 +37,9 @@
 
 /* Dark theme color variables */
 .theme-dark {
-    --h1-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h1-line-color: hsla(calc(var(--typ-accent-h) + 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h2-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --h3-line-color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
     --h1-fold-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
     --h1-text-color: hsla(calc(var(--typ-accent-h) - 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
     --h2-text-color: hsla(calc(var(--typ-accent-h) + 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
@@ -61,8 +63,22 @@
   width: 4px;
   display: inline-block;
   border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 10px;
+}
+
+.HyperMD-header-2::before  {
+  content: " ";
+  background-color: var(--h2-line-color);
+  width: 4px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.HyperMD-header-3::before  {
+  content: " ";
+  background-color: var(--h3-line-color);
+  width: 4px;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 /* Add extra space after Header-1 unless the next line is a horizontal line */
@@ -71,16 +87,18 @@
 /*    margin-top: 0.3em !important; */
 }
 
-.HyperMD-header-1 .cm-fold-indicator {
-  margin-left: -15px;
-  margin-right: 15px;
+.HyperMD-header-1 .cm-fold-indicator,
+.HyperMD-header-2 .cm-fold-indicator,
+.HyperMD-header-3 .cm-fold-indicator {
+  margin-left: 20px;
+/*  margin-right: 15px;*/
   color: var(--h1-fold-color);
 }
 
 /* By sailKite on Discord */
 .cm-header-1, .markdown-rendered h1 {
     color: var(--h1-text-color);
-    padding-left: 0.3em;
+    /* padding-left: 0.3em; */
 }
 
 .cm-header-2, .markdown-rendered h2 {

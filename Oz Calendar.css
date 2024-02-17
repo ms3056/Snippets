@@ -7,12 +7,12 @@
         1
     );
     font-weight: bolder;
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-shadow: 2px 2px 4px black;
 }
 
 .oz-calendar-plugin-view .react-calendar__tile--active {
-    background-color: var(--background-primary-alt) !important; 
+/*    background-color: var(--background-primary-alt) !important; */
 }
 
 .oz-calendar-plugin-view .react-calendar__tile {
@@ -28,7 +28,7 @@
 .oz-calendar-plugin-view .react-calendar__month-view__days__day--weekend {
 	background-color: var(--background-primary-alt) !important;
     border-radius: unset;
-    filter: brightness(0.5);
+    filter: brightness(0.6);
 }
 
 .oz-calendar-plugin-view .react-calendar__month-view__weekNumbers {
@@ -37,8 +37,7 @@
         calc(var(--typ-accent-h) + 180),
         calc(var(--typ-accent-s) + 20%),
         calc(var(--typ-accent-l) + 10%),
-        1
-    );
+        1);
     flex-basis: auto !important;
     background-color: var(--background-primary-alt);
     font-size: var(--nav-item-size);
@@ -54,7 +53,7 @@
 }
 
 .oz-calendar-plugin-today {
-    border-radius: 0.5em;
+    border-radius: var(--radiusS) !important;
     border: 2px solid hsla(
         calc(var(--typ-accent-h) + 180),
         calc(var(--typ-accent-s) + 20%),
@@ -101,6 +100,9 @@
 .oz-calendar-note-line:hover {
     filter: hue-rotate(180deg);
     background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.3) !important;
-    color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
+    color: hsla(
+        calc(var(--typ-accent-h) - 180), 
+        calc(var(--typ-accent-s) + 0%), 
+        calc(var(--typ-accent-l) + 0%), 1) !important;
     border-radius: 5px;
 }

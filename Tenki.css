@@ -119,7 +119,9 @@
   align-items: center;
   border: 2px solid var(--tenki-border);
   min-width: 25%;
-  background-color: var(--tenki-background);
+/*  background-color: var(--tenki-background);*/
+  background-color: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 10%), 0.2);
+
   border-radius: var(--radiusL);
   backdrop-filter: blur(10px);
 }
@@ -157,21 +159,21 @@
     "ss04" 1,
     "ss03" 1 !important;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 15%),
+    calc(var(--accent-h) + 90),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 25%),
     1
   );
   border-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 25%),
+    calc(var(--accent-h) + 90),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 25%),
     1
   );
   background-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 35%),
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 35%),
     1
   );
   border-radius: 10px;

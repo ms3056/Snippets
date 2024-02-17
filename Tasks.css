@@ -4,8 +4,8 @@
 }
 
 .theme-dark {
-  --task-text: hsla(calc(var(--typ-accent-h) - 5), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 25%), 1);
-  --task-background: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-s) - 20%), 1);
+  --task-text: hsla(calc(var(--typ-accent-h) - 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 35%), 1);
+  --task-background: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 20%), calc(var(--typ-accent-s) - 40%), 1);
 }
 
 .markdown-source-view.mod-cm6 input.task-list-item-checkbox {
@@ -100,10 +100,10 @@ body {
   left: 24px;
   right: -10px;
   bottom: 0;
-  border: 2px solid hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
+  border: 2px solid hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 40%), calc(var(--typ-accent-l) + 10%), 1);
   border-left: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: var(--radiusL);
+  border-bottom-right-radius: var(--radiusL);
   box-sizing: border-box;
 }
 
@@ -113,7 +113,7 @@ body {
   font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
   text-shadow: 2px 2px 4px black;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 0.9em;
   padding-top: 0.1em;
   padding-bottom: 0.1em;
   color: var(--task-text);
@@ -142,8 +142,8 @@ body {
 
 .tasks .cm-widgetBuffer+.task-list-label+.cm-widgetBuffer+.cm-list-1 {
   font-family: "Recursive Sans Casual Static";
-  background: var(--background-primary);
-  color: hsla(calc(var(--typ-accent-h) + 0%), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1) !important;
+  background-color: var(--background-primary);
+  color: hsla(calc(var(--typ-accent-h) + 0%), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1) !important;
   text-shadow: unset;
   line-height: 1.6em !important;
   font-size: 1.2em;

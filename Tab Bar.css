@@ -1,8 +1,41 @@
-div.view-actions {
-    --icon-size: 22px;
+/* Align icons horizontally with Flexbox and add gaps */
+.view-actions,
+.cmdr-page-header {
+  align-items: center;
+  background-color: var(--background-primary);
+  border-top: none !important;
+  border-bottom-right-radius: var(--radiusL);
+  border-bottom-left-radius: var(--radiusL);
+  border: 6px solid var(--background-primary-alt);
+}
+
+.view-actions {
+  margin-right: 1em !important;
+}
+
+.view-actions svg {
+  stroke: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 10%),
+    1
+  ) !important;
+  --icon-size: 20px;
+  border: none;
 }
 
 .cmdr-page-header {
-    color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--lighter-second-l-10), 100%) !important;
-    --icon-size: 22px;
+  padding-right: 10px !important;
+  border: 3px solid var(--background-primary);
+}
+
+.cmdr-page-header svg {
+  stroke: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 20%),
+    1
+  ) !important;
+  --icon-size: 20px;
+  border: 0px solid var(--background-primary);
 }

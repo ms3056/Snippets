@@ -1,0 +1,1355 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"--ra",
+				"--radiusL"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"--rad",
+				"--radiusL"
+			],
+			[
+				"--background-pri",
+				"--background-primary-alt"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"border-",
+				"border-color"
+			],
+			[
+				"cm",
+				"cm-underline"
+			],
+			[
+				"cm-",
+				"cm-underline"
+			],
+			[
+				"border-bottom",
+				"border-bottom-right-radius"
+			],
+			[
+				"border-rad",
+				"border-top-right-radius"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"background",
+				"background-repeat"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
+				"u",
+				"unset"
+			],
+			[
+				"text-decoration",
+				"text-decoration-line"
+			],
+			[
+				"--card-",
+				"--card-background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"workspace-",
+				"workspace-tabs"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"tra",
+				"translateY()"
+			],
+			[
+				"bo",
+				"text-bottom"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"backgrou",
+				"background-repeat"
+			],
+			[
+				"fi",
+				"fill"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"n",
+				"unset"
+			],
+			[
+				"nav",
+				"nav-folder"
+			],
+			[
+				"callout",
+				"callout-content"
+			],
+			[
+				"markdown",
+				"markdown-rendered"
+			],
+			[
+				"--hsl-se",
+				"--hsl-second-base"
+			],
+			[
+				"--shift-se",
+				"--shift-second-h-90"
+			],
+			[
+				"hsl-second",
+				"hsl-second-base"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"--car",
+				"--card-foreground-color"
+			],
+			[
+				"height",
+				"line-height"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"theme-",
+				"theme-dark"
+			],
+			[
+				"pur",
+				"mediumpurple"
+			],
+			[
+				"green",
+				"limegreen"
+			],
+			[
+				"oran",
+				"orangered"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"task-list-",
+				"task-list-item-checkbox"
+			],
+			[
+				"theme",
+				"theme-light"
+			],
+			[
+				"--h5",
+				"--h5-text-color"
+			],
+			[
+				"--h4",
+				"--h4-text-color"
+			],
+			[
+				"--h3",
+				"--h3-text-color"
+			],
+			[
+				"--h2",
+				"--h2-text-color"
+			],
+			[
+				"them",
+				"theme-dark"
+			],
+			[
+				"is",
+				"is-selected"
+			],
+			[
+				"--tl",
+				"--tl-today-border"
+			],
+			[
+				"time",
+				"timeline-day"
+			],
+			[
+				"--",
+				"--tl-today-border"
+			],
+			[
+				"--tl-",
+				"--tl-weekend-text"
+			],
+			[
+				"--tl-wee",
+				"--tl-weekend-text"
+			],
+			[
+				"light",
+				"lightslategray"
+			],
+			[
+				"med",
+				"mediumblue"
+			],
+			[
+				"border-ra",
+				"border-top-left-radius"
+			],
+			[
+				"--ic",
+				"--icons"
+			],
+			[
+				"--icon",
+				"--icon180"
+			],
+			[
+				"border-top-",
+				"border-top-left-radius"
+			],
+			[
+				"--card",
+				"--card-foreground-color"
+			],
+			[
+				"workspa",
+				"workspace-tab-header-container-inner"
+			],
+			[
+				"workspace-t",
+				"workspace-tab-header-container"
+			],
+			[
+				"workspace-tab-header",
+				"workspace-tab-header-container"
+			],
+			[
+				"work",
+				"workspace-tab-container"
+			],
+			[
+				"border-radiu",
+				"border-bottom-right-radius"
+			],
+			[
+				"--my-",
+				"--my-tag-border-width"
+			],
+			[
+				"--my",
+				"--my-tag-border"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"border-top",
+				"border-top"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"--ca",
+				"--card-background-color"
+			],
+			[
+				"-card",
+				"--card-foreground-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"--to",
+				"--tokei-main-text"
+			],
+			[
+				"--cr",
+				"--crypto-secondary-text"
+			],
+			[
+				"--odd",
+				"--odd-row-text"
+			],
+			[
+				"--odd-",
+				"--odd-row-text"
+			],
+			[
+				"lime",
+				"limegreen"
+			],
+			[
+				"lightgree",
+				"lightseagreen"
+			],
+			[
+				"orange",
+				"orangered"
+			],
+			[
+				"--table-",
+				"--table-hover-text"
+			],
+			[
+				"--even",
+				"--even-rows-background"
+			],
+			[
+				"side",
+				"side-panels"
+			],
+			[
+				"workspace-tab-head",
+				"workspace-tab-header-container"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"lightr",
+				"lightcoral"
+			],
+			[
+				"sidebar",
+				"sidebar-toggle-button"
+			],
+			[
+				"--call",
+				"--callout-color"
+			],
+			[
+				"sidebar-",
+				"sidebar-toggle-button"
+			],
+			[
+				"works",
+				"workspace-tab-header"
+			],
+			[
+				"padding-b",
+				"padding-bottom"
+			],
+			[
+				"margin-b",
+				"margin-bottom"
+			],
+			[
+				"--co",
+				"--color3"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"--tabs",
+				"--tabs-color2"
+			],
+			[
+				"nav-folder-",
+				"nav-folder-children"
+			],
+			[
+				"nav-",
+				"nav-folder"
+			],
+			[
+				"font-w",
+				"font-weight"
+			],
+			[
+				"tree-it",
+				"tree-item-self"
+			],
+			[
+				"bag",
+				"background-color"
+			],
+			[
+				"translate",
+				"translateX()"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"margin-block-",
+				"margin-block-start"
+			],
+			[
+				"tree",
+				"tree-item-self"
+			],
+			[
+				"--my-acc",
+				"--my-accent-dark-r"
+			],
+			[
+				"backgroud-c",
+				"background-color"
+			],
+			[
+				"tree-",
+				"tree-item-self"
+			],
+			[
+				"--fol",
+				"--Fold1"
+			],
+			[
+				"tree-item",
+				"tree-item-children"
+			],
+			[
+				"tree-iem",
+				"tree-item-self"
+			],
+			[
+				"darko",
+				"darkorange"
+			],
+			[
+				"Hyp",
+				"HyperMD-header-4"
+			],
+			[
+				"c",
+				"cm-header-1"
+			],
+			[
+				"backgroun-",
+				"background-color"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"align-",
+				"align-items"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Accent.css",
+			"settings":
+			{
+				"buffer_size": 12366,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"open work",
+				"Project And Worspsace Management: Open Workspace"
+			],
+			[
+				"new workspace",
+				"Project And Worspsace Management: New Workspace"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"close all",
+				"Terminus: Close All"
+			],
+			[
+				"open",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"termius",
+				"Terminus: Toggle Panel"
+			],
+			[
+				": open",
+				"Terminal: Open"
+			],
+			[
+				"terminau",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"terminal",
+				"Terminal: Open"
+			],
+			[
+				"termin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"format",
+				"Format CSS: Compact (Break Selectors)"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"py",
+				"PyYapf: Format Document"
+			],
+			[
+				"package control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ",
+				"Package Control: Upgrade All Packages"
+			],
+			[
+				"markdow",
+				"MarkdownEditing: Markdown Lint"
+			],
+			[
+				"packag control",
+				"Package Control: Install Package"
+			],
+			[
+				"Packag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pack",
+				"View Package File"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"termi",
+				"Terminus: Close All"
+			],
+			[
+				"termins",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"formatp",
+				"Format CSS: Expanded (Break Selectors)"
+			],
+			[
+				"css",
+				"Format CSS: Compact"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Preferences: Browse Packages"
+			],
+			[
+				"mini",
+				"Formatter: Minify With Clean CSS"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"froma",
+				"Formatter: Beautify With Stylelint"
+			],
+			[
+				"formatt",
+				"Formatter: Beautify With Beautysh"
+			],
+			[
+				"pacage",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package ",
+				"Preferences: Browse Packages"
+			],
+			[
+				"tremin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"",
+				"UI: Select Theme"
+			],
+			[
+				"uninstall",
+				"Colorsublime: Uninstall Theme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"tremina",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"TERMINUS",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"compare",
+				"BeyondCompare: Show Diff"
+			],
+			[
+				"lsp:enable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"LSP:enab",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp: enabl",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"LSP: enable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"enable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"black",
+				"python-black: Format the selected code or the code of the entire file"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"term",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"g",
+				"Git: Commit"
+			],
+			[
+				"package coin",
+				"Package Control: Install Package"
+			],
+			[
+				"code",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ayu",
+				"ayu: Activate theme"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 480.0,
+		"history":
+		[
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets"
+	],
+	"file_history":
+	[
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Layout.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Tasks.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Bookmarks.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/README.md",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Accent.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/DayPlanner.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/Assets/scripts/FixWeeks.py",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Border Colors.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Dataview.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/Assets/templates/Startup Template.md",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Horizontal.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Tenki.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Tokei.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/themes/Border/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Oz Calendar.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/plugins/oz-calendar/styles.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/themes/AnuPpuccin/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/Border Colors.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/BulletThreading.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/plugins/tenki/styles.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/Assets/scripts/randomColor.js",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/match/base.yml",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.gitmodules",
+		"/C/Users/m3n7qv/AppData/Roaming/Sublime Text 3/Packages/Markdown.sublime-package",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/tenki/styles.css",
+		"/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/themes/Novadust/theme.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/tokei/styles.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.gitmodules",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Layout.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Accent.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/Novadust/theme.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/Flexoki/theme.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/Flexoki/manifest.json",
+		"/C/Users/m3n7qv/MyStorage/Downloads/mailbox-svgrepo-com.svg",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/Mado Miniflow/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Saved Snippets/HIroMike - Accent Colors.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/AnuPpuccin/theme.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/extended-colorschemes.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Cards.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/Assets/scripts/randomColor.js",
+		"/C/Users/m3n7qv/MyStorage/頭脳/Assets/scripts/quoter.js",
+		"/C/Users/m3n7qv/MyStorage/Downloads/Compressed/Text_on_a_Circle_Visio_SmartShape/Text on a Circle/Text on a Circle/installation.txt",
+		"/C/Users/m3n7qv/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VBY1C53Q/email.txt",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/Meeting.py",
+		"/G/My Drive/DnD/Gorgon + Additional Content/Gorgon Additional Content/Maps/Gorgon - Roll20.txt",
+		"/C/Users/m3n7qv/MyStorage/Test Vault/Test/.obsidian/plugins/Tenki/styles.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/themes/Minimal/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Business/.gitignore",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/TZ.py",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/Time.py",
+		"/G/My Drive/頭脳/.obsidian/snippets/TT.css",
+		"/G/My Drive/頭脳/Assets/scripts/randomColor.js",
+		"/G/My Drive/頭脳/Canvas/Untitled.canvas",
+		"/G/My Drive/頭脳/.obsidian/snippets/Canvas.css",
+		"/G/My Drive/頭脳/.obsidian/plugins/canvas-style-menu/styles.css",
+		"/G/My Drive/頭脳/Assets/MicrosoftTodo.css",
+		"/C/Users/m3n7qv/Desktop/page.html",
+		"/G/My Drive/頭脳/.obsidian/plugins/canvas-style-menu/data.json",
+		"/C/Users/m3n7qv/MyStorage/Downloads/Gorgon.txt",
+		"/C/Users/m3n7qv/Desktop/MicrosoftTodo.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/Bold and Italic Font.css",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/timezones.txt",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/TimezoneClip.py",
+		"/G/My Drive/頭脳/.obsidian/snippets/Active Line.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/Tags.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/Properties.css",
+		"/C/Users/m3n7qv/MyStorage/Downloads/Easy Chili Recipe.md",
+		"/G/My Drive/頭脳/.obsidian/snippets/Files.css",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/Timezone.py",
+		"/G/My Drive/頭脳/.obsidian/snippets/Tasks.css",
+		"/G/My Drive/頭脳/.gitignore",
+		"/G/My Drive/頭脳/Inbox/Testing.md",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/day.py",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/fyear.py",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/fiscal.py",
+		"/C/Users/m3n7qv/AppData/Roaming/espanso/scripts/myfy.py",
+		"/G/My Drive/頭脳/.obsidian/snippets/Cards.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/Tokei.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/CustomFrame.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/Oz Calendar.css",
+		"/G/My Drive/頭脳/.obsidian/snippets/snippets.sublime-project",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Dataview.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tasks.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/supercharged-links-gen.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Files.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tokei.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Callouts.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Headers.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Active Line.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tabs.css",
+		"/C/Users/m3n7qv/MyStorage/Downloads/Compressed/Canvas-Candy-Vault-2023-10-29/Canvas-Candy-Vault/.obsidian/snippets/canvas-candy.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Properties.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tables.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Horizontal.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Bold and Italic Font.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/CustomFrame.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.gitignore",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tenki.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/tokei/data.json",
+		"/C/Users/m3n7qv/Desktop/GCAP - Initial Contract.csv",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/tokei/main.js",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Bookmarks.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Bullets.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/file-explorer-note-count/styles.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/file-explorer-note-count/data.json",
+		"/C/Users/m3n7qv/MyStorage/Education/README.md",
+		"/C/Users/m3n7qv/MyStorage/Education/LICENSE",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/README.md",
+		"/C/Users/m3n7qv/MyStorage/Downloads/magicpattern-grid-pattern-1697712411016.svg",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Timeline.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/LICENSE",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/plugins/periodic-notes/styles.css",
+		"/C/Users/m3n7qv/MyStorage/頭脳/.obsidian/snippets/Tab Bar.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/Organizations/GCAP.md",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/Organizations/MHI FX.md",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Gantt.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/themes/Flexoki/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Downloads/mermaid.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Callouts.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Cards.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/themes/AnuPpuccin/theme.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Bookmarks.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Outline.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Tenki.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Tab Bar.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Tabs.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/snippets/Kanban.css",
+		"/C/Users/m3n7qv/MyStorage/Vault/Work/.obsidian/plugins/obsidian-kanban/data.json"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/Accent.css",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 12366,
+						"regions":
+						{
+							"col_264C59FF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										910,
+										917
+									]
+								],
+								"scope": "col_264C59FF"
+							},
+							"col_264C59FF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_264C59FF_circle.png",
+								"regions":
+								[
+									[
+										886,
+										886
+									]
+								],
+								"scope": "col_gutter"
+							},
+							"col_304F50FF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										642,
+										649
+									]
+								],
+								"scope": "col_304F50FF"
+							},
+							"col_304F50FF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_304F50FF_circle.png",
+								"regions":
+								[
+									[
+										618,
+										618
+									]
+								],
+								"scope": "col_gutter"
+							},
+							"col_407F94FF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										877,
+										884
+									]
+								],
+								"scope": "col_407F94FF"
+							},
+							"col_407F94FF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_407F94FF_circle.png",
+								"regions":
+								[
+									[
+										854,
+										854
+									]
+								],
+								"scope": "col_gutter"
+							},
+							"col_52138CFF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										368,
+										375
+									]
+								],
+								"scope": "col_52138CFF"
+							},
+							"col_52138CFF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_52138CFF_circle.png",
+								"regions":
+								[
+									[
+										344,
+										344
+									]
+								],
+								"scope": "col_gutter"
+							},
+							"col_725BADFF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										335,
+										342
+									]
+								],
+								"scope": "col_725BADFF"
+							},
+							"col_725BADFF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_725BADFF_circle.png",
+								"regions":
+								[
+									[
+										312,
+										312
+									]
+								],
+								"scope": "col_gutter"
+							},
+							"col_90D997FF":
+							{
+								"flags": 16,
+								"regions":
+								[
+									[
+										609,
+										616
+									]
+								],
+								"scope": "col_90D997FF"
+							},
+							"col_90D997FF_icon":
+							{
+								"flags": 16,
+								"icon": "Packages/User/Color Highlight.cache/col_90D997FF_circle.png",
+								"regions":
+								[
+									[
+										586,
+										586
+									]
+								],
+								"scope": "col_gutter"
+							}
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_helper.box_height": 18,
+							"color_helper.color_scheme": "Mariana.sublime-color-scheme",
+							"color_helper.refresh": false,
+							"color_helper.scan":
+							{
+								"allow_scanning": true,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?xi)\n(?:\n    \\b(?<![-#&$])(?:\n        color\\((?!\\s*-)|(?:hsla?|(?:ok)?(?:lch|lab)|hwb|rgba?)\\(\n) |\n\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])\\#)\n",
+								"current_ext": ".css",
+								"current_syntax": "CSS/CSS",
+								"enabled": true,
+								"last_updated": 1708054579.55,
+								"scanning": "meta.declaration-list.css -support.type.property-name.css -comment -string,meta.property-value.css -comment -string,meta.value.css -comment -string,meta.tag.inline.any.html string.quoted -constant.character.entity.html,meta.tag.any.html meta.attribute-with-value.style.html"
+							},
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 60.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/MyPython.sublime-build",
+	"project": "/C/Users/m3n7qv/MyStorage/Hikki/.obsidian/snippets/snippets.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
