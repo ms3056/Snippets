@@ -49,7 +49,6 @@
     --child15-bg-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 0.2);
 }
 
-
 [data-type="bookmarks"] .tree-item-self.is-active {
   display: flex;
   align-items: center;

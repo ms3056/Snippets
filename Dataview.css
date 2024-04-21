@@ -138,37 +138,91 @@ div.dataview-error-box::before {
     font-size: 1em !important;
 }
 
+
+/* Dataview Tasks */
+/* Task Text */
+
+.cm-preview-code-block:has(.task-list-item) .task-list-item.plugin-tasks-list-item {
+    font-family: "Quicksand";
+    vertical-align: middle !important;
+    
+} 
+
+.cm-preview-code-block:has(.task-list-item) .task-list-item {
+    color: pink !important;
+} 
+
+.cm-preview-code-block:has(.task-list-item) .task-description {
+    color: lime;
+    margin-left: 0.5em;
+}
+
+/* Checkboxes */
+
+.cm-preview-code-block:has(.task-list-item) .task-list-item-checkbox {
+    width: 1.6em;
+    height: 1.6em;
+}
+
+/* Not Checked - checkbox*/
+.cm-preview-code-block:has(.task-list-item) .task-list-item-checkbox:not(:checked) {
+    border-color: pink !important;
+}
+
+/* Checked - checkbox*/
+.cm-preview-code-block:has(.task-list-item) .task-list-item-checkbox:is(:checked) {
+    border-color: orange !important;
+}
+
+/* Checked - checkmark */
+.cm-preview-code-block:has(.task-list-item) .task-list-item-checkbox::after {
+    background-color: cyan !important;
+}
+
+/* Tags */
+.cm-preview-code-block:has(.task-list-item) .tag {
+    background: var(--my-tag-background);
+    font-weight: bold;
+    border: var(--my-tag-border-width) solid var(--my-tag-border);
+    text-shadow: 2px 2px 2px black;
+    padding-top: 0;
+    padding-bottom: 0.05em;
+    font-size: 0.7em;
+    color: yellow;
+}
+
+
 /* Dataview Tables */
 
 /* Remove the border (my default tables have a border) */
-.block-language-dataview.node-insert-event > table {
+/* .block-language-dataview.node-insert-event > table {
     border: 2px solid hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 0%), 1) !important;
 
-}
+} */
 
 /* Header */
-.block-language-dataview .table-view-tr-header > th {
+/* .block-language-dataview .table-view-tr-header > th {
     border-bottom: solid 4px hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 0%), 1) !important;
     color: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
     background-color: hsla(calc(var(--typ-accent-h) + 90), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
     font-size: 0.9em !important;
     text-align: center !important;
     line-height: 2em !important;
-}
+} */
 
 /* Odd number rows background */
-.block-language-dataview .table-view-tbody > tr:nth-child(odd) {
+/* .block-language-dataview .table-view-tbody > tr:nth-child(odd) {
     background-color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
     color: hsla(calc(var(--typ-accent-h) + 0), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
-  }
+  } */
   
   /* Even number rows background */
-.block-language-dataview .table-view-tbody > tr:nth-child(even) {
+/* .block-language-dataview .table-view-tbody > tr:nth-child(even) {
     background-color: hsla(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), calc(var(--typ-accent-l) - 40%), 1) !important;
     color: hsla(calc(var(--typ-accent-h) + 45), var(--typ-accent-s), calc(var(--typ-accent-l) + 20%), 1) !important;
-}
+} */
 
-.block-language-dataview .table-view-tbody > tr:hover {
+/* .block-language-dataview .table-view-tbody > tr:hover {
       font-weight: bold !important;
       filter: hue-rotate(180deg) brightness(1.2) !important;
-}
+} */

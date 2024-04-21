@@ -1,0 +1,42 @@
+/* attempt to display sync icon on mobile while drawer is closed */
+:is(.is-mobile, .is-phone)
+  .workspace:not(:has(.workspace-drawer-backdrop))
+  .workspace-drawer.mod-right {
+  display: flex !important;
+  overflow: visible;
+  left: 100%;
+}
+
+:is(.is-mobile, .is-phone)
+  .workspace:not(:has(.workspace-drawer-backdrop))
+  .workspace-drawer.mod-right
+  .workspace-drawer-inner {
+  overflow: visible;
+}
+
+:is(.is-mobile, .is-phone)
+  .workspace:not(:has(.workspace-drawer-backdrop))
+  .sync-status-icon {
+  position: absolute;
+  left: calc(-1 * 50px);
+  top: calc(1 * 20px);
+  opacity: 0.6;
+}
+
+:is(.is-mobile, .is-phone)
+  .workspace:not(:has(.workspace-drawer-backdrop))
+  .view-actions {
+  padding-right: 23px;
+}
+
+:is(.is-mobile, .is-phone)
+  .workspace:not(:has(.workspace-drawer-backdrop))
+  .sync-status-icon.mod-working
+  svg {
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+}

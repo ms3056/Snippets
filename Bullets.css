@@ -1,58 +1,149 @@
-.list-bullet {
-  margin-right: 0.3em;
-  --list-bullet-size: 0.5em;
-}
 
-.has-list-bullet > li[data-line="0"] > .list-bullet::after,
-.HyperMD-list-line-1 .list-bullet::after {
-  background-color: hsla(
+body {
+  --bullet-c1: hsla(
     calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --bullet-c2: hsla(
+    calc(var(--typ-accent-h) + 30),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
   );
-}
-
-.has-list-bullet > li[data-line="1"] > .list-bullet::after,
-.HyperMD-list-line-2 .list-bullet::after {
-  background-color: var(--background-primary);
-  border: 0.1em solid
-    hsla(
-      calc(var(--typ-accent-h) + 0),
-      calc(var(--typ-accent-s) + 20%),
-      calc(var(--typ-accent-l) + 0%),
-      1
-    );
-}
-
-.has-list-bullet > li[data-line="2"] > .list-bullet::after,
-.HyperMD-list-line-3 .list-bullet::after {
-  background-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 40%),
+  --bullet-c3: hsla(
+    calc(var(--typ-accent-h) + 60),
+    calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
   );
-}
-
-.has-list-bullet > li[data-line="3"] > .list-bullet::after,
-.HyperMD-list-line-4 .list-bullet::after {
-  background-color: var(--background-primary);
-  border: 0.1em solid
-    hsla(
-      calc(var(--typ-accent-h) + 0),
-      calc(var(--typ-accent-s) + 60%),
-      calc(var(--typ-accent-l) - 0%),
-      1
-    );
-}
-
-.has-list-bullet > li[data-line="4"] > .list-bullet::after,
-.HyperMD-list-line-5 .list-bullet::after {
-  background-color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 80%),
+  --bullet-c4: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
   );
+  --bullet-c5: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --bullet-size-l: 14px;
+  --bullet-size-s: 12px;
+}
+
+.list-bullet {
+  margin-right: 0.5em;
+}
+
+/* Reading View */
+ul > li {
+  position: relative;
+  list-style-type: none;
+}
+
+
+ul > li::before {
+  content: "- ";
+  position: absolute;
+  inset-inline-start: -1em;
+}
+
+
+.cm-list-1 {
+  color: var(--bullet-c1);
+}
+
+.cm-list-2 {
+  color: var(--bullet-c2);
+}
+
+.cm-list-3 {
+  color: var(--bullet-c3);
+}
+
+.HyperMD-list-line-4 .cm-list-1 {
+  color: var(--bullet-c4);
+}
+
+.HyperMD-list-line-5 .cm-list-2,
+.HyperMD-list-line-6 .cm-list-3,
+.HyperMD-list-line-7 .cm-list-1 {
+  color: var(--bullet-c5);
+}
+
+/* .HyperMD-list-line-1 .list-bullet::after {
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--bullet-c1);
+  border-bottom: none;
+  border-left: none;
+} */
+
+/* .HyperMD-list-line-2 .list-bullet::after {
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--bullet-c2);
+  border-bottom: none;
+  border-left: none;
+} */
+
+/* .HyperMD-list-line-3 .list-bullet::after {
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--bullet-c3);
+  border-bottom: none;
+  border-left: none;
+} */
+
+/* .HyperMD-list-line-4 .list-bullet::after {
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--bullet-c4);
+  border-bottom: none;
+  border-left: none;
+} */
+
+/* bullets */
+.HyperMD-list-line:nth-child(5n+2) .list-bullet::after {
+  color: pink;
+  background-color: transparent;
+}
+
+.HyperMD-list-line:nth-child(5n+3) .list-bullet::after {
+  background-color: purple;
+}
+
+.HyperMD-list-line:nth-child(5n+4) .list-bullet::after {
+  background-color: lime;
+}
+
+.HyperMD-list-line:nth-child(5n+5) .list-bullet::after {
+  background-color: blue;
+}
+
+.HyperMD-list-line:nth-child(5n+6) .list-bullet::after {
+  background-color: orange;
 }

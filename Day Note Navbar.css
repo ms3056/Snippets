@@ -1,0 +1,56 @@
+
+
+.daily-note-navbar button {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding-inline: 4px;
+    padding-block: 0;
+    font-size: 16px; /* Example: Adjust font size for visual effect */
+    text-shadow: 0px 2px 1px rgba(0,0,0,0.2); /* Simulate text depth */
+  }
+  
+
+  
+
+.daily-note-navbar__current {
+    position: relative; 
+    color: hsla(
+      calc(var(--typ-accent-h) + 60),
+      calc(var(--typ-accent-s) + 40%),
+      calc(var(--typ-accent-l) + 0%),
+      1
+    );
+    border-radius: 0;
+    background-color: transparent !important;
+    box-shadow: 0px 10px 2px -6px hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 0%),
+        calc(var(--typ-accent-l) + 0%),
+        1
+      ) !important;
+  }
+  
+  /* .daily-note-navbar__current::after {
+    content: "";
+    position: absolute;
+    left: 50%; 
+    bottom: -4px; 
+    transform: translateX(-50%); 
+    width: calc(100% - 20px); 
+    height: 2px; 
+    background-color: var(--typ-accent);
+    border-radius: 2px; 
+  } */
+  
+
+
+.daily-note-navbar__not-exists {
+	color:  hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) - 40%),
+        calc(var(--typ-accent-l) - 10%),
+        1
+      );
+}

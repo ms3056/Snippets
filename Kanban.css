@@ -17,13 +17,48 @@
   /* Renamed Colors */
   --KB-divider-color: transparent;
   --KB-tab-outline-color: transparent;
-  --KB-interactive-accent: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-10), 1);
-  --KB-text-on-accent: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--lighter-second-l-30), 1) !important;
-  --KB-borders: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--darker-second-l-30), 1);
-  --KB-icons: hsla(var(--shift-second-h-180), var(--hsl-second-s), var(--hsl-second-l), 1);
-  --KB-highlight-1: hsla(var(--shift-second-h-15), var(--sat-second-s-40), var(--lighter-second-l-20), 0.2);
-  --KB-card-background-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.7), 20%, 1);
-  --KB-card-foreground-color: hsla(var(--hsl-second-h), calc(var(--hsl-second-s) * 0.5), 13%, 1);
+  --KB-interactive-accent: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --KB-text-on-accent: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 30%),
+    1
+  );
+  --KB-borders: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 30%),
+    1
+  );
+  --KB-icons: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+  --KB-highlight-1: hsla(
+    calc(var(--typ-accent-h) + 15),
+    calc(var(--typ-accent-s) + 40%),
+    calc(var(--typ-accent-l) + 20%),
+    0.2
+  );
+  --KB-card-background-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) * 0.7),
+    calc(var(--typ-accent-l) - 40%),
+    1
+  );
+  --KB-card-foreground-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) * 0.5),
+    calc(var(--typ-accent-l) - 40%),
+    1
+  );
 }
 
 /* Main CSS with variables */
@@ -55,12 +90,14 @@
 }
 
 .kanban-plugin__lane-title {
-  font-size: 18px;
+  /* font-size: 18px;
   font-weight: bold;
+  background-color: var(--KB-highlight-1); */
 }
 
 .kanban-plugin__lane-title-text p {
-  margin: 0;
+  margin-left: 0.5em;
+  padding: 0.1em;
   color: var(--KB-text-on-accent);
 }
 
@@ -115,7 +152,7 @@
 .kanban-plugin__item-title-wrapper {
   display: flex;
   align-items: center;
-  background-color: var(--KB-highlight-1);
+  /* background-color: var(--KB-highlight-1); */
 }
 
 .task-list-item-checkbox {

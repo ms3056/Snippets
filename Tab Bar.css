@@ -2,15 +2,18 @@
 .view-actions,
 .cmdr-page-header {
   align-items: center;
-  background-color: var(--background-primary);
+  /* background-color: var(--background-primary); */
   border-top: none !important;
   border-bottom-right-radius: var(--radiusL);
   border-bottom-left-radius: var(--radiusL);
-  border: 6px solid var(--background-primary-alt);
+  /* border: 8px solid var(--background-primary-alt); */
 }
 
 .view-actions {
   margin-right: 1em !important;
+  height: 3em;
+  border-bottom-right-radius: var(--radiusL) !important;
+  border-bottom-left-radius: var(--radiusL) !important;
 }
 
 .view-actions svg {
@@ -21,12 +24,22 @@
     1
   ) !important;
   --icon-size: 20px;
-  border: none;
+}
+
+.view-actions svg:hover {
+  stroke: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 30%),
+    1
+  ) !important;
+  --icon-size: 22px !important;
 }
 
 .cmdr-page-header {
   padding-right: 10px !important;
-  border: 3px solid var(--background-primary);
+  border: 2px solid transparent;
+  padding-bottom: 2px;
 }
 
 .cmdr-page-header svg {
@@ -36,6 +49,8 @@
     calc(var(--accent-l) + 20%),
     1
   ) !important;
-  --icon-size: 20px;
-  border: 0px solid var(--background-primary);
+  --icon-size: 22px;
+  /* border: 3px solid var(--background-primary); */
 }
+
+

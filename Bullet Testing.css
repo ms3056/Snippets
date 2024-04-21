@@ -1,0 +1,156 @@
+body {
+  --bullet-c1: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+  --bullet-c2: hsla(
+    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --bullet-c3: hsla(
+    calc(var(--typ-accent-h) + 60),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --bullet-c4: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --bullet-c5: hsla(
+    calc(var(--typ-accent-h) + 120),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+  --bullet-c6: hsla(
+    calc(var(--typ-accent-h) + 150),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+  --bullet-size-l: 0.5em;
+  --bullet-size-s: 0.5em;
+}
+
+:not(.HyperMD-task-line) .list-bullet {
+  padding-right: 0.3em;
+  /* padding-bottom: 0.3em; */
+}
+
+
+
+/* Level 1 */
+/* Bullet */
+ul:not(li > *) > li > .list-bullet::after,
+.HyperMD-list-line-1 .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--bullet-c1);
+  border-bottom: none;
+  border-left: none;
+}
+
+/* Text*/
+ul:not(li > *) > li,
+.HyperMD-list-line-1:not(:has(.cm-strong)) .cm-list-1 {
+  color: var(--bullet-c1) !important;
+}
+
+/* Level 2 */
+/* Bullet */
+ul:not(li > *) > li > ul > li > .list-bullet::after,
+.HyperMD-list-line-2:not(:has(.cm-strong)) .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 30%;
+  background-color: var(--bullet-c2);
+}
+
+/* Text */
+ul:not(li > *) > li > ul > li,
+.HyperMD-list-line-2:not(:has(.cm-strong)) .cm-list-2 {
+  color: var(--bullet-c2);
+}
+
+/* Level 3 */
+/* Bullet */
+ul:not(li > *) > li > ul > li > ul > li > .list-bullet::after,
+.HyperMD-list-line-3:not(:has(.cm-strong)) .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 30%;
+  background-color: var(--bullet-c3);
+}
+
+/* Text */
+ul:not(li > *) > li > ul > li ul > li,
+.HyperMD-list-line-3:not(:has(.cm-strong)) .cm-list-3 {
+  color: var(--bullet-c3);
+}
+
+/* Level 4 */
+/* Bullet */
+ul:not(li > *) > li > ul > li > ul > li > ul > li > .list-bullet::after,
+.HyperMD-list-line-4:not(:has(.cm-strong)) .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 30%;
+  background-color: var(--bullet-c4);
+}
+
+/* Text */
+ul:not(li > *) > li > ul > li ul > li > ul > li,
+.HyperMD-list-line-4:not(:has(.cm-strong)) .cm-list-1 {
+  color: var(--bullet-c4);
+}
+
+/* Level 5 */
+/* Bullet */
+ul:not(li > *) > li > ul > li > ul > li > ul > li > ul > li > .list-bullet::after,
+.HyperMD-list-line-5:not(:has(.cm-strong)) .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 30%;
+  background-color: var(--bullet-c5);
+}
+
+/* Text */
+ul:not(li > *) > li > ul > li ul > li > ul > li > ul > li,
+.HyperMD-list-line-5:not(:has(.cm-strong)) .cm-list-2 {
+  color: var(--bullet-c5);
+}
+
+/* Level 6 */
+/* Bullet */
+ul:not(li > *) > li > ul > li > ul > li > ul > li > ul > li > ul > li > .list-bullet::after,
+.HyperMD-list-line-6:not(:has(.cm-strong)) .list-bullet::after {
+  height: var(--bullet-size-l);
+  width: var(--bullet-size-l);
+  border-radius: 30%;
+  background-color: var(--bullet-c6);
+}
+
+/* Text */
+ul:not(li > *) > li > ul > li ul > li > ul > li ul > li > ul > li,
+.HyperMD-list-line-6:not(:has(.cm-strong)) .cm-list-3 {
+  color: var(--bullet-c6);
+}
+
+/* Level 7 and beyond */
+/* Text */
+ul:not(li > *) > li > ul > li ul > li > ul > li ul > li > ul > li ul > li,
+.HyperMD-list-line-7:not(:has(.cm-strong)) .cm-list-1 {
+  color: var(--bullet-c1);
+}

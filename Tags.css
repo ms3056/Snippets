@@ -1,38 +1,63 @@
 body {
-  --my-tag-text: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--lighter-second-l-10), 1);
-  --my-tag-hash: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
-  --my-tag-border: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--darker-second-l-20), 1);
-  --my-tag-background: hsla(var(--hsl-accent-secondary-h), var(--hsl-accent-secondary-s), var(--hsl-accent-secondary-l), 0.1);
+  --my-tag-text: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --my-tag-hash: hsla(
+    calc(var(--typ-accent-h) + 60),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --my-tag-border: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --my-tag-background: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 20%),
+    1
+  );
   --my-tag-border-width: 2px;
 }
 
-/* Selects the hashtag symbol with the class 'cm-hashtag-begin' */
-.cm-line .cm-formatting.cm-hashtag-begin {
-  color: var(--my-tag-hash);
+/* Reading */
+.has-list-bullet:has(.tag) .tag {
   background: var(--my-tag-background);
+  font-weight: bold;
   border: var(--my-tag-border-width) solid var(--my-tag-border);
-  border-right-width: 0;
-  padding-right: 0.2em;
+  text-shadow: 2px 2px 2px black;
+  padding-top: 0;
+  padding-bottom: 0.05em;
+  font-size: 0.7em;
+  color: var(--my-tag-text) !important;
 }
 
-/* Selects the hashtag text with the class 'cm-hashtag-end' */
-.cm-line .cm-hashtag-end {
-  color: var(--my-tag-text);
+/* Live / Source Editor */
+.HyperMD-list-line:has(.cm-hashtag) .cm-hashtag.cm-hashtag-begin,
+.HyperMD-list-line:has(.cm-hashtag) .cm-hashtag-end {
   background: var(--my-tag-background);
+  font-weight: bold;
   border: var(--my-tag-border-width) solid var(--my-tag-border);
-  border-left-width: 0;
+  text-shadow: 2px 2px 2px black;
+  padding-top: 0;
+  padding-bottom: 0.05em;
+  font-size: 0.7em;
 }
 
-/* Base styles for the hashtag symbol and text */
-.cm-line .cm-formatting.cm-hashtag-begin,
-.cm-line .cm-hashtag-end {
-  transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+.HyperMD-list-line:has(.cm-hashtag) .cm-hashtag.cm-hashtag-begin {
+  color: var(--my-tag-hash) !important;
+  border-right: none;
+  padding-left: 0.4em;
 }
 
-/* Hover effect to highlight both the hashtag symbol and text */
-.cm-line:hover .cm-formatting.cm-hashtag-begin,
-.cm-line:hover .cm-hashtag-end {
-filter: hue-rotate(180deg) brightness(1.1);
+.HyperMD-list-line:has(.cm-hashtag) .cm-hashtag-end {
+  color: var(--my-tag-text) !important;
+  border-left: none;
+  padding-right: 0.4em;
 }
-
-

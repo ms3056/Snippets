@@ -1,0 +1,348 @@
+.theme-dark {
+  --checkbox-size: 1.6em;
+  --checkbox-radius: 30%;
+  --checkbox-checked-opacity: 0.6;
+  --checklist-done-decoration: unset;
+
+  /* Unchecked Background */
+  --checkbox-unchecked-bg: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) - 30%),
+    calc(var(--typ-accent-l) - 20%),
+    1
+  );
+
+  /* Unchecked Border */
+  --checkbox-unchecked-border: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+
+  /* Unchecked Hover Background */
+  --checkbox-unchecked-hover-bg: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 20%),
+    1
+  );
+
+  /* Unchecked Hover Border */
+  --checkbox-unchecked-hover-border: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 5%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+
+  /* Checked Background */
+  --checkbox-checked-bg: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) - 5%),
+    0.6
+  );
+
+  /* Checked Border */
+  --checkbox-checked-border: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 15%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+
+  /* Checkmark Color */
+  --checkbox-checkmark-color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 50%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  );
+}
+
+
+.cm-indent::before {
+  border-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 30%),
+    1
+  ) !important;
+}
+
+ul.has-list-bullet::before {
+  border-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 30%),
+    1
+  ) !important;
+}
+
+ol::before {
+  border-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 30%),
+    1
+  ) !important;
+}
+
+/* ! Checkbox - Important */
+input[data-task="!"]:checked::after,
+li[data-task="!"] > input:checked::after,
+li[data-task="!"] > p > input:checked::after {
+  content: none;
+}
+
+input[data-task="!"]:checked:focus,
+li[data-task="!"] > input:checked:focus,
+li[data-task="!"] > p > input:checked:focus {
+  display: contents;
+}
+
+input[data-task="!"]:checked,
+li[data-task="!"] > input:checked,
+li[data-task="!"] > p > input:checked {
+  display: none;
+}
+
+.HyperMD-list-line-1:not(:has(.cm-strong))[data-task="!"],
+.task-list-item[data-task="!"] {
+  background-color: #cf1414 !important;
+  border: 4px solid #e78b8b;
+  border-radius: 6px;
+  text-align: center !important;
+  /* line-height: 1em !important; */
+}
+
+.HyperMD-list-line-1:not(:has(.cm-strong))[data-task="!"] .cm-list-1,
+.task-list-item[data-task="!"] {
+  color: whitesmoke !important;
+  font-size: 0.9em;
+  padding-left: 1em;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* @ Checkbox - Important */
+input[data-task="@"]:checked::after,
+li[data-task="@"] > input:checked::after,
+li[data-task="@"] > p > input:checked::after {
+  content: none;
+}
+
+input[data-task="@"]:checked:focus,
+li[data-task="@"] > input:checked:focus,
+li[data-task="@"] > p > input:checked:focus {
+  display: contents;
+}
+
+input[data-task="@"]:checked,
+li[data-task="@"] > input:checked,
+li[data-task="@"] > p > input:checked {
+  display: none;
+}
+
+.HyperMD-list-line-1:not(:has(.cm-strong))[data-task="@"],
+.task-list-item[data-task="@"] {
+  background-color: #1465cf !important;
+  border: 4px solid #598aca;
+  border-radius: 6px;
+  text-align: center !important;
+}
+
+.HyperMD-list-line-1:not(:has(.cm-strong))[data-task="@"] .cm-list-1,
+.task-list-item[data-task="@"] {
+  color: whitesmoke !important;
+  padding-left: 1em;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* Meeting tasks */
+/* Cancelled Meetings C */
+/* @ Checkbox - Important */
+input[data-task="C"]:checked::after,
+li[data-task="C"] > input:checked::after,
+li[data-task="C"] > p > input:checked::after {
+  content: none;
+}
+
+input[data-task="C"]:checked:focus,
+li[data-task="C"] > input:checked:focus,
+li[data-task="C"] > p > input:checked:focus {
+  display: contents;
+}
+
+input[data-task="C"]:checked,
+li[data-task="C"] > input:checked,
+li[data-task="C"] > p > input:checked {
+  display: none;
+}
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task="C"],
+.task-list-item[data-task="C"] {
+  /* background-color: #444c57 !important; */
+  /* border: 4px solid #353a42; */
+  border-radius: 6px;
+  /* text-align: center !important; */
+}
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task="C"] .cm-list-1,
+.task-list-item[data-task="C"] {
+  /* color: whitesmoke !important; */
+  /* padding-left: 1em; */
+  text-shadow: 2px 2px 2px black;
+  filter: brightness(0.5);
+}
+
+/* .HyperMD-list-line-1:has(.cm-strong)[data-task="C"]::before,
+.task-list-item[data-task="C"] {
+  content: "🤬";
+  color: whitesmoke;
+  font-size: 1.1em;
+  vertical-align: middle;
+} */
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task="C"]::before,
+.task-list-item[data-task="C"] {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-x'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m15 9-6 6'/%3E%3Cpath d='m9 9 6 6'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 0.15em;
+  margin-right: 0.3em;
+  margin-bottom: 0.05em;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+/* Pushed Meetings > */
+/* @ Checkbox - Important */
+input[data-task=">"]:checked::after,
+li[data-task=">"] > input:checked::after,
+li[data-task=">"] > p > input:checked::after {
+  content: none;
+}
+
+input[data-task=">"]:checked:focus,
+li[data-task=">"] > input:checked:focus,
+li[data-task=">"] > p > input:checked:focus {
+  display: contents;
+}
+
+input[data-task=">"]:checked,
+li[data-task=">"] > input:checked,
+li[data-task=">"] > p > input:checked {
+  display: none;
+}
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task=">"],
+.task-list-item[data-task=">"] {
+  /* background-color: #4d717f !important; */
+  /* border: 4px solid #475960; */
+  border-radius: 6px;
+  height: 2.2em;
+  /* text-align: center !important; */
+}
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task=">"] .cm-list-1,
+.task-list-item[data-task=">"] {
+  /* color: whitesmoke !important; */
+  /* padding-left: 1em; */
+  text-shadow: 2px 2px 2px black;
+  filter: brightness(0.5);
+}
+
+.HyperMD-list-line-1:has(.cm-strong)[data-task=">"]::before,
+.task-list-item[data-task=">"] {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='whitesmoke' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 12h8m-4 4l4-4l-4-4'/%3E%3C/g%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 0.15em;
+  margin-right: 0.3em;
+  margin-bottom: 0.05em;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+/*                                                 */
+/* The following is for all non-special Checkboxes */
+/*                                                 */
+
+/* Checkmarks in the Properties Dialog */
+/* Unchecked checkbox */
+input[type=checkbox].metadata-input-checkbox:not(:checked) {
+  background-color: var(--checkbox-unchecked-bg);
+  border-color: var(--checkbox-unchecked-border);
+  border-radius: var(--checkbox-radius);
+  --checkbox-size: 1.3em;
+}
+
+/* Unchecked Tasks:hover */
+input[type=checkbox].metadata-input-checkbox:hover {
+  background-color: var(--checkbox-unchecked-hover-bg);
+  border-color: var(--checkbox-unchecked-hover-border);
+}
+
+/* Checked checkbox */
+input[type=checkbox].metadata-input-checkbox:is(:checked) {
+  background-color: var(--checkbox-checked-bg);
+  border-color: var(--checkbox-checked-border);
+  --checkbox-size: 1.3em;
+  filter: brightness(0.7);
+}
+
+/* The check itself */
+input[type=checkbox].metadata-input-checkbox:is(:checked)::after {
+  background-color: var(--checkbox-checkmark-color);
+}
+
+/* Unchecked Tasks */
+input[data-task=" "],
+li[data-task=" "] > input,
+li[data-task=" "] > p > input {
+  background-color: var(--checkbox-unchecked-bg);
+  border-color: var(--checkbox-unchecked-border);
+  border-radius: var(--checkbox-radius);
+}
+
+/* Unchecked Tasks:hover */
+input[data-task=" "]:hover,
+li[data-task=" "] > input:hover,
+li[data-task=" "] > p > input:hover {
+  background-color: var(--checkbox-unchecked-hover-bg);
+  border-color: var(--checkbox-unchecked-hover-border);
+}
+
+/* Checked Tasks Checkbox*/
+input[data-task="x"]:checked,
+li[data-task="x"] > input:checked,
+li[data-task="x"] > p > input:checked {
+  background-color: var(--checkbox-checked-bg);
+  border-color: var(--checkbox-checked-border);
+  opacity: var(--checkbox-checked-opacity) !important;
+}
+
+/* Checked Tasks Check */
+input[data-task="x"]:checked::after,
+li[data-task="x"] > input:checked::after,
+li[data-task="x"] > p > input:checked::after {
+  background-color: var(--checkbox-checkmark-color);
+}
+
+/* Tasks that are checked */
+.HyperMD-list-line-1[data-task="x"] .cm-list-1,
+.task-list-item[data-task="x"] {
+  opacity: 60%;
+}
+
+.HyperMD-list-line-1[data-task] .cm-list-1,
+.task-list-item[data-task] {
+  vertical-align: middle;
+}
+
+

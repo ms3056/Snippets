@@ -112,6 +112,21 @@ settings:
   --radiusS: 10px;
 }
 
+/* Bookmark Icon */
+.view-action.mod-bookmarked {
+  --icon-color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 0%),
+    0.4
+  );
+}
+
+/* Line Height */
+.cm-line {
+  line-height: 1.4em !important;
+}
+
 /* Theme Specific Color Variables */
 body.theme-daisy-blue,
 body.theme-red-sky,
@@ -267,11 +282,11 @@ body.theme-palenight {
   --accent-l: 44% !important;
   --accent-a: 100% !important;
   --typ-accent-h: 0 !important;
-  --typ-accent-s: 48% !important;
-  --typ-accent-l: 52% !important;
+  --typ-accent-s: 54% !important;
+  --typ-accent-l: 58% !important;
   --typ-accent-a: 100% !important;
-  --typ-accent: hsl(0, 48%, 52%);
-  --text-selection: hsl(180, 48%, 52%);
+  --typ-accent: hsl(0, 54%, 58%);
+  --text-selection: hsl(0, 64%, 32%);
 }
 
 body.theme-tea-teal {
@@ -292,10 +307,10 @@ body.theme-blue-gray {
   --accent-l: 43% !important;
   --accent-a: 100% !important;
   --typ-accent-h: 232 !important;
-  --typ-accent-s: 23% !important;
-  --typ-accent-l: 63% !important;
+  --typ-accent-s: 43% !important;
+  --typ-accent-l: 50% !important;
   --typ-accent-a: 100% !important;
-  --typ-accent: hsla(232, 23%, 63%, 1);
+  --typ-accent: hsla(232, 43%, 50%, 100%);
 }
 
 body.theme-custom {
@@ -415,7 +430,7 @@ body.theme-custom {
   /* Modifier Colors */
   --background-modifier-hover: var(--background-primary-alt);
   --background-modifier-active-hover: var(--dark-blue);
-  --background-modifier-border: var(--ocean-blue);
+  --background-modifier-border: none;
   --background-modifier-border-hover: hsla(
     calc(var(--accent-h) + 10),
     var(--accent-s),
@@ -477,7 +492,9 @@ body.theme-custom {
     calc(var(--accent-l) + 0%),
     1
   );
+
   --tab-background-active: var(--background-primary);
+  
   --tab-text-color-focused-active-current: hsla(
     calc(var(--accent-h) + 180),
     calc(var(--accent-s) + 20%),
@@ -498,6 +515,7 @@ body.theme-custom {
     calc(var(--accent-l) + 10%),
     1
   );
+  --icon-opacity-active: 1;
   --icon-color-hover: orange;
   --icon-color-active: blue;
   --icon-color-focused: hsla(
@@ -512,7 +530,7 @@ body.theme-custom {
   --slider-track-background: var(--ocean-blue);
 
   /* Scrollbar Styles */
-  --scrollbar-thumb-bg: hsla(
+  /* --scrollbar-thumb-bg: hsla(
     calc(var(--accent-h)),
     calc(var(--accent-s)),
     calc(var(--accent-l) - 5%),
@@ -523,7 +541,7 @@ body.theme-custom {
     var(--accent-s),
     calc(var(--accent-l) + 20%),
     1
-  );
+  ); */
 }
 
 /* Hover line indicator */
@@ -557,6 +575,26 @@ body.theme-custom {
 .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }*/
+
+/* For TickTick Page */
+.ticktick .inline-title { 
+  display: none; 
+}
+
+.ticktick {
+  :is(&.markdown-preview-view, & > .cm-editor > .cm-scroller)::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+  }
+  border: 10px solid var(--background-primary);
+}
+
+
+.markdown-preview-view {
+  padding: 0;
+  border-radius: 10px;
+  background-color: var(--background-primary) !important;
+}
 
 .view-header-title-parent {
   color: hsla(
@@ -616,7 +654,7 @@ body.theme-custom {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background-color: hsla(
     calc(var(--accent-h) + 0),
     calc(var(--accent-s) + 0%),
@@ -624,23 +662,57 @@ body.theme-custom {
     1
   ) !important;
   border: 2px solid var(--background-primary) !important;
-}
+} */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.7em !important;
-  border: 2px solid var(--background-primary) !important;
-}
+  border: 2px solid var(--background-primary) !important; 
+} */
 
 /* Workspace tab text */
 .workspace-tab-header-inner-title {
   /* color: hsla(calc(var(--typ-accent-h) + 180), var(--typ-accent-s), var(--typ-accent-l), 1); */
 }
 
+
+/* From SailKite on Discord */
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover,
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
+    background-image: repeating-linear-gradient(45deg, hsla(
+      calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) - 10%),
+      1
+    ) 0px 10px, hsla(
+      calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 10%),
+      1
+    ) 10px 20px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* Workspace Tab Header */
 .workspace .mod-root .workspace-tab-header.is-active {
-  border-top: 2px solid
-    hsla(var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l), 0.5);
+  /* border-left: 4px solid var(--background-primary);
+  border-right: 4px solid var(--background-primary); */
+  border-bottom: 4px solid hsla(
+    var(--typ-accent-h), 
+    var(--typ-accent-s), 
+    var(--typ-accent-l), 1);
   margin-left: 1em;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .sidebar-toggle-button.mod-left {
@@ -653,11 +725,13 @@ body.theme-custom {
 /* Color for both left and right collapse icons */
 .sidebar-toggle-button svg {
   color: hsla(
-    calc(var(--accent-h) + 0),
+    calc(var(--accent-h) + 90),
     calc(var(--accent-s) + 20%),
     calc(var(--accent-l) + 30%),
     1
   ) !important;
+  width: 1.5em;
+  height: 1.5em;
 }
 /* Hover for both left and right collapse icons */
 .sidebar-toggle-button:hover svg {
@@ -739,11 +813,6 @@ body.theme-custom {
 .titlebar-button-container svg {
   width: 16px;
   height: 16px;
-}
-
-/* Custom Frames Frame */
-.custom-frames-frame {
-  background-color: var(--background-primary);
 }
 
 /* Status Bar */

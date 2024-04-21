@@ -11,7 +11,7 @@
     --tl-weekend-text: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
     --tl-weekend-day: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
     --tl-weekday-text: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
-    --tl-weekday-day: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+    --tl-weekday-day: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 20%), 1);
     --tl-today-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
     --tl-today-border: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
     --tl-weekend-bg: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 0.2);
@@ -27,12 +27,12 @@
 
 /* Gradient for the first widget */
 body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-container > div > div > div.timeline-container.svelte-ilz3jn {
-    background: linear-gradient(to top, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent);
+    /* background: linear-gradient(to top, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent); */
 }
 
 /* Gradient for the second widget */
 body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-container > div > div > div.timeline-container.svelte-ilz3jn > div.timeline-view.svelte-ilz3jn {
-    background: linear-gradient(to bottom, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent);
+    /* background: linear-gradient(to bottom, hsla(var(--typ-accent-h), var(--typ-accent-s), 20%, 0.7), transparent); */
 }
 
 

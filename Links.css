@@ -1,0 +1,15 @@
+a.internal-link {
+    --link-decoration: none;
+    --link-color: fuchsia;
+}
+
+.cm-underline {
+    --link-decoration: none;
+    --link-color: pink;
+}
+
+
+body {
+    /* --link-color: fuchsia;
+    --link-decoration: none; */
+}

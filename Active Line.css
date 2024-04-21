@@ -35,9 +35,9 @@
 
   /* Cursor color */
   --al-4: hsla(
-    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--typ-accent-l) + 0%),
     1
   );
 
@@ -46,7 +46,7 @@
     calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 35%),
-    0.7
+    0.6
   );
 
   /* Shadow color */
@@ -90,13 +90,11 @@
   --al-5: hsla(
     calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--typ-accent-l) + 0%),
     0.3
   );
   --al-6: hsl(calc(var(--typ-accent-h) + 0), 0%, 56.251%);
 }
-
-/* Other styles remain unchanged. They do not contain color definitions to be updated. */
 
 .cm-scroller {
   padding-left: 6px !important;
@@ -112,7 +110,7 @@
 
 /* edit bar */
 .cm-gutter {
-  overflow: visible !important;
+  /* overflow: visible !important; */
 }
 
 /* Background channel */
@@ -129,20 +127,22 @@
 /* Small line highlight */
 .cm-gutterElement.cm-active {
   position: relative;
+  top: 0px;
   background-color: var(--al-0);
   box-shadow: var(--al-6) 0px 0px 10px 0px !important;
   border-radius: 5px;
 }
 
+/* Top of gutter - rounding */
 .cm-gutterElement:nth-child(2) {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
 }
 
-
+/* Bottom of gutter - rounding */
 .cm-gutterElement:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
 }
 
 /* Background of active line */
@@ -158,10 +158,10 @@
     transparent 100%
   );
   filter: brightness(1.3);
-  padding-top: unset !important;
+  /* padding-top: unset !important;
   padding-bottom: unset !important;
   margin-top: unset !important;
-  margin-bottom: unset !important;
+  margin-bottom: unset !important; */
 }
 
 /* Reset/override style for .cm-active.cm-line inside tables */
@@ -175,6 +175,6 @@
 }
 
 .cm-line {
-  padding-top: unset !important;
-  padding-bottom: unset !important;
+  /* padding-top: unset !important;
+  padding-bottom: unset !important; */
 }

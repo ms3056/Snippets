@@ -1,7 +1,7 @@
 /* OZ Calendar Tweaks */
 .oz-calendar-plugin-today abbr {
     color: hsla(
-        calc(var(--typ-accent-h) + 180),
+        calc(var(--typ-accent-h) + 0),
         calc(var(--typ-accent-s) + 20%),
         calc(var(--typ-accent-l) + 10%),
         1
@@ -9,6 +9,30 @@
     font-weight: bolder;
     font-size: 1.4em;
     text-shadow: 2px 2px 4px black;
+}
+
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekdays {
+    color: hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
+}
+
+/* Add a W and align it with the day names */
+.react-calendar__month-view__weekNumbers::before {
+    content: "W"; 
+    display: block;
+    text-align: center; 
+    padding: 0.39em 0;
+    color: hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
 }
 
 .oz-calendar-plugin-view .react-calendar__tile--active {
@@ -31,17 +55,38 @@
     filter: brightness(0.6);
 }
 
+/* Center the 'W' with the week numbers */
+/* .react-calendar__month-view__weekNumbers::before {
+    content: 'W'; 
+    font-size: 0.9em; 
+    text-align: center; 
+    height: 100%;
+    display: block;
+    color: hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 10%),
+        1
+    );
+  } */
+  
+
 .oz-calendar-plugin-view .react-calendar__month-view__weekNumbers {
     display: block !important;
     color: hsla(
         calc(var(--typ-accent-h) + 180),
         calc(var(--typ-accent-s) + 20%),
-        calc(var(--typ-accent-l) + 10%),
+        calc(var(--typ-accent-l) - 10%),
         1);
     flex-basis: auto !important;
-    background-color: var(--background-primary-alt);
+    background-color: var(--background-primary);
     font-size: var(--nav-item-size);
-    border-radius: var(--radiusS);
+    /* border-radius: var(--radiusS); */
+    border-right: 2px dashed hsla(
+        calc(var(--typ-accent-h) + 180),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) - 20%),
+        1);
 }
 
 .oz-calendar-plugin-view .dots-wrapper {

@@ -1,60 +1,233 @@
 /* from the Everforest Enchanted theme by FireIsGood */
 :root body:is(.theme-dark, .theme-light) {
-    --h1-size: 1.757em !important;
-    --h2-size: 1.375em !important;
-    --h3-size: 1.250em !important;
-    --h4-size: 1.125em !important;
-    --h5-size: 1.125em !important;
-    --h6-size: 1.125em !important;
+  --h1-size: 1.757em !important;
+  --h2-size: 1.375em !important;
+  --h3-size: 1.25em !important;
+  --h4-size: 1.125em !important;
+  --h5-size: 1.125em !important;
+  --h6-size: 1.125em !important;
 
-    --h1-line-height: 1.2;
-    --h2-line-height: 1.2;
-    --h3-line-height: 1.2;
-    --h4-line-height: 1.1;
-    --h5-line-height: 1.1;
-    --h6-line-height: 1.1;
+  --h1-line-height: 1.2;
+  --h2-line-height: 1.2;
+  --h3-line-height: 1.2;
+  --h4-line-height: 1.1;
+  --h5-line-height: 1.1;
+  --h6-line-height: 1.1;
 
-    --h1-weight: 900;
-    --h2-weight: 700;
-    --h3-weight: 600;
-    --h4-weight: 500;
-    --h5-weight: 500;
-    --h6-weight: 500;
+  --h1-weight: 900;
+  --h2-weight: 700;
+  --h3-weight: 600;
+  --h4-weight: 500;
+  --h5-weight: 500;
+  --h6-weight: 500;
 }
 
 /* Light theme color variables */
 .theme-light {
-    --h1-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h1-fold-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h1-text-color: hsla(calc(var(--typ-accent-h) - 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h2-text-color: hsla(calc(var(--typ-accent-h) - 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h3-text-color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h4-text-color: hsla(calc(var(--typ-accent-h) - 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h5-text-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --h6-text-color: hsla(calc(var(--typ-accent-h) - 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), 1);
-    --header-shadow: hsl(0, 0%, 62.502%);
+  --h1-line-color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h1-fold-color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h1-text-color: hsla(
+    calc(var(--typ-accent-h) - 30),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h2-text-color: hsla(
+    calc(var(--typ-accent-h) - 60),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h3-text-color: hsla(
+    calc(var(--typ-accent-h) - 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h4-text-color: hsla(
+    calc(var(--typ-accent-h) - 120),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h5-text-color: hsla(
+    calc(var(--typ-accent-h) - 150),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --h6-text-color: hsla(
+    calc(var(--typ-accent-h) - 150),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  --header-shadow: hsl(0, 0%, 60%);
 }
 
 /* Dark theme color variables */
 .theme-dark {
-    --h1-line-color: hsla(calc(var(--typ-accent-h) + 45), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h2-line-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h3-line-color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h1-fold-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 0%), 1);
-    --h1-text-color: hsla(calc(var(--typ-accent-h) - 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h2-text-color: hsla(calc(var(--typ-accent-h) + 30), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h3-text-color: hsla(calc(var(--typ-accent-h) + 60), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h4-text-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h5-text-color: hsla(calc(var(--typ-accent-h) + 120), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --h6-text-color: hsla(calc(var(--typ-accent-h) + 150), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
-    --header-shadow: black;
+  --h1-line-color: hsla(
+    calc(var(--typ-accent-h) + 45),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h2-line-color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h3-line-color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h1-fold-color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+  --h1-text-color: hsla(
+    calc(var(--typ-accent-h) - 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h2-text-color: hsla(
+    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h3-text-color: hsla(
+    calc(var(--typ-accent-h) + 60),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h4-text-color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h5-text-color: hsla(
+    calc(var(--typ-accent-h) + 120),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --h6-text-color: hsla(
+    calc(var(--typ-accent-h) + 150),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  --header-shadow: black;
+}
+
+/* Header Hover */
+
+.is-live-preview .HyperMD-header-1:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H1";
+  position: absolute;
+  left: 0.9em;
+  top: 0;
+  font-size: 0.3em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
 }
 
 
+.is-live-preview .HyperMD-header-2:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H2";
+  position: absolute;
+  left: -1.4em;
+  top: 0;
+  font-size: 0.4em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
+}
+.is-live-preview .HyperMD-header-3:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H3";
+  position: absolute;
+  left: -1.4em;
+  top: 0;
+  font-size: 0.4em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
+}
+.is-live-preview .HyperMD-header-4:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H4";
+  position: absolute;
+  left: -1.6em;
+  top: 0;
+  font-size: 0.4em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
+}
+.is-live-preview .HyperMD-header-5:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H5";
+  position: absolute;
+  left: -1.6em;
+  top: 0;
+  font-size: 0.4em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
+}
+.is-live-preview .HyperMD-header-6:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+  content: "H6";
+  position: absolute;
+  left: -1.6em;
+  top: 0;
+  font-size: 0.4em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    0.5
+  );
+} 
+
 /* All Headers, editing and reading modes */
 /* From FireIsGood on Discord */
-.cm-header, :is(h1, h2, h3, h4, h5, h6) {
-  text-shadow: 2px 2px 2px var(--header-shadow);
+.cm-header,
+:is(h1, h2, h3, h4, h5, h6) {
+  text-shadow: 2px 2px 5px var(--header-shadow);
 }
 
 .HyperMD-header-1::before {
@@ -62,58 +235,47 @@
   background-color: var(--h1-line-color);
   width: 4px;
   display: inline-block;
-  border-radius: 5px;
 }
 
-.HyperMD-header-2::before  {
-  content: " ";
-  background-color: var(--h2-line-color);
-  width: 4px;
-  display: inline-block;
-  border-radius: 5px;
-}
 
-.HyperMD-header-3::before  {
-  content: " ";
-  background-color: var(--h3-line-color);
-  width: 4px;
-  display: inline-block;
-  border-radius: 5px;
-}
 
 /* Add extra space after Header-1 unless the next line is a horizontal line */
 .HyperMD-header.HyperMD-header-1.cm-line + .cm-line:not(.hr),
 .HyperMD-header.HyperMD-header-1.cm-line + .HyperMD-task-line:not(.hr) {
-/*    margin-top: 0.3em !important; */
+     /* margin-top: 0.3em !important; */
 }
 
-.HyperMD-header-1 .cm-fold-indicator,
-.HyperMD-header-2 .cm-fold-indicator,
-.HyperMD-header-3 .cm-fold-indicator {
-  margin-left: 20px;
-/*  margin-right: 15px;*/
+.HyperMD-header-1 .cm-fold-indicator {
+  margin-left: 0.6em;
+  /*  margin-right: 15px;*/
   color: var(--h1-fold-color);
 }
 
 /* By sailKite on Discord */
-.cm-header-1, .markdown-rendered h1 {
-    color: var(--h1-text-color);
-    /* padding-left: 0.3em; */
+.cm-header-1,
+.markdown-rendered h1 {
+  color: var(--h1-text-color);
+  padding-left: 0.1em;
 }
 
-.cm-header-2, .markdown-rendered h2 {
-    color: var(--h2-text-color);
+.cm-header-2,
+.markdown-rendered h2 {
+  color: var(--h2-text-color);
 }
 
-.cm-header-3, .markdown-rendered h3 {
-    color: var(--h3-text-color)
+.cm-header-3,
+.markdown-rendered h3 {
+  color: var(--h3-text-color);
 }
 
-.cm-header-4, .markdown-rendered h4 {
-    color: var(--h4-text-color);
+.cm-header-4,
+.markdown-rendered h4 {
+  color: var(--h4-text-color);
 }
 
-.cm-header-5, .markdown-rendered h5, .cm-header-6, .markdown-rendered h6 {
-    color: var(--h5-text-color);
+.cm-header-5,
+.markdown-rendered h5,
+.cm-header-6,
+.markdown-rendered h6 {
+  color: var(--h5-text-color);
 }
-
