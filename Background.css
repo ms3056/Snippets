@@ -1,0 +1,30 @@
+/* border image approach */
+body
+  .markdown-source-view.is-live-preview
+  .HyperMD-header.HyperMD-header-1.cm-line {
+  /* --h1-bot-padding: 20px;
+  --h1-underline-size: 1px;
+  --h1-underline-color: darkslategrey;
+  --h1-underline-offset: 5px;
+  padding-bottom: var(--h1-bot-padding) !important;
+  border-image: linear-gradient(
+      to top,
+      var(--h1-underline-color) var(--h1-underline-size),
+      transparent var(--h1-underline-size)
+    )
+    fill 0 / calc(var(--h1-bot-padding) - var(--h1-underline-offset)) 0 / 0 !important; */
+}
+
+/* background approach */
+body
+  .markdown-source-view.is-live-preview
+  .HyperMD-header.HyperMD-header-1.cm-line {
+  --h1-bot-padding: 20px;
+  --h1-underline-size: 1px;
+  --h1-underline-color: darkslategrey;
+  --h1-underline-offset: 5px;
+  padding-bottom: var(--h1-bot-padding);
+  background: conic-gradient(var(--h1-underline-color) 0 0) bottom
+    calc(var(--h1-bot-padding) - var(--h1-underline-offset)) center / 100%
+    var(--h1-underline-size) no-repeat padding-box;
+}

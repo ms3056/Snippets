@@ -1,0 +1,30 @@
+/* Ensuring the outermost container fills its parent completely and centers content */
+.workspace-leaf-content {
+    display: flex;
+    height: 100%; 
+    width: 100%; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Ensuring all inner containers expand to fill the available space and center content */
+.clock-container, .timedate-container {
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Styling for the time element with adjusted font size and removed extra space */
+.time {
+    font-size: 6vw; 
+    line-height: 1; 
+    text-align: center;
+    margin: 0; 
+    padding: 0; 
+}
