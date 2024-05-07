@@ -37,9 +37,9 @@
     1
   );
   --h1-text-color: hsla(
-    calc(var(--typ-accent-h) - 30),
+    calc(var(--typ-accent-h) + 30),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-l) - 0%),
     1
   );
   --h2-text-color: hsla(
@@ -104,7 +104,7 @@
   --h1-text-color: hsla(
     calc(var(--typ-accent-h) - 0),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-l) - 0%),
     1
   );
   --h2-text-color: hsla(
@@ -145,14 +145,14 @@
 .is-live-preview .HyperMD-header-1:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H1";
   position: absolute;
-  left: 0.9em;
+  left: 0.6em;
   top: 0;
-  font-size: 0.3em;
+  font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
-    0.5
+    calc(var(--typ-accent-l) - 10%),
+    1
   );
 }
 

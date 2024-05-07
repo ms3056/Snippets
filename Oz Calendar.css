@@ -11,7 +11,6 @@
     text-shadow: 2px 2px 4px black;
 }
 
-
 .oz-calendar-plugin-view .react-calendar__month-view__weekdays {
     color: hsla(
         calc(var(--typ-accent-h) + 0),
@@ -114,7 +113,7 @@
 }
 
 .oz-calendar-note-line-icon {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), calc(var(--typ-accent-a) + 0%)) !important;
     align-content: center;
     justify-content: center;
@@ -146,8 +145,27 @@
     filter: hue-rotate(180deg);
     background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.3) !important;
     color: hsla(
-        calc(var(--typ-accent-h) - 180), 
+        calc(var(--typ-accent-h) + 180), 
         calc(var(--typ-accent-s) + 0%), 
         calc(var(--typ-accent-l) + 0%), 1) !important;
     border-radius: 5px;
+}
+
+.oz-calendar-plugin-view .react-calendar__navigation__arrow {
+    font-size: 2em;    
+    color: hsla(
+        calc(var(--typ-accent-h) + 90),
+        calc(var(--typ-accent-s) + 20%),
+        calc(var(--typ-accent-l) + 0%),
+        1
+    );
+}
+
+.oz-calendar-plugin-view .react-calendar__navigation__arrow:hover {
+    color: hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 0%),
+        calc(var(--typ-accent-l) - 10%),
+        1
+    );
 }

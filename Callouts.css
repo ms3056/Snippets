@@ -79,12 +79,6 @@
     1
   );
 
-  --callout-vacation: hsla(
-    calc(var(--typ-accent-h) + 90),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 40%),
-    1
-  );
 }
 
 .theme-light {
@@ -177,7 +171,12 @@
   .block-language-dataviewjs
   span {
   font-family: "Rec Mono Duotone";
-  background-color: var(--callout-vacation) !important;
+  background-color: hsla(
+    calc(var(--typ-accent-h) + 10),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) - 40%),
+    1
+  );
   float: right;
   padding: 0.4em;
   margin-bottom: 0.5em;
@@ -186,8 +185,8 @@
   font-size: 1em;
   border: 2px solid
     hsla(
-      calc(var(--typ-accent-h) + 90),
-      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-h) + 10),
+      calc(var(--typ-accent-s) + 10%),
       calc(var(--typ-accent-l) - 20%),
       1
     );

@@ -22,20 +22,30 @@
 
 /* My Personal Font Preference */
 .clock-container {
-  font-family: "Bricolage Grotesque 14pt";
+  font-family: "Lato";
   --tokei-main-text: var(--typ-accent);
   --tokei-secondary-text: hsla(
-    calc(var(--typ-accent-h) + 0), 
-    calc(var(--typ-accent-s) + 0%), 
-    calc(var(--typ-accent-l) + 30%), 
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 30%),
     calc(var(--typ-accent-a) + 0%)
   );
-  --tokei-background: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 10%), 0.2);
-  --tokei-border: hsla(calc(var(--accent-h) + 0), calc(var(--accent-s) - 30%), calc(var(--accent-s) + 0%), 1);
+  --tokei-background: hsla(
+    calc(var(--accent-h)),
+    calc(var(--accent-s)),
+    calc(var(--accent-l) - 10%),
+    0.2
+  );
+  --tokei-border: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) - 30%),
+    calc(var(--accent-s) + 0%),
+    1
+  );
   --tokei-main-180: hsla(
-    calc(var(--typ-accent-h) - 180), 
-    calc(var(--typ-accent-s) + 0%), 
-    calc(var(--typ-accent-l) + 20%), 
+    calc(var(--typ-accent-h) - 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 20%),
     1
   );
 
@@ -43,19 +53,22 @@
   margin-top: 10px;
 }
 
-
 .time {
   text-shadow: 2px 2px 4px black;
-  color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+  color: hsla(
+    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
   /* font-size: 3em; */
-
 }
 
 .date {
   font-size: 1.7em;
   text-shadow: 2px 2px 2px black;
   color: hsla(
-    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-h) + 10),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
@@ -64,7 +77,12 @@
 
 .quarter,
 .week {
-  color: hsla(calc(var(--typ-accent-h) + 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) - 10%), 1);
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
   font-size: 1.2em !important;
@@ -108,7 +126,7 @@
   text-shadow: 2px 2px 4px black;
   text-align: center;
   color: hsla(
-    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
@@ -126,7 +144,7 @@
   white-space: pre-line;
   content: attr(data-text) " ";
   color: hsla(
-    calc(var(--typ-accent-h) - 90),
+    calc(var(--typ-accent-h) + 180),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) + 10%),
     1
@@ -135,7 +153,6 @@
   font-size: 1.2em;
   text-align: center;
 }
-
 
 .time-display::before {
   content: attr(data-text) "\A";

@@ -279,7 +279,7 @@ input[type=checkbox].metadata-input-checkbox:not(:checked) {
   background-color: var(--checkbox-unchecked-bg);
   border-color: var(--checkbox-unchecked-border);
   border-radius: var(--checkbox-radius);
-  --checkbox-size: 1.3em;
+  --checkbox-size: 1.4em !important;
 }
 
 /* Unchecked Tasks:hover */
@@ -292,7 +292,7 @@ input[type=checkbox].metadata-input-checkbox:hover {
 input[type=checkbox].metadata-input-checkbox:is(:checked) {
   background-color: var(--checkbox-checked-bg);
   border-color: var(--checkbox-checked-border);
-  --checkbox-size: 1.3em;
+  --checkbox-size: 1.4em !important;
   filter: brightness(0.7);
 }
 
@@ -308,6 +308,7 @@ li[data-task=" "] > p > input {
   background-color: var(--checkbox-unchecked-bg);
   border-color: var(--checkbox-unchecked-border);
   border-radius: var(--checkbox-radius);
+  --checkbox-size: 1.4em;
 }
 
 /* Unchecked Tasks:hover */
@@ -325,6 +326,7 @@ li[data-task="x"] > p > input:checked {
   background-color: var(--checkbox-checked-bg);
   border-color: var(--checkbox-checked-border);
   opacity: var(--checkbox-checked-opacity) !important;
+  --checkbox-size: 1.4em;
 }
 
 /* Checked Tasks Check */
