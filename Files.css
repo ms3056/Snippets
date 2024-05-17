@@ -1,255 +1,490 @@
-.theme-dark,
-.theme-light {
-    --root-bookmarks-color: black;
-    --group-bookmarks-color: transparent;
+/* @settings
+name: AnuPpuccin
+id: anuppuccin-theme-settings
+settings:
+
+# Workspace :: Rainbow Folders
+
+  -
+    id: anp-rainbow-section-header
+    title: Rainbow Folders
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anuppuccin-url-custom-rainbow-colors
+    title: Custom rainbow folder colors snippet
+    description: "Download the snippet through [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/custom-rainbow-colors.css)."
+    type: info-text
+    markdown: true
+  -
+    id: anp-alt-rainbow-style
+    title: Rainbow style
+    type: class-select
+    allowEmpty: false
+    default: anp-default-rainbow
+    options:
+      - 
+        label: None
+        value: anp-default-rainbow
+      - 
+        label: Simple
+        value: anp-simple-rainbow-color-toggle
+
+# Workspace :: Rainbow Folders :: Simple Folder Settings
+
+  -
+    id: anp-simple-rainbow-folder-settings
+    title: Simple Folder Settings
+    description: 
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: anp-simple-rainbow-title-toggle
+    title: Enable title recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-collapse-icon-toggle
+    title: Enable collapse icon recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-indentation-toggle
+    title: Enable collapse indent recolor
+    type: class-toggle
+  -
+    id: anp-simple-rainbow-icon-toggle
+    title: Enable circular file
+    type: class-toggle
+  -
+    id: anp-rainbow-subfolder-color-toggle
+    title: Enable subfolder color inheritance
+    type: class-toggle
+
+# Workspace :: File Browser
+  -
+    id: anp-filebrowser-header
+    title: File Browser
+    description: 'Enable/Disable File Browser elements'
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-file-icons
+    title: Enable file icons
+    type: class-toggle
+  -
+    id: anp-collapse-folders
+    title: Enable folder icons for collapse indicators
+    type: class-toggle
+  - 
+      id: file-font-size
+      title: File Font Size
+      description: The size of the font
+      type: variable-number-slider
+      default: 0.8
+      min: 0.5
+      max: 2
+      step: 0.1
+      format: em;
+*/
+
+body {
+  --anp-rainbow-folder-bg-opacity: 1;
+  --anp-rainbow-folder-border-opacity: 1;
+  --anp-rainbow-folder-collapse-border-custom: #00000044;
+  --icon-opacity: 1;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder {
-    --nav-item-color: var(--hsl-second-base) !important;
-    border-radius: 4px;
-    --icon-color: var(--folder-color);
-}
-
-/* Files */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
-  font-size: 0.9em;
-}
-
-.mod-root > .nav-folder-title > .nav-folder-title-content  {
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  line-height: 1em;
-  font-size: 1.6em;
-  border-radius: 10px;
-  font-family: "Yu Gothic" !important;
-  color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 100%);
-
-}
-
-.mod-root > .nav-folder-title[data-count]::after {
-  content: attr(data-count);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='24' viewBox='0 0 120 24' fill='none'%3E%3Ctext x='0.7em' y='0.7em' fill='gray' font-size='1.2em' font-family='Rec Mono Duotone' text-anchor='left' alignment-baseline='middle'%3ETotal%3C/text%3E%3C/svg%3E");
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 3.5em;
-  line-height: 1em;
-  padding-right: 0.9em;
-  margin-right: -0.7em;
-  font-size: 1.4em;
-  text-shadow: 2px 2px 4px #000000;
-  border-radius: 10px;
-  color: var(--typ-accent);
-  background-color: var(--card-background-color);
-}
-
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
-  font-size: 1.1em;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: "Bricolage Grotesque 14pt", monospace !important;
-  font-feature-settings: "zero", "liga" 1, "ss12" 1, "ss01" 1, "pnum" 1 !important;
+.theme-dark {
+  --ctp-rosewater: var(--ctp-custom-rosewater, var(--ctp-ext-rosewater, 245, 224, 220));
+  --ctp-flamingo: var(--ctp-custom-flamingo, var(--ctp-ext-flamingo, 242, 205, 205));
+  --ctp-pink: var(--ctp-custom-pink, var(--ctp-ext-pink, 245, 194, 231));
+  --ctp-mauve: var(--ctp-custom-mauve, var(--ctp-ext-mauve, 203, 166, 247));
+  --ctp-red: var(--ctp-custom-red, var(--ctp-ext-red, 243, 139, 168));
+  --ctp-maroon: var(--ctp-custom-maroon, var(--ctp-ext-maroon, 235, 160, 172));
+  --ctp-peach: var(--ctp-custom-peach, var(--ctp-ext-peach, 250, 179, 135));
+  --ctp-yellow: var(--ctp-custom-yellow, var(--ctp-ext-yellow, 249, 226, 175));
+  --ctp-green: var(--ctp-custom-green, var(--ctp-ext-green, 166, 227, 161));
+  --ctp-teal: var(--ctp-custom-teal, var(--ctp-ext-teal, 148, 226, 213));
+  --ctp-sky: var(--ctp-custom-sky, var(--ctp-ext-sky, 137, 220, 235));
+  --ctp-sapphire: var(--ctp-custom-sapphire, var(--ctp-ext-sapphire, 116, 199, 236));
+  --ctp-blue: var(--ctp-custom-blue, var(--ctp-ext-blue, 135, 176, 249));
+  --ctp-lavender: var(--ctp-custom-lavender, var(--ctp-ext-lavender, 180, 190, 254));
+  --ctp-text: var(--ctp-custom-text, var(--ctp-ext-text, 198, 208, 245));
+  --ctp-subtext1: var(--ctp-custom-subtext1, var(--ctp-ext-subtext1, 179, 188, 223));
+  --ctp-subtext0: var(--ctp-custom-subtext0, var(--ctp-ext-subtext0, 161, 168, 201));
+  --ctp-overlay2: var(--ctp-custom-overlay2, var(--ctp-ext-overlay2, 142, 149, 179));
+  --ctp-overlay1: var(--ctp-custom-overlay1, var(--ctp-ext-overlay1, 123, 129, 157));
+  --ctp-overlay0: var(--ctp-custom-overlay0, var(--ctp-ext-overlay0, 105, 109, 134));
+  --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 86, 89, 112));
+  --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 67, 70, 90));
+  --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 49, 50, 68));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 30, 30, 46));
+  --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 24, 24, 37));
+  --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 17, 17, 27));
 }
 
 
 
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title {
-  --nav-item-color: var(--folder-color) !important;
+/* Changing the font requires this little tweak for Bookmarks */
+[data-type=bookmarks] .tree-item-icon,
+[data-type=bookmarks] .tree-item-inner {
+/*  align-items: center !important;*/
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title, .nav-file-title {
-/*  border: 2px solid transparent;*/
+[data-type=bookmarks] .tree-item .tree-item-self,
+.nav-folder > .tree-item-self,
+.nav-file-title-content {
+  font-family: "Bricolage Grotesque 14pt";
+  font-size: var(--file-font-size);
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: calc(2) * var(--file-font-size));
 }
 
-/* The very top level items */
-.workspace-leaf-content[data-type="file-explorer"] .tree-item-self.nav-folder-title[data-path]:not([data-path*="/"]) {
-/*    background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), .1) !important;*/
-  margin-left: 50px;
+
+
+/*===============================================================
+* RAINBOW FOLDERS
+* Author: AnubisNekhet
+* https://www.buymeacoffee.com/anubisnekhet
+*===============================================================*/
+/*---------------------------------------------------------------
+* RAIBOW FOLDER VARIABLE
+
+* --rainbow-folder-color is a raw rgb variable whose value
+* is cycled per child folder in a folder tree.
+* Applying "inherit" to every child folder excluding first-order
+* child folders results in folders "inheriting" their parent
+* folder colors.
+*---------------------------------------------------------------*/
+.nav-folder-children > .nav-folder:nth-child(11n+2),
+.nav-files-container > div > .nav-folder:nth-child(11n+2),
+[data-type=bookmarks] .tree-item:nth-child(11n+2) {
+  --rainbow-folder-color: var(--ctp-red);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+3),
+.nav-files-container > div > .nav-folder:nth-child(11n+3),
+[data-type=bookmarks] .tree-item:nth-child(11n+3) {
+  --rainbow-folder-color: var(--ctp-maroon);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+4),
+.nav-files-container > div > .nav-folder:nth-child(11n+4),
+[data-type=bookmarks] .tree-item:nth-child(11n+4) {
+  --rainbow-folder-color: var(--ctp-peach);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+5),
+.nav-files-container > div > .nav-folder:nth-child(11n+5),
+[data-type=bookmarks] .tree-item:nth-child(11n+5) {
+  --rainbow-folder-color: var(--ctp-yellow);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+6),
+.nav-files-container > div > .nav-folder:nth-child(11n+6),
+[data-type=bookmarks] .tree-item:nth-child(11n+6) {
+  --rainbow-folder-color: var(--ctp-green);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+7),
+.nav-files-container > div > .nav-folder:nth-child(11n+7),
+[data-type=bookmarks] .tree-item:nth-child(11n+7) {
+  --rainbow-folder-color: var(--ctp-teal);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+8),
+.nav-files-container > div > .nav-folder:nth-child(11n+8),
+[data-type=bookmarks] .tree-item:nth-child(11n+8) {
+  --rainbow-folder-color: var(--ctp-sky);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+9),
+.nav-files-container > div > .nav-folder:nth-child(11n+9),
+[data-type=bookmarks] .tree-item:nth-child(11n+9) {
+  --rainbow-folder-color: var(--ctp-sapphire);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+10),
+.nav-files-container > div > .nav-folder:nth-child(11n+10),
+[data-type=bookmarks] .tree-item:nth-child(11n+10) {
+  --rainbow-folder-color: var(--ctp-blue);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+11),
+.nav-files-container > div > .nav-folder:nth-child(11n+11),
+[data-type=bookmarks] .tree-item:nth-child(11n+11) {
+  --rainbow-folder-color: var(--ctp-lavender);
+}
+.nav-folder-children > .nav-folder:nth-child(11n+12),
+.nav-files-container > div > .nav-folder:nth-child(11n+12),
+[data-type=bookmarks] .tree-item:nth-child(11n+12) {
+  --rainbow-folder-color: var(--ctp-mauve);
 }
 
-/* Bottom level items */
-.workspace-leaf-content[data-type="file-explorer"] .tree-item.nav-file .tree-item-self.nav-file-title .tree-item-inner.nav-file-title-content {
-    color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 10%), calc(var(--typ-accent-a) + 0%));
+.anp-rainbow-subfolder-color-toggle .nav-files-container .nav-folder.nav-folder .nav-folder,
+.anp-rainbow-subfolder-color-toggle [data-type=bookmarks] .tree-item .tree-item,
+.nav-files-container > div > .tree-item.nav-file > .tree-item-self,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".js"]::before, .anp-file-icons .nav-file {
+  --rainbow-folder-color: inherit;
+}
 
+.tree-item-self {
+    display: flex; 
+    align-items: center; 
+}
+
+.tree-item-inner {
+/*    display: flex; 
+    align-items: center; 
+    margin-left: calc(0.05 * var(--file-font-size)); */
+}
+
+.tree-item-self > .nav-file-tag {
+    margin-left: auto; 
 }
 
 /* Hover */
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder > .nav-folder-title:hover, .nav-file-title:hover {
-/*  filter: hue-rotate(180deg);*/
-/*  border: 2px solid var(--hsl-second-base) !important;*/
-/*  background-color: hsla(var(--hsl-second-h), var(--hsl-second-s), var(--hsl-second-l), 0.3) !important;*/
-  color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
-  background-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.3) !important;
-  border-radius: 5px;
+/* File Explorer */
+.nav-files-container > div > .nav-folder > .tree-item-self:hover {
+  background-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 0.4));
+  color: white !important;
+  border-radius: 10px;
 }
 
-/* Children */
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+2) > .nav-folder-title {
-/*  background-color: var(--child1-bg-color);*/
-  --folder-color: var(--child1-color); 
+/* Bookmarks */
+[data-type=bookmarks] .tree-item .tree-item-self:hover .tree-item-inner-text {
+  color: white;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+3) > .nav-folder-title{
-/*    background-color: var(--child2-bg-color);*/
-  --folder-color:var(--child2-color);
+/* Bookmarks and File Explorer Children */
+[data-type=bookmarks] .tree-item .tree-item-self:hover,
+.nav-files-container > div > .nav-folder .tree-item-children .tree-item-self:hover {
+    background-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 0.4));
+    color: white !important;
+    border-radius: 10px;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+4) > .nav-folder-title{
-/*    background-color: var(--child3-bg-color);*/
-  --folder-color:var(--child3-color);
+/* Files at root level */
+/* No parent to inherit from, so fixing the color */
+.nav-files-container > div > .tree-item.nav-file > .tree-item-self {
+    color: hsla(260.19, 57.143%, 64.314%, 100%);;
+    border-radius: 10px !important;
+    margin: 0;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+5) > .nav-folder-title{
-/*    background-color: var(--child4-bg-color);*/
-  --folder-color:var(--child4-color);  
+/* Hover for files at root level */
+.nav-files-container > div > .tree-item.nav-file > .tree-item-self:hover {
+    background-color: hsla(260.19, 57.143%, 64.314%, 30%);
+    color: white;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+6) > .nav-folder-title{
-/*    background-color: var(--child5-bg-color);*/
-  --folder-color:var(--child5-color);
+/*---------------------------------------------------------------
+* SIMPLE RAINBOW STYLE
+*---------------------------------------------------------------*/
+
+/* Items within file folders */
+.nav-file-title {
+  --nav-item-size: var(--file-font-size);
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+7) > .nav-folder-title{
-/*    background-color: var(--child6-bg-color);*/
-  --folder-color: var(--child6-color); 
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-files-container > div > .nav-folder .nav-folder-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] .tree-item .tree-item-inner,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-file-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] .tree-item .tree-item,
+[data-type=bookmarks] .tree-item .tree-item-inner-text {
+  transition: color 0.3s;
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
+  --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.2);
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+8) > .nav-folder-title{
-/*    background-color: var(--child7-bg-color);*/
-  --folder-color: var(--child7-color);
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.is-being-dragged-over {
+  background-color: rgba(var(--rainbow-folder-color), 0.1);
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+9) > .nav-folder-title{
-/*    background-color: var(--child8-bg-color);*/
-  --folder-color: var(--child8-color);
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-files-container > div > .nav-folder .nav-folder-title:after,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner:after {
+  transition: color 0.4s;
+  color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  content: "⬤";
+  font-size: 10px;
+  position: relative;
+  margin-left: 4px;
+  opacity: 0.5;
+  top: -0.5px;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+10) > .nav-folder-title {
-/*    background-color: var(--child9-bg-color);*/
-  --folder-color: var(--child9-color);
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item-inner,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] .tree-item .tree-item {
+/*  align-items: center !important;
+  vertical-align: middle;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;*/
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+11) > .nav-folder-title {
-/*    background-color: var(--child10-bg-color);*/
-  --folder-color: var(--child10-color);
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-files-container .nav-folder > .nav-folder-children,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] .tree-item .tree-item-children {
+  transition: color 0.4s;
+  border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+12) > .nav-folder-title {
-/*    background-color: var(--child11-bg-color);*/
-  --folder-color: var(--child11-color); 
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-icon-toggle .tree-item-self .tree-item-icon {
+  --icon-color: rgba(
+    var(--rainbow-folder-color),
+    var(--anp-simple-rainbow-opacity, 1)
+  );
+  --nav-collapse-icon-color: rgba(
+    var(--rainbow-folder-color),
+    var(--anp-simple-rainbow-opacity, 1)
+  );
+  --nav-collapse-icon-color-collapsed: rgba(
+    var(--rainbow-folder-color),
+    var(--anp-simple-rainbow-opacity, 1)
+  );
+
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+13) > .nav-folder-title {
-/*    background-color: var(--child12-bg-color);*/
-  --folder-color: var(--child12-color); 
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .nav-folder.mod-root .nav-folder > .nav-folder-children :is(.nav-file, .nav-folder) {
+/*  margin-left: var(--size-2-1);*/
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+14) > .nav-folder-title {
-/*    background-color: var(--child13-bg-color);*/
-  --folder-color: var(--child13-color); 
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .nav-folder-title {
+  align-items: center;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+15) > .nav-folder-title {
-/*    background-color: var(--child14-bg-color);*/
-  --folder-color: var(--child14-color); 
+/* Target any tree item at the desired level */
+/* Small tweak for the enlarged icons */
+.tree-item-inner.nav-file-title-content {
+/*    margin-left: 4px;*/
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > .nav-folder:nth-child(15n+16) > .nav-folder-title {
-/*    background-color: var(--child15-bg-color);*/
-  --folder-color: var(--child15-color); 
+
+/* Bookmark Icons */
+[data-type=bookmarks] .tree-item-self > .tree-item-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-heart'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+  display: flex;
+  flex-basis: 100%;
+  width: calc(1.1 * var(--file-font-size));
+  height: calc(1.1 * var(--file-font-size));
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder {
-	
+/* Open Icon */
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .collapse-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+  display: flex;
+  flex-basis: 100%;
+  width: calc(1.1 * var(--file-font-size));
+  height: calc(1.1 * var(--file-font-size));
 }
 
-/* Replace icons */
-.workspace-leaf-content[data-type="file-explorer"] .collapse-icon svg.svg-icon {
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item.is-collapsed .collapse-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+  display: flex;
+  flex-basis: 100%;
+  width: calc(1.1 * var(--file-font-size));
+  height: calc(1.1 * var(--file-font-size));
+}
+
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .collapse-icon svg {
   display: none;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .collapse-icon::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
-  -webkit-mask-repeat: no-repeat;
-  background-color: hsla(calc(var(--typ-accent-h) + 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1);
+.anp-file-icons .nav-file .nav-file-title[data-path] {
+  align-items: center;
+  --nav-item-color: hsla(
+    calc(var(--typ-accent-h) + 60),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 20%),
+  1);
 }
 
-
-/* Closed Folder */
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator.is-collapsed::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
-  -webkit-mask-repeat: no-repeat;
-  background-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), calc(var(--typ-accent-a) + 0%));
+.anp-file-icons .nav-file .nav-file-title[data-path]::before {
   content: "";
-  display: inline-flex;
+  display: flex;
   flex-shrink: 0;
-  height: 16px;
-  width: 16px;
-  margin-right: 5px;
-
+  margin-left: calc(-1.4 * var(--file-font-size));
+  opacity: var(--icon-opacity);
+  position: absolute;
+  width: calc(1.2 * var(--file-font-size));
+  height: calc(1.2 * var(--file-font-size));
+  filter: hue-rotate(90deg);
 }
 
-/* Taken from the AnnuPpuccin Theme */
-/* Generic Icon */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path]::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E%0A");
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".pdf"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6m-4 5H8m8 4H8m2-8H8'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
-  background-color: hsla(calc(var(--typ-accent-h) - 180), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), calc(var(--typ-accent-a) + 0%));
-  content: "";
-  display: inline-flex;
-  flex-shrink: 0;
-  height: 16px;
-  width: 16px;
-  margin-right: 5px;
+  background-color: currentColor; 
 }
 
-/* All of my templates start with t. */
-/* My startup templates start with Startup */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path*="t."][data-path$=".md"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path*="Startup"][data-path$=".md"]::before {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-json-2'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1'/%3E%3Cpath d='M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1'/%3E%3C/svg%3E") !important;
+.anp-file-icons .nav-file .nav-file-title[data-path$=".md"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".pdf"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor; 
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".csv"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M8 13h2'/%3E%3Cpath d='M14 13h2'/%3E%3Cpath d='M8 17h2'/%3E%3Cpath d='M14 17h2'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
+    background-color: currentColor; 
 }
 
-/* Icon for Markdown Files */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".md"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".pdf"]::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6m-4 5H8m8 4H8m2-8H8'/%3E%3C/svg%3E%0A");
-  -webkit-mask-repeat: no-repeat;
-}
-
-/* Icon for Canvas Files */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".canvas"]::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3h7v9H3zm11 0h7v5h-7zm0 9h7v9h-7zM3 16h7v5H3z'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-}
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".svg"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".bmp"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".jpg"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".gif"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".webp"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".jpeg"]::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".png"]::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Ccircle cx='10' cy='13' r='2'/%3E%3Cpath d='m20 17-1.09-1.09a2 2 0 0 0-2.82 0L10 22'/%3E%3C/svg%3E%0A");
-  -webkit-mask-repeat: no-repeat;
-}
-
-/* Excalidraw files are .excaidraw.md files */
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".excalidraw.md"]::before {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E%3Crect width='4' height='6' x='2' y='12' rx='2'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpath d='M10 12h2v6'/%3E%3Cpath d='M10 18h4'/%3E%3C/svg%3E");
+.anp-file-icons .nav-file .nav-file-title[data-path$=".js"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".py"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".css"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M8 13h2'/%3E%3Cpath d='M14 13h2'/%3E%3Cpath d='M8 17h2'/%3E%3Cpath d='M14 17h2'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
-}
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-file .nav-file-title[data-path$=".js"]::before {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-code'%3E%3Cpolyline points='16 18 22 12 16 6'/%3E%3Cpolyline points='8 6 2 12 8 18'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
+    background-color: currentColor; 
 }
 
 
+.anp-file-icons .nav-file .nav-file-title[data-path$=".canvas"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3h7v9H3zm11 0h7v5h-7zm0 9h7v9h-7zM3 16h7v5H3z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+}
 
+.anp-file-icons .nav-file .nav-file-title[data-path$=".excalidraw.md"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 13.5V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2h-5.5'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M10.4 12.6a2 2 0 0 1 3 3L8 21l-4 1 1-4Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".svg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".bmp"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".jpg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".gif"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".webp"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".jpeg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".png"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Ccircle cx='10' cy='13' r='2'/%3E%3Cpath d='m20 17-1.09-1.09a2 2 0 0 0-2.82 0L10 22'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: currentColor;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".mp3"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".wav"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".m4a"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".ogg"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".flac"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".3gp"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18V5l12-2v13M9 9l12-2'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Ccircle cx='18' cy='16' r='3'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".webm"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M10 8l6 4-6 4V8z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path$=".mp4"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".ogv"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".mov"]::before,
+.anp-file-icons .nav-file .nav-file-title[data-path$=".mkv"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z'/%3E%3Cpath d='m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z'/%3E%3Cpath d='M6.6 4.99l3.38 4.2m1.88-5.81l3.38 4.2'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+}
