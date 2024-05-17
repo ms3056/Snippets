@@ -1,0 +1,321 @@
+/* Simple HSL color application to nav-folders at various child positions */
+.nav-folder:nth-child(10n+2) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+2) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+2) .tree-item-children  {
+    --file-folder-color-h: var(--typ-accent-h); 
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 5%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+}
+
+/* Further selectors for other child positions with adjusted color calculations */
+.nav-files-container > div > .nav-folder:nth-child(10n+3) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+3) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+3) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 30);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 0%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+/* Apply to all specified child positions similarly */
+.nav-files-container > div > .nav-folder:nth-child(10n+4) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+4) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+4) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 60);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+5) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+5) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+5) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 90);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+6) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+6) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+6) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 120);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+7) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+7) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+7) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 150);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+8) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+8) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+8) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 180);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 0%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+9) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+9) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+9) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 210);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 10%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+10) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+10) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+10) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 240);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 10%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+ --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+.nav-files-container > div > .nav-folder:nth-child(10n+11) > .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+11) .tree-item-children .tree-item-self,
+.nav-files-container > div > .nav-folder:nth-child(10n+11) .tree-item-children {
+    --file-folder-color-h: calc(var(--typ-accent-h) + 270);
+    --file-folder-color-s: calc(var(--typ-accent-s) + 20%);
+    --file-folder-color-l: calc(var(--typ-accent-l) + 10%);
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-collapse-icon-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+    --nav-indentation-guide-color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+
+}
+
+/* Ensure children inherit these styles */
+.nav-files-container > div > .nav-folder .tree-item-children .tree-item-self,
+.nav-files-container > div > .tree-item.nav-file > .tree-item-self,
+.nav-files-container > div > .nav-folder .tree-item-children {
+    --file-folder-color-h: inherit;
+    --file-folder-color-s: inherit;
+    --file-folder-color-l: inherit;
+    color: hsla(var(--file-folder-color-h), var(--file-folder-color-s), var(--file-folder-color-l), 1);
+}
+
+
+
+
+/* Targeting root-level files that are not in any folder */
+
+.nav-files-container > div > .tree-item.nav-file .tree-item-self:before {
+    transform: translateX(-20px);
+    margin-right: -16px;
+}
+
+.nav-files-container > div > .tree-item.nav-file .tree-item-self {
+    color: mediumpurple; /* Example style */
+    border-radius: 5px !important;
+    transform: translateX(-0px);
+    margin: 0;
+}
+
+.nav-files-container > div > .tree-item.nav-file .tree-item-self:hover {
+    background-color: #6837c8 !important;
+    color: #c6b4eb;
+}
+
+.nav-files-container .tree-item-self.is-active {
+  color: hsla(
+    calc(var(--file-folder-color-h) - 0), 
+    calc(var(--file-folder-color-s) + 0%), 
+    calc(var(--file-folder-color-l) + 20%), 1) !important;
+  background-color: hsla(
+    calc(var(--file-folder-color-h) + 0), 
+    calc(var(--file-folder-color-s) + 0%), 
+    calc(var(--file-folder-color-l) + 0%), 0.3) !important;
+}
+
+.nav-files-container .tree-item-self.is-active .tree-item-inner::before {
+  content: "(";
+    margin-right: 2px;
+    color: hsla(
+    calc(var(--bookmark-color-h) + 0), 
+    calc(var(--bookmark-color-s) + 0%), 
+    calc(var(--bookmark-color-l) + 10%), 1);;
+}
+
+.nav-files-container .tree-item-self.is-active .tree-item-inner::after{
+  content: ")";
+  margin-left: 2px;
+  color: hsla(
+    calc(var(--bookmark-color-h) + 0), 
+    calc(var(--bookmark-color-s) + 0%), 
+    calc(var(--bookmark-color-l) + 10%), 1);;
+}
+
+
+
+/* Hover */
+.nav-files-container > div > .nav-folder > .tree-item-self:hover {
+  color: hsla(calc(var(--file-folder-color-h) - 0), calc(var(--file-folder-color-s) + 0%), calc(var(--file-folder-color-l) + 20%), 1) !important;
+  background-color: hsla(calc(var(--file-folder-color-h) + 0), calc(var(--file-folder-color-s) + 0%), calc(var(--file-folder-color-l) + 0%), 0.3) !important;
+  border-radius: 5px;
+}
+
+.nav-files-container > div > .nav-folder .tree-item-children .tree-item-self:hover {
+  color: hsla(calc(var(--file-folder-color-h) - 0), calc(var(--file-folder-color-s) + 0%), calc(var(--file-folder-color-l) + 20%), 1) !important;
+  background-color: hsla(calc(var(--file-folder-color-h) + 0), calc(var(--file-folder-color-s) + 0%), calc(var(--file-folder-color-l) + 0%), 0.3) !important;
+  border-radius: 5px;
+}
+
+
+/*icons*/
+
+/* Closed state icon - Assuming .is-collapsed indicates a closed folder */
+.tree-item.nav-folder.is-collapsed > .tree-item-self > .tree-item-icon > svg {
+    /* SVG for closed folder icon */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+    -webkit-mask-size: cover;
+    background: currentColor; 
+    transform: rotate(0deg);
+    width: 16px;
+    height: 16px;
+}
+
+/* Open state icon - Assuming .is-open indicates an open folder */
+.tree-item.nav-folder > .tree-item-self > .tree-item-icon > svg {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+    -webkit-mask-size: cover;
+    background: currentColor; 
+    transform: rotate(0deg);
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Base styles for file icons using ::before, applied universally */
+.tree-item-self[data-path$=".md"]::before,
+.tree-item-self[data-path$=".csv"]::before,
+.tree-item-self[data-path$=".pdf"]::before,
+.tree-item-self[data-path$=".js"]::before,
+.tree-item-self[data-path$=".py"]::before,
+.tree-item-self[data-path$=".css"]::before,
+.tree-item-self[data-path$=".png"]::before,
+.tree-item-self[data-path$=".svg"]::before,
+.tree-item-self[data-path$=".excalidraw.md"]::before {
+    content: 'x';
+    display: inline-block;
+    width: 16px;  
+    height: 16px;
+    margin-right: 8px; 
+    -webkit-mask-size: contain; 
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center; 
+    background-color: currentColor;
+    vertical-align: middle; 
+}
+
+/* Canvas is special - who knows why */
+.tree-item-self[data-path$=".canvas"]::before {
+    content: 'x';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    background-color: currentColor;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.tree-item-self {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.tree-item-inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px; 
+}
+
+
+/* Selector for .md and .pdf files */
+.tree-item-self[data-path$=".md"]::before,
+.tree-item-self[data-path$=".pdf"]::before {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-text'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+    background-color: currentColor; 
+}
+
+.tree-item-self[data-path$=".csv"]::before {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-spreadsheet'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M8 13h2'/%3E%3Cpath d='M14 13h2'/%3E%3Cpath d='M8 17h2'/%3E%3Cpath d='M14 17h2'/%3E%3C/svg%3E");
+    background-color: currentColor; 
+}
+
+/* Selector for .zip files */
+.tree-item-self[data-path$=".js"]::before,
+.tree-item-self[data-path$=".py"]::before,
+.tree-item-self[data-path$=".css"]::before {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-code-2'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='m5 12-3 3 3 3'/%3E%3Cpath d='m9 18 3-3-3-3'/%3E%3C/svg%3E");
+    background-color: currentColor; 
+}
+
+/* Images */
+.tree-item-self[data-path$=".png"]::before,
+.tree-item-self[data-path$=".svg"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-image'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Ccircle cx='10' cy='12' r='2'/%3E%3Cpath d='m20 17-1.296-1.296a2.41 2.41 0 0 0-3.408 0L9 22'/%3E%3C/svg%3E");
+    background-color: currentColor; 
+}
+/* Excalidraw */
+.nav-file .tree-item-self[data-path$=".excalidraw.md"]::before {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E%3Crect width='4' height='6' x='2' y='12' rx='2'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpath d='M10 12h2v6'/%3E%3Cpath d='M10 18h4'/%3E%3C/svg%3E");
+    background-color: currentColor;
+}
+
+
+.tree-item-self[data-path$=".canvas"]::before {
+    content: "x";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' %3E%3Crect width='4' height='6' x='2' y='12' rx='2'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'/%3E%3Cpath d='M10 12h2v6'/%3E%3Cpath d='M10 18h4'/%3E%3C/svg%3E");
+    width: 14px;  
+    height: 14px; 
+    margin-right: 5px; 
+}
+

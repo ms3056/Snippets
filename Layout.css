@@ -81,6 +81,10 @@ settings:
         description: Content accent
         default-dark: '#90D997'
         default-light: '#304f50'
+    -
+        id: layout-card-shadows
+        title: Enable shadows
+        type: class-toggle
 
 */
 
@@ -576,6 +580,54 @@ body.theme-custom {
     height: calc(100% - 6px);
 }*/
 
+.horizontal-main-container {
+  margin-bottom: 20px !important;
+}
+
+
+
+/* ====== status bar====== */
+
+body {
+    --status-bar-background: transparent;
+    --status-bar-border-color: transparent;
+    --status-bar-border-width: 0;
+}
+
+.status-bar {
+    padding: 0px 16px 0 0;
+    width: 100%;
+    min-height: 16px;
+    padding-bottom: 2px;
+        display: flex;
+    justify-content: center;
+}
+
+/* Status Bar */
+.status-bar {
+  font-size: 1.1em;
+  color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  );
+  background-color: var(--background-primary-alt);
+/*  border: 2px solid var(--background-primary);*/
+/*  border-radius: var(--radiusL);*/
+  text-shadow: 2px 2px 2px black;
+/*  margin-right: 2px;*/
+}
+
+.status-bar-item.mod-clickable:hover {
+    color: yellowgreen;
+}
+
+.status-bar-item {
+    height: 24px;
+}
+
+
 /* For TickTick Page */
 .ticktick .inline-title { 
   display: none; 
@@ -789,72 +841,113 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 }
 
+/* Both of these are required or the hover will be offset */
+.titlebar-button-container.mod-right,
+.workspace-tab-header-container::after {
+  padding-right: 20px;
+}
+
 .titlebar-button.mod-minimize:hover svg {
-  /* background-color: var(--background-primary); */
-  width: 24px;
-  height: 24px;
+  color: lightskyblue;
+}
+
+.titlebar-button.mod-minimize:hover {
+   background-color: var(--background-primary); 
+   border-radius: 10px;
+/*  width: 24px;*/
+/*  height: 24px;*/
 
 }
 
 .titlebar-button.mod-maximize:hover svg {
-  /* background-color: var(--background-primary); */
-  width: 24px;
-  height: 24px;
+  color: lime;
+}
+
+.titlebar-button.mod-maximize:hover {
+   background-color: var(--background-primary); 
+   border-radius: 10px;
+/*  width: 24px;*/
+/*  height: 24px;*/
 
 }
 
 .titlebar-button.mod-close:hover svg {
-  /* background-color: var(--background-primary); */
-  width: 24px;
-  height: 24px;
+  color: red;
+}
+
+.titlebar-button.mod-close:hover {
+   background-color: var(--background-primary); 
+   border-radius: 10px;
+/*  width: 24px;*/
+/*  height: 24px;*/
 
 }
 
 .titlebar-button-container svg {
+  color: hsla(
+    calc(var(--accent-h) + 20),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 30%),
+    1
+  );
   width: 16px;
   height: 16px;
 }
 
-/* Status Bar */
-.status-bar {
-  font-size: 1.1em;
-  color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    1
-  );
-  background-color: var(--background-primary);
-  border: 10px solid var(--background-primary-alt);
-  border-top-left-radius: var(--radiusL);
-  border-bottom-right-radius: var(--radiusL);
-  text-shadow: 2px 2px 2px black;
-  margin-right: 2px;
-}
-
-.side-dock-actions {
-  /* border-top: pink 2px solid; */
-}
 
 /* Left Side-bar Icons */
-.side-dock-ribbon-action:nth-child(4n) svg {
-  color: var(--icon180);
+.layout-card-shadows .side-dock-actions {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.side-dock-ribbon-action:nth-child(4n + 1) svg {
-  color: var(--icons);
+.side-dock-ribbon-action:nth-child(8n) {
+  --icon-color: rgb(var(--ctp-red)) !important;
+  color: rgb(var(--ctp-red)) !important;
 }
 
-.side-dock-ribbon-action:nth-child(4n + 2) svg {
-  color: var(--icon60);
+.side-dock-ribbon-action:nth-child(8n + 1) {
+  --icon-color: rgb(var(--ctp-maroon)) !important;
+  color: rgb(var(--ctp-maroon)) !important;
 }
 
-.side-dock-ribbon-action:nth-child(4n + 3) svg {
-  color: var(--icon120);
+.side-dock-ribbon-action:nth-child(8n + 2) {
+  --icon-color: rgb(var(--ctp-peach)) !important;
+  color: rgb(var(--ctp-peach)) !important;
 }
 
-.side-dock-ribbon-action:nth-child(4n + 4) svg {
-  color: var(--icon220);
+.side-dock-ribbon-action:nth-child(8n + 3) {
+  --icon-color: rgb(var(--ctp-yellow)) !important;
+  color: rgb(var(--ctp-yellow)) !important;
+}
+
+.side-dock-ribbon-action:nth-child(8n + 4) {
+  --icon-color: rgb(var(--ctp-green)) !important;
+  color: rgb(var(--ctp-green)) !important;
+}
+
+.side-dock-ribbon-action:nth-child(8n + 5) {
+  --icon-color: rgb(var(--ctp-teal)) !important;
+  color: rgb(var(--ctp-teal)) !important;
+
+}
+.side-dock-ribbon-action:nth-child(8n + 6) {
+  --icon-color: rgb(var(--ctp-sky)) !important;
+  color: rgb(var(--ctp-sky)) !important;
+}
+
+.side-dock-ribbon-action:nth-child(8n + 7) {
+  --icon-color: rgb(var(--ctp-sapphire)) !important;
+  color: rgb(var(--ctp-sapphire)) !important;
+}
+
+.side-dock-ribbon-action:nth-child(8n + 8) {
+  --icon-color: rgb(var(--ctp-blue)) !important;
+  color: rgb(var(--ctp-blue)) !important;
+}
+
+.side-dock-ribbon-action:nth-child(8n + 9) {
+  --icon-color: rgb(var(--ctp-lavender)) !important;
+  color: rgb(var(--ctp-lavender)) !important;
 }
 
 /* Right Top Icon Bar */
@@ -891,11 +984,24 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   }
 }
 
-/* Layout Styles */
+
 .workspace-tab-container {
-  margin: 7px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
+  margin-bottom: 10px;
   border-radius: var(--radiusL);
-  box-shadow: 5px 5px 5px 0px var(--shadow);
+}
+
+
+/* Layout Styles */
+.layout-card-shadows .workspace-tab-container {
+/*  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workspace-tab-container:not(.workspace-split.mod-horizontal.mod-right-split) {
+/*    margin-bottom: 30px;*/
 }
 
 .workspace-split.mod-horizontal.mod-right-split {
@@ -908,7 +1014,14 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   padding: 4px;
 }
 
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
+  background-color: var(--background-primary-alt) !important;
+}
+
 .side-dock-actions {
+  display: flex;
+  flex-direction: column;
+  height: 93vh; 
   background-color: var(--background-primary) !important;
   border-top-right-radius: var(--radiusL) !important;
   border-bottom-right-radius: var(--radiusL) !important;
@@ -921,7 +1034,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   height: 20px;
 }
 
-.side-dock-settings {
+/*.side-dock-settings {
   background-color: var(--background-primary) !important;
   border-top-right-radius: var(--radiusL);
   border-bottom-right-radius: var(--radiusL);
@@ -932,14 +1045,37 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 .side-dock-settings svg {
   width: 20px;
   height: 20px;
+}*/
+
+/* Make the container a flex container in column direction */
+.side-dock-actions {
+    display: flex;
+    flex-direction: column;
+    height: 90vh; 
 }
 
-.workspace-ribbon {
+/* Add margin-top auto to the last child to push it to the bottom */
+body:not(.is-mobile) .side-dock-actions .clickable-icon:nth-last-child(3) {
+    margin-top: auto;
+}
+
+body:not(.is-mobile) .side-dock-actions .clickable-icon:last-child {
+    margin-bottom: 1em;
+}
+
+body:not(.is-mobile) .workspace-ribbon {
   padding: 0px !important;
-  background-color: var(--background-primary-alt) !important;
+  background-color: var(--background-primary-alt);
 }
 
-.workspace-tab-header-container {
-  background-color: var(--background-primary-alt) !important;
+body:not(.is-mobile) .workspace-tab-header-container {
+  background-color: var(--background-primary-alt);
 }
 
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  display: none;
+}
+
+.side-dock-settings {
+/*  display: none;*/
+ }

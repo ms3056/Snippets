@@ -1,5 +1,30 @@
+/*===============================================================
+* Most of this code and logic is from the repository below - the
+* excellent theme AnuPpuccin. Please support THEIR work 
+* I have left the variables and the settings with the same
+* names as theirs, to further enforce the idea that this is 
+* not my original work - I only edited and added to it. 
+* I will immediately remove the code if AnubisNekhet or 
+* anyone else has a problem with this. 
+*===============================================================*/
+
+/*===============================================================
+* RAINBOW FOLDERS
+* Author: AnubisNekhet
+* https://www.buymeacoffee.com/anubisnekhet
+*===============================================================*/
+/*---------------------------------------------------------------
+* RAIBOW FOLDER VARIABLE
+
+* --rainbow-folder-color is a raw rgb variable whose value
+* is cycled per child folder in a folder tree.
+* Applying "inherit" to every child folder excluding first-order
+* child folders results in folders "inheriting" their parent
+* folder colors.
+*---------------------------------------------------------------*/
+
 /* @settings
-name: AnuPpuccin
+name: AnuPpuccin - Rainbow Folders
 id: anuppuccin-theme-settings
 settings:
 
@@ -145,22 +170,6 @@ body {
   padding-left: calc(2) * var(--file-font-size));
 }
 
-
-
-/*===============================================================
-* RAINBOW FOLDERS
-* Author: AnubisNekhet
-* https://www.buymeacoffee.com/anubisnekhet
-*===============================================================*/
-/*---------------------------------------------------------------
-* RAIBOW FOLDER VARIABLE
-
-* --rainbow-folder-color is a raw rgb variable whose value
-* is cycled per child folder in a folder tree.
-* Applying "inherit" to every child folder excluding first-order
-* child folders results in folders "inheriting" their parent
-* folder colors.
-*---------------------------------------------------------------*/
 .nav-folder-children > .nav-folder:nth-child(11n+2),
 .nav-files-container > div > .nav-folder:nth-child(11n+2),
 [data-type=bookmarks] .tree-item:nth-child(11n+2) {

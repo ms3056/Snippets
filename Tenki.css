@@ -85,12 +85,12 @@
 
 .current-icon {
   margin-right: 2em;
-  width: 148px;
-  height: 148px;
+  width: 128px;
+  height: 128px;
 }
 
 .current-conditions {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-shadow: 2px 2px 4px black;
   color: hsla(
     calc(var(--typ-accent-h) + 0),
@@ -101,7 +101,7 @@
 }
 
 .current-stats-container {
-  font-size: 1.2em;
+  font-size: 1em;
   text-shadow: 2px 2px 4px black;
   color: hsla(
     calc(var(--typ-accent-h) + 0),
@@ -116,9 +116,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 5px;
-  min-width: 300px;
+  gap: 10px;
+  padding: 2px;
+  min-width: 200px;
 }
 
 .forecast-day-container {
@@ -151,8 +151,8 @@
 }
 
 .forecast-icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .forecast-tooltip {

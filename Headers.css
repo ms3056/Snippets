@@ -37,7 +37,7 @@
     1
   );
   --h1-text-color: hsla(
-    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
     calc(var(--typ-accent-l) - 0%),
     1
@@ -160,65 +160,65 @@
 .is-live-preview .HyperMD-header-2:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H2";
   position: absolute;
-  left: -1.4em;
+  left: -1.6em;
   top: 0;
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--typ-accent-l) + 10%),
     0.5
   );
 }
 .is-live-preview .HyperMD-header-3:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H3";
   position: absolute;
-  left: -1.4em;
+  left: -1.6em;
   top: 0;
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--typ-accent-l) + 10%),
     0.5
   );
 }
 .is-live-preview .HyperMD-header-4:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H4";
   position: absolute;
-  left: -1.6em;
+  left: -1.8em;
   top: 0;
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--typ-accent-l) + 10%),
     0.5
   );
 }
 .is-live-preview .HyperMD-header-5:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H5";
   position: absolute;
-  left: -1.6em;
+  left: -1.8em;
   top: 0;
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--typ-accent-l) + 10%),
     0.5
   );
 }
 .is-live-preview .HyperMD-header-6:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
   content: "H6";
   position: absolute;
-  left: -1.6em;
+  left: -1.8em;
   top: 0;
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-h) + 90),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
+    calc(var(--typ-accent-l) + 10%),
     0.5
   );
 } 
@@ -257,6 +257,38 @@
   color: var(--h1-text-color);
   padding-left: 0.1em;
 }
+
+.cm-header-1:after,
+.markdown-rendered h1:after {
+    /* Adds content to the pseudo-element */
+    content: "";
+    
+    /* Sets the height of the line */
+    height: 5px;
+    
+    /* Sets the width of the line to span the entire header */
+    width: 100%;
+    
+    /* Applies the gradient background */
+    background: linear-gradient(to right, transparent 25%, hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 20%),
+    calc(var(--accent-l) + 0%),
+    1) 100%);
+    
+    /* Ensures the line is horizontal */
+    display: block;
+    
+    /* Rounds the right end cap */
+    border-top-right-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+}
+
+ .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+    padding-top: 0.5em !important;
+ }
+
+
 
 .cm-header-2,
 .markdown-rendered h2 {

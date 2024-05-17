@@ -1,4 +1,9 @@
 /* OZ Calendar Tweaks */
+
+.clickable-icon.svelte-xud6aw {
+    border: none !important;
+}
+
 .oz-calendar-plugin-today abbr {
     color: hsla(
         calc(var(--typ-accent-h) + 0),

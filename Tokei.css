@@ -56,16 +56,16 @@
 .time {
   text-shadow: 2px 2px 4px black;
   color: hsla(
-    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--typ-accent-l) + 0%),
     1
   );
-  /* font-size: 3em; */
+   font-size: 3em; 
 }
 
 .date {
-  font-size: 1.7em;
+  font-size: 1.6em;
   text-shadow: 2px 2px 2px black;
   color: hsla(
     calc(var(--typ-accent-h) + 10),
@@ -73,6 +73,7 @@
     calc(var(--typ-accent-l) - 0%),
     1
   );
+  padding-bottom: 0.5em;
 }
 
 .quarter,
@@ -85,7 +86,7 @@
   );
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
-  font-size: 1.2em !important;
+  font-size: 1em !important;
 }
 
 /* this snippet will apply a more compact style */
@@ -122,7 +123,7 @@
   margin-left: 0.1em;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 1.1em;
+  font-size: 1em;
   text-shadow: 2px 2px 4px black;
   text-align: center;
   color: hsla(
@@ -150,7 +151,7 @@
     1
   );
   text-shadow: 2px 2px 2px black;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
 }
 
