@@ -1,0 +1,33 @@
+body {
+    --checklist-done-decoration: unset;
+}
+
+/* Target the parent div of a checked checkbox and apply color to all its children */
+.HyperMD-task-line:has(input.task-list-item-checkbox:checked) {
+    color: #606060 !important;
+}
+
+/* align the checkmark - something shifted it */
+input[data-task="x"]:checked::after,
+li[data-task="x"]>input:checked::after,
+li[data-task="x"]>p>input:checked::after {
+    background-color: var(--background-primary) !important;
+}
+
+/* Checked Tasks Checkbox*/
+input[data-task="x"]:checked,
+li[data-task="x"]>input:checked,
+li[data-task="x"]>p>input:checked {
+    opacity: 50% !important;
+    background-color: #606060 !important;
+}
+
+input[type=checkbox]:checked {
+    border-color: var(--background-primary-alt) !important;
+}
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line:has(.cm-underline) .cm-underline {
+  text-decoration: none !important;
+
+}

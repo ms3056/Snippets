@@ -16,8 +16,8 @@
 }
 
 /* Change font and color of italic text */
-em,
-.cm-em {
+:not(.HyperMD-task-line) em,
+:not(.HyperMD-task-line) .cm-em {
   font-family: "Recursive Sans Casual Static", serif !important;
   font-feature-settings:
     "zero",
@@ -39,16 +39,23 @@ em,
   text-shadow: 2px 2px 2px black;
 }
 
-strong,
-.cm-strong {
+/*Bold NOT in a task*/
+.cm-line:not(.HyperMD-task-line) strong,
+.cm-line:not(.HyperMD-task-line) .cm-strong {
   font-size: 1.1em;
   color: hsla(
-    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-h) + 25),
     calc(var(--typ-accent-s) + 10%),
     calc(var(--typ-accent-l) + 20%),
     1
   ) !important;
   text-shadow: 2px 2px 2px black;
+}
+
+.HyperMD-task-line:has(strong, em) em,
+.HyperMD-task-line:has(.cm-strong, .cm-em) .cm-em {
+  color: peru !important;
+  font-size: 2em;
 }
 
 /* --- change font in Live Preview editing --- */

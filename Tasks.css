@@ -62,8 +62,8 @@
   border-bottom-left-radius: 5px;
   margin-left: 2px;
   color: var(--task-startend-time);
-  padding-bottom: 0.2em;
-  line-height: 1.8em;
+/*  padding-bottom: 0.2em;*/
+/*  line-height: 1.8em;*/
   border-right: none;
 }
 
@@ -85,11 +85,11 @@
   border: 1px dashed var(--task-startend-bg) !important;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-right: 10px;
+  padding-right: 0.5em;
   color: var(--task-startend-text) !important;
   font-style: normal;
-  padding-bottom: 0.2em;
-  line-height: 1.8em;
+/*  padding-bottom: 0.2em;
+  line-height: 1.8em;*/
   border-left: none !important;
 }
 
@@ -119,20 +119,29 @@
   );
 }
 
+/* Select the last .cm-list-1 element within any parent */
+/* Select the last .cm-list-1 element within the specified div */
+.HyperMD-list-line-1:has(.cm-strong).HyperMD-task-line.HyperMD-list-line-1[data-task] .cm-list-1:last-of-type {
+/*  color: red !important;*/
+/*  background-color: blue !important;*/
+/*  font-size: 1.1em;*/
+}
+
 /* Base styles for .cm-underline inside .HyperMD-task-line */
 .HyperMD-list-line-1:has(.cm-strong).HyperMD-task-line.HyperMD-list-line-1[data-task] .cm-underline {
-  vertical-align: bottom;
-  font-size: 1.1em;
+/*  vertical-align: middle;*/
+/*  font-size: 1.1em;*/
   text-decoration: none !important;
+  margin-bottom: 0.5em !important;
   color: hsla(
-    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 40%),
     calc(var(--typ-accent-l) + 10%),
     1
   );
   text-shadow: 2px 2px 4px black;
   position: relative;
-  padding-left: 30px;
+  padding-left: 1.2em;
 }
 
 /* Pseudo-element for the SVG icon */
@@ -140,9 +149,10 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0em;
-  width: 1.5em;
-  height: 1.5em;
+  top: 0.1em;
+  top: .1em;
+  width: 1.1em;
+  height: 1.4em;
   background-color: transparent;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v7'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M4 18v-1a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
@@ -167,8 +177,6 @@
   text-shadow: 2px 2px 4px black;
   border-radius: 5px;
   font-size: 0.9em;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
   color: var(--task-text);
   background: var(--task-background);
   margin-right: 0.5em;
@@ -183,4 +191,20 @@
 
 .HyperMD-list-line.HyperMD-list-line-1.HyperMD-task-line:has(.cm-strong) {
   line-height: 1.6em !important;
+}
+
+
+.HyperMD-list-line-1:has(.cm-strong).HyperMD-task-line.HyperMD-list-line-1[data-task] .cm-list-1:last-of-type {
+  color: hsla(
+    calc(var(--typ-accent-h) + 30),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 10%),
+    1
+  );
+  font-size: inherit;
+}
+
+/* Quick check to see how things are aligned, and that no other code is interfereing   */
+.HyperMD-list-line-1:has(.cm-strong).HyperMD-task-line.HyperMD-list-line-1[data-task] .cm-list-1 {
+/*  border-bottom: 2px dotted red;*/
 }

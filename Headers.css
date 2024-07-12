@@ -140,103 +140,124 @@
   --header-shadow: black;
 }
 
-/* Header Hover */
+body:not(.collapse-icon-restore) .HyperMD-header-1:has(.collapse-icon:not(.is-collapsed)) .cm-fold-indicator .collapse-indicator, 
+body:not(.collapse-icon-restore) .HyperMD-header-1:has(.collapse-icon:not(.is-collapsed)) .markdown-source-view.mod-cm6 .cm-fold-indicator.is-collapsed .collapse-indicator {
+  transform: translateX(-60%);
+}
 
-.is-live-preview .HyperMD-header-1:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
-  content: "H1";
+body:not(.collapse-icon-restore) .HyperMD-header-1:has(.collapse-icon:not(.is-collapsed)) .is-live-preview .HyperMD-header-1:hover .collapse-indicator.collapse-icon,
+body:not(.collapse-icon-restore) .HyperMD-header-1:has(.collapse-icon:not(.is-collapsed)) :is(.markdown-rendered, .markdown-preview-view) h1:hover .collapse-indicator.collapse-icon{
+/*  transform: translateX(-10%); */
+}
+
+/* Apply styles when not in collapsed state */
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1:hover .collapse-indicator:not(.is-collapsed)::before,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h1:hover .collapse-indicator:not(.is-collapsed)::before {
+    content: "H1";
   position: absolute;
-  left: 0.6em;
-  top: 0;
+  top: 0;  
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-h) + 0),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--typ-accent-l) + 0%),
     1
   );
+  white-space: nowrap;  
+  transform: translateX(-25%); 
+text-align: center;
 }
 
-
-.is-live-preview .HyperMD-header-2:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2:hover .collapse-indicator.collapse-icon::before,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h2:hover .collapse-indicator.collapse-icon::before {
   content: "H2";
   position: absolute;
-  left: -1.6em;
-  top: 0;
+  top: 0;  /* Adjust this value to position the content above the SVG */
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-h) + 30),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    0.5
+    calc(var(--typ-accent-l) + 0%),
+    1
   );
+  white-space: nowrap;  /* Prevent wrapping */
+  transform: translateX(-20%); 
+text-align: center;
 }
-.is-live-preview .HyperMD-header-3:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3:hover .collapse-indicator.collapse-icon::before,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h3:hover .collapse-indicator.collapse-icon::before {
   content: "H3";
   position: absolute;
-  left: -1.6em;
-  top: 0;
+  top: 0;  /* Adjust this value to position the content above the SVG */
   font-size: 0.4em;
   color: hsla(
-    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-h) + 60),
     calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    0.5
+    calc(var(--typ-accent-l) + 0%),
+    1
   );
+  white-space: nowrap;  /* Prevent wrapping */
+  transform: translateX(-20%); 
+text-align: center;
 }
-.is-live-preview .HyperMD-header-4:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
-  content: "H4";
-  position: absolute;
-  left: -1.8em;
-  top: 0;
-  font-size: 0.4em;
-  color: hsla(
-    calc(var(--typ-accent-h) + 90),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    0.5
-  );
-}
-.is-live-preview .HyperMD-header-5:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
-  content: "H5";
-  position: absolute;
-  left: -1.8em;
-  top: 0;
-  font-size: 0.4em;
-  color: hsla(
-    calc(var(--typ-accent-h) + 90),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    0.5
-  );
-}
-.is-live-preview .HyperMD-header-6:not(.cm-active):hover > :nth-child(1 of .cm-header)::before {
-  content: "H6";
-  position: absolute;
-  left: -1.8em;
-  top: 0;
-  font-size: 0.4em;
-  color: hsla(
-    calc(var(--typ-accent-h) + 90),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    0.5
-  );
-} 
 
 /* All Headers, editing and reading modes */
 /* From FireIsGood on Discord */
-.cm-header,
-:is(h1, h2, h3, h4, h5, h6) {
+.cm-header-1,
+:is(h1) {
   text-shadow: 2px 2px 5px var(--header-shadow);
+  padding-left: 0.2em;
 }
 
-.HyperMD-header-1::before {
+:not(.cm-header .cm-header-1) .cm-header
+:is(h2, h3, h4, h5, h6) {
+  text-shadow: 2px 2px 5px var(--header-shadow);
+  padding-left: 5em;
+}
+
+/* Only add a line for not collapsed H1s */
+.HyperMD-header-1:has(.collapse-icon:not(.is-collapsed))::before {
   content: " ";
   background-color: var(--h1-line-color);
   width: 4px;
   display: inline-block;
+  margin-left: 0.3em;
 }
 
+
+/* This code assumes the Excalidraw header line contains a .cm-comment entry and that */
+/* your regular headers do NOT have this. In my notes it has been safe.  */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-foldPlaceholder {
+  display: none;
+}
+
+
+/* Make the toggle harder to see */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .collapse-indicator svg {
+  opacity: 60% !important;
+  color: var(--background-primary-alt);
+}
+
+/* Hide the cm-comment which in this case is the text Excalidraw in the header */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-comment.cm-header.cm-header-1 {
+  display: none;
+}
+
+/* Hover of the toggle and make it larger and red */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .collapse-indicator:hover svg {
+  position: relative;
+  left: 0.25em;
+  opacity: 100% !important;
+  color: red;
+  width: 1em;
+  height: 1em;
+}
+
+
+.cm-line > .cm-comment {
+  display: none;
+}
 
 
 /* Add extra space after Header-1 unless the next line is a horizontal line */
@@ -245,8 +266,9 @@
      /* margin-top: 0.3em !important; */
 }
 
+
 .HyperMD-header-1 .cm-fold-indicator {
-  margin-left: 0.6em;
+/*  margin-left: 0.6em;*/
   /*  margin-right: 15px;*/
   color: var(--h1-fold-color);
 }
@@ -255,40 +277,54 @@
 .cm-header-1,
 .markdown-rendered h1 {
   color: var(--h1-text-color);
-  padding-left: 0.1em;
+  padding-left: 0.2em;
 }
 
 .cm-header-1:after,
 .markdown-rendered h1:after {
-    /* Adds content to the pseudo-element */
-    content: "";
-    
-    /* Sets the height of the line */
-    height: 5px;
-    
-    /* Sets the width of the line to span the entire header */
-    width: 100%;
-    
-    /* Applies the gradient background */
-    background: linear-gradient(to right, transparent 25%, hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 20%),
-    calc(var(--accent-l) + 0%),
-    1) 100%);
-    
-    /* Ensures the line is horizontal */
+    content: " ";
+    position: absolute;
     display: block;
-    
-    /* Rounds the right end cap */
-    border-top-right-radius: 2.5px;
-    border-bottom-right-radius: 2.5px;
+    bottom: 0;
+    left: 0;
+    height: 4px; 
+    width: 100%;
+    border-bottom: 2px solid transparent; 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, 
+    transparent 20%, 
+      hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 10%),
+        calc(var(--typ-accent-l) - 10%),
+        1) 55%,
+      hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 0%),
+        calc(var(--typ-accent-l) + 5%),
+        1) 75%,
+      hsla(
+        calc(var(--typ-accent-h) + 0),
+        calc(var(--typ-accent-s) + 10%),
+        calc(var(--typ-accent-l) - 10%),
+        1) 80%, 
+    transparent 100%);
 }
 
  .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
-    padding-top: 0.5em !important;
+/*    padding-top: 0.5em;*/
  }
 
 
+/* Add padding-top to a cm-line that has an internal-embed element and exists directly after a header */
+.internal-embed {
+/*    padding-top: 0.5em !important;*/
+}
+
+/* Add padding-top to an internal-embed that comes directly after an H1 header */
+.cm-s-obsidian .cm-line.HyperMD-header-1 + .internal-embed {
+    padding-top: 0.5em;
+}
 
 .cm-header-2,
 .markdown-rendered h2 {

@@ -167,7 +167,7 @@ body {
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: calc(2) * var(--file-font-size));
+  padding-left: calc((2) * var(--file-font-size));
 }
 
 .nav-folder-children > .nav-folder:nth-child(11n+2),
@@ -497,3 +497,34 @@ body {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8H4Z'/%3E%3Cpath d='m4 11-.88-2.87a2 2 0 0 1 1.33-2.5l11.48-3.5a2 2 0 0 1 2.5 1.32l.87 2.87L4 11.01Z'/%3E%3Cpath d='M6.6 4.99l3.38 4.2m1.88-5.81l3.38 4.2'/%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat;
 }
+
+
+/* Parent container using Flexbox for vertical centering and alignment */
+.oz-explorer-root-nav-folder-title {
+    position: relative; /* Relative positioning for the container */
+    display: flex;      /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    padding-right: 24px; /* Consistent right padding */
+    padding-left: 24px;  /* Consistent left padding */
+    border-bottom: 2px dashed lightblue;
+}
+
+/* The main text content */
+.oz-explorer-root-nav-folder-title .nav-folder-title-content {
+    flex-grow: 1; /* Allow the main content to take up available space */
+}
+
+/* ::after pseudo-element for right alignment */
+.oz-explorer-root-nav-folder-title::after {
+    position: absolute;        /* Absolute positioning for alignment */
+    right: 34px;               /* Align to the right with consistent padding */
+}
+
+/* Consistent padding for the nav-files-container */
+.nav-files-container {
+    padding-right: 24px; /* Consistent right padding */
+    padding-left: 24px;  /* Consistent left padding */
+}
+
+
+

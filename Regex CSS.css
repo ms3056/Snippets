@@ -1,0 +1,391 @@
+body {
+  --icon-size: 1em;
+  --icon-add: 0em;
+  /* Original: #22272e, now slightly darker */
+/*--background-primary: #1e2026 !important;*/
+/* Original: #1c2128, now slightly darker */  
+/*--background-tertiary: #171a1f !important; */
+
+  /* Blend the backgrounds slightly with the accent color */
+  --background-primary: hsl(
+    var(--accent-h),
+    calc((14% + var(--accent-s)) * 0.1),  /* Keeping original saturation low, influenced slightly by accent */
+    calc(15% + (var(--accent-l) - 50%) * 0.05)  /* Adjusting lightness subtly */
+  ) !important;
+
+    --background-primary-alt: hsl(
+    var(--accent-h),
+    calc((14% + var(--accent-s)) * 0.1),  /* Keeping original saturation low, influenced slightly by accent */
+    calc(13% + (var(--accent-l) - 50%) * 0.05)  /* Adjusting lightness subtly */
+  ) !important;
+
+  --background-tertiary: hsl(
+    var(--accent-h),
+    calc((11% + var(--accent-s)) * 0.1),  /* Similar adjustment for saturation */
+    calc(10% + (var(--accent-l) - 50%) * 0.05)  /* Subtly adjusting lightness */
+  ) !important;
+
+
+  --background-secondary: hsl(
+    var(--accent-h),
+    calc((13% + var(--accent-s)) * 0.1),  /* Similar adjustment for saturation */
+    calc(20% + (var(--accent-l) - 90%) * 0.15)  /* Subtly adjusting lightness */
+  ) !important;
+
+
+/*  --background-secondary: hsl(214.29, 13.462%, 20.392%) !important;*/
+}
+
+/* Remove the underline from my special schedule tasks */
+.HyperMD-list-line-1[data-task="x"]:has(.cm-underline) .cm-underline,
+.task-list-item[data-task="x"]:has(.cm-underline) .cm-underline {
+  color: #606060;
+}
+
+.HyperMD-list-line-1[data-task="c"]:has(.cm-underline) .cm-underline,
+.task-list-item[data-task="c"]:has(.cm-underline) .cm-underline {
+  color: #732d2e;
+}
+
+.HyperMD-list-line-1[data-task=">"]:has(.cm-underline) .cm-underline,
+.task-list-item[data-task=">"]:has(.cm-underline) .cm-underline {
+  color: #732d2e;
+}
+
+/* Style the time for my special schedule */
+.tasktime {
+  font-family: "Rec Mono Duotone";
+  font-feature-settings:
+    "zero",
+    "liga"1,
+    "ss12"1,
+    "ss01"1,
+    "pnum"1 !important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 2px;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+  border-right: none;
+}
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line:has(.cm-underline) .cm-underline {
+  text-decoration: none !important;
+}
+
+.HyperMD-task-line:has(.cm-strong) .cm-strong {
+  color: hsla(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 0%),
+      1);
+  font-weight: normal;
+}
+
+/* Milestone Tasks - Text only */
+.HyperMD-list-line-1:has(.cm-em) .cm-em {
+  font-style: normal;
+  color: hsla(
+        calc(var(--accent-h) + 90),
+        var(--accent-s),
+        calc(var(--accent-l) + 0%), 1);
+/*  font-weight: normal;*/
+}
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line:has(.cm-underline) .cm-underline {
+  text-decoration: none !important;
+
+}
+
+.HyperMD-list-line-1 input[data-task=" "],
+.task-list-item input[data-task=" "] {
+  background-color: hsla(
+        calc(var(--accent-h) + 90),
+        var(--accent-s),
+        calc(var(--accent-l) - 10%), 0.4);
+}
+
+.HyperMD-list-line-1[data-task="x"] .tasktime,
+.task-list-item[data-task="x"] .tasktime {
+  color: #606060;
+}
+
+.HyperMD-list-line-1[data-task="x"] span[class*="cm-tag"].cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin,
+.HyperMD-list-line-1[data-task="x"] span[class*="cm-tag"].cm-hashtag.cm-hashtag-end{
+  color: #606060 !important;
+  background-color: #404040 !important;
+  border-color: #606060;
+
+}
+
+.HyperMD-task-line:has(input[data-task='"'])  .cm-list-1 {
+    color: #9f9fff !important;
+    margin-left: 0.3em;
+}
+
+.HyperMD-task-line:has(input[data-task='"'])  .cm-list-1.cm-em {
+    color: hsla(
+        calc(var(--accent-h) + 90),
+        var(--accent-s),
+        calc(var(--accent-l) - 0%), 1) !important;
+}
+
+
+input[data-task='"']:checked::after  {
+  background-color: hsla(
+        calc(var(--accent-h) + 90),
+        var(--accent-s),
+        calc(var(--accent-l) - 0%), 1);
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: -1em;
+  transform: rotate(180deg);
+}
+
+
+
+.HyperMD-task-line:has(input.task-list-item-checkbox:checked) {
+    color: #606060 !important;
+}
+
+
+
+
+
+input[data-task="x"]:checked {
+  background-color: #606060;
+  border-color: #606060;
+}
+
+input[data-task="x"]:checked::after {
+  background-color: #303030;
+}
+
+input[data-task=">"]:checked {
+  color: #b74849;
+}
+
+.HyperMD-list-line-1[data-task="c"] .tasktime,
+.task-list-item[data-task="c"] .tasktime {
+  color: #732d2e;
+}
+
+.HyperMD-list-line-1[data-task=">"] .tasktime,
+.task-list-item[data-task=">"] .tasktime {
+  color: #732d2e;
+}
+
+.HyperMD-list-line[data-task="x"] strong,
+.HyperMD-list-line[data-task="x"] .cm-strong {
+  color: #606060 !important;
+  font-weight: normal;
+}
+
+.HyperMD-list-line[data-task="x"] em,
+.HyperMD-list-line[data-task="x"] .cm-em {
+  color: #606060  !important;
+  font-weight: normal;
+}
+
+.HyperMD-list-line[data-task="c"] strong,
+.HyperMD-list-line[data-task="c"] .cm-strong {
+  color: #732d2e !important;
+  font-weight: normal;
+}
+
+.HyperMD-list-line[data-task="c"] em,
+.HyperMD-list-line[data-task="c"] .cm-em {
+  color: #732d2e !important;
+}
+
+.HyperMD-list-line[data-task=">"] strong,
+.HyperMD-list-line[data-task=">"] .cm-strong {
+  color: #732d2e !important;
+  font-weight: normal;
+}
+
+.HyperMD-list-line[data-task=">"] em,
+.HyperMD-list-line[data-task=">"] .cm-em {
+  color: #732d2e !important;
+}
+
+.moon, .sun, .feet, .lunch, .schedule, .done, .doc, .tasks-postpone, .tasks-edit, .room, .travel {
+  display: inline-block;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 
+    calc(var(--icon-size) + var(--icon-add)) 
+    calc(var(--icon-size) + var(--icon-add));
+  width: calc(var(--icon-size) + var(--icon-add));
+  height: calc(var(--icon-size) + var(--icon-add));
+  vertical-align: middle;
+  /* Hide the original emoji */
+  color: transparent;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+/*  transform: translateY(0.0em);*/
+}
+
+.moon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9'/%3E%3Cpath d='M20 3v4'/%3E%3Cpath d='M22 5h-4'/%3E%3C/svg%3E");
+  background-color: #f0e68c;
+  transform: translateY(-0.1em);
+}
+
+.travel {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M240,91.64l-147.41,88a32,32,0,0,1-38-4.32L18.53,140a8,8,0,0,1,2.32-13.19L24,125.27,55.79,136,88,116.51,58.65,88a8,8,0,0,1,2.2-13.3L68,72l57.53,21.17,54.84-32.75a32,32,0,0,1,41,7.32Z' opacity='0.2'%3E%3C/path%3E%3Cpath d='M176,216a8,8,0,0,1-8,8H24a8,8,0,0,1,0-16H168A8,8,0,0,1,176,216ZM247.86,93.15a8,8,0,0,1-3.76,5.39l-147.41,88a40.18,40.18,0,0,1-20.26,5.52,39.78,39.78,0,0,1-27.28-10.87l-.12-.12L13,145.8a16,16,0,0,1,4.49-26.21l3-1.47a8,8,0,0,1,6.08-.4l28.26,9.54L75,115.06,53.17,93.87A16,16,0,0,1,57.7,67.4l.32-.13,7.15-2.71a8,8,0,0,1,5.59,0L124.7,84.38,176.27,53.6a39.82,39.82,0,0,1,51.28,9.12l.12.15,18.64,23.89A8,8,0,0,1,247.86,93.15Zm-19.74-3.7-13-16.67a23.88,23.88,0,0,0-30.68-5.42l-54.8,32.72a8.06,8.06,0,0,1-6.87.64L68,80.58l-4,1.53.21.2L93.57,110.8a8,8,0,0,1-1.43,12.58L59.93,142.87a8,8,0,0,1-6.7.73l-28.67-9.67-.19.1-.37.17a.71.71,0,0,1,.13.12l36,35.26a23.85,23.85,0,0,0,28.42,3.18Z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: lime;
+  transform: translateY(-0.1em);
+}
+
+.HyperMD-list-line-1[data-task="x"] .moon,
+.task-list-item[data-task="x"] .moon {
+  background-color: #606060;
+}
+
+.feet {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-footprints'%3E%3Cpath d='M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z'/%3E%3Cpath d='M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z'/%3E%3Cpath d='M16 17h4'/%3E%3Cpath d='M4 13h4'/%3E%3C/svg%3E");
+  background-color: olivedrab;
+}
+
+.room {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M200,224H150.54A266.56,266.56,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25a88,88,0,0,0-176,0c0,31.4,14.51,64.68,42,96.25A266.56,266.56,0,0,0,105.46,224H56a8,8,0,0,0,0,16H200a8,8,0,0,0,0-16ZM56,104a72,72,0,0,1,144,0c0,57.23-55.47,105-72,118C111.47,209,56,161.23,56,104Zm112,0a40,40,0,1,0-40,40A40,40,0,0,0,168,104Zm-64,0a24,24,0,1,1,24,24A24,24,0,0,1,104,104Z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: hsla(
+        calc(var(--accent-h) + 90),
+        var(--accent-s),
+        calc(var(--accent-l) + 20%), 1);
+  transform: translateY(-0.1em);
+  --icon-add: 0.2em;
+}
+
+
+
+/* Change the color when tesk is checked */
+.HyperMD-list-line-1[data-task="x"] .feet,
+.task-list-item[data-task="x"] .feet {
+  background-color: #606060;
+}
+
+.sun {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2'/%3E%3Cpath d='M12 20v2'/%3E%3Cpath d='m4.93 4.93 1.41 1.41'/%3E%3Cpath d='m17.66 17.66 1.41 1.41'/%3E%3Cpath d='M2 12h2'/%3E%3Cpath d='M20 12h2'/%3E%3Cpath d='m6.34 17.66-1.41 1.41'/%3E%3Cpath d='m19.07 4.93-1.41 1.41'/%3E%3C/svg%3E");
+  background-color: lightgoldenrodyellow;
+  transform: translateY(-0.1em);
+}
+
+.lunch {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M72,88V40a8,8,0,0,1,16,0V88a8,8,0,0,1-16,0ZM216,40V224a8,8,0,0,1-16,0V176H152a8,8,0,0,1-8-8,268.75,268.75,0,0,1,7.22-56.88c9.78-40.49,28.32-67.63,53.63-78.47A8,8,0,0,1,216,40ZM200,53.9c-32.17,24.57-38.47,84.42-39.7,106.1H200ZM119.89,38.69a8,8,0,1,0-15.78,2.63L112,88.63a32,32,0,0,1-64,0l7.88-47.31a8,8,0,1,0-15.78-2.63l-8,48A8.17,8.17,0,0,0,32,88a48.07,48.07,0,0,0,40,47.32V224a8,8,0,0,0,16,0V135.32A48.07,48.07,0,0,0,128,88a8.17,8.17,0,0,0-.11-1.31Z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: lightblue;
+  transform: translateY(-0.1em);
+}
+
+
+
+.cm-list-1:has(.schedule) {
+  display: inline;
+}
+
+.schedule {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-calendar'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+  background-color: lightblue;
+    transform: translateY(-0.1em);
+}
+
+
+
+.done {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check-circle'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'%3E%3C/path%3E%3Cpolyline points='22 4 12 14.01 9 11.01'%3E%3C/polyline%3E%3C/svg%3E");  
+  background-color: lightblue;
+  --icon-add: -0.05em;
+  transform: translateY(-0.05em);
+}
+
+
+
+.doc {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M88,96a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,96Zm8,40h64a8,8,0,0,0,0-16H96a8,8,0,0,0,0,16Zm32,16H96a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16ZM224,48V156.69A15.86,15.86,0,0,1,219.31,168L168,219.31A15.86,15.86,0,0,1,156.69,224H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H152V160a8,8,0,0,1,8-8h48V48H48Zm120-40v28.7L196.69,168Z'%3E%3C/path%3E%3C/svg%3E"); 
+  background-color: hsla(
+        calc(var(--accent-h) + 0),
+        var(--accent-s),
+        calc(var(--accent-l) + 20%), 1);
+  --icon-add: 0.3em;
+  transform: translateY(-0.05em);
+}
+
+
+.tasks-edit {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-sliders'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M8 12h8'/%3E%3Cpath d='M10 11v2'/%3E%3Cpath d='M8 17h8'/%3E%3Cpath d='M14 16v2'/%3E%3C/svg%3E");
+  background-color: plum;
+}
+
+
+.tasks-postpone {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-arrow-right'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 12h8'/%3E%3Cpath d='m12 16 4-4-4-4'/%3E%3C/svg%3E");
+  background-color: peru;
+}
+
+.HyperMD-list-line-1[data-task="x"] .sun,
+.HyperMD-list-line-1[data-task="x"] .lunch,
+.HyperMD-list-line-1[data-task="x"] .schedule,
+.HyperMD-list-line-1[data-task="x"] .done,
+.HyperMD-list-line-1[data-task="x"] .doc,
+.HyperMD-list-line-1[data-task="x"] .tasks-edit,
+.HyperMD-list-line-1[data-task="x"] .tasks-postpone,
+.HyperMD-list-line-1[data-task="x"] .room,
+.HyperMD-list-line-1[data-task="x"] .travel,
+.task-list-item[data-task="x"] .sun,
+.task-list-item[data-task="x"] .lunch,
+.task-list-item[data-task="x"] .schedule,
+.task-list-item[data-task="x"] .done,
+.task-list-item[data-task="x"] .doc,
+.task-list-item[data-task="x"] .tasks-edit,
+.task-list-item[data-task="x"] .tasks-postpone,
+.task-list-item[data-task="x"] .room,
+.task-list-item[data-task="x"] .travel {
+  background-color: #606060;
+}
+
+.HyperMD-list-line-1[data-task="c"] .sun,
+.HyperMD-list-line-1[data-task="c"] .lunch,
+.HyperMD-list-line-1[data-task="c"] .schedule,
+.HyperMD-list-line-1[data-task="c"] .done,
+.HyperMD-list-line-1[data-task="c"] .doc,
+.HyperMD-list-line-1[data-task="c"] .tasks-edit,
+.HyperMD-list-line-1[data-task="c"] .tasks-postpone,
+.HyperMD-list-line-1[data-task="c"] .room,
+.HyperMD-list-line-1[data-task="c"] .travel,
+.task-list-item[data-task="c"] .sun,
+.task-list-item[data-task="c"] .lunch,
+.task-list-item[data-task="c"] .schedule,
+.task-list-item[data-task="c"] .done,
+.task-list-item[data-task="c"] .doc,
+.task-list-item[data-task="c"] .tasks-edit,
+.task-list-item[data-task="c"] .tasks-postpone,
+.task-list-item[data-task="c"] .room,
+.task-list-item[data-task="c"] .tavel {
+  background-color: #732d2e;
+}
+
+.HyperMD-list-line-1[data-task=">"] .sun,
+.HyperMD-list-line-1[data-task=">"] .lunch,
+.HyperMD-list-line-1[data-task=">"] .schedule,
+.HyperMD-list-line-1[data-task=">"] .done,
+.HyperMD-list-line-1[data-task=">"] .doc,
+.HyperMD-list-line-1[data-task=">"] .tasks-edit,
+.HyperMD-list-line-1[data-task=">"] .tasks-postpone,
+.HyperMD-list-line-1[data-task=">"] .room,
+.HyperMD-list-line-1[data-task=">"] .travel,
+.task-list-item[data-task=">"] .sun,
+.task-list-item[data-task=">"] .lunch,
+.task-list-item[data-task=">"] .schedule,
+.task-list-item[data-task=">"] .done,
+.task-list-item[data-task=">"] .doc,
+.task-list-item[data-task=">"] .tasks-edit,
+.task-list-item[data-task=">"] .tasks-postpone,
+.task-list-item[data-task=">"] .room,
+.task-list-item[data-task=">"] .travel  {
+  background-color: #732d2e;
+}

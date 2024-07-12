@@ -8,36 +8,36 @@
 .theme-dark {
   /* Color of small line */
   --al-0: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 10%),
     1
   );
 
   --al-1: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
     0.05
   );
   --al-2: hsla(
-    calc(var(--typ-accent-h) - 45),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--accent-h) - 45),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
     0.1
   );
   --al-3: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
     0.05
   );
 
   /* Cursor color */
   --al-4: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 0%),
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 0%),
     1
   );
 
@@ -101,7 +101,23 @@
 }
 
 .markdown-source-view .inline-title {
-  padding-bottom: 1.15em;
+/*  padding-bottom: 1.15em;*/
+}
+
+.markdown-source-view .inline-title::before {
+  display: inline-block;
+  vertical-align: -0.15em;
+  content: " ";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z' opacity='0.2'%3E%3C/path%3E%3Cpath d='M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  margin-right: 0.2em;
+  width: 1em;
+  height: 1em;
+  background-color: hsla(
+    calc(var(--typ-accent-h) + 0),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 20%),
+    1);
 }
 
 .markdown-source-view.mod-cm6.is-live-preview div.cm-editor div {
@@ -110,8 +126,22 @@
 
 /* edit bar */
 .cm-gutter {
-  /* overflow: visible !important; */
+/*   overflow: visible !important; */
 }
+
+/* Add rounded borders to the top-left and top-right of the first .cm-gutterElement */
+.cm-lineNumbers .cm-gutterElement:not([style*="visibility: hidden"]):first-of-type,
+.cm-gutterElement:nth-child(2) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Add rounded borders to the bottom-left and bottom-right of the last .cm-gutterElement */
+.cm-gutterElement:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 
 /* Background channel */
 .cm-gutterElement {
@@ -122,6 +152,8 @@
   font-size: 0px;
   min-width: 10px !important;
   background-color: var(--al-5);
+/*  border-top-left-radius: 5px;*/
+/*  border-top-right-radius: 5px;*/
 }
 
 /* Small line highlight */
@@ -146,6 +178,7 @@
 }
 
 /* Background of active line */
+
 .cm-active.cm-line {
   background: linear-gradient(
     90deg,
@@ -158,11 +191,11 @@
     transparent 100%
   );
   filter: brightness(1.3);
-  /* padding-top: unset !important;
-  padding-bottom: unset !important;
-  margin-top: unset !important;
-  margin-bottom: unset !important; */
 }
+
+
+
+
 
 /* Reset/override style for .cm-active.cm-line inside tables */
 .table-editor .cm-active.cm-line {
@@ -172,6 +205,7 @@
   padding-bottom: 0;
   margin-top: 0; /* Reset margins */
   margin-bottom: 0;
+  height: 10%;
 }
 
 .cm-line {

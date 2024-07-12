@@ -92,3 +92,27 @@
       0.4
     ) !important;
 }
+
+
+
+/* Checked tasks in the DayPlanner */
+.markdown-block-content > .rendered-markdown.svelte-9hk5bl > .contains-task-list .task-list-item:is(.is-checked) {
+  margin-left: 1em;
+}
+
+/* Unchecked tasks in the DayPlanner */
+.markdown-block-content > .rendered-markdown.svelte-9hk5bl > .contains-task-list .task-list-item:not(.is-checked){
+  filter: brightness(1.2);
+}
+
+.markdown-block-content > .rendered-markdown.svelte-9hk5bl > .contains-task-list .task-list-item:is(.is-checked) .task-list-item-checkbox {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-block-content > .rendered-markdown.svelte-9hk5bl > .contains-task-list .task-list-item:is(.is-checked) .task-list-item-checkbox:after {
+  top: 0em;
+  width: 1em;
+  height: 1em;
+}
+

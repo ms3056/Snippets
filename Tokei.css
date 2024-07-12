@@ -1,20 +1,15 @@
-/*.theme-dark {
-  --tk-background: hsla(
-    var(--typ-accent-h),
-    calc(var(--typ-accent-s) * 0.5),
-    20%,
-    0.7
-  );
+.theme-dark {
+  --typ-accent-h: var(--accent-h);
+  --typ-accent-s: var(--accent-s);
+  --typ-accent-l: var(--accent-l);
 }
 
 .theme-light {
-  --tk-background: hsla(
-    var(--typ-accent-h),
-    var(--typ-accent-s),
-    var(--typ-accent-l),
-    0.2
-  );
-}*/
+  --typ-accent-h: var(--accent-h);
+  --typ-accent-s: var(--accent-s);
+  --typ-accent-l: var(--accent-l);
+}
+
 
 .workspace-leaf:has(> .workspace-leaf-content > .clock-container) {
   height: auto;
@@ -34,12 +29,12 @@
     calc(var(--accent-h)),
     calc(var(--accent-s)),
     calc(var(--accent-l) - 10%),
-    0.2
+    0.1
   );
   --tokei-border: hsla(
     calc(var(--accent-h) + 0),
-    calc(var(--accent-s) - 30%),
-    calc(var(--accent-s) + 0%),
+    calc(var(--accent-s) - 20%),
+    calc(var(--accent-l) - 20%),
     1
   );
   --tokei-main-180: hsla(
@@ -115,7 +110,7 @@
   max-width: 27%;
   background-color: var(--tokei-background);
   border-color: var(--tokei-border);
-  border-radius: var(--radiusL);
+  border-radius: 10px;
 }
 
 .timezone-name {

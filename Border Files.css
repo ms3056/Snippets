@@ -1,0 +1,1011 @@
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1163095446919585843
+*/
+
+/* updated snippet for v1.6.3 – Erweiterung von 11 auf 14; tweak Farben amw */
+
+.tree-item,
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder {
+  --nav-item-color: var(--folder-color);
+}
+
+.collapse-icon svg.svg-icon {
+  color: var(--folder-color) !important;
+}
+
+.tree-item .tree-item-self {
+  font-size: 1.2em;
+}
+
+.tree-item:hover,
+.nav-folder-children > .nav-folder:hover {
+  filter: brightness(1.4);
+}
+
+.tree-item:nth-child(14n + 2),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 2) {
+  --folder-color: rgb(216.04, 70.833, 70.833);  /* Tiefes Rot */
+}
+
+.tree-item:nth-child(14n + 3),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 3) {
+  --folder-color: rgb(217, 100, 11);  /* Tiefes Orange */
+}
+
+.tree-item:nth-child(14n + 4),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 4) {
+  --folder-color: rgb(199, 138, 28);  /* Tiefes Ocker */
+}
+
+.tree-item:nth-child(14n + 5),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 5) {
+  --folder-color: rgb(209, 182, 31); /* Tiefes Gelb */
+}
+
+.tree-item:nth-child(14n + 6),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 6) {
+  --folder-color: rgb(24, 140, 6); /* Tiefes Grün */
+}
+
+.tree-item:nth-child(14n + 7),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 7) {
+  --folder-color: rgb(30, 179, 166); /* Teal */
+}
+
+.tree-item:nth-child(14n + 8),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 8) {
+  --folder-color: rgb(57, 129, 219);  /* Blau */
+}
+
+.tree-item:nth-child(14n + 9),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 9) {
+  --folder-color: rgb(52, 165, 217);  /* Hellblau */
+}
+
+.tree-item:nth-child(14n + 10),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 10) {
+  --folder-color: rgb(131, 137, 235);  /* Blau mit Violettstich */
+}
+
+.tree-item:nth-child(14n + 11),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 11) {
+  --folder-color: rgb(156, 104, 247); /* Violett */
+}
+
+.tree-item:nth-child(14n + 12),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 12) {
+  --folder-color: rgb(203, 166, 247);  /* Veilchen */
+}
+
+.tree-item:nth-child(14n + 13),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 13) {
+  --folder-color: rgb(162, 212, 61);  /* Linde */
+}
+
+.tree-item:nth-child(14n + 14),
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 14) {
+  --folder-color: rgb(128, 158, 68);  /* Olive */
+}
+
+.nav-header svg {
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%),
+    1);
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/* ================ */
+/* Windows Controls */
+/* ================ */
+.titlebar-button-container.mod-right {
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 0%),
+    0.1) !important;
+  background-color: var(--background-primary-alt) !important;
+  border-radius: 10px;
+}
+
+.titlebar-button-container.mod-right,
+.workspace-tab-header-container::after {
+  padding-right: 20px;
+}
+
+
+.titlebar-button-container.mod-right .titlebar-button.mod-minimize {
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%),
+    1);
+}
+
+.titlebar-button-container.mod-right .titlebar-button.mod-maximize {
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%),
+    1);
+}
+
+.titlebar-button-container.mod-right .titlebar-button.mod-close {
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%),
+    1);
+}
+
+/* ====================== */
+/* Callouts mtg and today */
+/* ====================== */
+
+/* Edit Block Button */
+.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button {
+  opacity: 0.6;
+  background-color: var(--background-primary);
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 0%),
+    1
+  );
+  border: 2px solid hsla(var(--accent), 0.5);
+  transition: ease-in-out all 0.4s;
+  transition: 150ms cubic-bezier(0.2, 0, 1, 0.9);
+  border-radius: 10px;
+  align-items: center;
+  padding: unset;
+  margin: unset;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button:hover {
+  color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
+    1
+  );
+  background-color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 40%),
+    1
+  );
+  border: 2px solid
+    hsla(
+      calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1
+    );
+  opacity: 1;
+}
+
+.callout[data-callout="inf"] {
+  border-color: transparent;
+  background-color: transparent;
+  border-width: 3px;
+  color: var(--text-normal);
+  border-radius: 20px;
+  padding: 32px 16px 16px 16px;
+  transition: 200ms !important;
+  margin: 16px 0;
+  position: relative;
+}
+
+.callout[data-callout="inf"] .callout-title {
+  position: absolute;
+  /* Absolute positioning to float above */
+  top: 1.3em;
+  left: 1.2em;
+  background: var(--background-primary);
+  --callout-title-color: hsl(
+    calc(var(--accent-h) + 90),
+      var(--accent-s),
+      var(--accent-l));
+  font-weight: bold;
+  --callout-title-size: 1.2em;
+  text-shadow: 2px 2px 2px black;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.callout[data-callout="inf"] .callout-icon {
+  display: none;
+}
+
+.callout[data-callout="inf"] .callout-title-inner {
+  display: inline-block;
+  /* Keep it inline with the icon */
+  vertical-align: middle;
+  /* Align with the icon */
+}
+
+.callout[data-callout="inf"] .callout-content {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary);
+  border: 4px dashed hsla(
+    calc(var(--accent-h) + 90),
+      var(--accent-s),
+    calc(var(--accent-l) + 10%), 100%);
+  transition: 200ms !important;
+}
+
+
+.callout[data-callout="mtg"] {
+  border-color: hsla(calc(var(--accent-h) + 90),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  background-color: hsla(calc(var(--accent-h) + 90),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  border-width: 3px;
+  color: var(--text-normal);
+  border-radius: 20px;
+  padding: 32px 16px 16px 16px;
+  transition: 200ms !important;
+  margin: 16px 0;
+  position: relative;
+}
+
+.callout[data-callout="today"] {
+  border-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  border-width: 3px;
+  color: var(--text-normal);
+  border-radius: 20px;
+  padding: 32px 16px 16px 16px;
+  transition: 200ms !important;
+  margin: 16px 0;
+  position: relative;
+}
+
+.callout[data-callout="mtg"] .callout-title,
+.callout[data-callout="today"] .callout-title {
+  position: absolute;
+  /* Absolute positioning to float above */
+  top: 0px;
+  left: 6px;
+  background: none;
+  --callout-title-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  font-weight: bold;
+  --callout-title-size: 1.4em;
+  text-shadow: 2px 2px 2px black;
+  padding: 0.1em 0.5em;
+}
+
+.callout[data-callout="mtg"] .callout-icon,
+.callout[data-callout="today"] .callout-icon {
+  display: none;
+}
+
+.callout[data-callout="mtg"] .callout-title-inner,
+.callout[data-callout="today"] .callout-title-inner {
+  display: inline-block;
+  /* Keep it inline with the icon */
+  vertical-align: middle;
+  /* Align with the icon */
+}
+
+.callout[data-callout="mtg"] .callout-content {
+  margin-top: 20px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 40%);
+  transition: 200ms !important;
+}
+
+.callout[data-callout="today"] .callout-content {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 40%);
+  transition: 200ms !important;
+}
+
+.callout[data-callout="inf"] .callout-content:hover {
+    border-color: hsla(
+    calc(var(--accent-h) + 90),
+      var(--accent-s),
+    calc(var(--accent-l) + 30%), 100%);
+}
+
+.callout[data-callout="mtg"]:hover,
+.callout[data-callout="today"]:hover {
+  border-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+}
+
+/* Paragraph styling inside callout content */
+.callout[data-callout="mtg"] .callout-content p,
+.callout[data-callout="today"] .callout-content p {
+  margin: 10px 10px;
+  line-height: 1.6;
+}
+
+.callout[data-callout="mtg"] .callout-content:has(blockquote) blockquote {
+  --blockquote-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  --blockquote-border-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  --blockquote-border-thickness: 6px;
+  border-radius: 10px;
+  margin-right: 2em;
+}
+
+.callout[data-callout="mtg"] .callout-content:has(> h2) {
+  --h2-text-color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+}
+
+.callout[data-callout="mtg"] .callout-content:has(> ul > li)>ul>li {
+  line-height: 1.2em !important;
+  --list-spacing: 0.2em !important;
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+}
+
+.callout[data-callout="mtg"] .callout-content>ul>li::marker {
+  color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+}
+
+.callout[data-callout="today"] .callout-content {
+  position: relative;
+}
+
+.callout[data-callout="today"] .callout-content p::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 22px 22px;
+  background-color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 10%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+  position: absolute;
+  left: 0.5em;
+  top: 0.3em;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.callout[data-callout="today"] .callout-content {
+  padding-left: 30px;
+  /* Adjust padding to make room for the icon */
+  position: relative;
+}
+
+
+.callout[data-callout="today"] .callout-content .block-language-dataviewjs span {
+  font-family: "Rec Mono Duotone";
+  background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  float: right;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 60%),
+      calc(var(--accent-l) + 30%),
+      1);
+}
+
+.callout[data-callout="today"] .callout-content .block-language-dataviewjs span:hover {
+    background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 50%);
+    border-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+
+}
+
+
+
+
+
+/* ======= */
+/* Headers for Excalidraw*/
+/* ======= */
+
+/* Image styling */
+.internal-embed.media-embed.image-embed.is-loaded img {
+  display: block;
+  margin: auto;
+  /* Center the image within the container */
+  border-radius: 10px;
+  /* Optional: add border radius to the image */
+  /*  border: 4px solid hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 10%),
+    1
+  ) !important;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.HyperMD-header-1:has(.collapse-icon.is-collapsed) .collapse-indicator {
+  transform: translateX(0.5em);
+}
+
+.HyperMD-header-1:has(.collapse-icon.is-collapsed) .collapse-indicator svg {
+  opacity: 80% !important;
+  color: var(--background-primary-alt);
+  background-color: currentColor;
+  -webkit-mask-image: none !important;
+  transition: margin-left 0.3s, transform 0.3s;
+  transform-origin: left center;
+
+}
+
+/* Hover of the toggle and make it larger */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .collapse-indicator:hover svg {
+  opacity: 100% !important;
+  transform: scale(1.5);
+}
+
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-comment.cm-header.cm-header-1 {
+  display: none !important;
+}
+
+
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-foldPlaceholder {
+  display: none;
+}
+
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::after {}
+
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1:has(.is-collapsed)::after,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1:has(.is-collapsed)::before {
+  display: none;
+}
+
+/* For the Border theme turn off the H1 line completely */
+/* FOr Excalidraw data */
+div.ex-opacity-15.HyperMD-header.HyperMD-header-1.cm-line::after {
+  display: none;
+}
+
+.HyperMD-header-1:has(.cm-comment) .HyperMD-header-1::after {
+  display: none;
+}
+
+.is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
+:is(.markdown-rendered, .markdown-preview-view) h1 .collapse-indicator.collapse-icon svg {
+/*  width: 14px;
+  height: 14px;*/
+  background-color: var(--h1-accent-color);
+  color: transparent;
+}
+
+.is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
+:is(.markdown-rendered, .markdown-preview-view) h2 .collapse-indicator.collapse-icon svg {
+/*  width: 12px;
+  height: 12px;*/
+  background-color: var(--h2-accent-color);
+  color: transparent;
+}
+
+.is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
+:is(.markdown-rendered, .markdown-preview-view) h3 .collapse-indicator.collapse-icon svg {
+/*  width: 12px;
+  height: 12px;*/
+  background-color: var(--h3-accent-color);
+  color: transparent;
+}
+
+/* ===================== */
+/* Change the Jisho Icon */
+/* ===================== */
+/* Target the specific SVG icon using the unique class */
+/* This is for the Jisho.org icon */
+.workspace-tab-header-inner-icon .svg-icon.aHR0cHM6Ly9qaXNoby5vcmcv {
+  width: 20px;
+  /* Adjust width to fit your new icon */
+  height: 20px;
+  /* Adjust height to fit your new icon */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-book-a'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3Cpath d='m8 13 4-7 4 7'/%3E%3Cpath d='M9.1 11h5.7'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  filter: grayscale(100%) contrast(20%);
+  background-color: transparent;
+  color: transparent;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* ============= */
+/* Dataview List */
+/* ============= */
+.dataview.list-view-ul li {
+  border: 2px solid hsla(
+    calc(var(--accent-h) + 180),
+    var(--accent-s),
+    calc(var(--accent-l) - 0%),
+    0.5);
+
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.05em;
+}
+
+.dataview.list-view-ul li:hover {
+  background-color: hsla(
+    calc(var(--accent-h) + 0),
+    var(--accent-s),
+    calc(var(--accent-l) - 0%),
+    0.2);
+}
+
+.dataview.list-view-ul li span a {
+  /* Variables for colors and gradient stops */
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  font-size: 0.8em;
+  text-shadow: 2px 2px 4px black;
+  text-decoration: none;
+}
+
+.dataview.list-view-ul {
+  list-style: none !important;
+  /*    padding-left: 4em;*/
+  /*    padding-top: 1.5em;*/
+  padding-bottom: 2em;
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  font-weight: light !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.4em;
+  width: 90%;
+  margin: 0.4em auto;
+  min-height: 3em;
+  border-bottom: 2px dotted hsl(calc(var(--accent-h) + 180),
+      var(--accent-s),
+      var(--accent-l));
+}
+
+/* =========== */
+/* Oz calendar */
+/* =========== */
+
+.oz-calendar-plugin-today abbr {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px black;
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekdays {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+/* Add a W and align it with the day names */
+.react-calendar__month-view__weekNumbers::before {
+  content: "W";
+  display: block;
+  text-align: center;
+  padding: 0.39em 0;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+.oz-calendar-plugin-view .react-calendar__tile--active {
+  --oz-calendar-selected-day-background: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      0.2);
+}
+
+.oz-calendar-plugin-view .react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  height: 30px;
+  display: block;
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__days__day--weekend {
+  background-color: var(--background-primary-alt) !important;
+  border-radius: unset;
+  filter: brightness(0.6);
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekNumbers {
+  display: block !important;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) - 10%),
+      1);
+  flex-basis: auto !important;
+  /*    background-color: var(--background-primary-alt);*/
+  font-size: var(--nav-item-size);
+  /* border-radius: var(--radiusS); */
+  border-right: 2px dashed hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) - 20%),
+      1);
+}
+
+.oz-calendar-plugin-view .dots-wrapper {
+  display: none;
+}
+
+.oz-calendar-plugin-view.fixed .react-calendar {
+  height: 230px;
+}
+
+.oz-calendar-plugin-today {
+  border-radius: 10px !important;
+  border: 2px solid hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+  padding: 0.3em !important;
+}
+
+.oz-calendar-nav-action-middle,
+.oz-calendar-plugin-view button.react-calendar__navigation__label {
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+.oz-calendar-note-line-icon {
+  /*    font-size: 1.3em;*/
+  color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      calc(100% + 0%)) !important;
+  align-content: center;
+  justify-content: center;
+}
+
+.oz-calendar-note-line {
+  font-size: 1.2em;
+  padding: 0.1em;
+}
+
+.oz-calendar-note-line:first-child span {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  font-size: 1.1em;
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 45),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  display: inline;
+}
+
+/*.oz-calendar-note-line span {
+  border-bottom: 1px dashed hsla(
+      calc(var(--accent-h) + 45), 
+      calc(var(--accent-s) + 0%), 
+      calc(var(--accent-l) - 20%), 
+      1);
+}*/
+
+.oz-calendar-note-line span {
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 45),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  display: inline;
+}
+
+.oz-calendar-note-line:last-child span {
+  border-bottom: unset;
+}
+
+.oz-calendar-note-line {
+  font-family: "Rec Mono Duotone", monospace;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+.oz-calendar-plugin-view .react-calendar__navigation__arrow {
+  font-size: 1.4em;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 0%),
+      1);
+}
+
+/* Normal Tags */
+.cm-hashtag.cm-hashtag-begin,
+.cm-hashtag.cm-hashtag-end {
+  background-color: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 20%));
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border: var(--my-tag-border-width) solid hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 20%));
+  text-shadow: 2px 2px 2px black;
+  font-size: 0.6em;
+}
+
+/* Task Stuff */
+/* TickTick Tasks */
+.HyperMD-list-line-1:has(.dataview.inline-field-key) .dataview.inline-field-key {
+  display: none;
+} 
+
+.HyperMD-list-line-1:has(.dataview.inline-field-value) .dataview.inline-field-value {
+  display: none;
+}
+
+
+/* ======== */
+/* TickTick */
+/* ======== */
+/* For TickTick Page */
+.ticktick .inline-title {
+  display: none;
+}
+
+.ticktick {
+  :is(&.markdown-preview-view, & > .cm-editor > .cm-scroller)::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 6px solid var(--background-primary);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Headers */
+
+.HyperMD-header .cm-header-1 {
+  color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 0%),
+    1);
+  margin-left: 0.2em;
+}
+
+.HyperMD-header .cm-header-2 {
+  color: hsla(
+    calc(var(--accent-h) + 60),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 0%),
+    1);
+  margin-left: 0.2em;
+}
+
+.HyperMD-header .cm-header-3 {
+  color: hsla(
+    calc(var(--accent-h) + 120),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 0%),
+    1);
+  margin-left: 0.2em;
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h1 .collapse-indicator.collapse-icon svg {
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM144,160a8,8,0,0,1-16,0V128H72v32a8,8,0,0,1-16,0V80a8,8,0,0,1 16,0v32h56V80a8,8,0,0,1 16,0Zm56,16a8,8,0,0,1-16,0V111l-11.56,7.71a8,8,0,1,1-8.88-13.32l24-16A8,8,0,0,1,200,96Z'%3E%3C/path%3E%3C/svg%3E");
+    position: relative;
+    left: 0.2em;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    width: 24px;
+    height: 24px;
+    display: block; /* Ensure the SVG is block-level */
+    filter: hue-rotate(30deg);
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h2 .collapse-indicator.collapse-icon svg {
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM128,160a8,8,0,0,1-16,0V128H72v32a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0v32h40V80a8,8,0,0,1,16,0Zm64,24H152a8,8,0,0,1-6.4-12.8l36-48a12,12,0,1,0-19.15-14.46,13.06,13.06,0,0,0-2.58,4.81,8,8,0,1,1-15.68-3.18,28.17,28.17,0,1,1,50.2,22.44L168,168h24a8,8,0,0,1,0,16Z'%3E%3C/path%3E%3C/svg%3E");
+    position: relative;
+    left: 0.2em;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    width: 24px;
+    height: 24px;
+    display: block; /* Ensure the SVG is block-level */
+    filter: hue-rotate(180deg);
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h3 .collapse-indicator.collapse-icon svg {
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM128,160a8,8,0,0,1-16,0V128H72v32a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0v32h40V80a8,8,0,0,1,16,0Zm40,24a32,32,0,0,1-21.34-8.15,8,8,0,1,1,10.68-11.92A16,16,0,1,0,168,136a8,8,0,0,1-6.4-12.8L176,104H152a8,8,0,0,1,0-16h40a8,8,0,0,1,6.4,12.8l-16.71,22.28A32,32,0,0,1,168,184Z'%3E%3C/path%3E%3C/svg%3E");
+    position: relative;
+    left: 0.2em;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    width: 24px;
+    height: 24px;
+    display: block; /* Ensure the SVG is block-level */
+    filter: hue-rotate(180deg);
+}
+
+
+/* Bullets */
+:not(.HyperMD-task-line) .list-bullet {
+  padding-right: 0.3em;
+}
+
+.has-list-bullet>li[data-line="0"]>.list-bullet::after,
+.HyperMD-list-line-1 .list-bullet::after {
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+  border-bottom: none;
+  border-left: none;
+}
+
+.has-list-bullet>li[data-line="1"]>.list-bullet::after,
+.HyperMD-list-line-2 .list-bullet::after {
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 30%;
+  border: 2px solid hsla(
+    calc(var(--accent-h) + 30),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 10%),
+      1);
+  background-color: var(--background-primary);
+}
+
+.has-list-bullet>li[data-line="2"]>.list-bullet::after,
+.HyperMD-list-line-3 .list-bullet::after {
+  height: 0.3em;
+  width: 0.3em;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(calc(var(--accent-h) + 60),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+}
+
+.has-list-bullet>li[data-line="3"]>.list-bullet::after,
+.HyperMD-list-line-4 .list-bullet::after {
+  background-color: var(--background-primary);
+  border: 0.05em solid hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+}
+
+
+
+/* =========== */
+/* Day Planner */
+/* =========== */
+
+.needle {
+  z-index: 10;
+}
+
+.markdown-block-content {
+  background-color: hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.05) !important;
+}
+
+.hour-block {
+  border-bottom: 1px solid hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.6) !important;
+}
+
+.half-hour-separator {
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 60),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.4) !important;
+}
+
+.clickable-icon.svelte-xud6aw {
+  border: none !important;
+}
+
+.date.svelte-1ua8hc1.svelte-1ua8hc1 {
+  margin-top: 0.5em;
+}
+
+.controls.svelte-1ua8hc1.svelte-1ua8hc1 {
+  display: none !important;
+}
+

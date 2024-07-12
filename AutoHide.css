@@ -1,0 +1,54 @@
+/* ======== */
+/* Autohide */
+/* ======== */
+
+/* Ensure no outline or shadow effects are present */
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container,
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container * {
+  box-shadow: none !important;  /* Remove any shadow effects */
+  outline: none !important;  /* Remove any outlines */
+}
+
+/* Additional reset for all child elements inside the container */
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container * {
+  background-color: transparent !important;  /* Ensures all children have transparent background */
+}
+
+/* Initial state with hidden elements */
+/* Initial state with hidden elements and upward transform */
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-inner-icon,
+.workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner,
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-inner::before {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+/* Hover state with visible elements and no transform */
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover .workspace-tab-header-inner-icon,
+.workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner,
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover .workspace-tab-header-inner::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  height: 10px;
+  transition: height 200ms ease-in;
+  position: relative; 
+}
+
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover {
+  height: var(--header-height);
+  background-color: var(--background) !important;
+}
+
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  position: absolute;
+  z-index: 1;
+}

@@ -308,7 +308,7 @@ li[data-task=" "] > p > input {
   background-color: var(--checkbox-unchecked-bg);
   border-color: var(--checkbox-unchecked-border);
   border-radius: var(--checkbox-radius);
-  --checkbox-size: 1.4em;
+  --checkbox-size: 1.6em;
 }
 
 /* Unchecked Tasks:hover */
@@ -326,7 +326,7 @@ li[data-task="x"] > p > input:checked {
   background-color: var(--checkbox-checked-bg);
   border-color: var(--checkbox-checked-border);
   opacity: var(--checkbox-checked-opacity) !important;
-  --checkbox-size: 1.4em;
+  --checkbox-size: 1.6em;
 }
 
 /* Checked Tasks Check */
@@ -334,6 +334,7 @@ input[data-task="x"]:checked::after,
 li[data-task="x"] > input:checked::after,
 li[data-task="x"] > p > input:checked::after {
   background-color: var(--checkbox-checkmark-color);
+  top: -0.1em;
 }
 
 /* Tasks that are checked */
@@ -342,6 +343,7 @@ li[data-task="x"] > p > input:checked::after {
   opacity: 60%;
 }
 
+/* Attempt to align everything */
 .HyperMD-list-line-1[data-task] .cm-list-1,
 .task-list-item[data-task] {
   vertical-align: middle;

@@ -1,0 +1,241 @@
+
+/* ====================== */
+/* Callouts mtg and today */
+/* ====================== */
+
+/* Edit Block Button */
+.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button {
+  opacity: 0.6;
+  background-color: var(--background-primary);
+  color: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 0%),
+    1
+  );
+  border: 2px solid hsla(var(--accent), 0.5);
+  transition: ease-in-out all 0.4s;
+  transition: 150ms cubic-bezier(0.2, 0, 1, 0.9);
+  border-radius: 10px;
+  align-items: center;
+  padding: unset;
+  margin: unset;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+}
+
+.markdown-source-view.mod-cm6 .cm-callout > .edit-block-button:hover {
+  color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%),
+    1
+  );
+  background-color: hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 40%),
+    1
+  );
+  border: 2px solid
+    hsla(
+      calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1
+    );
+  opacity: 1;
+}
+
+.callout[data-callout="mtg"] {
+  border-color: hsla(calc(var(--accent-h) + 90),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  background-color: hsla(calc(var(--accent-h) + 90),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  border-width: 3px;
+  color: var(--text-normal);
+  border-radius: 20px;
+  padding: 32px 16px 16px 16px;
+  transition: 200ms !important;
+  margin: 16px 0;
+  position: relative;
+}
+
+.callout[data-callout="today"] {
+  border-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  border-width: 3px;
+  color: var(--text-normal);
+  border-radius: 20px;
+  padding: 32px 16px 16px 16px;
+  transition: 200ms !important;
+  margin: 16px 0;
+  position: relative;
+}
+
+.callout[data-callout="mtg"] .callout-title,
+.callout[data-callout="today"] .callout-title {
+  position: absolute;
+  /* Absolute positioning to float above */
+  top: 0px;
+  left: 6px;
+  background: none;
+  --callout-title-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  font-weight: bold;
+  --callout-title-size: 1.4em;
+  text-shadow: 2px 2px 2px black;
+  padding: 0.1em 0.5em;
+}
+
+.callout[data-callout="mtg"] .callout-icon,
+.callout[data-callout="today"] .callout-icon {
+  display: none;
+}
+
+.callout[data-callout="mtg"] .callout-title-inner,
+.callout[data-callout="today"] .callout-title-inner {
+  display: inline-block;
+  /* Keep it inline with the icon */
+  vertical-align: middle;
+  /* Align with the icon */
+}
+
+.callout[data-callout="mtg"] .callout-content {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 40%);
+  transition: 200ms !important;
+}
+
+.callout[data-callout="today"] .callout-content {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 40%);
+  transition: 200ms !important;
+}
+
+.callout[data-callout="mtg"]:hover,
+.callout[data-callout="today"]:hover {
+  border-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+}
+
+/* Paragraph styling inside callout content */
+.callout[data-callout="mtg"] .callout-content p,
+.callout[data-callout="today"] .callout-content p {
+  margin: 10px 10px;
+  line-height: 1.6;
+}
+
+.callout[data-callout="mtg"] .callout-content:has(blockquote) blockquote {
+  --blockquote-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  --blockquote-border-color: hsl(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l));
+  --blockquote-border-thickness: 6px;
+  border-radius: 10px;
+  margin-right: 2em;
+}
+
+.callout[data-callout="mtg"] .callout-content:has(> h2) {
+  --h2-text-color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+}
+
+.callout[data-callout="mtg"] .callout-content:has(> ul > li)>ul>li {
+  line-height: 1.2em !important;
+  --list-spacing: 0.2em !important;
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+}
+
+.callout[data-callout="mtg"] .callout-content>ul>li::marker {
+  color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+}
+
+.callout[data-callout="today"] .callout-content {
+  position: relative;
+}
+
+.callout[data-callout="today"] .callout-content p::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-quote'%3E%3Cpath d='M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z'/%3E%3Cpath d='M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 22px 22px;
+  background-color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 10%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+  position: absolute;
+  left: 0.5em;
+  top: 0.3em;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.callout[data-callout="today"] .callout-content {
+  padding-left: 30px;
+  /* Adjust padding to make room for the icon */
+  position: relative;
+}
+
+
+.callout[data-callout="today"] .callout-content .block-language-dataviewjs span {
+  font-family: "Rec Mono Duotone";
+  background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 10%);
+  float: right;
+  padding: 0.4em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  border: 2px solid hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 60%),
+      calc(var(--accent-l) + 30%),
+      1);
+}
+
+.callout[data-callout="today"] .callout-content .block-language-dataviewjs span:hover {
+    background-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 50%);
+    border-color: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 30%);
+
+}

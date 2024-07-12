@@ -128,7 +128,7 @@ settings:
 
 /* Line Height */
 .cm-line {
-  line-height: 1.4em !important;
+/*  line-height: 1.4em !important;*/
 }
 
 /* Theme Specific Color Variables */
@@ -285,9 +285,9 @@ body.theme-palenight {
   --accent-s: 20% !important;
   --accent-l: 44% !important;
   --accent-a: 100% !important;
-  --typ-accent-h: 0 !important;
-  --typ-accent-s: 54% !important;
-  --typ-accent-l: 58% !important;
+  --typ-accent-h: 0;
+  --typ-accent-s: 54%;
+  --typ-accent-l: 58%;
   --typ-accent-a: 100% !important;
   --typ-accent: hsl(0, 54%, 58%);
   --text-selection: hsl(0, 64%, 32%);
@@ -336,6 +336,7 @@ body.theme-custom {
 
 /* Dark Theme Styles */
 .theme-dark {
+  --background-modifier-border: red;
   /* Surface Colors */
   /* --background-primary: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 30%), var(--accent-a));
     --background-primary-alt: hsla(calc(var(--accent-h)), calc(var(--accent-s)), calc(var(--accent-l) - 20%), var(--accent-a));
@@ -680,7 +681,7 @@ body {
 /* Title */
 .inline-title {
   color: hsla(
-    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-h) + 30),
     calc(var(--typ-accent-s) + 20%),
     calc(var(--typ-accent-l) + 10%),
     1
@@ -1009,9 +1010,13 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   background-color: var(--background-primary-alt);
 }
 
+.workspace-tabs:is(.mod-top) .workspace-tab-header-container-inner {
+/*  padding-top: 4px;*/
+}
+
 .workspace-tabs {
   background-color: var(--background-primary-alt);
-  padding: 4px;
+/*  margin-top: 4px;*/
 }
 
 .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed {
@@ -1021,7 +1026,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 .side-dock-actions {
   display: flex;
   flex-direction: column;
-  height: 93vh; 
+  top: 25vh;
+/*  height: 80vh !important; */
   background-color: var(--background-primary) !important;
   border-top-right-radius: var(--radiusL) !important;
   border-bottom-right-radius: var(--radiusL) !important;
@@ -1049,9 +1055,9 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
 
 /* Make the container a flex container in column direction */
 .side-dock-actions {
-    display: flex;
-    flex-direction: column;
-    height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  height: 86vh; 
 }
 
 /* Add margin-top auto to the last child to push it to the bottom */
@@ -1079,3 +1085,21 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .side-dock-settings {
 /*  display: none;*/
  }
+
+/* Only .png images */
+.internal-embed[src$=".png"] img {
+  border: 10px solid var(--background-primary-alt);
+  border-radius: 20px;
+  margin-inline: auto;
+  display: block;
+}
+
+/* Only .svg images */
+/* My only SVGs are Excalidraw embeds */
+.internal-embed[src$=".svg"] img {
+  border: 5px solid var(--background-primary-alt);
+  border-radius: 20px;
+  margin-inline: auto;
+  display: block;
+}
+

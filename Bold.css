@@ -1,0 +1,819 @@
+
+/* Bold and Italic */
+/* Italic not in a task */
+:not(.HyperMD-task-line).cm-line .cm-em,
+:not(.HyperMD-task-line) em {
+  font-family: "Recursive Sans Casual Static", serif !important;
+  font-feature-settings:
+    "zero",
+    "liga"1,
+    "dlig"1,
+    "ss12"1,
+    "ss01"0,
+    "pnum"1,
+    "ss04"1,
+    "ss03"1 !important;
+  font-style: italic;
+  font-size: 1em;
+  color: hsla(calc(var(--accent-h) + 190),
+      calc(var(--accent-s) + 10%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+/*Bold NOT in a task*/
+:not(.HyperMD-task-line).cm-line .cm-strong,
+:not(.task-list-item).cm-line strong {
+  font-size: 1.1em;
+  color: hsla(calc(var(--accent-h) + 25),
+      calc(var(--accent-s) + 10%),
+      calc(var(--accent-l) + 20%),
+      1) !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* ====== Bold ====== */
+
+
+body {
+    --bold-weight: inherit;
+    --bold-color: inherit;
+}
+
+.cm-s-obsidian span.cm-quote.cm-strong {
+    color: inherit;
+}
+
+
+/* Room */
+.HyperMD-list-line[data-task=" "] strong em,
+.HyperMD-list-line[data-task=" "] .cm-strong ~ .cm-em {
+  color: peru !important;
+}
+
+/* Milestone tasks */
+.HyperMD-list-line[data-task=" "] em,
+.HyperMD-list-line[data-task=" "] .cm-em {
+  color: #6074ac !important;
+}
+
+
+.HyperMD-task-line strong,
+.HyperMD-task-line .cm-strong {
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 10%),
+    calc(var(--typ-accent-l) + 0%),
+    1
+  ) !important;
+}
+
+/* Italic */
+body {
+    --italic-color: inherit;
+}
+
+/*.cm-s-obsidian span.cm-quote.cm-em {
+    color: inherit;
+}
+*/
+/* --- */
+
+font[color] {
+    --italic-color: inhert;
+    --bold-color: inhert;
+}
+
+
+/* Side dock ribbon */
+body:not(.is-mobile) .side-dock-ribbon-action svg {
+  stroke: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 100%);
+  /* fill: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 100%); */
+  stroke-width: 1.3;
+  fill-opacity: 10%;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Format Document"] svg,
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Omnivore"] svg {
+  stroke-width: 0.8;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Cycle accent color"] svg {
+  stroke: hsla(
+    calc(var(--accent-h) + 90),
+    var(--accent-s),
+    var(--accent-l), 100%);
+  stroke-width: 1.5;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action:nth-last-child(3) {
+  margin-top: auto;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open another vault"] svg,
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open Settings"] svg,
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open help"] svg {
+  stroke: hsla(
+  calc(var(--accent-h) + 180),
+  var(--accent-s),
+  var(--accent-l), 100%); 
+}
+
+
+body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+  background-color: hsl(
+    calc(var(--accent-h) + 180),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) + 10%)) !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  display: none;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+  padding-bottom: 0;
+}
+
+/* This code assumes the Excalidraw header line contains a .cm-comment entry and that */
+/* your regular headers do NOT have this. In my notes it has been safe.  */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-foldPlaceholder {
+  display: none;
+}
+
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::after {}
+
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1:has(.is-collapsed)::after,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1:has(.is-collapsed)::before {
+  display: none;
+}
+
+/*.internal-embed[src$=".svg"] img {
+  border: 2px solid var(--background-primary-alt);
+  border-radius: 20px;
+  margin-inline: auto;
+  display: block;
+}*/
+
+/* Container styling */
+.internal-embed.media-embed.image-embed.is-loaded {
+  padding: 10px;
+}
+
+/* Image styling */
+.internal-embed.media-embed.image-embed.is-loaded img {
+  display: block;
+  margin: auto;
+  /* Center the image within the container */
+  border-radius: 10px;
+  /* Optional: add border radius to the image */
+  /*  border: 4px solid hsla(
+    calc(var(--accent-h) + 0),
+    calc(var(--accent-s) + 0%),
+    calc(var(--accent-l) - 10%),
+    1
+  ) !important;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Excalidraw */
+/* Make the toggle harder to see*/
+/* Undo the theme movement */
+.HyperMD-header-1:has(.collapse-icon.is-collapsed) .collapse-indicator {
+  transform: translateX(0px) !important;
+}
+
+.HyperMD-header-1:has(.collapse-icon.is-collapsed) .collapse-indicator svg {
+  opacity: 80% !important;
+  color: var(--background-primary-alt);
+  background-color: currentColor;
+  -webkit-mask-image: none !important;
+  transition: margin-left 0.3s, transform 0.3s;
+  transform-origin: left center;
+  position: relative;
+  left: 0.2em;
+  /* Adjust this value to move the SVG to the right */
+}
+
+/* Hover of the toggle and make it larger */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .collapse-indicator:hover svg {
+  opacity: 100% !important;
+  transform: scale(1.5);
+}
+
+
+/* Hide the cm-comment which in this case is the text Excalidraw in the header */
+.HyperMD-header-1:has(.cm-comment):has(.collapse-icon.is-collapsed) .cm-comment.cm-header.cm-header-1 {
+  display: none !important;
+}
+
+
+
+.cm-line>.cm-comment {
+  display: none;
+}
+
+.side-dock-actions {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+}
+
+
+/* ======= */
+/* Headers for Excalidraw*/
+/* ======= */
+
+/* For the Border theme turn off the H1 line completely */
+/* FOr Excalidraw data */
+div.ex-opacity-15.HyperMD-header.HyperMD-header-1.cm-line::after {
+  display: none;
+}
+
+.HyperMD-header-1:has(.cm-comment) .HyperMD-header-1::after {
+  display: none;
+}
+/* Target the task list directly after a header */
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h1 .collapse-indicator.collapse-icon svg {
+  width: 14px;
+  height: 14px;
+  background-color: var(--h1-accent-color);
+  color: transparent;
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h2 .collapse-indicator.collapse-icon svg {
+  width: 12px;
+  height: 12px;
+  background-color: var(--h2-accent-color);
+  color: transparent;
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h3 .collapse-indicator.collapse-icon svg {
+  width: 12px;
+  height: 12px;
+  background-color: var(--h3-accent-color);
+  color: transparent;
+}
+
+.HyperMD-header-1+.HyperMD-task-line,
+.HyperMD-header-1+.HyperMD-list-line,
+.HyperMD-header-1+.internal-embed {
+  padding-top: 0.75em !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h1::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h1::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
+  filter: hue-rotate(90deg) !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h2::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h2::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
+  filter: hue-rotate(180deg) !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h3::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h3::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
+  filter: hue-rotate(270deg) !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h4::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h4::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
+  filter: hue-rotate(270deg) !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h5::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h5::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
+  filter: hue-rotate(90deg) !important;
+}
+
+body:not(.heading-indicator-off) .markdown-rendered>h6::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h6::before,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
+  filter: hue-rotate(90deg) !important;
+}
+
+/* ===================== */
+/* Change the Jisho Icon */
+/* ===================== */
+/* Target the specific SVG icon using the unique class */
+/* This is for the Jisho.org icon */
+.workspace-tab-header-inner-icon .svg-icon.aHR0cHM6Ly9qaXNoby5vcmcv {
+  width: 20px;
+  /* Adjust width to fit your new icon */
+  height: 20px;
+  /* Adjust height to fit your new icon */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-book-a'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3Cpath d='m8 13 4-7 4 7'/%3E%3Cpath d='M9.1 11h5.7'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  filter: grayscale(100%) contrast(20%);
+  background-color: transparent;
+  color: transparent;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* ============= */
+/* Dataview List */
+/* ============= */
+.dataview.list-view-ul li {
+  border: 2px solid hsla(
+    calc(var(--accent-h) + 180),
+    var(--accent-s),
+    calc(var(--accent-l) - 0%),
+    0.5);
+
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.05em;
+}
+
+.dataview.list-view-ul li:hover {
+  background-color: hsla(
+    calc(var(--accent-h) + 0),
+    var(--accent-s),
+    calc(var(--accent-l) - 0%),
+    0.2);
+}
+
+.dataview.list-view-ul li span a {
+  /* Variables for colors and gradient stops */
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  font-size: 0.8em;
+  text-shadow: 2px 2px 4px black;
+  text-decoration: none;
+}
+
+.dataview.list-view-ul {
+  list-style: none !important;
+  /*    padding-left: 4em;*/
+  /*    padding-top: 1.5em;*/
+  padding-bottom: 2em;
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  font-weight: light !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.4em;
+  width: 90%;
+  margin: 0.4em auto;
+  min-height: 3em;
+  border-bottom: 2px dotted hsl(calc(var(--accent-h) + 180),
+      var(--accent-s),
+      var(--accent-l));
+}
+
+/* =========== */
+/* Day Planner */
+/* =========== */
+
+.needle {
+  z-index: 10;
+}
+
+.markdown-block-content {
+  background-color: hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.05) !important;
+}
+
+.hour-block {
+  border-bottom: 1px solid hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.6) !important;
+}
+
+.half-hour-separator {
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 60),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      0.4) !important;
+}
+
+/* =========== */
+/* Oz calendar */
+/* =========== */
+
+.oz-calendar-plugin-today abbr {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px black;
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekdays {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+/* Add a W and align it with the day names */
+.react-calendar__month-view__weekNumbers::before {
+  content: "W";
+  display: block;
+  text-align: center;
+  padding: 0.39em 0;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+.oz-calendar-plugin-view .react-calendar__tile--active {
+  --oz-calendar-selected-day-background: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      0.2);
+}
+
+.oz-calendar-plugin-view .react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  height: 30px;
+  display: block;
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__days__day--weekend {
+  background-color: var(--background-primary-alt) !important;
+  border-radius: unset;
+  filter: brightness(0.6);
+}
+
+.oz-calendar-plugin-view .react-calendar__month-view__weekNumbers {
+  display: block !important;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) - 10%),
+      1);
+  flex-basis: auto !important;
+  /*    background-color: var(--background-primary-alt);*/
+  font-size: var(--nav-item-size);
+  /* border-radius: var(--radiusS); */
+  border-right: 2px dashed hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) - 20%),
+      1);
+}
+
+.oz-calendar-plugin-view .dots-wrapper {
+  display: none;
+}
+
+.oz-calendar-plugin-view.fixed .react-calendar {
+  height: 230px;
+}
+
+.oz-calendar-plugin-today {
+  border-radius: 10px !important;
+  border: 2px solid hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+  padding: 0.3em !important;
+}
+
+.oz-calendar-nav-action-middle,
+.oz-calendar-plugin-view button.react-calendar__navigation__label {
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+}
+
+.oz-calendar-note-line-icon {
+  /*    font-size: 1.3em;*/
+  color: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      calc(100% + 0%)) !important;
+  align-content: center;
+  justify-content: center;
+}
+
+.oz-calendar-note-line {
+  font-size: 1.2em;
+  padding: 0.1em;
+}
+
+.oz-calendar-note-line:first-child span {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  font-size: 1.1em;
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 45),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  display: inline;
+}
+
+/*.oz-calendar-note-line span {
+  border-bottom: 1px dashed hsla(
+      calc(var(--accent-h) + 45), 
+      calc(var(--accent-s) + 0%), 
+      calc(var(--accent-l) - 20%), 
+      1);
+}*/
+
+.oz-calendar-note-line span {
+  border-bottom: 1px dashed hsla(calc(var(--accent-h) + 45),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  display: inline;
+}
+
+.oz-calendar-note-line:last-child span {
+  border-bottom: unset;
+}
+
+.oz-calendar-note-line {
+  font-family: "Rec Mono Duotone", monospace;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important;
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1) !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+.oz-calendar-plugin-view .react-calendar__navigation__arrow {
+  font-size: 1.4em;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 20%),
+      calc(var(--accent-l) + 0%),
+      1);
+}
+
+/* ======== */
+/* TickTick */
+/* ======== */
+/* For TickTick Page */
+.ticktick .inline-title {
+  display: none;
+}
+
+.ticktick {
+  :is(&.markdown-preview-view, & > .cm-editor > .cm-scroller)::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 6px solid var(--background-primary);
+}
+
+
+/* =============== */
+/* Day Note Navbar */
+/* =============== */
+
+.daily-note-navbar button {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-inline: 4px;
+  padding-block: 0;
+  font-size: 16px;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.daily-note-navbar__current {
+  position: relative;
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+  border-radius: 0;
+  background-coltransparent !important;
+  box-shadow: 0px 10px 2px -6px hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      1) !important;
+}
+
+.daily-note-navbar__not-exists {
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) - 40%),
+      calc(var(--accent-l) - 20%),
+      1);
+}
+
+
+/* ====== */
+/*  Tasks */
+/* ====== */
+
+.rendered-markdown.svelte-9hk5bl li.task-list-item[data-task="x"], .rendered-markdown.svelte-9hk5bl li.task-list-item[data-task="X"] {
+    opacity: 50% !important;
+    color: #606060 !important;
+    filter: grayscale(100%);
+}
+
+/* Target the parent div of a checked checkbox and apply color to all its children */
+.HyperMD-task-line:has(input.task-list-item-checkbox:checked) {
+    color: #606060 !important;
+}
+
+/* align the checkmark - something shifted it */
+input[data-task="x"]:checked::after,
+li[data-task="x"]>input:checked::after,
+li[data-task="x"]>p>input:checked::after {
+    background-color: var(--background-primary) !important;
+}
+
+/* Checked Tasks Checkbox*/
+input[data-task="x"]:checked,
+li[data-task="x"]>input:checked,
+li[data-task="x"]>p>input:checked {
+    opacity: 50% !important;
+    background-color: #606060 !important;
+    border-color: #606060 !important;
+}
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line:has(.cm-underline) .cm-underline {
+  text-decoration: none !important;
+}
+
+/* Milestone Tasks - Text only */
+.HyperMD-list-line-1:has(.cm-em) .cm-em {
+  font-style: normal;
+}
+
+/* Base styles for .cm-underline inside .HyperMD-task-line */
+.HyperMD-task-line:has(.cm-underline) .cm-underline {
+  text-decoration: none !important;
+
+}
+
+/* ============== */
+/* TickTick Tasks */
+/* ============== */
+.HyperMD-list-line-1:has(.dataview.inline-field-key) .dataview.inline-field-key {
+  display: none;
+}
+
+.HyperMD-list-line-1:has(.dataview.inline-field-value) .dataview.inline-field-value {
+  display: none;
+}
+
+
+/* ================================ */
+/* Commander Actions on the Tab Bar */
+/* ================================ */
+.cmdr-page-header svg {
+  stroke: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 100%);
+  fill: hsla(var(--accent-h),
+      var(--accent-s),
+      var(--accent-l), 100%);
+  stroke-width: 1.5;
+  fill-opacity: 10%;
+}
+
+
+
+/* Properties */
+.metadata-container {
+  /* font-size: 0.9em;
+  font-family: "Rec Mono Duotone", monospace !important;
+  font-feature-settings: "zero", "liga"1, "ss12"1, "ss01"1, "pnum"1 !important; */
+}
+
+.metadata-properties {
+  --metadata-divider-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      0.4);
+  --metadata-label-text-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+  --metadata-label-font-size: 0.8em;
+  --metadata-input-font-size: 0.8em;
+  --metadata-gap: 0em !important;
+  --metadata-padding: 0.05em !important;
+  --metadata-divider-color: hsla(calc(var(--accent-h) - 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      0.4);
+}
+
+.metadata-input-longtext:empty:before,
+.multi-select-input[placeholder="No value"]:before,
+.metadata-input-number:placeholder-shown::placeholder {
+  color: hsla(calc(var(--accent-h) - 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      0.4);
+}
+
+.metadata-input-longtext,
+.metadata-input-number,
+.metadata-link .internal-link {
+  color: hsla(calc(var(--accent-h) - 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+}
+
+.metadata-property-icon {
+  --icon-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      0.4);
+}
+
+.mod-date,
+.mod-datetime {
+  color: hsla(calc(var(--accent-h) - 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1) !important;
+}
+
+
+
+/* Bullets */
+:not(.HyperMD-task-line) .list-bullet {
+  padding-right: 0.3em;
+}
+
+.has-list-bullet>li[data-line="0"]>.list-bullet::after,
+.HyperMD-list-line-1 .list-bullet::after {
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 0%;
+  transform: rotate(45deg);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+  border-bottom: none;
+  border-left: none;
+}
+
+.has-list-bullet>li[data-line="1"]>.list-bullet::after,
+.HyperMD-list-line-2 .list-bullet::after {
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 30%;
+  border: 2px solid hsla(
+    calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
+  background-color: var(--background-primary);
+}
+
+.has-list-bullet>li[data-line="2"]>.list-bullet::after,
+.HyperMD-list-line-3 .list-bullet::after {
+  height: 0.3em;
+  width: 0.3em;
+  background-color: var(--background-primary);
+  border: 2px solid hsla(calc(var(--accent-h) + 60),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+}
+
+.has-list-bullet>li[data-line="3"]>.list-bullet::after,
+.HyperMD-list-line-4 .list-bullet::after {
+  background-color: var(--background-primary);
+  border: 0.05em solid hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
+}

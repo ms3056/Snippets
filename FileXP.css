@@ -1,3 +1,7 @@
+
+
+
+
 /* Simple HSL color application to nav-folders at various child positions */
 .nav-folder:nth-child(10n+2) > .tree-item-self,
 .nav-files-container > div > .nav-folder:nth-child(10n+2) .tree-item-children .tree-item-self,

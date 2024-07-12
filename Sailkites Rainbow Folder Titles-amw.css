@@ -1,0 +1,76 @@
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1163095446919585843
+*/
+
+/* updated snippet for v1.6.3 – Erweiterung von 11 auf 14; tweak Farben amw */
+
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder,
+.tree-item {
+  --nav-item-color: var(--folder-color);
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:hover,
+.tree-item:hover {
+  filter: brightness(0.9);
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 2),
+.tree-item:nth-child(14n + 2) {
+  --folder-color: rgb(211, 47, 47);  /* Tiefes Rot */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 3),
+.tree-item:nth-child(14n + 3) {
+  --folder-color: rgb(217, 100, 11);  /* Tiefes Orange */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 4),
+.tree-item:nth-child(14n + 4) {
+  --folder-color: rgb(199, 138, 28);  /* Tiefes Ocker */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 5) {
+  --folder-color: rgb(209, 182, 31); /* Tiefes Gelb */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 6) {
+  --folder-color: rgb(24, 140, 6); /* Tiefes Grün */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 7) {
+  --folder-color: rgb(30, 179, 166); /* Teal */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 8) {
+  --folder-color: rgb(57, 129, 219);  /* Blau */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 9) {
+  --folder-color: rgb(52, 165, 217);  /* Hellblau */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 10) {
+  --folder-color: rgb(131, 137, 235);  /* Blau mit Violettstich */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 11) {
+  --folder-color: rgb(156, 104, 247); /* Violett */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 12) {
+  --folder-color: rgb(203, 166, 247);  /* Veilchen */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 12) {
+  --folder-color: rgb(76, 199, 170);  /* Milchgrün */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 13) {
+  --folder-color: rgb(162, 212, 61);  /* Linde */
+}
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder:nth-child(14n + 14) {
+  --folder-color: rgb(128, 158, 68);  /* Olive */
+}

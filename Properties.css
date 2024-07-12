@@ -1,7 +1,7 @@
 body {
-    --metadata-gap: 0.5em !important; 
-    --metadata-padding: 0.5em !important;
-    --metadata-border-color: pink !important;
+/*    --metadata-gap: 0.5em !important; 
+    --metadata-padding: 0.3em !important;
+    --metadata-border-color: pink !important;*/
 }
 
 /* Properties */
@@ -39,6 +39,7 @@ body {
     --icon-color: hsla(calc(var(--typ-accent-h) + 0), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 0.4);
 }
 
+/* Symbol for Properties Box */
 .metadata-properties::before {
     display: absolute;
     content: "";
@@ -55,7 +56,10 @@ body {
     border-bottom: 2px dashed var(--metadata-divider-color); 
 }
 
-.mod-date {
+.mod-date,
+.mod-datetime {
+    width: 100%;
+    overflow: visible;
     color: hsla(calc(var(--typ-accent-h) - 90), calc(var(--typ-accent-s) + 0%), calc(var(--typ-accent-l) + 0%), 1) !important;
 }
 
@@ -65,4 +69,9 @@ body {
 
 body {
     --metadata-label-width: 11em;
+}
+
+
+.metadata-property .metadata-input-text {
+    
 }

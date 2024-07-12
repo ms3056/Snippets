@@ -6,7 +6,6 @@
 /* > [!today    | base           | collapsed | blue, orange, etc] */
 
 /* Edit Block Button */
-
 .markdown-source-view.mod-cm6 .cm-callout > .edit-block-button {
   opacity: 0.6;
   background-color: var(--background-primary);
@@ -21,8 +20,8 @@
   transition: 150ms cubic-bezier(0.2, 0, 1, 0.9);
   border-radius: 10px;
   align-items: center;
-  padding: unset !important;
-  margin: unset !important;
+  padding: unset;
+  margin: unset;
   right: 20px;
   top: 20px;
   width: 30px;
@@ -268,7 +267,7 @@
 
 .callout[data-callout="today"] .callout-title-inner {
   color: hsla(
-    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-h) + 30),
     calc(var(--typ-accent-s) + 20%),
     calc(var(--typ-accent-l) + 10%),
     1
@@ -687,7 +686,7 @@
 
 /* Custom Color List */
 .callout[data-callout-metadata*="typ-accent"] {
-  --callout-color: var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l) !important;
+  --callout-color: var(--typ-accent-h), var(--typ-accent-s), var(--typ-accent-l);
   --title-h: var(--typ-accent-h);
   --title-s: var(--typ-accent-s);
   --title-l: var(--typ-accent-l);
@@ -771,10 +770,10 @@
 }
 
 .callout[data-callout-metadata*="linen"] {
-  --callout-color: 331, 54%, 88%;
+  --callout-color: 331, 54%, 78%;
   --title-h: 331;
   --title-s: 54%;
-  --title-l: 88%;
+  --title-l: 78%;
 }
 
 .callout[data-callout-metadata*="indianred"] {
@@ -789,4 +788,100 @@
   --title-h: 24;
   --title-s: 61%;
   --title-l: 69%;
+}
+
+
+/* Callout for mtg */
+/* General callout styling */
+.callout[data-callout="mtg"] {
+    background-color: var(--background-primary); /* Dark background */
+    color: #ffffff; /* White text color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 32px 16px 16px 16px; /* Increased top padding for the floating title */
+    margin: 16px 0; /* Margin around the callout */
+    position: relative; /* For positioning the title */
+}
+
+/* Callout title styling */
+.callout[data-callout="mtg"] .callout-title {
+    position: absolute; /* Absolute positioning to float above */
+    top: 0px; 
+    left: 6px; 
+    background: none; 
+    --callout-title-color: hsl(var(--callout-color));
+    font-weight: bold; 
+    --callout-title-size: 1.4em;
+    text-shadow: 2px 2px 2px black;
+    padding: 0.1em 0.5em; 
+}
+
+/* Callout icon styling */
+.callout[data-callout="mtg"] .callout-icon {
+    display: none; 
+}
+
+/* Inner part of the callout title */
+.callout[data-callout="mtg"] .callout-title-inner {
+    display: inline-block; /* Keep it inline with the icon */
+    vertical-align: middle; /* Align with the icon */
+}
+
+/* Callout content styling */
+.callout[data-callout="mtg"] .callout-content {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 0.5em !important;
+  background-color: var(--background-primary-alt);
+  border: 3px solid hsla(var(--callout-color), 40%);
+  transition: 200ms !important;
+}
+
+.callout[data-callout="mtg"] .callout-content:hover {
+  border-color: hsla(var(--callout-color), 100%);
+}
+
+/* Paragraph styling inside callout content */
+.callout[data-callout="mtg"] .callout-content p {
+    margin: 10px 10px; 
+    line-height: 1.6;
+}
+
+.callout[data-callout="mtg"] .callout-content:has(blockquote) blockquote {
+    --blockquote-color: hsl(var(--callout-color));
+  --blockquote-border-color: hsl(var(--callout-color));
+  --blockquote-background-color: var(--background-primary);
+  --blockquote-border-thickness: 6px;
+    border-radius: 10px;
+    margin-right: 2em;
+  }
+
+
+
+.callout[data-callout="mtg"] .callout-content:has(> h2) {
+  --h2-text-color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
+}
+
+.callout[data-callout="mtg"] .callout-content:has(> ul > li) > ul > li {
+  line-height: 1.2em !important;
+  --list-spacing: 0.2em !important;
+  color: hsla(
+    calc(var(--typ-accent-h) + 90),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) + 10%),
+    1
+  ) !important;
+}
+
+.callout[data-callout="mtg"] .callout-content > ul > li::marker {
+  color: hsla(
+    calc(var(--typ-accent-h) + 180),
+    calc(var(--typ-accent-s) + 0%),
+    calc(var(--typ-accent-l) - 0%),
+    1
+  );
 }
