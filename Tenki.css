@@ -1,19 +1,17 @@
 .tenki-refresh-button[data-app-id="tenki"] .clickable-icon {
-	position: absolute;
-	top: 18px;
-	right: 18px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
   transform-origin: center;
-	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .tenki-refresh-button[data-app-id="tenki"] .clickable-icon:hover {
   transform: rotate(180deg);
-  color: hsla(
-    calc(var(--accent-h) + 45),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 10%),
-    1
-  );
+  color: hsla(calc(var(--accent-h) + 45),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
 }
 
 .weather-container {
@@ -22,47 +20,35 @@
   background-size: cover; */
   padding-top: 10px;
   font-family: "Lato";
-  --tenki-main-text: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 20%),
-    1
-  );
-  --tenki-secondary-text: hsla(
-    calc(var(--accent-h) + 180),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 10%),
-    1
-  );
-  --tenki-background: hsla(
-    calc(var(--accent-h)),
-    calc(var(--accent-s)),
-    calc(var(--accent-l) - 10%),
-    0.5
-  );
-  --tenki-border: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) - 20%),
-    calc(var(--accent-l) - 20%),
-    1
-  );
-  --tenki-highlight: hsla(
-    calc(var(--accent-h) + 90),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 20%),
-    1
-  );
+  --tenki-main-text: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      1);
+  --tenki-secondary-text: hsla(calc(var(--accent-h) + 180),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
+  --tenki-background: hsla(calc(var(--accent-h)),
+      calc(var(--accent-s)),
+      calc(var(--accent-l) - 10%),
+      0.5);
+  --tenki-border: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) - 20%),
+      calc(var(--accent-l) - 20%),
+      1);
+  --tenki-highlight: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      1);
   border-radius: 40px !important;
 }
 
 .location {
   text-shadow: 2px 2px 4px black;
-  color: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) - 10%),
-    1
-  );
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 10%),
+      1);
 }
 
 .current-container {
@@ -80,23 +66,20 @@
 .current-conditions {
   font-size: 1.2em;
   text-shadow: 2px 2px 4px black;
-  color: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 10%),
-    1);
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
   padding: 0;
 }
 
 .current-stats-container {
   font-size: 1em;
   text-shadow: 2px 2px 4px black;
-  color: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 10%),
-    1
-  );
+  color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
 }
 
 .forecast-container {
@@ -114,30 +97,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) - 0%),
-    1);
+  border: 2px solid hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
   min-width: 28%;
-/*  background-color: var(--tenki-background);*/
-  background-color: hsla(
-    calc(var(--accent-h)), 
-    calc(var(--accent-s)), 
-    calc(var(--accent-l) - 10%), 0.1);
+  /*  background-color: var(--tenki-background);*/
+  background-color: hsla(calc(var(--accent-h)),
+      calc(var(--accent-s)),
+      calc(var(--accent-l) - 10%), 0.1);
   border-radius: 10px;
   backdrop-filter: blur(10px);
 }
 
 .forecast-day-container:hover {
-  border: 2px solid hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 20%),
-    1) !important;
+  border: 2px solid hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      1) !important;
 }
 
-.forecast-day-container > * {
+.forecast-day-container>* {
   margin: var(--gap) 0 0 var(--gap);
 }
 
@@ -147,12 +127,10 @@
   margin-top: 0.3em;
   font-size: 1.2em;
   text-shadow: 2px 2px 4px black;
-  color: hsla(
-    calc(var(--accent-h) + 30),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) - 0%),
-    1
-  );
+  color: hsla(calc(var(--accent-h) + 30),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 0%),
+      1);
 }
 
 .forecast-icon {
@@ -165,30 +143,25 @@
   font-family: "Recursive Sans Casual Static", serif !important;
   font-feature-settings:
     "zero",
-    "liga" 1,
-    "dlig" 1,
-    "ss12" 1,
-    "ss01" 0,
-    "pnum" 1,
-    "ss04" 1,
-    "ss03" 1 !important;
-  color: hsla(
-    calc(var(--accent-h) + 90),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 20%),
-    1
-  );
-  border-color: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 0%),
-    1);
-  background-color: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) - 30%),
-    1
-  );
+    "liga"1,
+    "dlig"1,
+    "ss12"1,
+    "ss01"0,
+    "pnum"1,
+    "ss04"1,
+    "ss03"1 !important;
+  color: hsla(calc(var(--accent-h) + 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 20%),
+      1);
+  border-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 0%),
+      1);
+  background-color: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) - 30%),
+      1);
   border-radius: 10px;
   padding: 0.2em;
   font-size: 1.1em;
@@ -196,12 +169,10 @@
 }
 
 .forecast-rain {
-  color: hsla(
-    calc(var(--accent-h) - 90),
-    calc(var(--accent-s) + 0%),
-    calc(var(--accent-l) + 10%),
-    1
-  );
+  color: hsla(calc(var(--accent-h) - 90),
+      calc(var(--accent-s) + 0%),
+      calc(var(--accent-l) + 10%),
+      1);
   font-size: 1.1em;
   margin-bottom: 0.2em;
   text-shadow: 2px 2px 4px black;
@@ -422,12 +393,12 @@
 /* Replace Icons - Sun Clouds */
 /* .current-icon[src="http://cdn.weatherapi.com/weather/64x64/day/116.png"] */
 /* { */
-  /* object-position: -99999px 99999px; */
-  /* background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!-- (c) ammap.com %7C SVG weather icons --%3E%3Csvg width='56' height='48' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='blur' x='-.20655' y='-.28472' width='1.403' height='1.6944'%3E%3CfeGaussianBlur in='SourceAlpha' stdDeviation='3' /%3E%3CfeOffset dx='0' dy='4' result='offsetblur' /%3E%3CfeComponentTransfer%3E%3CfeFuncA slope='0.05' type='linear' /%3E%3C/feComponentTransfer%3E%3CfeMerge%3E%3CfeMergeNode /%3E%3CfeMergeNode in='SourceGraphic' /%3E%3C/feMerge%3E%3C/filter%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B %0A** CLOUDS%0A @keyframes am-weather-cloud-2 %7B 0%25 %7B -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); transform: translate(0px, 0px); %7D 50%25 %7B -webkit-transform: translate(2px, 0px); -moz-transform: translate(2px, 0px); -ms-transform: translate(2px, 0px); transform: translate(2px, 0px); %7D 100%25 %7B -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); transform: translate(0px, 0px); %7D %7D .am-weather-cloud-2 %7B -webkit-animation-name: am-weather-cloud-2; -moz-animation-name: am-weather-cloud-2; animation-name: am-weather-cloud-2; -webkit-animation-duration: 3s; -moz-animation-duration: 3s; animation-duration: 3s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D %0A** SUN%0A @keyframes am-weather-sun %7B 0%25 %7B -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); %7D 100%25 %7B -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); %7D %7D .am-weather-sun %7B -webkit-animation-name: am-weather-sun; -moz-animation-name: am-weather-sun; -ms-animation-name: am-weather-sun; animation-name: am-weather-sun; -webkit-animation-duration: 9s; -moz-animation-duration: 9s; -ms-animation-duration: 9s; animation-duration: 9s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; -ms-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D @keyframes am-weather-sun-shiny %7B 0%25 %7B stroke-dasharray: 3px 10px; stroke-dashoffset: 0px; %7D 50%25 %7B stroke-dasharray: 0.1px 10px; stroke-dashoffset: -1px; %7D 100%25 %7B stroke-dasharray: 3px 10px; stroke-dashoffset: 0px; %7D %7D .am-weather-sun-shiny line %7B -webkit-animation-name: am-weather-sun-shiny; -moz-animation-name: am-weather-sun-shiny; -ms-animation-name: am-weather-sun-shiny; animation-name: am-weather-sun-shiny; -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; animation-duration: 2s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; -ms-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,-2)' filter='url(%23blur)'%3E%3Cg transform='translate(0,16)'%3E%3Cg class='am-weather-sun' style='-moz-animation-duration:9s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-sun;-moz-animation-timing-function:linear;-ms-animation-duration:9s;-ms-animation-iteration-count:infinite;-ms-animation-name:am-weather-sun;-ms-animation-timing-function:linear;-webkit-animation-duration:9s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-sun;-webkit-animation-timing-function:linear'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3Cg transform='rotate(45)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(90)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(135)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='scale(-1)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(225)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(-90)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(-45)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Ccircle r='5' fill='%23ffa500' stroke='%23ffa500' stroke-width='2' /%3E%3C/g%3E%3C/g%3E%3Cg class='am-weather-cloud-2' style='-moz-animation-duration:3s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-cloud-2;-moz-animation-timing-function:linear;-webkit-animation-duration:3s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-cloud-2;-webkit-animation-timing-function:linear'%3E%3Cpath transform='translate(-20,-11)' d='m47.7 35.4c0-4.6-3.7-8.2-8.2-8.2-1 0-1.9 0.2-2.8 0.5-0.3-3.4-3.1-6.2-6.6-6.2-3.7 0-6.7 3-6.7 6.7 0 0.8 0.2 1.6 0.4 2.3-0.3-0.1-0.7-0.1-1-0.1-3.7 0-6.7 3-6.7 6.7 0 3.6 2.9 6.6 6.5 6.7h17.2c4.4-0.5 7.9-4 7.9-8.4z' fill='%23c6deff' stroke='%23fff' stroke-linejoin='round' stroke-width='1.2' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
-  /* background-repeat: no-repeat; */
-  /* background-position-x: center; */
-  /* background-position-y: bottom; */
-  /* background-size: 100%; */
+/* object-position: -99999px 99999px; */
+/* background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!-- (c) ammap.com %7C SVG weather icons --%3E%3Csvg width='56' height='48' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='blur' x='-.20655' y='-.28472' width='1.403' height='1.6944'%3E%3CfeGaussianBlur in='SourceAlpha' stdDeviation='3' /%3E%3CfeOffset dx='0' dy='4' result='offsetblur' /%3E%3CfeComponentTransfer%3E%3CfeFuncA slope='0.05' type='linear' /%3E%3C/feComponentTransfer%3E%3CfeMerge%3E%3CfeMergeNode /%3E%3CfeMergeNode in='SourceGraphic' /%3E%3C/feMerge%3E%3C/filter%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B %0A** CLOUDS%0A @keyframes am-weather-cloud-2 %7B 0%25 %7B -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); transform: translate(0px, 0px); %7D 50%25 %7B -webkit-transform: translate(2px, 0px); -moz-transform: translate(2px, 0px); -ms-transform: translate(2px, 0px); transform: translate(2px, 0px); %7D 100%25 %7B -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); transform: translate(0px, 0px); %7D %7D .am-weather-cloud-2 %7B -webkit-animation-name: am-weather-cloud-2; -moz-animation-name: am-weather-cloud-2; animation-name: am-weather-cloud-2; -webkit-animation-duration: 3s; -moz-animation-duration: 3s; animation-duration: 3s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D %0A** SUN%0A @keyframes am-weather-sun %7B 0%25 %7B -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); %7D 100%25 %7B -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); %7D %7D .am-weather-sun %7B -webkit-animation-name: am-weather-sun; -moz-animation-name: am-weather-sun; -ms-animation-name: am-weather-sun; animation-name: am-weather-sun; -webkit-animation-duration: 9s; -moz-animation-duration: 9s; -ms-animation-duration: 9s; animation-duration: 9s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; -ms-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D @keyframes am-weather-sun-shiny %7B 0%25 %7B stroke-dasharray: 3px 10px; stroke-dashoffset: 0px; %7D 50%25 %7B stroke-dasharray: 0.1px 10px; stroke-dashoffset: -1px; %7D 100%25 %7B stroke-dasharray: 3px 10px; stroke-dashoffset: 0px; %7D %7D .am-weather-sun-shiny line %7B -webkit-animation-name: am-weather-sun-shiny; -moz-animation-name: am-weather-sun-shiny; -ms-animation-name: am-weather-sun-shiny; animation-name: am-weather-sun-shiny; -webkit-animation-duration: 2s; -moz-animation-duration: 2s; -ms-animation-duration: 2s; animation-duration: 2s; -webkit-animation-timing-function: linear; -moz-animation-timing-function: linear; -ms-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-iteration-count: infinite; -ms-animation-iteration-count: infinite; animation-iteration-count: infinite; %7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,-2)' filter='url(%23blur)'%3E%3Cg transform='translate(0,16)'%3E%3Cg class='am-weather-sun' style='-moz-animation-duration:9s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-sun;-moz-animation-timing-function:linear;-ms-animation-duration:9s;-ms-animation-iteration-count:infinite;-ms-animation-name:am-weather-sun;-ms-animation-timing-function:linear;-webkit-animation-duration:9s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-sun;-webkit-animation-timing-function:linear'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3Cg transform='rotate(45)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(90)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(135)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='scale(-1)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(225)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(-90)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Cg transform='rotate(-45)'%3E%3Cline transform='translate(0,9)' y2='3' fill='none' stroke='%23ffa500' stroke-linecap='round' stroke-width='2' /%3E%3C/g%3E%3Ccircle r='5' fill='%23ffa500' stroke='%23ffa500' stroke-width='2' /%3E%3C/g%3E%3C/g%3E%3Cg class='am-weather-cloud-2' style='-moz-animation-duration:3s;-moz-animation-iteration-count:infinite;-moz-animation-name:am-weather-cloud-2;-moz-animation-timing-function:linear;-webkit-animation-duration:3s;-webkit-animation-iteration-count:infinite;-webkit-animation-name:am-weather-cloud-2;-webkit-animation-timing-function:linear'%3E%3Cpath transform='translate(-20,-11)' d='m47.7 35.4c0-4.6-3.7-8.2-8.2-8.2-1 0-1.9 0.2-2.8 0.5-0.3-3.4-3.1-6.2-6.6-6.2-3.7 0-6.7 3-6.7 6.7 0 0.8 0.2 1.6 0.4 2.3-0.3-0.1-0.7-0.1-1-0.1-3.7 0-6.7 3-6.7 6.7 0 3.6 2.9 6.6 6.5 6.7h17.2c4.4-0.5 7.9-4 7.9-8.4z' fill='%23c6deff' stroke='%23fff' stroke-linejoin='round' stroke-width='1.2' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+/* background-repeat: no-repeat; */
+/* background-position-x: center; */
+/* background-position-y: bottom; */
+/* background-size: 100%; */
 /* } */
 
 /* Replace Icons - Moon Clouds */

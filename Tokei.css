@@ -19,30 +19,22 @@
 .clock-container {
   font-family: "Lato";
   --tokei-main-text: var(--typ-accent);
-  --tokei-secondary-text: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 30%),
-    calc(var(--typ-accent-a) + 0%)
-  );
-  --tokei-background: hsla(
-    calc(var(--accent-h)),
-    calc(var(--accent-s)),
-    calc(var(--accent-l) - 10%),
-    0.1
-  );
-  --tokei-border: hsla(
-    calc(var(--accent-h) + 0),
-    calc(var(--accent-s) - 20%),
-    calc(var(--accent-l) - 20%),
-    1
-  );
-  --tokei-main-180: hsla(
-    calc(var(--typ-accent-h) - 180),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 20%),
-    1
-  );
+  --tokei-secondary-text: hsla(calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 30%),
+      calc(var(--typ-accent-a) + 0%));
+  --tokei-background: hsla(calc(var(--accent-h)),
+      calc(var(--accent-s)),
+      calc(var(--accent-l) - 10%),
+      0.1);
+  --tokei-border: hsla(calc(var(--accent-h) + 0),
+      calc(var(--accent-s) - 20%),
+      calc(var(--accent-l) - 20%),
+      1);
+  --tokei-main-180: hsla(calc(var(--typ-accent-h) - 180),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 20%),
+      1);
 
   padding: 0;
   margin-top: 10px;
@@ -50,35 +42,29 @@
 
 .time {
   text-shadow: 2px 2px 4px black;
-  color: hsla(
-    calc(var(--typ-accent-h) + 0),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 0%),
-    1
-  );
-   font-size: 3em; 
+  color: hsla(calc(var(--typ-accent-h) + 0),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 0%),
+      1);
+  font-size: 3em;
 }
 
 .clock-container .date {
   font-size: 1.6em;
   text-shadow: 2px 2px 2px black;
-  color: hsla(
-    calc(var(--typ-accent-h) + 10),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
-    1
-  );
+  color: hsla(calc(var(--typ-accent-h) + 10),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) - 0%),
+      1);
   padding-bottom: 0.5em;
 }
 
 .quarter,
 .week {
-  color: hsla(
-    calc(var(--typ-accent-h) + 180),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 10%),
-    1
-  );
+  color: hsla(calc(var(--typ-accent-h) + 180),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) - 10%),
+      1);
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
   font-size: 1em !important;
@@ -98,7 +84,7 @@
   padding-right: 2px;
 }
 
-.timezone-container > * {
+.timezone-container>* {
   margin: var(--gap) 0 0 var(--gap);
   border-radius: 10px;
 }
@@ -121,12 +107,10 @@
   font-size: 1em;
   text-shadow: 2px 2px 4px black;
   text-align: center;
-  color: hsla(
-    calc(var(--typ-accent-h) + 90),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) - 0%),
-    1
-  );
+  color: hsla(calc(var(--typ-accent-h) + 90),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) - 0%),
+      1);
 }
 
 .timezone-time:after {
@@ -139,12 +123,10 @@
   text-align: center;
   white-space: pre-line;
   content: attr(data-text) " ";
-  color: hsla(
-    calc(var(--typ-accent-h) + 180),
-    calc(var(--typ-accent-s) + 0%),
-    calc(var(--typ-accent-l) + 10%),
-    1
-  );
+  color: hsla(calc(var(--typ-accent-h) + 180),
+      calc(var(--typ-accent-s) + 0%),
+      calc(var(--typ-accent-l) + 10%),
+      1);
   text-shadow: 2px 2px 2px black;
   font-size: 1em;
   text-align: center;
