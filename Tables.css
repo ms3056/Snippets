@@ -2,6 +2,12 @@
   --table-header-color: #b9b5f9;
 }
 
+.table-wrapper,
+.markdown-rendered table {
+    margin-inline: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 table {
   background-color: #3d3b63;

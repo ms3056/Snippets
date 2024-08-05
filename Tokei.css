@@ -59,7 +59,7 @@
    font-size: 3em; 
 }
 
-.date {
+.clock-container .date {
   font-size: 1.6em;
   text-shadow: 2px 2px 2px black;
   color: hsla(

@@ -3,11 +3,16 @@ body {
     word-spacing: -0.04rem;
     letter-spacing: 0.01rem;
     -webkit-font-smoothing: antialiased !important;
+    --p-spacing: 0.5rem;
+    --line-height-normal: 1.4em;
+    --line-height-tight: 1.3em;
+    --list-spacing: 0.01em;
+    --p-spacing-empty: 0.6em;
+    --file-font-size: 1em;
+    --icon-opacity: 1;
 }
 
 :root {
-
-
 
     --darkest-blue: #18222b;
     --mid-blue: #273341;
@@ -54,37 +59,36 @@ body {
 
     /*Surface colors*/
     --background-primary: hsl(
-    var(--accent-h),
-    calc((14% + var(--accent-s)) * 0.1),  /* Keeping original saturation low, influenced slightly by accent */
-    calc(13% + (var(--accent-l) - 50%) * 0.05)  /* Adjusting lightness subtly */
-  ) !important;
+        var(--accent-h),
+        calc((14% + var(--accent-s)) * 0.2),
+        calc(13% + (var(--accent-l) - 50%) * 0.05)
+        ) !important;
 
     --background-primary-alt: hsl(
-    var(--accent-h),
-    calc((11% + var(--accent-s)) * 0.1),  /* Keeping original saturation low, influenced slightly by accent */
-    calc(11% + (var(--accent-l) - 50%) * 0.05)  /* Adjusting lightness subtly */
-  ) !important;	
+        var(--accent-h),
+        calc((11% + var(--accent-s)) * 0.1),
+        calc(11% + (var(--accent-l) - 50%) * 0.05)
+        ) !important;
 
-	
-    --inline-title-color: hsla(
-        calc(var(--accent-h) + 0),
-        calc(var(--accent-s) + 0%),
-        calc(var(--accent-l) - 0%), 1);
+
+    --inline-title-color: hsla(calc(var(--accent-h) + 0),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) - 0%), 1);
     --background-modifier-hover: var(--mid-blue);
     --background-modifier-active-hover: var(--dark-blue);
-    --background-modifier-border: none;	
+    --background-modifier-border: none;
     --background-modifier-border-hover: none;
-    --background-modifier-border-focus: none;	
+    --background-modifier-border-focus: none;
 
-    --background-modifier-error-rgb: var(--bright-red-rgb);	
+    --background-modifier-error-rgb: var(--bright-red-rgb);
     --background-modifier-error: var(--bright-red);
-    --background-modifier-error-hover: var(--bright-red);	
-    --background-modifier-success-rgb: var(--bright-green-rgb);	
-    --background-modifier-success: var(--bright-green);	
-    --background-modifier-message: var(--washed-blue);	
-    --background-modifier-form-field: var(--light-blue);
-    
-    /*Exended colors*/ 
+    --background-modifier-error-hover: var(--bright-red);
+    --background-modifier-success-rgb: var(--bright-green-rgb);
+    --background-modifier-success: var(--bright-green);
+    --background-modifier-message: var(--washed-blue);
+    /*    --background-modifier-form-field: var(--light-blue);*/
+
+    /*Exended colors*/
     --color-red: var(--bright-red);
     --color-orange: var(--bright-orange);
     --color-yellow: var(--bright-yellow);
@@ -104,48 +108,68 @@ body {
     --color-pink-rgb: var(--bright-orange-rgb);
 
     /*Interactive colors for elements*/
-    --interactive-normal: var(--washed-blue);
+    /*    --interactive-normal: var(--washed-blue);*/
     --interactive-hover: rgba(var(--washed-blue-rgb), 0.9);
-/*    --interactive-accent: var(--washed-blue);*/
+    /*    --interactive-accent: var(--washed-blue);*/
     --interactive-accent-hsl: hsl(202.5, 38.89%, 28.24%);
-    --interactive-accent-hover:	rgba(var(--ocean-blue-rgb), 0.8); 
+    --interactive-accent-hover: rgba(var(--ocean-blue-rgb), 0.8);
 
-    --interactive-accent: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 20%), 1);
+    --interactive-accent: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 20%), 0.7);
 
-    --text-on-accent: hsla(
-        calc(var(--accent-h) + 180),
-        var(--accent-s),
-        calc(var(--accent-l) + 20%), 1);
+    --interactive-normal: hsla(var(--accent-h),
+            calc(var(--accent-s) - 20%),
+            calc(var(--accent-l) - 20%), 1);
+
+    --text-on-accent: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 30%), 1);
+
+    --text-normal: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 40%), 1);
+
+    --background-modifier-form-field: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 0.2);
+
 
     /*TEXT*/
 
     --bold-color: var(--bright-green);
-    --code-normal: var(--blue-gray); 
+    --code-normal: var(--blue-gray);
     --italic-color: var(--bright-yellow);
     --italic-weight: normal;
-    
+
     /*Text foreground colors*/
-    --text-normal: var(--soft-white);
-    --text-muted: var(--basic-gray)	;
-    --text-faint: var(--bright-blue); 
-/*    --text-on-accent: var(--ocean-blue);*/
+    /*    --text-normal: var(--soft-white);*/
+    --text-muted: var(--basic-gray);
+    /*    --text-faint: var(--bright-blue); */
+    /*    --text-on-accent: var(--ocean-blue);*/
     --text-on-accent-inverted: var(--ocean-blue);
     --text-error: var(--bright-red);
     --text-success: var(--bright-green);
 
     /*Text background colors*/
-    --text-selection: 	var(--bright-red);
-    --text-highlight-bg: rgba(var(--percy-blue-rgb),0.5);
+    --text-selection: hsla(calc(var(--accent-h) + 0),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) - 30%), 1);
 
+    --text-highlight-bg: hsla(calc(var(--accent-h) + 0),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) - 10%), 0.5);
 
-    /*TITLES*/
-
-    --h1-color: var(--bright-red);
-    --h2-color: var(--bright-orange);
-    --h3-color: var(--bright-yellow);
+    /* Headers */
+    --h1-color: hsla(calc(var(--accent-h) + 0),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) + 0%), 1);
+    --h2-color: hsla(calc(var(--accent-h) + 60),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) + 0%), 1);
+    --h3-color: hsla(calc(var(--accent-h) + 120),
+            calc(var(--accent-s) + 0%),
+            calc(var(--accent-l) + 0%), 1);
     --h4-color: var(--bright-green);
     --h5-color: var(--percy-blue);
     --h6-color: var(--bright-blue);
@@ -160,31 +184,29 @@ body {
 
     /*CHECKLIST*/
 
-    --checkbox-color: var(--soft-yellow);
+    --checkbox-color: pink;
     --checkbox-size: 1.2em;
     --checkbox-color-hover: rgba(var(--soft-yellow-rgb), 0.8);
-    --checkbox-border-color:hsla(
-        calc(var(--accent-h) + 90),
-        var(--accent-s),
-        calc(var(--accent-l) - 10%), 1);
-    --checkbox-border-color-hover: hsla(
-        calc(var(--accent-h) + 90),
-        var(--accent-s),
-        calc(var(--accent-l) + 10%), 1);
+    --checkbox-border-color: hsla(calc(var(--accent-h) + 90),
+            var(--accent-s),
+            calc(var(--accent-l) - 10%), 1);
+    --checkbox-border-color-hover: hsla(calc(var(--accent-h) + 90),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 1);
     --checklist-done-color: var(--washed-blue);
-/*    --checkbox-marker-color: var(--background-primary);*/
+    /*    --checkbox-marker-color: var(--background-primary);*/
     --checklist-done-decoration: unset;
-  
+
 
     /*LISTS (UNORDERED)*/
 
-/*    --list-marker-color: var(--percy-blue);
+    /*    --list-marker-color: var(--percy-blue);
     --list-marker-color-collapsed: var(--list-marker-color);*/
-    
+
 
     /*INDENTATION*/
 
-/*    --indentation-guide-width: 2px;
+    /*    --indentation-guide-width: 2px;
     --indentation-guide-color: rgba(var(--ocean-blue-rgb), 0.4);
     --indentation-guide-width-active: 2px;
     --indentation-guide-color-active: rgba(var(--ocean-blue-rgb), 1);*/
@@ -193,131 +215,120 @@ body {
     /*TABS*/
 
     --tab-container-background: var(--background-primary-alt);
-    --tab-text-color-active: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 10%), 1);
-    --icon-color-focused: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 10%), 1);
-    --tab-text-color-focused-active-current: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 10%), 1);
-    --tab-text-color-focused-active-current: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 10%), 1);
+    --tab-text-color-active: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 1);
+    --icon-color-focused: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 1);
+    --tab-text-color-focused-active-current: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 1);
+    --tab-text-color-focused-active-current: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%), 1);
 
     --tab-radius: 5px;
     --tab-radius-active: 5px;
-    --tab-curve: none; 
-    --tab-text-color: var(--washed-blue); 
-    --tab-background-active: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 30%), 0.1);
+    --tab-curve: none;
+    --tab-text-color: var(--washed-blue);
+    --tab-background-active: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 30%), 0.1);
 
-    --toggle-thumb-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
+    --toggle-thumb-color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 1);
+
+    --text-faint: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 1);
 
 
     /*RANDOM SHIT*/
 
-    --divider-color: var(--background-primary-alt); 
-/*    --file-header-active: var(--almost-white);*/
-/*    --hr-color: var(--percy-blue);*/
+    --divider-color: var(--background-primary-alt);
+    /*    --file-header-active: var(--almost-white);*/
+    /*    --hr-color: var(--percy-blue);*/
 
-/*    --icon-color-hover: var(--soft-yellow);*/
-/*    --ribbon-background: var(--background-primary-alt);*/
-/*    --nav-collapse-icon-color: var(--percy-blue);*/
-/*    --slider-track-background: var(--ocean-blue);*/
+    /*    --icon-color-hover: var(--soft-yellow);*/
+    /*    --ribbon-background: var(--background-primary-alt);*/
+    /*    --nav-collapse-icon-color: var(--percy-blue);*/
+    /*    --slider-track-background: var(--ocean-blue);*/
 
 }
 
+/* Color of text in input boxes */
+input[type='text'] {
+    color: hsla(calc(var(--accent-h) + 10),
+            var(--accent-s),
+            calc(var(--accent-l) + 30%), 1);
+}
 
 /* Toggle Buttons */
 /*toggle switch*/
 
 /*track*/
 
+/* Track for unchecked toggles */
 .checkbox-container {
-    background-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 20%), 0.8);
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);*/
+    background-color: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 0.3);
 }
 
+
+/* Track for checked toggles */
 .checkbox-container.is-enabled {
-        background-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);*/
+    background-color: hsla(calc(var(--accent-h) + 10),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 1);
 }
 
-@media (hover: hover) {
-    .checkbox-container:hover {
-/*        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);*/
-    }
-}
 
 /*thumb*/
+/* toggles in the settings dialog */
 
 .checkbox-container:after {
-    background-color: hsla(
-        calc(var(--accent-h) + 180),
-        var(--accent-s),
-        calc(var(--accent-l) - 20%), 0.8);
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);*/
+    background-color: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 0.5);
 }
 
 .checkbox-container.is-enabled:after {
-    background-color: hsla(
-        calc(var(--accent-h) + 180),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);*/
+    background-color: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 1);
 }
 
-body {
-    /* Buttons */
-    --button-radius: 10px;
-}
+
 
 /* Breadcrumbs */
 
 .view-header-breadcrumb {
-    color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 10%), 1);;
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 10%), 1);
+    ;
 }
 
 .view-header-breadcrumb-separator {
-    color: hsla(
-        calc(var(--accent-h) + 180),
-        var(--accent-s),
-        calc(var(--accent-l) + 0%), 1) !important;
+    color: hsla(calc(var(--accent-h) + 180),
+            var(--accent-s),
+            calc(var(--accent-l) + 0%), 1) !important;
 }
 
 .view-header-title {
-    color: hsla(
-        calc(var(--accent-h) + 0),
-        var(--accent-s),
-        calc(var(--accent-l) + 20%), 1);
+    color: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 1);
     text-shadow: 2px 2px 2px black;
 }
 
 .is-focused .workspace-leaf.mod-active .view-header-title {
-        color: hsla(
-        calc(var(--accent-h) + 0),
-        var(--accent-s),
-        calc(var(--accent-l) + 20%), 1);
+    color: hsla(calc(var(--accent-h) + 0),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 1);
     text-shadow: 2px 2px 2px black;
 }
 
@@ -326,42 +337,45 @@ body {
 
 .sidebar-toggle-button {
     background-color: var(--background-primary-alt);
-    
+
 }
 
 .sidebar-toggle-button .clickable-icon {
-    color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 0%), 1); 
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 0%), 1);
 }
 
 .sidebar-toggle-button:hover .clickable-icon {
-    color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 20%), 1); 
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 20%), 1);
 }
 
 .sidebar-toggle-button.mod-right {
     padding-right: 3em;
 }
 
+.sidebar-toggle-button.mod-left {
+    padding-right: 1em;
+}
+
 div.cm-line {
     text-align: justify;
 }
 
-
+.workspace-tabs .workspace-leaf {
+    background-color: var(--background-primary);
+}
 
 
 .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner::before {
     content: "";
     width: calc(100% - 6px);
     height: 5px;
-    background-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) + 0%), 1); ;
+    background-color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 0%), 1);
     position: absolute;
     top: 27px;
     left: 3px;
@@ -369,7 +383,7 @@ div.cm-line {
 
 .mod-root .workspace-tab-header-container .workspace-tab-header.is-active,
 .mod-root .workspace-tab-header-container .workspace-tab-header.mod-active {
-/*    border-bottom: 2px solid hsla(
+    /*    border-bottom: 2px solid hsla(
         var(--accent-h),
         var(--accent-s),
         calc(var(--accent-l) - 0%), 1);
@@ -378,13 +392,13 @@ div.cm-line {
 
 .mod-left-split .mod-top,
 .mod-right-split .mod-top {
-/*    margin-top: 0.51em;*/
+    /*    margin-top: 0.51em;*/
 }
 
 .mod-left-split .mod-top .workspace-tab-header.is-active,
 .mod-right-split .mod-top .workspace-tab-header.is-active {
     background-color: var(--background-primary-alt);
-/*    border-bottom: 2px solid hsla(
+    /*    border-bottom: 2px solid hsla(
         var(--accent-h),
         var(--accent-s),
         calc(var(--accent-l) - 0%), 1);
@@ -397,19 +411,19 @@ div.cm-line {
 
 /* Windows buttons */
 .titlebar-button-container.mod-right {
-/*  border-radius: 10%;*/
+    /*  border-radius: 10%;*/
 }
 
 .titlebar-button-container.mod-right .titlebar-button:hover {
-  background-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 20%), 0.5);
+    background-color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 20%), 0.5);
 }
 
 
 .workspace-tab-header-container-inner {
-/*    margin-top: 2em;*/
+    /*    margin-top: 2em;*/
+    margin-left: 1em;
 }
 
 .workspace-split.mod-left-split {
@@ -424,10 +438,8 @@ div.cm-line {
     margin: .5em;
     margin-top: 0em !important;
     border-radius: 20px;
-    border: 2px solid hsla(
-        var(--accent-h),
-        0%,
-        50%, 0.2);
+    border: 2px solid hsla(var(--accent-h),
+            var(--accent-s), 50%, 0.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -441,17 +453,15 @@ div.cm-line {
 }
 
 .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher * {
-    color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 1);
 }
 
 .workspace-sidedock-vault-profile .workspace-drawer-vault-actions * {
-    color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 1);
 
 }
 
@@ -462,35 +472,33 @@ div.cm-line {
 }
 
 .status-bar {
-      --status-bar-position: relative;
-  --status-bar-radius: 0;
-  justify-content: center;
-  --status-bar-border-width: 0;
-  --status-bar-background: transparent;
-  --status-bar-border-color: transparent;
-  --status-bar-background: var(--background-primary-alt);
+    --status-bar-position: relative;
+    --status-bar-radius: 0;
+    justify-content: center;
+    --status-bar-border-width: 0;
+    --status-bar-background: transparent;
+    --status-bar-border-color: transparent;
     --status-bar-background: var(--background-primary-alt);
-  --status-bar-text-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 20%), 1);
-  font-size: 1em;
+    --status-bar-background: var(--background-primary-alt);
+    --status-bar-text-color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 20%), 1);
+    font-size: 1em;
 }
 
 
-.status-bar .status-bar-item.mod-clickable:hover, .status-bar .status-bar-item.mod-clickable:hover {
-  color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 0%), 1);
-  background-color: hsla(
-        var(--accent-h),
-        var(--accent-s),
-        calc(var(--accent-l) - 30%), 0.5);
+.status-bar .status-bar-item.mod-clickable:hover,
+.status-bar .status-bar-item.mod-clickable:hover {
+    color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 0%), 1);
+    background-color: hsla(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) - 30%), 0.5);
 }
 
-.workspace-tabs { 
-    background-color: var(--background-primary-alt);
+.workspace-tabs {
+    /*    background-color: var(--background-primary-alt);*/
 }
 
 .side-dock-actions {
@@ -518,4 +526,3 @@ div.cm-line {
     background-color: var(--background-primary-alt) !important;
 
 }
-
